@@ -1,0 +1,33 @@
+﻿@model List<DXTest.App_Data.XmlFileEntry>
+
+@Html.DevExpress().Label(
+            s =>
+            {
+                s.Name = "label";
+                s.Text = "Filename:";
+                s.Properties.EnableClientSideAPI = true;
+            }).GetHtml()
+<div>
+    <div class="leftAllign">
+        @Html.DevExpress().TextBox(
+                    s =>
+                    {
+                        s.Name = "textBoxFileName";
+                        s.Width = 170;
+                        s.Text = "";
+                        s.Properties.EnableClientSideAPI = true;
+                    }).GetHtml()
+
+    </div>
+    <div class="leftAllign">
+        @Html.DevExpress().Button(
+                    s =>
+                    {
+                        s.Name = "save";
+                        s.Text = "Save";
+                        s.ClientSideEvents.Click = "function (s, e) { saveFileToDatabase() }";
+                    }).GetHtml()
+    </div>
+</div>
+
+@Html.Partial("SaveFileListPartial", Model)

@@ -1,0 +1,11 @@
+﻿@model DXTest.Models.XmlEditorModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Partial("RibbonPartial", Model.DatabaseFiles)
+
+<div id="xmlTree">
+    @Html.Partial("XmlTreePartial", Model.TreeModel)
+</div>

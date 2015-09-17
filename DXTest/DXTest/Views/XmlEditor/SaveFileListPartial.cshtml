@@ -1,0 +1,17 @@
+﻿@model List<DXTest.App_Data.XmlFileEntry>
+
+@Html.DevExpress().ListBox(
+                     s =>
+                     {
+                         s.Name = "saveFileList";
+                         s.Width = 250;
+                         s.Height = 210;
+                         s.CallbackRouteValues = new { Controller = "XmlEditor", Action = "SaveFileListPartial" };
+                         s.Properties.SelectionMode = ListEditSelectionMode.Single;
+                         s.Properties.ClientSideEvents.SelectedIndexChanged = "onSelectionChanged";
+                         s.Properties.EnableClientSideAPI = true;
+                         foreach (DXTest.App_Data.XmlFileEntry file in Model)
+                         {
+                             s.Properties.Items.Add(file.Filename);
+                         }
+                     }).GetHtml()

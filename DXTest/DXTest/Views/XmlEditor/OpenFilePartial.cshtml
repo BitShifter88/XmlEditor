@@ -1,0 +1,15 @@
+﻿
+@using(Html.BeginForm("UploadControlForm", "File", FormMethod.Post))
+{
+    Html.DevExpress().UploadControl(s =>
+    {
+        s.Name = "UploadControl";
+        s.CallbackRouteValues = new { Controller = "File", Action = "UploadControlUpload" };
+        s.AutoStartUpload = true;
+        s.ShowProgressPanel = true;
+        s.ClientSideEvents.FileUploadComplete = "function(s,e) { reloadXmlTreeView(); }";
+        s.AdvancedModeSettings.EnableDragAndDrop = true;
+        s.UploadMode = DevExpress.Web.UploadControlUploadMode.Advanced;
+        s.ValidationSettings.Assign(DXTest.Code.Xml.XmlFileValidation.Settings);
+    }).GetHtml();
+}

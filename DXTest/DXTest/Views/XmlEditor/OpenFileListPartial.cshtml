@@ -1,0 +1,16 @@
+﻿@model List<DXTest.App_Data.XmlFileEntry>
+
+@Html.DevExpress().ListBox(
+                     s =>
+                     {
+                         s.Name = "openFileList";
+                         s.Width = 250;
+                         s.Height = 210;
+                         s.CallbackRouteValues = new { Controller = "XmlEditor", Action = "OpenFileListPartial" };
+                         s.Properties.SelectionMode = ListEditSelectionMode.Single;
+                         s.Properties.EnableClientSideAPI = true;
+                         foreach (DXTest.App_Data.XmlFileEntry file in Model)
+                         {
+                             s.Properties.Items.Add(file.Filename);
+                         }
+                     }).GetHtml()

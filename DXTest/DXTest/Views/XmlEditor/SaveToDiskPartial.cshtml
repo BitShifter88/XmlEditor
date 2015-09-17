@@ -1,0 +1,7 @@
+﻿@Html.DevExpress().Button(
+                    s =>
+                    {
+                        s.Name = "download";
+                        s.Text = "Download";
+                        s.RouteValues = new { Controller = "File", Action = "DownloadXmlFile" };
+                    }).GetHtml()

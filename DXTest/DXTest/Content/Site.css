@@ -1,0 +1,11 @@
+﻿body {
+}
+
+.openButton {
+float: right;
+}
+.leftAllign {
+float: left;
+margin: auto;
+padding-right: 10px;
+}

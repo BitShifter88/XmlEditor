@@ -1,0 +1,144 @@
+﻿@*This partial view is responsible for constructing the DevExpress ribbon*@ 
+
+@model List<DXTest.App_Data.XmlFileEntry>
+
+@*Ribbon.js contains all the javescript code for the Ribbon*@
+<script type="text/javascript" src="@Url.Content("/Content/Ribbon.js")"></script>
+
+@Html.DevExpress().Ribbon(settings =>
+{
+    settings.Name = "ribbon";
+    settings.Width = Unit.Pixel(1000);
+    // The ribbon contains a number of button images that the user can click
+    // When one of these buttons is clicked, the javascript funciont OnRibbonItemClicked i called
+    settings.ClientSideEvents.CommandExecuted = "OnRibbonItemClicked";
+
+    var tab = settings.Tabs.Add("Home");
+    // The ribbon group that contains the button images for addeding nodes to the xml document
+    var nodes = tab.Groups.Add("Nodes");
+
+    // Adds the "Add Element" button to the ribbon
+    nodes.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
+    {
+        i.Text = "Add Element";
+        i.Name = "AddElement";
+        i.Size = RibbonItemSize.Large;
+        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/addElement.png";
+    });
+    // Adds the "Add Attribute" button to the ribbon
+    nodes.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
+    {
+        i.Text = "Add Attribute";
+        i.Name = "AddAttribute";
+        i.Size = RibbonItemSize.Large;
+        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/addAttribute.png";
+    });
+    // The ribbon group that contains the button images for manipulating namespace declarations
+    var namespaceGroup = tab.Groups.Add("Namespace");
+
+    namespaceGroup.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
+    {
+        i.Text = "Make Namespace";
+        i.Name = "MakeNamespaceDeclaration";
+        i.Size = RibbonItemSize.Large;
+        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/n.ico";
+    });
+
+    var view = settings.Tabs.Add("View");
+    var treeView = view.Groups.Add("Tree View");
+
+    treeView.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
+    {
+        i.Text = "Expand All";
+        i.Name = "ExpandAll";
+        i.Size = RibbonItemSize.Large;
+        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/n.ico";
+    });
+
+    treeView.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
+    {
+        i.Text = "Collapse All";
+        i.Name = "CollapseAll";
+        i.Size = RibbonItemSize.Large;
+        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/n.ico";
+    });
+
+    // Attactes the popup menu to the ribbons file tab. The popup menu is constructed further down
+    settings.SetFileTabTemplateContent(c =>
+    {
+        TabControlTemplateContainerBase container = (TabControlTemplateContainerBase)c;
+        if (!container.Active)
+        {
+            ViewContext.Writer.Write(@"<div id=""FileTabtemplateDiv"" class=""fileTabtemplateDiv""><p>Files</p></div>");
+        }
+    });
+
+}).GetHtml()
+
+@*Constructs the popup menu that apperaes when the user clicks the "files" button in the ribbon
+  The popup menu contains 5 menu items: New Document, Open From Disk, Open From Database, Save To Disk, Save To Database*@ 
+@Html.DevExpress().PopupMenu(settings =>
+{
+    settings.Name = "menu";
+    settings.PopupAction = PopupAction.LeftMouseClick;
+    settings.PopupVerticalAlign = PopupVerticalAlign.Below;
+    settings.PopupHorizontalAlign = PopupHorizontalAlign.LeftSides;
+    settings.PopupElementID = "FileTabtemplateDiv";
+    settings.Items.Add(item =>
+    {
+        item.Text = "New Document";
+        item.Name = "new";
+        // When the user presses this menu item, ajax is used to instruct the server to create a new XML document
+        item.NavigateUrl = "javascript:ajaxNewDocument();";
+    });
+    settings.Items.Add(item =>
+    {
+        item.Text = "Open From Disk";
+        item.Name = "Open";
+        item.Items.Add(item2 =>
+        {
+            item2.SetTemplateContent(i =>
+            {
+                Html.RenderPartial("OpenFilePartial");
+            });
+        });
+    });
+    settings.Items.Add(item =>
+    {
+        item.Text = "Open From Database";
+        item.Name = "OpenDB";
+        item.Items.Add(item2 =>
+        {
+            item2.SetTemplateContent(i =>
+            {
+                Html.RenderPartial("OpenFromDatabasePartial", Model);
+            });
+        });
+    });
+    settings.Items.Add(item =>
+    {
+        item.Text = "Save To Disk";
+        item.Name = "Save";
+        item.Items.Add(item2 =>
+        {
+            item2.SetTemplateContent(i =>
+            {
+                Html.RenderPartial("SaveToDiskPartial");
+            });
+        });
+    });
+    settings.Items.Add(item =>
+    {
+        item.Text = "Save To Database";
+        item.Name = "SaveDB";
+        item.Items.Add(item2 =>
+        {
+            item2.SetTemplateContent(i =>
+            {
+                @Html.RenderPartial("SaveToDatabasePartial", Model);
+            });
+        });
+    });
+
+}).GetHtml()
+

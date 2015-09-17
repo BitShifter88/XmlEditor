@@ -1,0 +1,10 @@
+﻿//Open XML (populate treeview)
+//Edit XML node value/name
+Delete XML node
+Error handling when an ivalid file is opened
+
+
+====== I MORGEN ======
+
+Lav en XML Tree Model hvor der er en liste af namespaces
+Lav namespace combobox til tree view

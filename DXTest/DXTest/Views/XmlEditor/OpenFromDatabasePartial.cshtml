@@ -1,0 +1,14 @@
+﻿@model List<DXTest.App_Data.XmlFileEntry>
+
+@Html.Partial("OpenFileListPartial")
+
+<div class="openButton">
+    @Html.DevExpress().Button(
+                    s =>
+                    {
+                        s.Name = "open";
+                        s.Text = "Open";
+                        s.ClientSideEvents.Click = "function (s, e) { loadFileFromDatabase() }";
+                    }).GetHtml()
+
+</div>

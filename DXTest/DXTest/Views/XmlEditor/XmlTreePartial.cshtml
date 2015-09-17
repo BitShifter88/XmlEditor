@@ -1,0 +1,105 @@
+﻿@model DXTest.Models.XmlTreeModel
+
+@{ 
+    Html.EnableClientValidation();
+    Html.EnableUnobtrusiveJavaScript();
+
+    var treeList = Html.DevExpress().TreeList(
+        settings =>
+        {
+            settings.Name = "treeList";
+            // This specifies the Action responsible for updating the ViewModel when changes are made to the TreeList data
+            settings.CallbackRouteValues = new { Controller = "XmlEditor", Action = "XmlTreePartial" };
+            // This specifies the Action responsible for handling user changes to the data represented in the TreeList
+            // Furthermore, the Action updates the view model of the TreeList
+            settings.SettingsEditing.UpdateNodeRouteValues = new { Controller = "XmlEditor", Action = "UpdateNode" };
+            settings.Width = Unit.Pixel(1000);
+
+
+            // The TreeList is populated by passing a list of XmlTreeNode to the TreeList after it has been created.
+            // This is done at the end of this document with the code treeList.Bind(Model)
+            // However, XmlTreeNode is a custom class, so we need to tell the TreeList how to use a list of XmlTreeNode to construct a visual tree
+            // This is done with these two lines of code. We tell the TreeList that the "Id" attribute in XmlTreeNode is used as an identifier for each node
+            // And that the ParentId attribute is used to specify the identifier of the parent of that node.
+            settings.AutoGenerateColumns = false;
+            settings.KeyFieldName = "Id";
+            settings.ParentFieldName = "ParentId";
+            // If an XmlTreeNode has the parentID 0, it is the root node
+            settings.RootValue = 0;
+
+            // This allows the user to be able to select individual nodes
+            settings.SettingsBehavior.AllowFocusedNode = true;
+            //settings.SettingsBehavior.AutoExpandAllNodes = true;
+
+            settings.Settings.GridLines = System.Web.UI.WebControls.GridLines.Both;
+            settings.SettingsBehavior.ExpandCollapseAction = TreeListExpandCollapseAction.NodeDblClick;
+
+            settings.Columns.Add(
+                column =>
+                {
+                    column.AllowSort = DefaultBoolean.False;
+                    column.FieldName = "Name";
+                }
+            );
+            settings.Columns.Add(
+                column =>
+                {
+                    column.AllowSort = DefaultBoolean.False;
+                    column.FieldName = "Value";
+                }
+            );
+
+            settings.Columns.Add(
+                column =>
+                {
+                    column.Width = 50;
+                    column.AllowSort = DefaultBoolean.False;
+                    column.FieldName = "Type";
+                    column.ReadOnly = true;
+                }
+            );
+
+            settings.Columns.Add(column =>
+            {
+                column.FieldName = "Tag";
+                column.Width = 50;
+                column.AllowSort = DefaultBoolean.False;
+                column.ColumnType = MVCxTreeListColumnType.ComboBox;
+            });
+            settings.CellEditorInitialize += (s, e) =>
+            {
+                MVCxTreeList tree = (MVCxTreeList)s;
+                if (e.Column.FieldName == "Tag")
+                {
+                    ASPxComboBox cb = (ASPxComboBox)e.Editor;
+                    var node = tree.FindNodeByKeyValue(e.NodeKey);
+
+                    foreach (string ns in Model.Namespaces)
+                    {
+                        cb.Items.Add(ns);
+                    }
+                }
+            };
+
+            // We create a column with an "edit" link that allows the user to edit spcific tree nodes
+            settings.CommandColumn.Visible = true;
+            settings.CommandColumn.EditButton.Visible = true;
+            settings.CommandColumn.Width = 50;
+
+            // settings.SettingsEditing.ConfirmDelete = true;
+
+            // Each time a row (node) is created in the TreeList, we assign it a color according to the node type. Elements are colored green, and attributes are colered red
+            settings.HtmlRowPrepared = (s, e) =>
+            {
+                DXTest.Code.Xml.XmlNodeType value = (DXTest.Code.Xml.XmlNodeType)e.GetValue("Type");
+                if (value == DXTest.Code.Xml.XmlNodeType.Element)
+                    e.Row.BackColor = System.Drawing.Color.FromArgb(222, 246, 192);
+                if (value == DXTest.Code.Xml.XmlNodeType.Attribute)
+                    e.Row.BackColor = System.Drawing.Color.FromArgb(255, 210, 199);
+                if (value == DXTest.Code.Xml.XmlNodeType.Namespace)
+                    e.Row.BackColor = System.Drawing.Color.FromArgb(193, 180, 223);
+            };
+        }
+    );
+    }
+@treeList.Bind(Model.XmlNodes).GetHtml()
