@@ -1,6 +1,11 @@
 ﻿function reloadXmlTreeView() {
     treeList.PerformCallback();
 }
+function onTreeListCallBackError(s, e)
+{
+    e.handled = true;
+    alert("The updated data is invalid");
+}
 // When a button image on the Ribbon is clicked, this function is called
 function OnRibbonItemClicked(s, e) {
     // The name of the image button that was clicked

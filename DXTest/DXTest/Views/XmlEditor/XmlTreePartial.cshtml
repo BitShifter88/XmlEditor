@@ -13,6 +13,7 @@
             // This specifies the Action responsible for handling user changes to the data represented in the TreeList
             // Furthermore, the Action updates the view model of the TreeList
             settings.SettingsEditing.UpdateNodeRouteValues = new { Controller = "XmlEditor", Action = "UpdateNode" };
+            settings.ClientSideEvents.CallbackError = "onTreeListCallBackError";
             settings.Width = Unit.Pixel(1000);
 
 

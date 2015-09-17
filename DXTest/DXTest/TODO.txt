@@ -3,6 +3,10 @@
 Delete XML node
 Error handling when an ivalid file is opened
 
+Under save to database skal default navnet være navnet på den åbne xml fil
+Delete node
+Copy/paste node
+
 
 ====== I MORGEN ======
 

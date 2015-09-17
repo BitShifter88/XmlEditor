@@ -97,22 +97,33 @@ namespace DXTest.Code.Xml
         {
             // The updated node that is sent back from the view does not contain an XObject. So we have to retrieve the node from the session
             List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
-            XmlTreeNode node = treeNodes.Where(n => n.Id == updatedNode.Id).FirstOrDefault();
+            NamespaceManager namespaceManager = GetNamespaceManager();
+            XDocument doc = GetXDocument();
+            XmlTreeNode oldNode = treeNodes.Where(n => n.Id == updatedNode.Id).FirstOrDefault();
 
-            if (node.Type == XmlNodeType.Element)
+            if (oldNode.Type == XmlNodeType.Element)
             {
-                XElement element = (XElement)node.XObject;
+                XElement element = (XElement)oldNode.XObject;
+
                 XmlHelper.ChangeLocalNameForElement(element, updatedNode.Name);
 
-                // Parents don't have values, because XDocument does not like that
-                if (node.IsParrent == false)
+                XmlNamespace newNamespace = namespaceManager.GetNamespaceByPrefix(updatedNode.Tag);
+                XmlHelper.ChangeNamespace(element, newNamespace);
+                
+                    // Parents don't have values, because XDocument does not like that
+                if (oldNode.IsParrent == false)
                     element.Value = updatedNode.Value;
             }
-            else if (node.Type == XmlNodeType.Attribute)
+            else if (oldNode.Type == XmlNodeType.Attribute)
             {
-                XAttribute attribute = (XAttribute)node.XObject;
+                XAttribute attribute = (XAttribute)oldNode.XObject;
                 XAttribute newAttribute = XmlHelper.CreateAttribute(XmlHelper.ChangeLocalNameForAttribute(attribute, updatedNode.Name), updatedNode.Value);
-                XmlHelper.ReplaceAttribute(attribute, newAttribute, node.Parrent);
+                XmlHelper.ReplaceAttribute(attribute, newAttribute, oldNode.Parrent);
+            }
+            else if (oldNode.Type == XmlNodeType.Namespace)
+            {
+                XAttribute attribute = (XAttribute)oldNode.XObject;
+                namespaceManager.ChangeNamespaceDeclaration(doc, attribute, oldNode.Parrent, updatedNode.Value, updatedNode.Name);
             }
         }
 

@@ -10,6 +10,9 @@ using System.Xml.Linq;
 
 namespace DXTest.Controllers
 {
+    /// <summary>
+    /// The main controller the XML web application. It controls the view and the parial views of the XMl web application
+    /// </summary>
     public class XmlEditorController : Controller
     {
         public ActionResult Index()

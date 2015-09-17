@@ -46,6 +46,11 @@ namespace DXTest.Code.Xml
             return namespaces;
         }
 
+        public XmlNamespace GetNamespaceByPrefix(string prefix)
+        {
+            return Namespaces.Where(ns => ns.Prefix == prefix).FirstOrDefault();
+        }
+
         /// <summary>
         /// When an XML document is loaded, this methods scanns the XDocument for any namespace declarations. When it finds a namespace declation
         /// it is added to the Namespace attribute, in order to keep track of all namespaces.

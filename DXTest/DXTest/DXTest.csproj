@@ -269,9 +269,7 @@
     <Compile Include="Code\Xml\XmlToTreeListModel.cs" />
     <Compile Include="Code\Xml\XmlTreeNode.cs" />
     <Compile Include="Controllers\FileController.cs" />
-    <Compile Include="Controllers\RibbonController.cs" />
     <Compile Include="Controllers\XmlEditorController.cs" />
-    <Compile Include="Controllers\XmlTreeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
