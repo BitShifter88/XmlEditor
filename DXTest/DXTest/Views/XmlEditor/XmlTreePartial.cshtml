@@ -1,5 +1,6 @@
 ﻿@model DXTest.Models.XmlTreeModel
 
+
 @{ 
     Html.EnableClientValidation();
     Html.EnableUnobtrusiveJavaScript();
@@ -13,8 +14,12 @@
             // This specifies the Action responsible for handling user changes to the data represented in the TreeList
             // Furthermore, the Action updates the view model of the TreeList
             settings.SettingsEditing.UpdateNodeRouteValues = new { Controller = "XmlEditor", Action = "UpdateNode" };
-            settings.ClientSideEvents.CallbackError = "onTreeListCallBackError";
+            settings.SettingsEditing.DeleteNodeRouteValues = new { Controller = "XmlEditor", Action = "DeleteNode" };
+            settings.SettingsEditing.NodeDragDropRouteValues = new { Controller = "XmlEditor", Action = "NodeDragDrop" };
+            settings.ClientSideEvents.ContextMenu = "function(s, e) { OnTreeListRightClick(s, e) }";
+            //settings.ClientSideEvents.CallbackError = "onTreeListCallBackError";
             settings.Width = Unit.Pixel(1000);
+            settings.NodeValidating = DXTest.Code.Xml.XmlTreeNodeValidator.Validate;
 
 
             // The TreeList is populated by passing a list of XmlTreeNode to the TreeList after it has been created.
@@ -27,9 +32,9 @@
             settings.ParentFieldName = "ParentId";
             // If an XmlTreeNode has the parentID 0, it is the root node
             settings.RootValue = 0;
-
             // This allows the user to be able to select individual nodes
             settings.SettingsBehavior.AllowFocusedNode = true;
+            settings.SettingsBehavior.AllowDragDrop = true;
             //settings.SettingsBehavior.AutoExpandAllNodes = true;
 
             settings.Settings.GridLines = System.Web.UI.WebControls.GridLines.Both;
@@ -85,9 +90,11 @@
             // We create a column with an "edit" link that allows the user to edit spcific tree nodes
             settings.CommandColumn.Visible = true;
             settings.CommandColumn.EditButton.Visible = true;
+            settings.CommandColumn.DeleteButton.Visible = true;
+            settings.SettingsEditing.ConfirmDelete = true;
             settings.CommandColumn.Width = 50;
 
-            // settings.SettingsEditing.ConfirmDelete = true;
+            
 
             // Each time a row (node) is created in the TreeList, we assign it a color according to the node type. Elements are colored green, and attributes are colered red
             settings.HtmlRowPrepared = (s, e) =>

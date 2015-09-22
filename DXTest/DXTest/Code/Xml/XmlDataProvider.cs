@@ -38,10 +38,23 @@ namespace DXTest.Code.Xml
         /// <returns></returns>
         public static List<XmlTreeNode> GetXmlTreeNodes()
         {
-            XDocument doc = GetXDocumentFromSession();
-            HttpContext.Current.Session[XML_TREE_NODES] = XmlToTreeListModel.GetTreeList(doc);
+            if (GetXDocumentFromSession() == null)
+            {
+                NewDocument();
+            }
+
+            HttpContext.Current.Session[XML_TREE_NODES] = XmlToTreeListModel.GetTreeList(GetXDocumentFromSession());
 
             return GetXmlTreeNodesFromSession();
+        }
+
+        public static void NewDocument()
+        {
+            XDocument doc = new XDocument();
+            XElement root = new XElement("Root", "");
+            doc.Add(root);
+
+            XmlDataProvider.SetXmlData(doc);
         }
 
         public static XDocument GetXDocument()
@@ -93,6 +106,58 @@ namespace DXTest.Code.Xml
             UpdateXDocumentData(updatedNode);
         }
 
+        public static void MoveXmlTreeNode(int id, int newParentId)
+        {
+            List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
+            XmlTreeNode node = treeNodes.Where(n => n.Id == id).FirstOrDefault();
+            XmlTreeNode newParent = treeNodes.Where(n => n.Id == newParentId).FirstOrDefault();
+
+            // Only elements can be parents
+            if (newParent.Type != XmlNodeType.Element)
+                return;
+
+            XElement newParentElement = (XElement)newParent.XObject;
+
+            if (node.Type == XmlNodeType.Element)
+            {
+                XElement element = (XElement)node.XObject;
+                element.Remove();
+
+                newParentElement.Add(element);
+            }
+            else if (node.Type == XmlNodeType.Attribute || node.Type == XmlNodeType.Namespace)
+            {
+                XAttribute attribute = (XAttribute)node.XObject;
+                attribute.Remove();
+
+                newParentElement.Add(attribute);
+            }
+        }
+
+        public static void DeleteXmlTreeNode(int id)
+        {
+            List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
+            NamespaceManager namespaceManager = GetNamespaceManager();
+            XmlTreeNode oldNode = treeNodes.Where(n => n.Id == id).FirstOrDefault();
+
+            if (oldNode.Type == XmlNodeType.Element)
+            {
+                XElement element = (XElement)oldNode.XObject;
+                element.Remove();
+            }
+            else if (oldNode.Type == XmlNodeType.Attribute)
+            {
+                XAttribute attribute = (XAttribute)oldNode.XObject;
+                attribute.Remove();
+            }
+            else if (oldNode.Type == XmlNodeType.Namespace)
+            {
+                XAttribute attribute = (XAttribute)oldNode.XObject;
+                namespaceManager.RemoveNamespace(attribute, oldNode.Parrent);
+                attribute.Remove();
+            }
+        }
+
         private static void UpdateXDocumentData(XmlTreeNode updatedNode)
         {
             // The updated node that is sent back from the view does not contain an XObject. So we have to retrieve the node from the session
@@ -107,8 +172,12 @@ namespace DXTest.Code.Xml
 
                 XmlHelper.ChangeLocalNameForElement(element, updatedNode.Name);
 
-                XmlNamespace newNamespace = namespaceManager.GetNamespaceByPrefix(updatedNode.Tag);
-                XmlHelper.ChangeNamespace(element, newNamespace);
+                // If the updated node has been assigned a namespace tag
+                if (updatedNode.Tag != null)
+                {
+                    XmlNamespace newNamespace = namespaceManager.GetNamespaceByPrefix(updatedNode.Tag);
+                    XmlHelper.ChangeNamespace(element, newNamespace);
+                }
                 
                     // Parents don't have values, because XDocument does not like that
                 if (oldNode.IsParrent == false)

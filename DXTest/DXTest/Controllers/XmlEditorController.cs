@@ -33,15 +33,89 @@ namespace DXTest.Controllers
         [HttpPost, ValidateInput(false)]
         public ActionResult UpdateNode(XmlTreeNode updatedNode)
         {
-            XmlDataProvider.UpdateXmlData(updatedNode);
+            List<string> errors = XmlTreeNodeValidator.ValidateTreeNode(updatedNode);
+            foreach (string error in errors)
+            {
+                ModelState.AddModelError(error, "");
+            }
+            if (ModelState.IsValid)
+            {
+                XmlDataProvider.UpdateXmlData(updatedNode);
+            }
+            return PartialView("XmlTreePartial", ViewModelGenerator.GetXmlTreeModel());
+        }
+
+        [HttpPost]
+        public ActionResult DeleteNode(int Id)
+        {
+            XmlDataProvider.DeleteXmlTreeNode(Id);
+            return PartialView("XmlTreePartial", ViewModelGenerator.GetXmlTreeModel());
+        }
+
+        [HttpPost]
+        public ActionResult DeleteNodeJson(int id)
+        {
+            XmlDataProvider.DeleteXmlTreeNode(id);
+            return Json(true);
+        }
+
+        [HttpPost]
+        public ActionResult Copy(int id)
+        {
+            XmlTreeClipboard.Copy(id);
+            return Json(true);
+        }
+
+        [HttpPost]
+        public ActionResult Cut(int id)
+        {
+            XmlTreeClipboard.Copy(id);
+            XmlDataProvider.DeleteXmlTreeNode(id);
+            return Json(true);
+        }
+
+        [HttpPost]
+        public ActionResult Paste(int id)
+        {
+            XmlTreeNode parentNode = XmlDataProvider.GetXmlTreeNode(id);
+            XObject node = XmlTreeClipboard.Paste();
+            // If no node has been copyed, or the target for the paste is an attribute, we return
+            if (node == null || parentNode == null || parentNode.Type == XmlNodeType.Attribute)
+                return Json(false);
+
+            XElement pasteTarget = (XElement)parentNode.XObject;
+
+            if (node.GetType().IsAssignableFrom(typeof(XElement)))
+            {
+                XElement copyedNode = (XElement)node;
+                pasteTarget.Add(copyedNode);
+                // we make a copy again, so that we can do future pastes
+                XmlTreeClipboard.Copy(new XElement(copyedNode));
+            }
+            else if (node.GetType().IsAssignableFrom(typeof(XAttribute)))
+            {
+                XAttribute attribute = (XAttribute)node;
+                pasteTarget.Add(attribute);
+                // we make a copy again, so that we can do future pastes
+                XmlTreeClipboard.Copy(attribute);
+            }
+
+            return Json(true);
+        }
+
+        [HttpPost]
+        public ActionResult NodeDragDrop(int Id, int? ParentId)
+        {
+            if (ParentId == null)
+                throw new Exception("Does this ever happen?");
+            XmlDataProvider.MoveXmlTreeNode(Id, (int)ParentId);
             return PartialView("XmlTreePartial", ViewModelGenerator.GetXmlTreeModel());
         }
 
         [HttpPost]
         public ActionResult NewDocument()
         {
-            XDocument doc = new XDocument();
-            XmlDataProvider.SetXmlData(doc);
+            XmlDataProvider.NewDocument();
             return Json(true);
         }
 
@@ -64,7 +138,16 @@ namespace DXTest.Controllers
 
             XmlDataProvider.SetXmlData(doc);
 
+            OpenFilenameManager.SetOpenFilename(filename);
+
             return Json(true);
+        }
+
+
+        [HttpPost]
+        public ActionResult UpdateOpenFilename()
+        {
+            return Json(OpenFilenameManager.GetOpenFilename());
         }
 
         [HttpPost]
@@ -75,6 +158,10 @@ namespace DXTest.Controllers
             if (node.Type == XmlNodeType.Attribute)
             {
                 XmlDataProvider.GetNamespaceManager().MakeAttributeNamespaceDeclaration((XAttribute)node.XObject, node.Parrent);
+            }
+            else if (node.Type == XmlNodeType.Namespace)
+            {
+                XmlDataProvider.GetNamespaceManager().MakeAttributeNotBeNamespaceDeclaration((XAttribute)node.XObject, node.Parrent);
             }
             return Json(true);
         }
@@ -104,5 +191,6 @@ namespace DXTest.Controllers
                 return Json(false);
             }
         }
+
     }
 }

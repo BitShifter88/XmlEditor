@@ -1,10 +1,6 @@
-﻿function reloadXmlTreeView() {
-    treeList.PerformCallback();
-}
-function onTreeListCallBackError(s, e)
-{
-    e.handled = true;
-    alert("The updated data is invalid");
+﻿function OnFileUploadComplete(s, e) {
+    ajaxUpdateOpenFilename();
+    reloadXmlTreeView();
 }
 // When a button image on the Ribbon is clicked, this function is called
 function OnRibbonItemClicked(s, e) {
@@ -14,10 +10,10 @@ function OnRibbonItemClicked(s, e) {
     var focusedNodeKey = treeList.GetFocusedNodeKey();
 
     if (name == "AddElement") {
-        addNewNode(focusedNodeKey, 0);
+        AddNewElement(focusedNodeKey);
     }
     else if (name == "AddAttribute") {
-        addNewNode(focusedNodeKey, 1);
+        AddNewAttribute(focusedNodeKey);
     }
     else if (name == "MakeNamespaceDeclaration") {
         makeNamespaceDeclaration(focusedNodeKey);
@@ -29,31 +25,15 @@ function OnRibbonItemClicked(s, e) {
     else if (name == "CollapseAll") {
         collapseAll();
     }
-}
-function collapseAll() {
-    treeList.CollapseAll();
-}
-function expandAll() {
-    treeList.ExpandAll();
-}
-function makeNamespaceDeclaration(key) {
-    var data = {
-        focusedNodeKey: key
-    };
-    ajaxMakeNamespaceDeclaration(data);
-}
-function addNewNode(focusedNodeKey, type) {
-    var data = {
-        focusedNode: focusedNodeKey,
-        type: type
-    };
-    ajaxAddNewNode(data);
-}
-function onSelectionChanged(s, e) {
-
-    var selectedValue = saveFileList.GetSelectedItems()[0].text;
-    textBoxFileName.SetText(selectedValue);
-
+    else if (name == "Paste") {
+        Paste();
+    }
+    else if (name == "Copy") {
+        Copy();
+    }
+    else if (name == "Cut") {
+        Cut();
+    }
 }
 function loadFileFromDatabase() {
     var selectedValue = openFileList.GetSelectedItems()[0].text;
@@ -61,6 +41,11 @@ function loadFileFromDatabase() {
         filename: selectedValue
     }
     ajaxOpenFileFromDatabase(data);
+}
+function onSelectionChanged(s, e) {
+
+    var selectedValue = saveFileList.GetSelectedItems()[0].text;
+    textBoxFileName.SetText(selectedValue);
 }
 function updateDatabaseFileLists() {
     saveFileList.PerformCallback();
@@ -73,6 +58,24 @@ function saveFileToDatabase() {
         overwrite: false
     };
     ajaxSaveFileToDatabase(data);
+}
+function ajaxUpdateOpenFilename()
+{
+    $.ajax({
+        type: "POST",
+        url: "/XmlEditor/UpdateOpenFilename",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (response) {
+            if (response == "")
+            {
+                alert("Invalid XML file");
+            }
+            textBoxFileName.SetText(response);
+        },
+        error: function (response) {
+        }
+    });
 }
 function ajaxNewDocument() {
     $.ajax({
@@ -123,6 +126,7 @@ function ajaxOpenFileFromDatabase(data) {
         contentType: "application/json",
         dataType: "json",
         success: function (response) {
+            ajaxUpdateOpenFilename()
             reloadXmlTreeView();
         },
         error: function (response) {

@@ -188,16 +188,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Demo.js" />
+    <Content Include="Content\Common.js" />
     <Content Include="Content\Images\addElement.png" />
     <Content Include="Content\Images\addAttribute.png" />
-    <Content Include="Content\Images\n.ico" />
+    <Content Include="Content\Images\n.png" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\test.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\XmlTree.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -261,13 +262,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Code\TestData.cs" />
+    <Compile Include="Code\Xml\OpenFilenameManager.cs" />
     <Compile Include="Code\Xml\XmlFileValidation.cs" />
     <Compile Include="Code\Xml\NamespaceManager.cs" />
     <Compile Include="Code\Xml\XmlDataProvider.cs" />
     <Compile Include="Code\Xml\XmlHelper.cs" />
-    <Compile Include="Code\Xml\XmlLoader.cs" />
     <Compile Include="Code\Xml\XmlToTreeListModel.cs" />
+    <Compile Include="Code\Xml\XmlTreeClipboard.cs" />
     <Compile Include="Code\Xml\XmlTreeNode.cs" />
+    <Compile Include="Code\Xml\XmlTreeNodeValidator.cs" />
     <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\XmlEditorController.cs" />
     <Compile Include="Global.asax.cs">

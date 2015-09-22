@@ -1,14 +1,10 @@
-﻿//Open XML (populate treeview)
-//Edit XML node value/name
-Delete XML node
-Error handling when an ivalid file is opened
+﻿======= TODO =========
 
+Error handling when an invalid file is opened
 Under save to database skal default navnet være navnet på den åbne xml fil
-Delete node
-Copy/paste node
 
 
 ====== I MORGEN ======
 
-Lav en XML Tree Model hvor der er en liste af namespaces
-Lav namespace combobox til tree view
+Input validering
+Få overblik over status på XML namespaces

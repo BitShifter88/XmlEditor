@@ -2,9 +2,6 @@
 
 @model List<DXTest.App_Data.XmlFileEntry>
 
-@*Ribbon.js contains all the javescript code for the Ribbon*@
-<script type="text/javascript" src="@Url.Content("/Content/Ribbon.js")"></script>
-
 @Html.DevExpress().Ribbon(settings =>
 {
     settings.Name = "ribbon";
@@ -14,6 +11,33 @@
     settings.ClientSideEvents.CommandExecuted = "OnRibbonItemClicked";
 
     var tab = settings.Tabs.Add("Home");
+
+    var clipboard = tab.Groups.Add("Clipboard");
+
+    clipboard.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
+    {
+        i.Text = "Paste";
+        i.Name = "Paste";
+        i.Size = RibbonItemSize.Large;
+        ((RibbonButtonItem)i).LargeImage.IconID = IconID.EditPaste32x32;
+    });
+
+    clipboard.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
+    {
+        i.Text = "Cut";
+        i.Name = "Cut";
+        i.Size = RibbonItemSize.Small;
+        ((RibbonButtonItem)i).SmallImage.IconID = IconID.EditCopy16x16;
+    });
+
+    clipboard.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
+    {
+        i.Text = "Copy";
+        i.Name = "Copy";
+        i.Size = RibbonItemSize.Small;
+        ((RibbonButtonItem)i).SmallImage.IconID = IconID.ActionsMerge16x16;
+    });
+
     // The ribbon group that contains the button images for addeding nodes to the xml document
     var nodes = tab.Groups.Add("Nodes");
 
@@ -41,7 +65,7 @@
         i.Text = "Make Namespace";
         i.Name = "MakeNamespaceDeclaration";
         i.Size = RibbonItemSize.Large;
-        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/n.ico";
+        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/n.png";
     });
 
     var view = settings.Tabs.Add("View");

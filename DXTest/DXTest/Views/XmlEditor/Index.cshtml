@@ -4,8 +4,54 @@
     ViewBag.Title = "Index";
 }
 
+<script type="text/javascript" src="@Url.Content("/Content/Common.js")"></script>
+@*Ribbon.js contains all the javescript code for the Ribbon*@
+<script type="text/javascript" src="@Url.Content("/Content/Ribbon.js")"></script>
+@*XmlTree.js contains all the javescript code for the xml tree*@
+<script type="text/javascript" src="@Url.Content("/Content/XmlTree.js")"></script>
+
+
 @Html.Partial("RibbonPartial", Model.DatabaseFiles)
 
 <div id="xmlTree">
     @Html.Partial("XmlTreePartial", Model.TreeModel)
 </div>
+
+
+@*This creates the popup menu that is shown when the user right clicks on the DevExpress TreeList*@
+@Html.DevExpress().PopupMenu(
+        settings =>
+        {
+            settings.PopupAction = PopupAction.LeftMouseClick;
+            settings.PopupVerticalAlign = PopupVerticalAlign.Below;
+            settings.PopupHorizontalAlign = PopupHorizontalAlign.LeftSides;
+            settings.Name = "PopupMenu";
+            settings.Items.Add(item =>
+            {
+                item.Text = "New Element";
+                item.NavigateUrl = "javascript:NewElement();";
+            });
+            settings.Items.Add(item =>
+            {
+                item.Text = "New Attribute";
+                item.NavigateUrl = "javascript:NewAttribute();";
+            });
+            settings.Items.Add(item =>
+            {
+                item.Text = "Delete";
+                item.NavigateUrl = "javascript:Delete();";
+            });
+            settings.Items.Add(item =>
+            {
+                item.Text = "Copy";
+                item.NavigateUrl = "javascript:Copy();";
+            });
+            settings.Items.Add(item =>
+            {
+                item.Text = "Paste";
+                item.NavigateUrl = "javascript:Paste();";
+            });
+            settings.ClientSideEvents.Init = "InitPopupMenuHandler";
+            //settings.ClientSideEvents.ItemClick = "OnPopupMenuItemClick";
+        }
+    ).GetHtml()

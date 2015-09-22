@@ -39,10 +39,20 @@ namespace DXTest.Controllers
             // If the file turned out to be valid
             if (file.IsValid)
             {
-                // We construct an XDocument from the XML text in the file
-                XDocument doc = XDocument.Load(file.FileContent);
+                OpenFilenameManager.SetOpenFilename("");
+                XDocument doc = null;
+                try
+                {
+                    // We construct an XDocument from the XML text in the file
+                    doc = XDocument.Load(file.FileContent);
+                }
+                catch
+                {
+                    return;
+                }
                 // We inform the data provider about the new XML data
                 XmlDataProvider.SetXmlData(doc);
+                OpenFilenameManager.SetOpenFilename(file.FileName);
             }
         }
 
