@@ -100,10 +100,40 @@ namespace DXTest.Code.Xml
         /// <param name="updatedNode"></param>
         public static void UpdateXmlData(XmlTreeNode updatedNode)
         {
-            //// Updates the TreeList to ensure that the Dev Express TreeList shows a correct representation of the current XMl document
-            //UpdateTreeListData(updatedNode);
-            // Updates the XDocument with the changes represented by updateNode
-            UpdateXDocumentData(updatedNode);
+            // The updated node that is sent back from the view does not contain an XObject. So we have to retrieve the node from the session
+            List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
+            NamespaceManager namespaceManager = GetNamespaceManager();
+            XDocument doc = GetXDocument();
+            XmlTreeNode oldNode = treeNodes.Where(n => n.Id == updatedNode.Id).FirstOrDefault();
+
+            if (oldNode.Type == XmlNodeType.Element)
+            {
+                XElement element = (XElement)oldNode.XObject;
+
+                XmlHelper.ChangeLocalNameForElement(element, updatedNode.Name);
+
+                // If the updated node has been assigned a namespace tag
+                if (updatedNode.Tag != null)
+                {
+                    XmlNamespace newNamespace = namespaceManager.GetNamespaceByPrefix(updatedNode.Tag);
+                    XmlHelper.ChangeNamespace(element, newNamespace);
+                }
+
+                // Parents don't have values, because XDocument does not like that
+                if (oldNode.IsParrent == false)
+                    element.Value = updatedNode.Value;
+            }
+            else if (oldNode.Type == XmlNodeType.Attribute)
+            {
+                XAttribute attribute = (XAttribute)oldNode.XObject;
+                XAttribute newAttribute = XmlHelper.CreateAttribute(XmlHelper.ChangeLocalNameForAttribute(attribute, updatedNode.Name), updatedNode.Value);
+                XmlHelper.ReplaceAttribute(attribute, newAttribute, oldNode.Parrent);
+            }
+            else if (oldNode.Type == XmlNodeType.Namespace)
+            {
+                XAttribute attribute = (XAttribute)oldNode.XObject;
+                namespaceManager.ChangeNamespaceDeclaration(doc, attribute, oldNode.Parrent, updatedNode.Value, updatedNode.Name);
+            }
         }
 
         public static void MoveXmlTreeNode(int id, int newParentId)
@@ -138,63 +168,26 @@ namespace DXTest.Code.Xml
         {
             List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
             NamespaceManager namespaceManager = GetNamespaceManager();
-            XmlTreeNode oldNode = treeNodes.Where(n => n.Id == id).FirstOrDefault();
+            XmlTreeNode node = treeNodes.Where(n => n.Id == id).FirstOrDefault();
 
-            if (oldNode.Type == XmlNodeType.Element)
+            if (node.Type == XmlNodeType.Element)
             {
-                XElement element = (XElement)oldNode.XObject;
+                XElement element = (XElement)node.XObject;
                 element.Remove();
             }
-            else if (oldNode.Type == XmlNodeType.Attribute)
+            else if (node.Type == XmlNodeType.Attribute)
             {
-                XAttribute attribute = (XAttribute)oldNode.XObject;
+                XAttribute attribute = (XAttribute)node.XObject;
                 attribute.Remove();
             }
-            else if (oldNode.Type == XmlNodeType.Namespace)
+            else if (node.Type == XmlNodeType.Namespace)
             {
-                XAttribute attribute = (XAttribute)oldNode.XObject;
-                namespaceManager.RemoveNamespace(attribute, oldNode.Parrent);
+                XAttribute attribute = (XAttribute)node.XObject;
+                namespaceManager.RemoveNamespace(attribute, node.Parrent);
                 attribute.Remove();
             }
         }
 
-        private static void UpdateXDocumentData(XmlTreeNode updatedNode)
-        {
-            // The updated node that is sent back from the view does not contain an XObject. So we have to retrieve the node from the session
-            List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
-            NamespaceManager namespaceManager = GetNamespaceManager();
-            XDocument doc = GetXDocument();
-            XmlTreeNode oldNode = treeNodes.Where(n => n.Id == updatedNode.Id).FirstOrDefault();
-
-            if (oldNode.Type == XmlNodeType.Element)
-            {
-                XElement element = (XElement)oldNode.XObject;
-
-                XmlHelper.ChangeLocalNameForElement(element, updatedNode.Name);
-
-                // If the updated node has been assigned a namespace tag
-                if (updatedNode.Tag != null)
-                {
-                    XmlNamespace newNamespace = namespaceManager.GetNamespaceByPrefix(updatedNode.Tag);
-                    XmlHelper.ChangeNamespace(element, newNamespace);
-                }
-                
-                    // Parents don't have values, because XDocument does not like that
-                if (oldNode.IsParrent == false)
-                    element.Value = updatedNode.Value;
-            }
-            else if (oldNode.Type == XmlNodeType.Attribute)
-            {
-                XAttribute attribute = (XAttribute)oldNode.XObject;
-                XAttribute newAttribute = XmlHelper.CreateAttribute(XmlHelper.ChangeLocalNameForAttribute(attribute, updatedNode.Name), updatedNode.Value);
-                XmlHelper.ReplaceAttribute(attribute, newAttribute, oldNode.Parrent);
-            }
-            else if (oldNode.Type == XmlNodeType.Namespace)
-            {
-                XAttribute attribute = (XAttribute)oldNode.XObject;
-                namespaceManager.ChangeNamespaceDeclaration(doc, attribute, oldNode.Parrent, updatedNode.Value, updatedNode.Name);
-            }
-        }
 
         /// <summary>
         /// Adds a new node to the curret XML document. A node is added to XDocument, and another one is added to the XmlTreeNode list that is used by the DevExpress TreeList to visually represent the XML document
@@ -229,6 +222,39 @@ namespace DXTest.Code.Xml
             //// Creates the XmlTreeNode that is added to the list of XmlTreeNodes used by the DevExpress TreeList to visually represented the XML document
             //XmlTreeNode node = new XmlTreeNode() { Id = highestId + 1, ParentId = parrentId, IsParrent = false, Name = "Name" + treeNodes.Count, Value = "Value", Type = type, Parrent = (XElement)parent.XObject, XObject = newNodeXObject };
             //treeNodes.Add(node);
+        }
+
+        /// <summary>
+        /// Pastes the content of XmlTreeClipboard to the element with pasteTargetId id
+        /// </summary>
+        /// <param name="pasteTargetId"></param>
+        /// <returns></returns>
+        public static bool Paste(int pasteTargetId)
+        {
+            XmlTreeNode parentNode = XmlDataProvider.GetXmlTreeNode(pasteTargetId);
+            XObject node = XmlTreeClipboard.Paste();
+            // If no node has been copyed, or the target for the paste is an attribute, we return
+            if (node == null || parentNode == null || parentNode.Type == XmlNodeType.Attribute)
+                return false;
+
+            XElement pasteTarget = (XElement)parentNode.XObject;
+
+            if (node.GetType().IsAssignableFrom(typeof(XElement)))
+            {
+                XElement copyedNode = (XElement)node;
+                pasteTarget.Add(copyedNode);
+                // we make a copy again, so that we can do future pastes
+                XmlTreeClipboard.Copy(new XElement(copyedNode));
+            }
+            else if (node.GetType().IsAssignableFrom(typeof(XAttribute)))
+            {
+                XAttribute attribute = (XAttribute)node;
+                pasteTarget.Add(attribute);
+                // we make a copy again, so that we can do future pastes
+                XmlTreeClipboard.Copy(attribute);
+            }
+
+            return true;
         }
 
         //private static void UpdateTreeListData(XmlTreeNode updatedNode)

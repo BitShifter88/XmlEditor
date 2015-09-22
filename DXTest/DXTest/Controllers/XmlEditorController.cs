@@ -77,30 +77,10 @@ namespace DXTest.Controllers
         [HttpPost]
         public ActionResult Paste(int id)
         {
-            XmlTreeNode parentNode = XmlDataProvider.GetXmlTreeNode(id);
-            XObject node = XmlTreeClipboard.Paste();
-            // If no node has been copyed, or the target for the paste is an attribute, we return
-            if (node == null || parentNode == null || parentNode.Type == XmlNodeType.Attribute)
+            if (XmlDataProvider.Paste(id))
                 return Json(false);
-
-            XElement pasteTarget = (XElement)parentNode.XObject;
-
-            if (node.GetType().IsAssignableFrom(typeof(XElement)))
-            {
-                XElement copyedNode = (XElement)node;
-                pasteTarget.Add(copyedNode);
-                // we make a copy again, so that we can do future pastes
-                XmlTreeClipboard.Copy(new XElement(copyedNode));
-            }
-            else if (node.GetType().IsAssignableFrom(typeof(XAttribute)))
-            {
-                XAttribute attribute = (XAttribute)node;
-                pasteTarget.Add(attribute);
-                // we make a copy again, so that we can do future pastes
-                XmlTreeClipboard.Copy(attribute);
-            }
-
-            return Json(true);
+            else
+                return Json(true);
         }
 
         [HttpPost]

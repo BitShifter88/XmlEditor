@@ -37,10 +37,8 @@ function OnRibbonItemClicked(s, e) {
 }
 function loadFileFromDatabase() {
     var selectedValue = openFileList.GetSelectedItems()[0].text;
-    var data = {
-        filename: selectedValue
-    }
-    ajaxOpenFileFromDatabase(data);
+
+    ajaxOpenFileFromDatabase(selectedValue);
 }
 function onSelectionChanged(s, e) {
 
@@ -118,7 +116,11 @@ function ajaxMakeNamespaceDeclaration(data) {
         }
     });
 }
-function ajaxOpenFileFromDatabase(data) {
+function ajaxOpenFileFromDatabase(name) {
+
+    var data = {
+        filename: name
+    }
     $.ajax({
         type: "POST",
         url: "/XmlEditor/OpenXmlFromDatabase",

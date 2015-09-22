@@ -23,6 +23,9 @@ namespace DXTest.App_Data
         public byte[] Blob { get; set; }
     }
 
+    /// <summary>
+    /// This class is used to query the database
+    /// </summary>
     public class DatabaseManager
     {
         private static string GetConnectionString()
