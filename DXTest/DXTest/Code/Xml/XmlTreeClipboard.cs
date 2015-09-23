@@ -6,13 +6,17 @@ using System.Xml.Linq;
 
 namespace DXTest.Code.Xml
 {
+    /// <summary>
+    /// The user can copy, cut and paste XML nodes in the TreeView. This class serves as a clipboard for that. It is not possible to store data in the OS clipboard on the client due to security reasons
+    /// The ASP.NET Session variable is used to store the copyied data.
+    /// </summary>
     public class XmlTreeClipboard
     {
         private const string CLIPBOARD = "Clipboard";
 
         public static void Copy(int nodeId)
         {
-            XmlTreeNode node = XmlDataProvider.GetXmlTreeNode(nodeId);
+            XmlTreeNode node = new XmlDataProvider().GetXmlTreeNode(nodeId);
 
             if (node.Type == XmlNodeType.Element)
             {

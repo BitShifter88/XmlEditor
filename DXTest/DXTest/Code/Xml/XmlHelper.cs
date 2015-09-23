@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace DXTest.Code.Xml
@@ -16,16 +17,19 @@ namespace DXTest.Code.Xml
         /// <summary>
         /// XML names must not contain spaces or be empty. This method checks of a given XML name is valid
         /// </summary>
-        /// <param name="text"></param>
+        /// <param name="name"></param>
         /// <returns></returns>
-        public static bool IsStringLegalXmlName(string text)
+        public static bool IsStringLegalXmlName(string name)
         {
-            if (text.Contains(' '))
+            // We try to create an XElement with the name. If it fails, the name is invalid
+            try
+            {
+                XElement element = new XElement(name, "");
+            }
+            catch (XmlException)
+            {
                 return false;
-            if (text == string.Empty)
-                return false;
-            if (text.Contains(':'))
-                return false;
+            }
             return true;
         }
 
@@ -36,6 +40,7 @@ namespace DXTest.Code.Xml
         /// <returns></returns>
         public static bool IsStringLegalNamespaceUri(string uri)
         {
+            // Namespaces URI's can't be empty
             if (uri == string.Empty)
                 return false;
             return true;
@@ -53,6 +58,11 @@ namespace DXTest.Code.Xml
             return serializedXml;
         }
 
+        /// <summary>
+        /// Deserializes xml data in the form of a byte array
+        /// </summary>
+        /// <param name="serializedXml"></param>
+        /// <returns></returns>
         public static string DeSerializeXmlText(byte[] serializedXml)
         {
             string xmlText = System.Text.Encoding.UTF8.GetString(serializedXml);
@@ -77,6 +87,11 @@ namespace DXTest.Code.Xml
                 return document.Declaration + System.Environment.NewLine + document.ToString();
         }
 
+        /// <summary>
+        /// Creates an XDocument from a string of XML text
+        /// </summary>
+        /// <param name="xmlText"></param>
+        /// <returns></returns>
         public static XDocument StringToXDocument(string xmlText)
         {
             if (xmlText == string.Empty)

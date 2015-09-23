@@ -14,95 +14,82 @@ namespace DXTest.Code.Xml
     /// </summary>
     public class XmlDataProvider
     {
-        private const string XML_DOC_KEY = "XmlDoc";
-        private const string XML_NAMESPACE_MANAGER = "XmlNamespaceManager";
-        private const string XML_TREE_NODES = "XmlTreeNodes";
+        IXmlDataSource _dataSource;
+
+        public XmlDataProvider()
+        {
+            _dataSource = new SessionDataSource();
+        }
 
         /// <summary>
         /// Used to set the XML data when the user loads an XML file from ether a file or database
         /// </summary>
         /// <param name="doc"></param>
-        public static void SetXmlData(XDocument doc)
+        public void SaveXDocument(XDocument doc)
         {
-            HttpContext.Current.Session[XML_DOC_KEY] = doc;
             // NamespaceManager keeps track of the different namespaces in the curret XML document.
             NamespaceManager nm = new NamespaceManager();
             // Because of this, the NamespaceManager needs to go through the XDocument to scan it for namespace declaration
             nm.CheckXDocumentForNamespaces(doc);
-            HttpContext.Current.Session[XML_NAMESPACE_MANAGER] = nm;
+
+            _dataSource.SetXDocument(doc);
+            _dataSource.SetNamespaceManager(nm);
         }
 
         /// <summary>
         /// Gets the list of XmlTreeNodes used by the DevExpress TreeList to visually represent the XML data
         /// </summary>
         /// <returns></returns>
-        public static List<XmlTreeNode> GetXmlTreeNodes()
+        public List<XmlTreeNode> GenerateXmlTreeNodes()
         {
-            if (GetXDocumentFromSession() == null)
+            // If no document has been loaded, just create a default document
+            if (_dataSource.GetXDocument() == null)
             {
-                NewDocument();
+                NewDefaultDocument();
             }
 
-            HttpContext.Current.Session[XML_TREE_NODES] = XmlToTreeListModel.GetTreeList(GetXDocumentFromSession());
+            List<XmlTreeNode> treeNodes = XmlToTreeListModel.GetTreeList(_dataSource.GetXDocument());
+            _dataSource.SetXmlTreeNodes(treeNodes);
 
-            return GetXmlTreeNodesFromSession();
+            return treeNodes;
         }
 
-        public static void NewDocument()
+        /// <summary>
+        /// Creates a new XDocument that contains a single root node
+        /// </summary>
+        public void NewDefaultDocument()
         {
             XDocument doc = new XDocument();
             XElement root = new XElement("Root", "");
             doc.Add(root);
 
-            XmlDataProvider.SetXmlData(doc);
+            SaveXDocument(doc);
         }
 
-        public static XDocument GetXDocument()
+        public XDocument GetXDocument()
         {
-            return GetXDocumentFromSession();
+            return _dataSource.GetXDocument();
         }
 
-        private static XDocument GetXDocumentFromSession()
+        public NamespaceManager GetNamespaceManager()
         {
-            return (XDocument)HttpContext.Current.Session[XML_DOC_KEY];
+            return _dataSource.GetNamespaceManager();
         }
 
-        public static NamespaceManager GetNamespaceManager()
+        public XmlTreeNode GetXmlTreeNode(int id)
         {
-            if (HttpContext.Current.Session[XML_NAMESPACE_MANAGER] == null)
-                HttpContext.Current.Session[XML_NAMESPACE_MANAGER] = new NamespaceManager();
-
-            return (NamespaceManager)HttpContext.Current.Session[XML_NAMESPACE_MANAGER];
-        }
-
-        private static List<XmlTreeNode> GetXmlTreeNodesFromSession()
-        {
-            List<XmlTreeNode> treeNodes = (List<XmlTreeNode>)HttpContext.Current.Session[XML_TREE_NODES];
-
-            //// If no nodes exist, no XML file is currently open. However, the DevExpress still needs a list of XmlTreeNodes, so we create an empty list of XmlTreeNodes
-            //if (treeNodes == null)
-            //{
-            //    treeNodes = new List<XmlTreeNode>();
-            //    HttpContext.Current.Session[XML_TREE_NODES] = treeNodes;
-            //}
-
-            return treeNodes;
-        }
-
-        public static XmlTreeNode GetXmlTreeNode(int id)
-        {
-            return GetXmlTreeNodesFromSession().Where(node => node.Id == id).FirstOrDefault();
+            return _dataSource.GetXmlTreeNodes().Where(node => node.Id == id).FirstOrDefault();
         }
 
         /// <summary>
         /// Updates the data for a specific XMl node
         /// </summary>
         /// <param name="updatedNode"></param>
-        public static void UpdateXmlData(XmlTreeNode updatedNode)
+        public void UpdateXmlData(XmlTreeNode updatedNode)
         {
             // The updated node that is sent back from the view does not contain an XObject. So we have to retrieve the node from the session
-            List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
-            NamespaceManager namespaceManager = GetNamespaceManager();
+            List<XmlTreeNode> treeNodes = _dataSource.GetXmlTreeNodes();
+            NamespaceManager namespaceManager = _dataSource.GetNamespaceManager();
             XDocument doc = GetXDocument();
             XmlTreeNode oldNode = treeNodes.Where(n => n.Id == updatedNode.Id).FirstOrDefault();
 
@@ -125,6 +112,7 @@ namespace DXTest.Code.Xml
             }
             else if (oldNode.Type == XmlNodeType.Attribute)
             {
+                // XAttribute does not allow us to change its name. Therefor we have to replace th old attribute with a new one
                 XAttribute attribute = (XAttribute)oldNode.XObject;
                 XAttribute newAttribute = XmlHelper.CreateAttribute(XmlHelper.ChangeLocalNameForAttribute(attribute, updatedNode.Name), updatedNode.Value);
                 XmlHelper.ReplaceAttribute(attribute, newAttribute, oldNode.Parrent);
@@ -136,9 +124,15 @@ namespace DXTest.Code.Xml
             }
         }
 
-        public static void MoveXmlTreeNode(int id, int newParentId)
+        /// <summary>
+        /// The user can move XML nodes by using drag and drop. This method is used to perform the move
+        /// </summary>
+        /// <param name="id">The id of the node that is being moved</param>
+        /// <param name="newParentId">The id of the new parent node</param>
+        public void MoveXmlTreeNode(int id, int newParentId)
         {
-            List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
+            List<XmlTreeNode> treeNodes = _dataSource.GetXmlTreeNodes();
+            // The node that is being moved
             XmlTreeNode node = treeNodes.Where(n => n.Id == id).FirstOrDefault();
             XmlTreeNode newParent = treeNodes.Where(n => n.Id == newParentId).FirstOrDefault();
 
@@ -151,25 +145,33 @@ namespace DXTest.Code.Xml
             if (node.Type == XmlNodeType.Element)
             {
                 XElement element = (XElement)node.XObject;
+                // Remove the element from its current position in the XML tree
                 element.Remove();
-
+                // And add it to it's new parent
                 newParentElement.Add(element);
             }
             else if (node.Type == XmlNodeType.Attribute || node.Type == XmlNodeType.Namespace)
             {
                 XAttribute attribute = (XAttribute)node.XObject;
+                // Remove the attribute from its current position in the XML tree
                 attribute.Remove();
-
+                // Add it to its new position in the XMl tree
                 newParentElement.Add(attribute);
             }
         }
 
-        public static void DeleteXmlTreeNode(int id)
+        /// <summary>
+        /// Deletes a node with the id, id
+        /// </summary>
+        /// <param name="id"></param>
+        public void DeleteXmlTreeNode(int id)
         {
-            List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
+            List<XmlTreeNode> treeNodes = _dataSource.GetXmlTreeNodes();
             NamespaceManager namespaceManager = GetNamespaceManager();
+            // The node that we want to delete
             XmlTreeNode node = treeNodes.Where(n => n.Id == id).FirstOrDefault();
 
+            // We can't call .Remove() on the nodes XObject, so we have to cast it to an Element or Attribute in order to delete the node
             if (node.Type == XmlNodeType.Element)
             {
                 XElement element = (XElement)node.XObject;
@@ -183,6 +185,7 @@ namespace DXTest.Code.Xml
             else if (node.Type == XmlNodeType.Namespace)
             {
                 XAttribute attribute = (XAttribute)node.XObject;
+                // Namespaces also have to be removed from the namespace manager that keeps track of existing namespaces
                 namespaceManager.RemoveNamespace(attribute, node.Parrent);
                 attribute.Remove();
             }
@@ -194,9 +197,9 @@ namespace DXTest.Code.Xml
         /// </summary>
         /// <param name="parrentId"></param>
         /// <param name="type"></param>
-        public static void AddNode(int parrentId, XmlNodeType type)
+        public void AddNode(int parrentId, XmlNodeType type)
         {
-            List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
+            List<XmlTreeNode> treeNodes = _dataSource.GetXmlTreeNodes();
     
             int highestId = treeNodes.OrderByDescending(i => i.Id).FirstOrDefault().Id;
             XmlTreeNode parent = treeNodes.Where(i => i.Id == parrentId).FirstOrDefault();
@@ -229,9 +232,9 @@ namespace DXTest.Code.Xml
         /// </summary>
         /// <param name="pasteTargetId"></param>
         /// <returns></returns>
-        public static bool Paste(int pasteTargetId)
+        public bool Paste(int pasteTargetId)
         {
-            XmlTreeNode parentNode = XmlDataProvider.GetXmlTreeNode(pasteTargetId);
+            XmlTreeNode parentNode = GetXmlTreeNode(pasteTargetId);
             XObject node = XmlTreeClipboard.Paste();
             // If no node has been copyed, or the target for the paste is an attribute, we return
             if (node == null || parentNode == null || parentNode.Type == XmlNodeType.Attribute)
@@ -256,20 +259,5 @@ namespace DXTest.Code.Xml
 
             return true;
         }
-
-        //private static void UpdateTreeListData(XmlTreeNode updatedNode)
-        //{
-        //    List<XmlTreeNode> treeNodes = GetXmlTreeNodesFromSession();
-        //    // Findes the updated node
-        //    XmlTreeNode node = treeNodes.Where(n => n.Id == updatedNode.Id).FirstOrDefault();
-        //    // Updates the values of the node with the values from updateNode
-        //    if (node != null)
-        //    {
-        //        node.Name = updatedNode.Name;
-        //        node.Value = updatedNode.Value;
-        //        updatedNode.XObject = node.XObject;
-        //        updatedNode.Parrent = node.Parrent;
-        //    }
-        //}
     }
 }

@@ -4,7 +4,6 @@
     ViewBag.Title = "Index";
 }
 
-<script type="text/javascript" src="@Url.Content("/Content/Common.js")"></script>
 @*Ribbon.js contains all the javescript code for the Ribbon*@
 <script type="text/javascript" src="@Url.Content("/Content/Ribbon.js")"></script>
 @*XmlTree.js contains all the javescript code for the xml tree*@
@@ -45,6 +44,11 @@
             {
                 item.Text = "Copy";
                 item.NavigateUrl = "javascript:Copy();";
+            });
+            settings.Items.Add(item =>
+            {
+                item.Text = "Cut";
+                item.NavigateUrl = "javascript:Cut();";
             });
             settings.Items.Add(item =>
             {

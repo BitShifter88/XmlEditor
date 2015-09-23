@@ -31,6 +31,14 @@ namespace DXTest.Code.Xml
             return treeNodes;
         }
 
+        /// <summary>
+        /// This method is recursevly called when converting an XDocument to a list of XmlTreeNodes
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="parrent"></param>
+        /// <param name="parrentId"></param>
+        /// <param name="nodeId"></param>
+        /// <returns></returns>
         private static List<XmlTreeNode> ProcessXElement(XElement element, XElement parrent, int parrentId, ref int nodeId)
         {
             List<XmlTreeNode> treeNodes = new List<XmlTreeNode>();

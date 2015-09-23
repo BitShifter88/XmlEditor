@@ -21,9 +21,11 @@ namespace DXTest.Models
 
         public static XmlTreeModel GetXmlTreeModel()
         {
+            XmlDataProvider data = new XmlDataProvider();
+
             XmlTreeModel treeModel = new XmlTreeModel();
-            treeModel.XmlNodes = XmlDataProvider.GetXmlTreeNodes();
-            treeModel.Namespaces = XmlDataProvider.GetNamespaceManager().GetNamespacePrefixes();
+            treeModel.XmlNodes = data.GenerateXmlTreeNodes();
+            treeModel.Namespaces = data.GetNamespaceManager().GetNamespacePrefixes();
 
             return treeModel;
         }

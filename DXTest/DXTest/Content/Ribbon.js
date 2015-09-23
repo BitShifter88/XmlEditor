@@ -50,12 +50,7 @@ function updateDatabaseFileLists() {
     openFileList.PerformCallback();
 }
 function saveFileToDatabase() {
-
-    var data = {
-        filename: textBoxFileName.GetText(),
-        overwrite: false
-    };
-    ajaxSaveFileToDatabase(data);
+    ajaxSaveFileToDatabase(textBoxFileName.GetText(), false);
 }
 function ajaxUpdateOpenFilename()
 {
@@ -72,6 +67,7 @@ function ajaxUpdateOpenFilename()
             textBoxFileName.SetText(response);
         },
         error: function (response) {
+            alert("An error occured");
         }
     });
 }
@@ -85,39 +81,11 @@ function ajaxNewDocument() {
             reloadXmlTreeView();
         },
         error: function (response) {
-        }
-    });
-}
-function ajaxAddNewNode(data) {
-    $.ajax({
-        type: "POST",
-        url: "/XmlEditor/AddNode",
-        data: JSON.stringify(data),
-        contentType: "application/json",
-        dataType: "json",
-        success: function (response) {
-            reloadXmlTreeView();
-        },
-        error: function (response) {
-        }
-    });
-}
-function ajaxMakeNamespaceDeclaration(data) {
-    $.ajax({
-        type: "POST",
-        url: "/XmlEditor/MakeNamespaceDeclaration",
-        data: JSON.stringify(data),
-        contentType: "application/json",
-        dataType: "json",
-        success: function (response) {
-            reloadXmlTreeView();
-        },
-        error: function (response) {
+            alert("An error occured");
         }
     });
 }
 function ajaxOpenFileFromDatabase(name) {
-
     var data = {
         filename: name
     }
@@ -132,10 +100,16 @@ function ajaxOpenFileFromDatabase(name) {
             reloadXmlTreeView();
         },
         error: function (response) {
+            alert("An error occured");
         }
     });
 }
-function ajaxSaveFileToDatabase(data) {
+function ajaxSaveFileToDatabase(name, over) {
+    var data = {
+        filename: name,
+        overwrite: over
+    };
+
     $.ajax({
         type: "POST",
         url: "/XmlEditor/SaveXmlToDatabase",
@@ -147,18 +121,15 @@ function ajaxSaveFileToDatabase(data) {
                 updateDatabaseFileLists();
             }
             else {
+                // If the response is false, a file with that name already exists. Ask the user if he wants to overwrite the existing file
                 var r = confirm("A file with that name already exists in the database. Would you like to overwrite it?");
                 if (r == true) {
-                    var d = {
-                        filename: textBoxFileName.GetText(),
-                        overwrite: true
-                    };
-                    ajaxSaveFileToDatabase(d);
+                    ajaxSaveFileToDatabase(textBoxFileName.GetText(), true);
                 }
             }
         },
         error: function (response) {
-            alert("error");
+            alert("An error occured");
         }
     });
 }

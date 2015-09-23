@@ -1,4 +1,7 @@
-﻿function NewElement() {
+﻿function reloadXmlTreeView() {
+    treeList.PerformCallback();
+}
+function NewElement() {
     var focusedNodeKey = treeList.GetFocusedNodeKey();
     AddNewElement(focusedNodeKey);
 }
@@ -8,8 +11,7 @@ function NewAttribute() {
 }
 function Delete() {
     var focusedNodeKey = treeList.GetFocusedNodeKey();
-    var data = { id: focusedNodeKey }
-    ajaxDeleteNode(data);
+    ajaxDeleteNode(focusedNodeKey);
 }
 function Copy() {
     var focusedNodeKey = treeList.GetFocusedNodeKey();
@@ -36,16 +38,12 @@ function OnGridContextMenu(evt) {
 function OnPreventContextMenu(evt) {
     evt.preventDefault();
 }
+// When the user right clicks in the TreeList this function is called
 function OnTreeListRightClick(s, e) {
     treeList.SetFocusedNodeKey(e.objectKey);
 
     if (e.objectType == "Node") {
-        ///* prepare popup menu */
-        //var state = tree.GetNodeState(e.objectKey);
-
-        //popupMenu.GetItem(0).SetEnabled(state != "Child" && state != "NotFound");
-        //popupMenu.GetItem(1).SetEnabled(state == "Child" || state == "NotFound");
-
+        // Show a popup menu at the point the user clicked
         PopupMenu.ShowAtPos(ASPxClientUtils.GetEventX(e.htmlEvent), ASPxClientUtils.GetEventY(e.htmlEvent));
     }
 }
@@ -55,6 +53,32 @@ function OnPopupMenuItemClick(s, e) {
     //    return;
     //$("#CheckedItemName").val(e.item.name);
     //grid.PerformCallback({ "sortColumn": e.item.name });
+}
+function collapseAll() {
+    treeList.CollapseAll();
+}
+function expandAll() {
+    treeList.ExpandAll();
+}
+function onTreeListCallBackError(s, e) {
+    e.handled = true;
+    alert("An error occured trying to update the node");
+}
+function AddNewElement(focusedNodeKey) {
+    addNewNode(focusedNodeKey, 0);
+}
+function AddNewAttribute(focusedNodeKey) {
+    addNewNode(focusedNodeKey, 1);
+}
+function makeNamespaceDeclaration(key) {
+    ajaxMakeNamespaceDeclaration(key);
+}
+function addNewNode(focusedNodeKey, type) {
+    var data = {
+        focusedNode: focusedNodeKey,
+        type: type
+    };
+    ajaxAddNewNode(data);
 }
 function ajaxCopy(node) {
     var data = { id: node };
@@ -68,6 +92,7 @@ function ajaxCopy(node) {
         success: function (response) {
         },
         error: function (response) {
+            alert("An error occured");
         }
     });
 }
@@ -84,6 +109,7 @@ function ajaxCut(node) {
             reloadXmlTreeView();
         },
         error: function (response) {
+            alert("An error occured");
         }
     });
 }
@@ -100,10 +126,12 @@ function ajaxPaste(node) {
             reloadXmlTreeView();
         },
         error: function (response) {
+            alert("An error occured");
         }
     });
 }
-function ajaxDeleteNode(data) {
+function ajaxDeleteNode(node) {
+    var data = { id: node }
     $.ajax({
         type: "POST",
         url: "/XmlEditor/DeleteNodeJson",
@@ -114,6 +142,40 @@ function ajaxDeleteNode(data) {
             reloadXmlTreeView();
         },
         error: function (response) {
+            alert("An error occured");
+        }
+    });
+}
+function ajaxAddNewNode(data) {
+    $.ajax({
+        type: "POST",
+        url: "/XmlEditor/AddNode",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json",
+        success: function (response) {
+            reloadXmlTreeView();
+        },
+        error: function (response) {
+            alert("An error occured");
+        }
+    });
+}
+function ajaxMakeNamespaceDeclaration(key) {
+    var data = {
+        focusedNodeKey: key
+    };
+    $.ajax({
+        type: "POST",
+        url: "/XmlEditor/MakeNamespaceDeclaration",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json",
+        success: function (response) {
+            reloadXmlTreeView();
+        },
+        error: function (response) {
+            alert("An error occured");
         }
     });
 }

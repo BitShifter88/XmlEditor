@@ -16,7 +16,7 @@ namespace DXTest.Controllers
     /// <summary>
     /// This controller is used to handle responses from the DevExpress FileUpload controller. 
     /// </summary>
-    public class FileController : Controller
+    public class FileController : BaseController
     {
         public ActionResult UploadControlUpload()
         {
@@ -51,7 +51,7 @@ namespace DXTest.Controllers
                     return;
                 }
                 // We inform the data provider about the new XML data
-                XmlDataProvider.SetXmlData(doc);
+                XmlDataProvider.SaveXDocument(doc);
                 OpenFilenameManager.SetOpenFilename(file.FileName);
             }
         }
@@ -61,6 +61,10 @@ namespace DXTest.Controllers
 
         }
 
+        /// <summary>
+        /// When the user wants to download the open XML document down to hes local computer as a file, this method is used to create the MVC FileResult
+        /// </summary>
+        /// <returns></returns>
         public FileResult DownloadXmlFile()
         {
             byte[] fileBytes = XmlHelper.SerializeXmlText(XmlHelper.XDocumenToString(XmlDataProvider.GetXDocument()));
