@@ -37,11 +37,9 @@ function OnRibbonItemClicked(s, e) {
 }
 function loadFileFromDatabase() {
     var selectedValue = openFileList.GetSelectedItems()[0].text;
-
     ajaxOpenFileFromDatabase(selectedValue);
 }
 function onSelectionChanged(s, e) {
-
     var selectedValue = saveFileList.GetSelectedItems()[0].text;
     textBoxFileName.SetText(selectedValue);
 }
@@ -52,8 +50,7 @@ function updateDatabaseFileLists() {
 function saveFileToDatabase() {
     ajaxSaveFileToDatabase(textBoxFileName.GetText(), false);
 }
-function ajaxUpdateOpenFilename()
-{
+function ajaxUpdateOpenFilename() {
     $.ajax({
         type: "POST",
         url: "/XmlEditor/UpdateOpenFilename",

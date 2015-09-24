@@ -85,6 +85,9 @@ namespace DXTest.Code.Xml
         /// <param name="updatedNode"></param>
         public void UpdateXmlData(XmlTreeNode updatedNode)
         {
+            // If the new value of the updatedNode is null, the user wrote an empty value. We set the value of the updatedNode to empty string, since XDocument does not allow
+            if (updatedNode.Value == null)
+                updatedNode.Value = "";
             // The updated node that is sent back from the view does not contain an XObject. So we have to retrieve the node from the session
             List<XmlTreeNode> treeNodes = _dataSource.GetXmlTreeNodes();
             NamespaceManager namespaceManager = _dataSource.GetNamespaceManager();

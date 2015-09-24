@@ -12,3 +12,19 @@ Under save to database skal default navnet være navnet på den åbne xml fil
 
 Input validering
 Få overblik over status på XML namespaces
+
+
+Hej Jørgen
+
+Jeg har lavet en app setting til XML editoren der hedder LockTreeStructure. Når den er sat til true vil det ikke være muligt for brugen at flytte på noder. Brugeren kan heller ikke tilføje eller fjerne node. Det enste brugeren kan gøre er at redigere nodernes navne, værdier og tagge dem til et namespace.
+Jeg har også refaktoriseret lidt, og fixet lidt bugs.
+Til sidst har jeg også været ved at kikke på Dynamics AX for at få bedre kendskab til de forskellige koncepter der er i det system
+
+Hvis i føler at XML editoren er ved at have den nødvendige funktionalitet har jeg et forslag til en ny opgave i kunne give mig:
+Jeg kunne lave en 3D viewer ved brug af WebGL som kunne køre i en browser. Måske med CAD understøttelse så man kan åbne CAD filer (alt efter hvor omfatende det vil være at lave).
+Ham jeres 3D gut har snakked om at det nok ville blive WebGL han ville bruge til at lave 3D delen af Bluestar (han lød dog ikke helt sikker).
+Jeg tænker formålet med opgaven kunne være at udforske mulighederne for at tegne 3D (måske CAD) i browseren.
+
+Hvis i havde andre ideer med hensyn til opgaver er det også fint. Dette var bare et forslag.
+
+Hilsen Steffan

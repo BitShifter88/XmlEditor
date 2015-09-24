@@ -41,18 +41,12 @@ function OnPreventContextMenu(evt) {
 // When the user right clicks in the TreeList this function is called
 function OnTreeListRightClick(s, e) {
     treeList.SetFocusedNodeKey(e.objectKey);
-
     if (e.objectType == "Node") {
         // Show a popup menu at the point the user clicked
         PopupMenu.ShowAtPos(ASPxClientUtils.GetEventX(e.htmlEvent), ASPxClientUtils.GetEventY(e.htmlEvent));
     }
 }
 function OnPopupMenuItemClick(s, e) {
-    //alert("HEJ");
-    //if (e.item == null || e.item.name == $("#CheckedItemName").val())
-    //    return;
-    //$("#CheckedItemName").val(e.item.name);
-    //grid.PerformCallback({ "sortColumn": e.item.name });
 }
 function collapseAll() {
     treeList.CollapseAll();
@@ -82,7 +76,6 @@ function addNewNode(focusedNodeKey, type) {
 }
 function ajaxCopy(node) {
     var data = { id: node };
-
     $.ajax({
         type: "POST",
         url: "/XmlEditor/Copy",
@@ -98,7 +91,6 @@ function ajaxCopy(node) {
 }
 function ajaxCut(node) {
     var data = { id: node };
-
     $.ajax({
         type: "POST",
         url: "/XmlEditor/Cut",
@@ -115,7 +107,6 @@ function ajaxCut(node) {
 }
 function ajaxPaste(node) {
     var data = { id: node };
-
     $.ajax({
         type: "POST",
         url: "/XmlEditor/Paste",
