@@ -3,6 +3,10 @@
 Error handling when an invalid file is opened
 Under save to database skal default navnet være navnet på den åbne xml fil
 
+* Bluestar er et AX modul som fungere som et project management system from enginør projekter. Men AX er jo et forretnings system. Hvorfor lave et project management system som et modul til et foretnings system?
+* Hvilket eller hvilke sprog er Bluestar skrevet i? Jeg har set både C# og Java på jeres skærme
+* Jeg har læst at "Custom AX modifications" programmeres i et sprog der hedder X++. Er dele af Bluestar lavet i X++?
+* Jeg kunne godt tænke mig at blive lidt klogere på hvordan man programmere moduler til AX, og bare generelt snakker sammen med AX. Er der nogen bøger eller online resourcer du kan anbefale?
 
 ====== I MORGEN ======
 

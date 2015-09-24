@@ -74,7 +74,6 @@
             settings.Columns.Add(column =>
             {
                 column.FieldName = "Tag";
-                column.Width = 50;
                 column.AllowSort = DefaultBoolean.False;
                 column.ColumnType = MVCxTreeListColumnType.ComboBox;
             });
@@ -85,6 +84,8 @@
                 {
                     ASPxComboBox cb = (ASPxComboBox)e.Editor;
                     var node = tree.FindNodeByKeyValue(e.NodeKey);
+
+                    cb.Width = 70;
 
                     foreach (string ns in Model.Namespaces)
                     {
