@@ -17,7 +17,7 @@
                 <para>Returns which operations are performed when a session connects a cached data store for the first time.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.AutoCreateOption">AutoCreateOption</a> value specifying which operations are performed when a session connects a cached data store for the first time.
+            <value>An <see cref="AutoCreateOption"/> value specifying which operations are performed when a session connects a cached data store for the first time.
 </value>
 
 
@@ -39,7 +39,7 @@
 		An array of <b>IDisposable</b> objects that must be disposed on disconnect from the database.
 
             </param>
-            <returns>A <see cref="T:DevExpress.Xpo.DB.DataCacheNodeLocal"/> instance (an <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.IDataStore">IDataStore</a> implementation) which is connected to a MSSql2005SqlDependencyCacheRoot associated with a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, that is created based on specified settings.
+            <returns>A <see cref="T:DevExpress.Xpo.DB.DataCacheNodeLocal"/> instance (an <see cref="IDataStore"/> implementation) which is connected to a MSSql2005SqlDependencyCacheRoot associated with a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, that is created based on specified settings.
 </returns>
 
 
@@ -62,7 +62,7 @@
 
 
             </param>
-            <returns>A <see cref="T:DevExpress.Xpo.DB.DataCacheNode"/> instance (an <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.IDataStore">IDataStore</a> implementation) which is connected to a MSSql2005SqlDependencyCacheRoot associated with a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, that is created based on specified settings.
+            <returns>A <see cref="T:DevExpress.Xpo.DB.DataCacheNode"/> instance (an <see cref="IDataStore"/> implementation) which is connected to a MSSql2005SqlDependencyCacheRoot associated with a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, that is created based on specified settings.
 </returns>
 
 
@@ -80,7 +80,7 @@
 		An array of <b>IDisposable</b> objects that must be disposed on disconnect from the database.
 
             </param>
-            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.ICacheToCacheCommunicationCore">ICacheToCacheCommunicationCore</a> implementation) ready to be used as the Root element in a cached hierarchy.
+            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <see cref="ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.
 </returns>
 
 
@@ -102,7 +102,7 @@
 		An array of <b>IDisposable</b> objects that must be disposed on disconnect from the database.
 
             </param>
-            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.ICacheToCacheCommunicationCore">ICacheToCacheCommunicationCore</a> implementation) ready to be used as the Root element in a cached hierarchy.
+            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <see cref="ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.
 </returns>
 
 
@@ -124,7 +124,7 @@
 		An array of <b>IDisposable</b> objects that must be disposed on disconnect from the database.
 
             </param>
-            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.ICacheToCacheCommunicationCore">ICacheToCacheCommunicationCore</a> implementation) ready to be used as the Root element in a cached hierarchy.
+            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <see cref="ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.
 </returns>
 
 
@@ -154,7 +154,7 @@
 		An array of <b>IDisposable</b> objects that must be disposed on disconnect from the database.
 
             </param>
-            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.ICacheToCacheCommunicationCore">ICacheToCacheCommunicationCore</a> implementation) ready to be used as the Root element in a cached hierarchy.
+            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <see cref="ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.
 </returns>
 
 
@@ -180,7 +180,7 @@
 		An array of <b>IDisposable</b> objects that must be disposed on disconnect from the database.
 
             </param>
-            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.ICacheToCacheCommunicationCore">ICacheToCacheCommunicationCore</a> implementation) ready to be used as the Root element in a cached hierarchy.
+            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <see cref="ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.
 </returns>
 
 
@@ -206,7 +206,7 @@
 		An array of <b>IDisposable</b> objects that must be disposed on disconnect from the database.
 
             </param>
-            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.ICacheToCacheCommunicationCore">ICacheToCacheCommunicationCore</a> implementation) ready to be used as the Root element in a cached hierarchy.
+            <returns>A MSSql2005SqlDependencyCacheRoot instance (a <see cref="ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.
 </returns>
 
 
@@ -310,7 +310,7 @@
 		An object specifying the <i>command</i>'s parameters.
 
             </param>
-            <returns>An <a href="ms-xhelp:///?Id=T%3aSystem.Object">Object</a> denoting the operation result.
+            <returns>An <see cref="Object"/> denoting the operation result.
 </returns>
 
 
@@ -328,7 +328,7 @@
 		An array of data modification statements.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.Helpers.DataCacheModificationResult">DataCacheModificationResult</a> object denoting the result of the data modifications.
+            <returns>A <see cref="DataCacheModificationResult"/> object denoting the result of the data modifications.
 </returns>
 
 
@@ -342,7 +342,7 @@
 		An array of data modification statements.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.ModificationResult">ModificationResult</a> object denoting the result of the data modifications.
+            <returns>A <see cref="ModificationResult"/> object denoting the result of the data modifications.
 </returns>
 
 
@@ -360,7 +360,7 @@
 		An array of table names specifying modified tables.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.Helpers.DataCacheResult">DataCacheResult</a> object specifying a Root element's state.
+            <returns>A <see cref="DataCacheResult"/> object specifying a Root element's state.
 </returns>
 
 
@@ -374,7 +374,7 @@
 		A Root element's state stored by a specific cache Node.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.Helpers.DataCacheResult">DataCacheResult</a> object specifying a Root element's state.
+            <returns>A <see cref="DataCacheResult"/> object specifying a Root element's state.
 </returns>
 
 
@@ -400,7 +400,7 @@
 		An array of query statements.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.Helpers.DataCacheSelectDataResult">DataCacheSelectDataResult</a> object denoting the result of the data fetch.
+            <returns>A <see cref="DataCacheSelectDataResult"/> object denoting the result of the data fetch.
 </returns>
 
 
@@ -436,7 +436,7 @@
 		<b>true</b> if the schema should not be created when the table that corresponds to the first item in the <i>tables</i> array doesn't exist in a cached data store; otherwise, <b>false</b>.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.Helpers.DataCacheUpdateSchemaResult">DataCacheUpdateSchemaResult</a> denoting the result of the update operation.
+            <returns>A <see cref="DataCacheUpdateSchemaResult"/> denoting the result of the update operation.
 </returns>
 
 
@@ -454,7 +454,7 @@
 		An array of tables whose structure should be saved in a cached data store.
 
             </param>
-            <returns>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.UpdateSchemaResult">UpdateSchemaResult</a> denoting the result of the update operation.
+            <returns>An <see cref="UpdateSchemaResult"/> denoting the result of the update operation.
 </returns>
 
 
@@ -506,7 +506,7 @@
                 <para>Returns custom criteria registered in an application via the <see cref="M:DevExpress.Xpo.CustomCriteriaManager.RegisterCriterion"/> and <see cref="M:DevExpress.Xpo.CustomCriteriaManager.RegisterCriteria"/> method calls.
 </para>
             </summary>
-            <returns>A CustomCriteriaCollection object containing all custom criteria registered via the methods mentioned above.
+            <returns>A <see cref="CustomCriteriaCollection"/> object containing all custom criteria registered via the methods mentioned above.
 </returns>
 
 
@@ -540,7 +540,7 @@
                 <para>Returns custom criteria registered in an application via the <see cref="M:DevExpress.Xpo.CustomCriteriaManager.RegisterCriterion"/> and <see cref="M:DevExpress.Xpo.CustomCriteriaManager.RegisterCriteria"/> method calls.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.Int32">Int32</a> object which containing all custom criteria registered via the methods mentioned above.
+            <value>A <see cref="Int32"/> object which containing all custom criteria registered via the methods mentioned above.
 </value>
 
 
@@ -741,7 +741,7 @@
                 <para>When implemented by a class, returns the metadata of a method associated with a custom function used in LINQ to XPO expressions.
 </para>
             </summary>
-            <returns>A MethodInfo object which identifies the method to be used to evaluate a custom function, based on specified function parameters.
+            <returns>A <see cref="MethodInfo"/> object which identifies the method to be used to evaluate a custom function, based on specified function parameters.
 </returns>
 
 
@@ -763,7 +763,7 @@
 		An array of <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> containing function parameters.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Data.Filtering.CriteriaOperator">CriteriaOperator</a> object which corresponds to parameters passed as the <i>operands</i>.
+            <returns>A <see cref="CriteriaOperator"/> object which corresponds to parameters passed as the <i>operands</i>.
 </returns>
 
 
@@ -773,7 +773,7 @@
                 <para>When implemented by a class, returns the metadata of a method associated with a custom criterion used in LINQ to XPO expressions.
 </para>
             </summary>
-            <returns>A MethodInfo object which identifies the method to be used to evaluate a custom function associated with a custom criterion, based on specified function parameters.
+            <returns>A <see cref="MethodInfo"/> object which identifies the method to be used to evaluate a custom function associated with a custom criterion, based on specified function parameters.
 </returns>
 
 
@@ -991,7 +991,7 @@
 		An <see cref="T:DevExpress.Xpo.XPObjectStub"/> specifying the object that owns the collection property.
 
             </param>
-            <returns>A SerializableObjectLayerResult object which contains information on collection objects.
+            <returns>A <see cref="SerializableObjectLayerResult"/> object which contains information on collection objects.
 </returns>
 
 
@@ -1153,7 +1153,7 @@
                 <para>When implemented by a class, returns an <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value associated with an object layer.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.AutoCreateOption">AutoCreateOption</a> enumeration value which specifies the action which is performed when connecting to a data store.
+            <value>An <see cref="AutoCreateOption"/> enumeration value which specifies the action which is performed when connecting to a data store.
 </value>
 
 
@@ -1207,7 +1207,7 @@
 		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object specifying a delayed property whose values are loaded.
 
             </param>
-            <returns>An ObjectDictionary of loaded property values that correspond to the <i>objects</i> list elements.
+            <returns>An <see cref="ObjectDictionary"/> of loaded property values that correspond to the <i>objects</i> list elements.
 </returns>
 
 
@@ -1233,7 +1233,7 @@
 		An array of <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> objects specifying the types of objects for which schema should be created in the data store.
 
             </param>
-            <returns>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.UpdateSchemaResult">UpdateSchemaResult</a> enumeration value which specifies the result of the update operation.
+            <returns>An <see cref="UpdateSchemaResult"/> enumeration value which specifies the result of the update operation.
 </returns>
 
 
@@ -1319,7 +1319,7 @@
                 <para>When implemented by a class, returns a <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/> specifying the correspondence of <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> objects to <see cref="T:DevExpress.Xpo.XPObjectType"/> records.
 </para>
             </summary>
-            <returns>A Dictionary&lt;XPClassInfo, XPObjectType&gt;, providing a collection of complementary <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/>-<see cref="T:DevExpress.Xpo.XPObjectType"/> pairs.
+            <returns>A <see cref="Dictionary&lt;XPClassInfo, XPObjectType&gt;"/>, providing a collection of complementary <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/>-<see cref="T:DevExpress.Xpo.XPObjectType"/> pairs.
 
 </returns>
 
@@ -2826,7 +2826,7 @@
                 <para>Provides access to the current object layer's <see cref="T:System.Data.IDbConnection"/> object that is used to access a database.
 </para>
             </summary>
-            <value>An object which implements the <a href="ms-xhelp:///?Id=T%3aSystem.Data.IDbConnection">IDbConnection</a> interface.
+            <value>An object which implements the <see cref="IDbConnection"/> interface.
 </value>
 
 
@@ -2848,7 +2848,7 @@
                 <para>Provides access to the current object layer's data access layer that is used to access a data store.
 </para>
             </summary>
-            <value>An object which implements the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IDataLayer">IDataLayer</a> interface.
+            <value>An object which implements the <see cref="IDataLayer"/> interface.
 </value>
 
 
@@ -2858,7 +2858,7 @@
                 <para>Gets an object providing metadata on persistent objects stored in a data store.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.Metadata.XPDictionary">XPDictionary</a> object, which provides metadata on persistent objects stored in a data store.
+            <value>An <see cref="XPDictionary"/> object, which provides metadata on persistent objects stored in a data store.
 </value>
 
 
@@ -2872,7 +2872,7 @@
 		An object implementing the <see cref="T:DevExpress.Xpo.IDataLayer"/> interface.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.SimpleObjectLayer">SimpleObjectLayer</a> object which is initialized with the <i>dataLayer</i>. <b>null</b> (<b>Nothing</b> in Visual Basic) is returned if the <i>dataLayer</i> is not specified.
+            <returns>A <see cref="SimpleObjectLayer"/> object which is initialized with the <i>dataLayer</i>. <b>null</b> (<b>Nothing</b> in Visual Basic) is returned if the <i>dataLayer</i> is not specified.
 </returns>
 
 
@@ -3044,7 +3044,7 @@
                 <para>Returns the current SimpleObjectLayer object.
 </para>
             </summary>
-            <value>The current SimpleObjectLayer object cast to the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IObjectLayer">IObjectLayer</a>.
+            <value>The current SimpleObjectLayer object cast to the <see cref="IObjectLayer"/>.
 
 </value>
 
@@ -3339,7 +3339,7 @@
                 <para>Provides access to the current object layer's data access layer that is used to access a data store.
 </para>
             </summary>
-            <value>An object which implements the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IDataLayer">IDataLayer</a> interface.
+            <value>An object which implements the <see cref="IDataLayer"/> interface.
 </value>
 
 
@@ -3349,7 +3349,7 @@
                 <para>Gets an object providing metadata on persistent objects stored in a data store.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.Metadata.XPDictionary">XPDictionary</a> object which provides metadata on persistent objects stored in a data store.
+            <value>An <see cref="XPDictionary"/> object which provides metadata on persistent objects stored in a data store.
 </value>
 
 
@@ -3599,7 +3599,7 @@
                 <para>Returns the current SessionObjectLayer object.
 </para>
             </summary>
-            <value>The current SessionObjectLayer object cast to the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IObjectLayer">IObjectLayer</a>.
+            <value>The current SessionObjectLayer object cast to the <see cref="IObjectLayer"/>.
 
 </value>
 
@@ -3790,7 +3790,7 @@
                 <para>Returns an <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value associated with the current object layer.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.DB.AutoCreateOption">AutoCreateOption</a> enumeration value which specifies the action which is performed when connecting to a data store.
+            <value>An <see cref="AutoCreateOption"/> enumeration value which specifies the action which is performed when connecting to a data store.
 </value>
 
 
@@ -3878,7 +3878,7 @@
                 <para>Provides access to the current object layer's data access layer which is used to access a data store.
 </para>
             </summary>
-            <value>An object which implements the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IDataLayer">IDataLayer</a> interface.
+            <value>An object which implements the <see cref="IDataLayer"/> interface.
 </value>
 
 
@@ -3888,7 +3888,7 @@
                 <para>Gets an object providing metadata on persistent objects stored in a data store.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.Metadata.XPDictionary">XPDictionary</a> object which provides metadata on persistent objects stored in a data store.
+            <value>An <see cref="XPDictionary"/> object which provides metadata on persistent objects stored in a data store.
 </value>
 
 
@@ -4138,7 +4138,7 @@
                 <para>Returns the current SerializableObjectLayerClient object.
 </para>
             </summary>
-            <value>The current SerializableObjectLayerClient object cast to the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IObjectLayer">IObjectLayer</a>.
+            <value>The current SerializableObjectLayerClient object cast to the <see cref="IObjectLayer"/>.
 </value>
 
 
@@ -4456,7 +4456,7 @@
 		An <see cref="T:DevExpress.Xpo.XPObjectStub"/> specifying the object that owns the collection property.
 
             </param>
-            <returns>A SerializableObjectLayerResult object which contains information on collection objects.
+            <returns>A <see cref="SerializableObjectLayerResult"/> object which contains information on collection objects.
 </returns>
 
 
@@ -4528,7 +4528,7 @@
                 <para>Returns the current SerializableObjectLayer object.
 </para>
             </summary>
-            <value>The current SerializableObjectLayer object cast to the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.ISerializableObjectLayer">ISerializableObjectLayer</a>.
+            <value>The current SerializableObjectLayer object cast to the <see cref="ISerializableObjectLayer"/>.
 </value>
 
 
@@ -5058,7 +5058,7 @@
 		An object specifying the <i>command</i>'s parameters.
 
             </param>
-            <returns>An OperationResult denoting the operation result.
+            <returns>An <see cref="OperationResult"/> denoting the operation result.
 </returns>
 
 
@@ -5068,7 +5068,7 @@
                 <para>Defines a service operation that, when implemented by a class, returns which operations are performed when a data store is accessed for the first time.
 </para>
             </summary>
-            <returns>An OperationResult denoting the operation result.
+            <returns>An <see cref="OperationResult"/> denoting the operation result.
 </returns>
 
 
@@ -5082,7 +5082,7 @@
 		An array of data modification statements.
 
             </param>
-            <returns>An OperationResult denoting the result of the data modifications.
+            <returns>An <see cref="OperationResult"/> denoting the result of the data modifications.
 </returns>
 
 
@@ -5096,7 +5096,7 @@
 		An array of query statements.
 
             </param>
-            <returns>An OperationResult denoting the result of the data fetch.
+            <returns>An <see cref="OperationResult"/> denoting the result of the data fetch.
 </returns>
 
 
@@ -5114,7 +5114,7 @@
 		An array of tables whose structure should be saved in the data store. 
 
             </param>
-            <returns>An OperationResult denoting the result of the update operation.
+            <returns>An <see cref="OperationResult"/> denoting the result of the update operation.
 </returns>
 
 
@@ -5140,7 +5140,7 @@
 		An array of data modification statements.
 
             </param>
-            <returns>An OperationResult denoting the result of the data modifications.
+            <returns>An <see cref="OperationResult"/> denoting the result of the data modifications.
 
 </returns>
 
@@ -5159,7 +5159,7 @@
 		An array of table names specifying modified tables.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 
 </returns>
 
@@ -5174,7 +5174,7 @@
 		A Root element's state stored by a specific cache Node.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 
 </returns>
 
@@ -5193,7 +5193,7 @@
 		An array of query statements.
 
             </param>
-            <returns>An OperationResult object denoting the result of the data fetch.
+            <returns>An <see cref="OperationResult"/> object denoting the result of the data fetch.
 </returns>
 
 
@@ -5215,7 +5215,7 @@
 		<b>true</b> if the schema should not be created if the table that corresponds to the first item in the <i>tables</i> array doesn't exist in the cached data store; otherwise, <b>false</b>.
 
             </param>
-            <returns>An OperationResult denoting the result of the update operation.
+            <returns>An <see cref="OperationResult"/> denoting the result of the update operation.
 </returns>
 
 
@@ -5317,7 +5317,7 @@
 		An object specifying the <i>command</i>'s parameters.
 
             </param>
-            <returns>An OperationResult denoting the operation result.
+            <returns>An <see cref="OperationResult"/> denoting the operation result.
 </returns>
 
 
@@ -5327,7 +5327,7 @@
                 <para>Returns which operations are performed when a data store is accessed for the first time. This method delegates its call to get the corresponding option value of a data store passed as <i>provider</i> to the constructor.
 </para>
             </summary>
-            <returns>An OperationResult denoting the operation result.
+            <returns>An <see cref="OperationResult"/> denoting the operation result.
 </returns>
 
 
@@ -5341,7 +5341,7 @@
 		An array of data modification statements.
 
             </param>
-            <returns>An OperationResult denoting the result of the data modifications.
+            <returns>An <see cref="OperationResult"/> denoting the result of the data modifications.
 </returns>
 
 
@@ -5355,7 +5355,7 @@
 		An array of query statements.
 
             </param>
-            <returns>An OperationResult denoting the result of the data fetch.
+            <returns>An <see cref="OperationResult"/> denoting the result of the data fetch.
 </returns>
 
 
@@ -5373,7 +5373,7 @@
 		An array of tables whose structure should be saved in the data store.
 
             </param>
-            <returns>An OperationResult denoting the result of the update operation.
+            <returns>An <see cref="OperationResult"/> denoting the result of the update operation.
 </returns>
 
 
@@ -6055,7 +6055,7 @@
                 <para>Specifies how data source contents are sorted by default, when sort order is not specified by the bound control.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> object which contains the names of the columns against which data source contents are sorted.
+            <value>A <see cref="String"/> object which contains the names of the columns against which data source contents are sorted.
 </value>
 
 
@@ -6706,7 +6706,7 @@
 
 </para>
             </summary>
-            <value>An object which implements the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IDataLayer">IDataLayer</a> interface.
+            <value>An object which implements the <see cref="IDataLayer"/> interface.
 </value>
 
 
@@ -6753,7 +6753,7 @@
 
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.Metadata.XPDictionary">XPDictionary</a> object which provides metadata on persistent objects in a data store.
+            <value>An <see cref="XPDictionary"/> object which provides metadata on persistent objects in a data store.
 
 </value>
 
@@ -7226,7 +7226,7 @@
         </member>
         <member name="M:DevExpress.Xpo.Session.FindObject(DevExpress.Xpo.Metadata.XPClassInfo,DevExpress.Data.Filtering.CriteriaOperator,System.Boolean)">
             <summary>
-                <para>Searches for the first object which matches the specified criteria. Objects marked for deletion can optionally be included into the search.
+                <para>Searches for the first object which matches the specified criteria. 
 
 </para>
             </summary>
@@ -7240,7 +7240,7 @@
 
             </param>
             <param name="selectDeleted">
-		<b>true</b> to include persistent objects marked for deletion into the search; otherwise, <b>false</b>.
+		<b>true</b> to include persistent objects marked as deleted into the search; otherwise, <b>false</b>.
 
 
             </param>
@@ -7251,8 +7251,7 @@
         </member>
         <member name="M:DevExpress.Xpo.Session.FindObject(System.Type,DevExpress.Data.Filtering.CriteriaOperator,System.Boolean)">
             <summary>
-                <para>Searches for the first object which matches the specified criteria. Objects marked for deletion can optionally be included into the search.
-
+                <para>Searches for the first object which matches the specified criteria.
 </para>
             </summary>
             <param name="classType">
@@ -7265,7 +7264,7 @@
 
             </param>
             <param name="selectDeleted">
-		<b>true</b> to include persistent objects marked for deletion into the search; otherwise, <b>false</b>.
+		<b>true</b> to include persistent objects marked as deleted into the search; otherwise, <b>false</b>.
 
             </param>
             <returns>An object which represents the first persistent object which matches the specified criteria. <b>null</b> (<b>Nothing</b> in Visual Basic) if no persistent object which matches the criteria is found.
@@ -7319,7 +7318,7 @@
         </member>
         <member name="M:DevExpress.Xpo.Session.FindObject(DevExpress.Xpo.PersistentCriteriaEvaluationBehavior,DevExpress.Xpo.Metadata.XPClassInfo,DevExpress.Data.Filtering.CriteriaOperator,System.Boolean)">
             <summary>
-                <para>Searches for the first object which matches the specified criteria. Objects marked for deletion can optionally be included into the search.
+                <para>Searches for the first object which matches the specified criteria.
 </para>
             </summary>
             <param name="criteriaEvaluationBehavior">
@@ -7335,7 +7334,7 @@
 
             </param>
             <param name="selectDeleted">
-		<b>true</b> to include persistent objects marked for deletion into the search; otherwise, <b>false</b>.
+		<b>true</b> to include persistent objects marked as deleted into the search; otherwise, <b>false</b>.
 
             </param>
             <returns>An object which represents the first persistent object which matches the specified criteria. <b>null</b> (<b>Nothing</b> in Visual Basic) if no persistent object which matches the criteria is found.
@@ -7345,7 +7344,7 @@
         </member>
         <member name="M:DevExpress.Xpo.Session.FindObject``1(DevExpress.Data.Filtering.CriteriaOperator,System.Boolean)">
             <summary>
-                <para>Searches for the first object of the type designated by the specified generic type parameter which matches the specified criteria. Objects marked for deletion can optionally be included into the search.
+                <para>Searches for the first object of the type designated by the specified generic type parameter which matches the specified criteria. 
 </para>
             </summary>
             <param name="criteria">
@@ -7353,7 +7352,7 @@
 
             </param>
             <param name="selectDeleted">
-		<b>true</b> to include persistent objects marked for deletion into the search; otherwise, <b>false</b>.
+		<b>true</b> to include persistent objects marked as deleted into the search; otherwise, <b>false</b>.
 
             </param>
             <returns>An object which represents the first persistent object matching the specified criteria. <b>null</b> (<b>Nothing</b> in Visual Basic) if no persistent object matching the criteria is found.
@@ -7595,7 +7594,7 @@
 
             </param>
             <param name="selectDeleted">
-		<b>true</b> to include persistent objects marked for deletion in the search; otherwise, <b>false</b>.
+		<b>true</b> to include persistent objects marked as deleted in the search; otherwise, <b>false</b>.
 
             </param>
             <param name="callback">
@@ -9671,7 +9670,7 @@
                 <para>Provides access to an object access layer, which the current session uses to retrieve and update object data in a data store.
 </para>
             </summary>
-            <value>An object that implements the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IObjectLayer">IObjectLayer</a> interface.
+            <value>An object that implements the <see cref="IObjectLayer"/> interface.
 </value>
 
 
@@ -10925,7 +10924,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>Gets or sets the metadata provider used to filter and sort data using custom function operators.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.Metadata.XPDictionary">XPDictionary</a> object which provides support for custom function operators used to filter and sort data displayed in the data view.
+            <value>An <see cref="XPDictionary"/> object which provides support for custom function operators used to filter and sort data displayed in the data view.
 </value>
 
 
@@ -11243,7 +11242,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>Specifies how data source contents are sorted by default, when sort order is not specified by the bound control.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> object which contains the names of the columns against which data source contents are sorted.
+            <value>A <see cref="String"/> object which contains the names of the columns against which data source contents are sorted.
 </value>
 
 
@@ -11491,6 +11490,89 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
             </summary>
             <value>A <see cref="T:DevExpress.Xpo.Session"/> object whose persistent objects are being processed.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.IXPModificationsStore">
+
+            <summary>
+                <para>Implemented by classes that store information about the modified properties.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.IXPModificationsStore.ClearModifications">
+            <summary>
+                <para>Clears modifications in the current IXPModificationsStore.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.IXPModificationsStore.GetPropertyModified(DevExpress.Xpo.Metadata.XPMemberInfo)">
+            <summary>
+                <para>Checks whether or not the member is modified.
+</para>
+            </summary>
+            <param name="property">
+		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object that provides access to member metadata. 
+
+            </param>
+            <returns><b>true</b>, if the member is modified; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.IXPModificationsStore.GetPropertyOldValue(DevExpress.Xpo.Metadata.XPMemberInfo)">
+            <summary>
+                <para>Returns the old value of the member.
+</para>
+            </summary>
+            <param name="property">
+		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object that provides access to member metadata. 
+
+            </param>
+            <returns>An object which is the old value of the member.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.IXPModificationsStore.HasModifications">
+            <summary>
+                <para>Checks if there are modifications in the current IXPModificationsStore.
+
+</para>
+            </summary>
+            <returns><b>true</b>, if there are modifications; otherwise - <b>false</b>;
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.IXPModificationsStore.ResetPropertyModified(DevExpress.Xpo.Metadata.XPMemberInfo)">
+            <summary>
+                <para>Resets the member's modification.
+</para>
+            </summary>
+            <param name="property">
+		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object that provides access to member metadata. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.IXPModificationsStore.SetPropertyModified(DevExpress.Xpo.Metadata.XPMemberInfo,System.Object)">
+            <summary>
+                <para>Marks the member as modified.
+</para>
+            </summary>
+            <param name="property">
+		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object that provides access to member metadata. 
+
+            </param>
+            <param name="oldValue">
+		An object that is the member's old value.
+
+            </param>
 
 
         </member>
@@ -11912,7 +11994,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>Gets or sets the <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> class descendant's instance which provides metadata on persistent objects in a data store.
 </para>
             </summary>
-            <value>The <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.Metadata.XPDictionary">XPDictionary</a> class descendant's instance.
+            <value>The <see cref="XPDictionary"/> class descendant's instance.
 </value>
 
 
@@ -11970,43 +12052,27 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
 
 
         </member>
-        <member name="T:DevExpress.Xpo.OptimisticLockingBehavior">
+        <member name="T:DevExpress.Xpo.Exceptions.SameTableNameException">
 
             <summary>
-                <para>Contains values that specify the field-level locking behavior.
+                <para>An exception that is thrown when two persistent classes are mapped to the same table.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.ConsiderOptimisticLockingField">
+        <member name="M:DevExpress.Xpo.Exceptions.SameTableNameException.#ctor(DevExpress.Xpo.Metadata.XPClassInfo,DevExpress.Xpo.Metadata.XPClassInfo)">
             <summary>
-                <para>The optimistic lock field is considered.
+                <para>Initializes a new instance of the SameTableNameException class.
 </para>
             </summary>
+            <param name="firstClass">
+		An <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object that refers to the first of the two conflicted classes.
 
+            </param>
+            <param name="secondClass">
+		An <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object that refers to the second of the two conflicted classes.
 
-        </member>
-        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.LockAll">
-            <summary>
-                <para>All properties are checked (requires that the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property is set to <b>true</b>).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.LockModified">
-            <summary>
-                <para>Modified properties are checked (requires that the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property is set to <b>true</b>).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.NoLocking">
-            <summary>
-                <para>Locking is disabled.
-</para>
-            </summary>
+            </param>
 
 
         </member>
@@ -12088,6 +12154,87 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>Initializes a new instance of the CannotReloadPurgedObjectException class with default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException">
+
+            <summary>
+                <para>An exception that is thrown when a persistent object cannot be loaded because it's type is not valid.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the CannotLoadInvalidTypeException class.
+</para>
+            </summary>
+            <param name="typeName">
+		A string that specifies the name of the type.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException.TypeName">
+            <summary>
+                <para>Gets the name of the type that cannot be loaded.
+</para>
+            </summary>
+            <value>A string that specifies the name of the type.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.Exceptions.CannotFindAppropriateConnectionProviderException">
+
+            <summary>
+                <para>An exception that is thrown when an appropriate connection provider is not found.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.Exceptions.CannotFindAppropriateConnectionProviderException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the CannotFindAppropriateConnectionProviderException class.
+</para>
+            </summary>
+            <param name="connectionString">
+		A string that specifies the connection string.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.Exceptions.AssociationElementTypeMissingException">
+
+            <summary>
+                <para>An exception that is thrown when the <i>elementType</i> parameter is not specified in the <see cref="T:DevExpress.Xpo.AssociationAttribute"/> attribute.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.Exceptions.AssociationElementTypeMissingException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the AssociationElementTypeMissingException class.
+</para>
+            </summary>
+            <param name="propertyName">
+		The name of the collection property which does not have its element type specified by the <see cref="T:DevExpress.Xpo.AssociationAttribute"/>.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.Exceptions.AssociationElementTypeMissingException.PropertyName">
+            <summary>
+                <para>Gets the name of the collection property that caused the current exception.
+</para>
+            </summary>
+            <value>The name of the collection property that caused the current exception.
+</value>
 
 
         </member>
@@ -12285,7 +12432,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>Specifies how data source contents are sorted by default, when sort order is not specified by the bound control.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> object which contains the names of the columns against which data source contents are sorted.
+            <value>A <see cref="String"/> object which contains the names of the columns against which data source contents are sorted.
 </value>
 
 
@@ -12396,6 +12543,75 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
 
 
         </member>
+        <member name="T:DevExpress.Xpo.DB.OleDBConnectionProvider">
+
+            <summary>
+                <para>Implements the base functionality for providers that connect to OLE DB data sources.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.OleDBConnectionProvider.#ctor(System.Data.IDbConnection,DevExpress.Xpo.DB.AutoCreateOption)">
+            <summary>
+                <para>Initializes a new instance of the OleDBConnectionProvider class with the specified settings.
+</para>
+            </summary>
+            <param name="connection">
+		An object implementing the <see cref="T:System.Data.IDbConnection"/> interface that represents an open connection to a data source.
+
+            </param>
+            <param name="autoCreateOption">
+		An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations are performed when the data store is accessed for the first time. This parameter is used to initialize the <see cref="P:DevExpress.Xpo.DB.IDataStore.AutoCreateOption"/> property.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.OleDBConnectionProvider.CollectTablesToCreate(System.Collections.ICollection)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be called directly from your code.
+</para>
+            </summary>
+            <param name="tables">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.OleDBConnectionProvider.GetTableSchema(DevExpress.Xpo.DB.DBTable,System.Boolean,System.Boolean)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="table">
+		 
+
+            </param>
+            <param name="checkIndexes">
+		 
+
+            </param>
+            <param name="checkForeignKeys">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.OleDBConnectionProvider.SortColumnsAlphabetically">
+            <summary>
+                <para>Specifies how to order columns retrieved via the <b>GetStorageTables</b> and <see cref="M:DevExpress.Xpo.DB.OleDBConnectionProvider.GetTableSchema"/> methods. By default, this field is set to <b>true</b>, and the columns are listed alphabetically. If the field is set to <b>false</b>, the columns are returned as they appear in the database. 
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="T:DevExpress.Xpo.OptimisticLockingReadMergeBehavior">
 
             <summary>
@@ -12433,89 +12649,6 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>An exception is thrown.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Xpo.IXPModificationsStore">
-
-            <summary>
-                <para>Implemented by classes that store information about the modified properties.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.IXPModificationsStore.ClearModifications">
-            <summary>
-                <para>Clears modifications in the current IXPModificationsStore.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.IXPModificationsStore.GetPropertyModified(DevExpress.Xpo.Metadata.XPMemberInfo)">
-            <summary>
-                <para>Checks whether or not the member is modified.
-</para>
-            </summary>
-            <param name="property">
-		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object that provides access to member metadata. 
-
-            </param>
-            <returns><b>true</b>, if the member is modified; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.IXPModificationsStore.GetPropertyOldValue(DevExpress.Xpo.Metadata.XPMemberInfo)">
-            <summary>
-                <para>Returns the old value of the member.
-</para>
-            </summary>
-            <param name="property">
-		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object that provides access to member metadata. 
-
-            </param>
-            <returns>An object which is the old value of the member.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.IXPModificationsStore.HasModifications">
-            <summary>
-                <para>Checks if there are modifications in the current IXPModificationsStore.
-
-</para>
-            </summary>
-            <returns><b>true</b>, if there are modifications; otherwise - <b>false</b>;
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.IXPModificationsStore.ResetPropertyModified(DevExpress.Xpo.Metadata.XPMemberInfo)">
-            <summary>
-                <para>Resets the member's modification.
-</para>
-            </summary>
-            <param name="property">
-		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object that provides access to member metadata. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.IXPModificationsStore.SetPropertyModified(DevExpress.Xpo.Metadata.XPMemberInfo,System.Object)">
-            <summary>
-                <para>Marks the member as modified.
-</para>
-            </summary>
-            <param name="property">
-		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object that provides access to member metadata. 
-
-            </param>
-            <param name="oldValue">
-		An object that is the member's old value.
-
-            </param>
 
 
         </member>
@@ -13522,7 +13655,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="M:DevExpress.Xpo.XPBaseCollection.ResumeChangedEvents">
             <summary>
-                <para>Raises the <see cref="E:DevExpress.Xpo.XPBaseCollection.CollectionChanged"/> event after a call to the <see cref="M:DevExpress.Xpo.XPBaseCollection.SuspendChangedEvents"/> method.
+                <para>Resumes the immediate update of the collection after it was suspended using the <see cref="M:DevExpress.Xpo.XPBaseCollection.SuspendChangedEvents"/> method.
 </para>
             </summary>
 
@@ -13570,8 +13703,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="M:DevExpress.Xpo.XPBaseCollection.SuspendChangedEvents">
             <summary>
-                <para>Prevents the <see cref="E:DevExpress.Xpo.XPBaseCollection.CollectionChanged"/> event from firing until the <see cref="M:DevExpress.Xpo.XPBaseCollection.ResumeChangedEvents"/> method is called.
-
+                <para>Prevents the immediate update of the collection when objects are added/removed and filtering/sorting is changed until the <see cref="M:DevExpress.Xpo.XPBaseCollection.ResumeChangedEvents"/> method is called.
 </para>
             </summary>
 
@@ -14935,7 +15067,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>Gets a collection of custom function operators supplied by the current metadata provider. 
 </para>
             </summary>
-            <value>A CustomFunctionCollection object containing custom function operators supplied by the current metadata provider.
+            <value>A <see cref="CustomFunctionCollection"/> object containing custom function operators supplied by the current metadata provider.
 </value>
 
 
@@ -15898,7 +16030,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>Gets the <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> object which the current <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object belongs to.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.Metadata.XPDictionary">XPDictionary</a> object which contains the current <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object.
+            <value>An <see cref="XPDictionary"/> object which contains the current <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object.
 
 </value>
 
@@ -16721,30 +16853,6 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
 
 
         </member>
-        <member name="T:DevExpress.Xpo.Exceptions.SameTableNameException">
-
-            <summary>
-                <para>An exception that is thrown when two persistent classes are mapped to the same table.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.Exceptions.SameTableNameException.#ctor(DevExpress.Xpo.Metadata.XPClassInfo,DevExpress.Xpo.Metadata.XPClassInfo)">
-            <summary>
-                <para>Initializes a new instance of the SameTableNameException class.
-</para>
-            </summary>
-            <param name="firstClass">
-		An <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object that refers to the first of the two conflicted classes.
-
-            </param>
-            <param name="secondClass">
-		An <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> object that refers to the second of the two conflicted classes.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.Xpo.Exceptions.RequiredAttributeMissingException">
 
             <summary>
@@ -17011,56 +17119,6 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
 
 
         </member>
-        <member name="T:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException">
-
-            <summary>
-                <para>An exception that is thrown when a persistent object cannot be loaded because it's type is not valid.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the CannotLoadInvalidTypeException class.
-</para>
-            </summary>
-            <param name="typeName">
-		A string that specifies the name of the type.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException.TypeName">
-            <summary>
-                <para>Gets the name of the type that cannot be loaded.
-</para>
-            </summary>
-            <value>A string that specifies the name of the type.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Xpo.Exceptions.CannotFindAppropriateConnectionProviderException">
-
-            <summary>
-                <para>An exception that is thrown when an appropriate connection provider is not found.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.Exceptions.CannotFindAppropriateConnectionProviderException.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the CannotFindAppropriateConnectionProviderException class.
-</para>
-            </summary>
-            <param name="connectionString">
-		A string that specifies the connection string.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.Xpo.Exceptions.CannotChangePropertyWhenSessionIsConnectedException">
 
             <summary>
@@ -17079,106 +17137,6 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
 
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.Xpo.Exceptions.AssociationElementTypeMissingException">
-
-            <summary>
-                <para>An exception that is thrown when the <i>elementType</i> parameter is not specified in the <see cref="T:DevExpress.Xpo.AssociationAttribute"/> attribute.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.Exceptions.AssociationElementTypeMissingException.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the AssociationElementTypeMissingException class.
-</para>
-            </summary>
-            <param name="propertyName">
-		The name of the collection property which does not have its element type specified by the <see cref="T:DevExpress.Xpo.AssociationAttribute"/>.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.Exceptions.AssociationElementTypeMissingException.PropertyName">
-            <summary>
-                <para>Gets the name of the collection property that caused the current exception.
-</para>
-            </summary>
-            <value>The name of the collection property that caused the current exception.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Xpo.DB.OleDBConnectionProvider">
-
-            <summary>
-                <para>Implements the base functionality for providers that connect to OLE DB data sources.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.OleDBConnectionProvider.#ctor(System.Data.IDbConnection,DevExpress.Xpo.DB.AutoCreateOption)">
-            <summary>
-                <para>Initializes a new instance of the OleDBConnectionProvider class with the specified settings.
-</para>
-            </summary>
-            <param name="connection">
-		An object implementing the <see cref="T:System.Data.IDbConnection"/> interface that represents an open connection to a data source.
-
-            </param>
-            <param name="autoCreateOption">
-		An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations are performed when the data store is accessed for the first time. This parameter is used to initialize the <see cref="P:DevExpress.Xpo.DB.IDataStore.AutoCreateOption"/> property.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.OleDBConnectionProvider.CollectTablesToCreate(System.Collections.ICollection)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be called directly from your code.
-</para>
-            </summary>
-            <param name="tables">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.OleDBConnectionProvider.GetTableSchema(DevExpress.Xpo.DB.DBTable,System.Boolean,System.Boolean)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="table">
-		 
-
-            </param>
-            <param name="checkIndexes">
-		 
-
-            </param>
-            <param name="checkForeignKeys">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.OleDBConnectionProvider.SortColumnsAlphabetically">
-            <summary>
-                <para>Specifies how to order columns retrieved via the <b>GetStorageTables</b> and <see cref="M:DevExpress.Xpo.DB.OleDBConnectionProvider.GetTableSchema"/> methods. By default, this field is set to <b>true</b>, and the columns are listed alphabetically. If the field is set to <b>false</b>, the columns are returned as they appear in the database. 
-</para>
-            </summary>
-            <returns> </returns>
 
 
         </member>
@@ -19648,7 +19606,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
 
 </para>
             </summary>
-            <value>An object which implements the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IDataLayer">IDataLayer</a> interface; <b>null</b> - in this case, every new session will create and use its own data layer.
+            <value>An object which implements the <see cref="IDataLayer"/> interface; <b>null</b> - in this case, every new session will create and use its own data layer.
 
 </value>
 
@@ -19697,7 +19655,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
 
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.Metadata.XPDictionary">XPDictionary</a> object which provides metadata on the persistent objects in a data store.
+            <value>An <see cref="XPDictionary"/> object which provides metadata on the persistent objects in a data store.
 
 </value>
 
@@ -20102,7 +20060,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
                 <para>Specifies the default object access layer which is used by <see cref="T:DevExpress.Xpo.Session"/> objects by default, to retrieve and update object data in a data store.
 </para>
             </summary>
-            <value>An object which implements the <a href="ms-xhelp:///?Id=T%3aDevExpress.Xpo.IObjectLayer">IObjectLayer</a> interface; <b>null</b> - in this case, every new session will create and use its own object layer.
+            <value>An object which implements the <see cref="IObjectLayer"/> interface; <b>null</b> - in this case, every new session will create and use its own object layer.
 </value>
 
 
@@ -24605,6 +24563,46 @@ When storing descendant classes to the table of their parent class, make sure th
 
 
         </member>
+        <member name="T:DevExpress.Xpo.OptimisticLockingBehavior">
+
+            <summary>
+                <para>Contains values that specify the field-level locking behavior.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.ConsiderOptimisticLockingField">
+            <summary>
+                <para>The optimistic lock field is considered.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.LockAll">
+            <summary>
+                <para>All properties are checked (requires that the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property is set to <b>true</b>).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.LockModified">
+            <summary>
+                <para>Modified properties are checked (requires that the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property is set to <b>true</b>).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.NoLocking">
+            <summary>
+                <para>Locking is disabled.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.Xpo.IndicesAttribute">
 
             <summary>
@@ -24706,7 +24704,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>Designates the IsInstanceOfTypeFunction custom function operator's category.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Data.Filtering.FunctionCategory">FunctionCategory</a> value specifying the custom function's category.
+            <value>A <see cref="FunctionCategory"/> value specifying the custom function's category.
 </value>
 
 
@@ -24730,7 +24728,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An array of objects specifying function operands (parameters).
 
             </param>
-            <returns>An <a href="ms-xhelp:///?Id=T%3aSystem.Object">Object</a> specifying the custom function's return value, calculated based on the <i>operands</i>.
+            <returns>An <see cref="Object"/> specifying the custom function's return value, calculated based on the <i>operands</i>.
 </returns>
 
 
@@ -24804,7 +24802,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>Specifies name of the IsInstanceOfTypeFunction custom function operator.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> used to identify a custom function.
+            <value>A <see cref="String"/> used to identify a custom function.
 </value>
 
 
@@ -24826,7 +24824,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An array of function operator (parameter) types.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aSystem.Type">Type</a> object specifying the return value type of the custom function.
+            <returns>A <see cref="Type"/> object specifying the return value type of the custom function.
 </returns>
 
 
@@ -24844,7 +24842,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>Designates the IsExactTypeFunction custom function operator's category.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Data.Filtering.FunctionCategory">FunctionCategory</a> value specifying the custom function's category.
+            <value>A <see cref="FunctionCategory"/> value specifying the custom function's category.
 </value>
 
 
@@ -24868,7 +24866,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An array of objects specifying function operands (parameters).
 
             </param>
-            <returns>An <a href="ms-xhelp:///?Id=T%3aSystem.Object">Object</a> specifying the custom function's return value, calculated based on the <i>operands</i>.
+            <returns>An <see cref="Object"/> specifying the custom function's return value, calculated based on the <i>operands</i>.
 </returns>
 
 
@@ -24942,7 +24940,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>Specifies name of the IsExactTypeFunction custom function operator.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> used to identify a custom function.
+            <value>A <see cref="String"/> used to identify a custom function.
 </value>
 
 
@@ -24964,7 +24962,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An array of function operator (parameter) types.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aSystem.Type">Type</a> object specifying the return value type of the custom function.
+            <returns>A <see cref="Type"/> object specifying the return value type of the custom function.
 </returns>
 
 
@@ -25832,7 +25830,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		A <see cref="T:DevExpress.Xpo.LockingOption"/> enumeration value specifying whether check for optimistic locking is made.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25850,7 +25848,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		A <see cref="T:System.String"/> value which specifies the type name to be assigned to the <see cref="P:DevExpress.Xpo.XPObjectType.TypeName"/> property.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25860,7 +25858,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>When implemented by a class, obtains the value from an object layer's <see cref="P:DevExpress.Xpo.ISerializableObjectLayer.CanLoadCollectionObjects"/> property implementation and returns the operation result.
 </para>
             </summary>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25878,7 +25876,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An array of <see cref="T:DevExpress.Xpo.GetObjectStubsByKeyQuery"/> objects, containing data for queries that retrieve persistent objects by specified object types and key values.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25888,7 +25886,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>When implemented by a class, executes an object layer's <see cref="M:DevExpress.Xpo.ISerializableObjectLayerEx.GetParentObjectsToDelete"/> method implementation and returns the operation result.
 </para>
             </summary>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25898,7 +25896,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>When implemented by a class, executes an object layer's <see cref="M:DevExpress.Xpo.ISerializableObjectLayerEx.GetParentObjectsToSave"/> method implementation and returns the operation result.
 </para>
             </summary>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25908,7 +25906,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>When implemented by a class, executes an object layer's <see cref="M:DevExpress.Xpo.ISerializableObjectLayerEx.GetParentTouchedClassInfos"/> method implementation and returns the operation result.
 </para>
             </summary>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25926,7 +25924,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An <see cref="T:DevExpress.Xpo.XPObjectStub"/> instance identifying an object layer session's object to test.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25944,7 +25942,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An <see cref="T:DevExpress.Xpo.XPObjectStub"/> instance identifying an object layer session's object to test.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25966,7 +25964,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An <see cref="T:DevExpress.Xpo.XPObjectStub"/> specifying the object that owns the collection property.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -25988,7 +25986,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An array of strings specifying delayed the <i>theObject</i>'s properties whose values are loaded.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -26010,7 +26008,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		A <see cref="T:System.String"/> value specifying a delayed property whose values are loaded.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -26028,7 +26026,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		An array of <see cref="T:DevExpress.Xpo.ObjectStubsQuery"/> objects specifying queries that are executed to retrieve persistent objects.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -26038,7 +26036,7 @@ When storing descendant classes to the table of their parent class, make sure th
                 <para>When implemented by a class, executes an object layer's <see cref="M:DevExpress.Xpo.ISerializableObjectLayer.Purge"/> method implementation and returns the operation result.
 </para>
             </summary>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 
@@ -26068,7 +26066,7 @@ When storing descendant classes to the table of their parent class, make sure th
 		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which specifies the grouping criteria for the retrieved objects.
 
             </param>
-            <returns>An OperationResult object denoting the operation result.
+            <returns>An <see cref="OperationResult"/> object denoting the operation result.
 </returns>
 
 

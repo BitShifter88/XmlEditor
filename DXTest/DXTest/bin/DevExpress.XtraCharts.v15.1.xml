@@ -60,61 +60,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Printing.ChartOptionsPrint">
-
-            <summary>
-                <para>Provides print options for the chart control.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Printing.ChartOptionsPrint.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies all the settings from the ChartOptionsPrint object passed as a parameter.
-
-</para>
-            </summary>
-            <param name="options">
-		A ChartOptionsPrint object (which is the <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then this method does nothing.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Printing.ChartOptionsPrint.ImageFormat">
-            <summary>
-                <para>Specifies the image format for a chart's representation in a Print Preview form.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.Printing.PrintImageFormat"/> enumeration value, specifying the image format for the chart.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Printing.ChartOptionsPrint.SizeMode">
-            <summary>
-                <para>Gets or sets a value which specifies the size mode used to print the chart.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.Printing.PrintSizeMode"/> enumeration value which specifies the size mode used to print the chart.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Printing.ChartOptionsPrint.ToString">
-            <summary>
-                <para>Returns the textual representation of print options.
-
-</para>
-            </summary>
-            <returns>A <see cref="T:System.String"/> value which is the textual representation of print options.
-
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.BarSeriesLabelPosition">
 
             <summary>
@@ -2090,99 +2035,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.DateTimeScaleOptions">
-
-            <summary>
-                <para>Contains settings for an axis scale when its data type is date-time.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.DateTimeScaleOptions.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the DateTimeScaleOptions object passed as the parameter.
-</para>
-            </summary>
-            <param name="obj">
-		A DateTimeScaleOptions object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.AutomaticMeasureUnitsCalculator">
-            <summary>
-                <para>Gets or sets the automatic date-time measure unit calculator.
-</para>
-            </summary>
-            <value>An object of class implementing the <see cref="T:DevExpress.XtraCharts.IDateTimeMeasureUnitsCalculator"/> interface.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.XtraCharts.DateTimeScaleOptions.DefaultGridAlignment">
-            <summary>
-                <para>Identifies the default value for the <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.GridAlignment"/> property. Always <see cref="F:DevExpress.XtraCharts.DateTimeGridAlignment.Day"/>.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraCharts.DateTimeScaleOptions.DefaultMeasureUnit">
-            <summary>
-                <para>Identifies the default value for the <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.MeasureUnit"/> property. Always <see cref="F:DevExpress.XtraCharts.DateTimeMeasureUnit.Day"/>.
-</para>
-            </summary>
-            <returns>
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.GridAlignment">
-            <summary>
-                <para>Gets or sets the date-time measure unit to which the beginning of an axis' gridlines and labels should be aligned.
-
-
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.DateTimeGridAlignment"/> enumeration value that represents the measurement unit to which the beginning of an axis's gridlines and labels should be aligned.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.MeasureUnit">
-            <summary>
-                <para>Gets or sets the detail level for date-time values.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.DateTimeMeasureUnit"/> enumeration value which represents the axis' detail level.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.WorkdaysOnly">
-            <summary>
-                <para>Specifies whether holidays and non-working days should be excluded from the axis scale.
-</para>
-            </summary>
-            <value><b>true</b>, to exclude non-working days from the axis scale; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.WorkdaysOptions">
-            <summary>
-                <para>Provides access to the information about non-working days to adjust the date-time axis scale.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.WorkdaysOptions"/> object that contains the information about non-working days.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.IXYDiagram2D">
 
             <summary>
@@ -2347,34 +2199,18 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.ScaleMode">
+        <member name="T:DevExpress.XtraCharts.NumericColorizerValueProvider">
 
             <summary>
-                <para>Lists the values that specify the scale mode for an axis.
+                <para>The class used to provide floating point number values stored in the color data source member to a colorizer.
+
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.XtraCharts.ScaleMode.Automatic">
+        <member name="M:DevExpress.XtraCharts.NumericColorizerValueProvider.#ctor">
             <summary>
-                <para>Identifies the automatic date-time scale mode, meaning that data is automatically aggregated according to the chosen <see cref="P:DevExpress.XtraCharts.ScaleOptionsBase.AggregateFunction"/>.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraCharts.ScaleMode.Continuous">
-            <summary>
-                <para>Identifies the continuous date-time scale mode, meaning data aggregation is disabled and you can only change the grid alignment using the <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.GridAlignment"/> property.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraCharts.ScaleMode.Manual">
-            <summary>
-                <para>Identifies the manual date-time scale mode, meaning that the <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.GridAlignment"/> and <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.MeasureUnit"/> properties are in effect, and they should be manually defined. Also, you can choose the aggregate function using the <see cref="P:DevExpress.XtraCharts.ScaleOptionsBase.AggregateFunction"/> property.
+                <para>Initializes a new instance of the NumericColorizerValueProvider class with default settings.
 </para>
             </summary>
 
@@ -2845,74 +2681,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.FillOptionsColor2Base">
-
-            <summary>
-                <para>Represents the base class for objects which define specific filling options using the second color.
-
-
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FillOptionsColor2Base.#ctor">
-            <summary>
-                <para>Initializes a new instance of the FillOptionsColor2Base class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FillOptionsColor2Base.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the FillOptionsColor2Base object passed as the parameter.
-
-</para>
-            </summary>
-            <param name="obj">
-		A FillOptionsColor2Base object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.FillOptionsColor2Base.Color2">
-            <summary>
-                <para>Gets or sets the second color used in specific filling modes.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> structure that specifies the second filling color. 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FillOptionsColor2Base.Equals(System.Object)">
-            <summary>
-                <para>Determines whether the specified object is equal to the current FillOptionsColor2Base instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current FillOptionsColor2Base instance; otherwise <b>false</b>.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FillOptionsColor2Base.GetHashCode">
-            <summary>
-                <para>Gets the hash code (a number) that corresponds to the value of the current FillOptionsColor2Base object.
-
-</para>
-            </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.ImageAnnotation">
 
             <summary>
@@ -3057,27 +2825,6 @@
             </summary>
             <value>A <see cref="T:DevExpress.XtraCharts.CursorType"/> enumeration value specifying the cursor type.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.SelectedItemCollection">
-
-            <summary>
-                <para>Represents a collection of selected chart elements (points and series) including business objects, in the case of data binding.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.SelectedItemCollection.#ctor(DevExpress.XtraCharts.Native.ISelectionController)">
-            <summary>
-                <para>Creates and initializes a new instance of the <see cref="T:DevExpress.XtraCharts.SelectedItemCollection"/> class.
-</para>
-            </summary>
-            <param name="controller">
-		The <b>ISelectionController</b> interface 
-
-            </param>
 
 
         </member>
@@ -7045,6 +6792,22 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Doughnut3DSeriesLabel">
+
+            <summary>
+                <para>Defines label settings for Doughnut 3D series.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Doughnut3DSeriesLabel.#ctor">
+            <summary>
+                <para>Initializes a new instance of the Doughnut3DSeriesLabel class with default settings.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.FunnelDiagram3D">
 
             <summary>
@@ -7154,31 +6917,30 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.CrosshairElementGroup">
+        <member name="T:DevExpress.XtraCharts.LegendItemCheckedEventArgs">
 
             <summary>
-                <para>Defines the crosshair elements (crosshair value lines, crosshair value labels, crosshair labels) and crosshair header element that can be used to custom draw a crosshair cursor. 
+                <para>Provides data for the <see cref="E:DevExpress.XtraCharts.ChartControl.LegendItemChecked"/> (<see cref="E:DevExpress.XtraCharts.Web.WebChartControl.LegendItemChecked"/>) event.
 </para>
             </summary>
 
         </member>
-        <member name="P:DevExpress.XtraCharts.CrosshairElementGroup.CrosshairElements">
+        <member name="P:DevExpress.XtraCharts.LegendItemCheckedEventArgs.CheckedElement">
             <summary>
-                <para>Gets the settings of crosshair elements (crosshair value lines, crosshair value labels, crosshair labels) to customize their appearance. 
+                <para>Gets a value that defines which chart element has been checked on a legend by a legend check box.  
 </para>
             </summary>
-            <value>An object implementing the <see cref="T:System.Collections.IEnumerable"/> interface that represents the collection of  <see cref="T:DevExpress.XtraCharts.CrosshairElement"/>s.
+            <value>The <see cref="T:DevExpress.XtraCharts.ChartElement"/> value that is the chart element for which the legend check box has been checked. 
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraCharts.CrosshairElementGroup.HeaderElement">
+        <member name="P:DevExpress.XtraCharts.LegendItemCheckedEventArgs.NewCheckState">
             <summary>
-                <para>Gets the settings of crosshair group header elements to customize their appearance. 
+                <para>Gets a value that indicates the check state of a legend item after the <see cref="E:DevExpress.XtraCharts.ChartControl.LegendItemChecked"/> event is handled.
 </para>
             </summary>
-            <value>An object implementing the System.Collections.IEnumerable interface that represents the <see cref="T:DevExpress.XtraCharts.CrosshairGroupHeaderElement"/> collection.
-
+            <value><b>true</b>, if a legend item is checked; otherwise, <b>false</b>.
 </value>
 
 
@@ -7848,6 +7610,34 @@
             </summary>
 
         </member>
+        <member name="T:DevExpress.XtraCharts.FunnelDrawOptions">
+
+            <summary>
+                <para>Contains settings for custom drawing funnel series.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.FunnelDrawOptions.Border">
+            <summary>
+                <para>Gets the Funnel series view's border settings when implementing custom drawing in the chart control.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.CustomBorder"/> object which specifies the border style.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.FunnelDrawOptions.FillStyle">
+            <summary>
+                <para>Gets the Funnel series view's fill style settings when implementing custom draw in the chart control.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.PolygonFillStyle"/> object which specifies the fill style for the background of funnels. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.FunnelPointOptions">
 
             <summary>
@@ -7958,6 +7748,72 @@
 </para>
             </summary>
             <value>Always <b>Horizontal</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.FunnelSeriesViewBase">
+
+            <summary>
+                <para>Represents the base class for series views of the Funnel type.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.FunnelSeriesViewBase.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the FunnelSeriesViewBase object passed as the parameter.
+</para>
+            </summary>
+            <param name="obj">
+		An FunnelSeriesViewBase object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.FunnelSeriesViewBase.Equals(System.Object)">
+            <summary>
+                <para>Determines whether or not the specified object is equal to the current FunnelSeriesViewBase instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to be compared with the current object.
+
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current FunnelSeriesViewBase instance; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.FunnelSeriesViewBase.GetHashCode">
+            <summary>
+                <para>Serves as the default hash function.
+</para>
+            </summary>
+            <returns>An integer value, specifying the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.FunnelSeriesViewBase.HeightToWidthRatio">
+            <summary>
+                <para>Gets or sets a value that specifies the height-to-width ratio of a Funnel series.
+</para>
+            </summary>
+            <value>A double value that specifies the height-to-width ratio of a funnel. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.FunnelSeriesViewBase.PointDistance">
+            <summary>
+                <para>Gets or sets the distance between points of a Funnel series.
+</para>
+            </summary>
+            <value>An integer, representing the distance between points of a Funnel series, in pixels.
 </value>
 
 
@@ -8355,22 +8211,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.FullStackedBarSeriesLabel">
-
-            <summary>
-                <para>Defines label settings for full-stacked bar series.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FullStackedBarSeriesLabel.#ctor">
-            <summary>
-                <para>Initializes a new instance of the FullStackedBarSeriesLabel class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.ChartPaletteColorizerBase">
 
             <summary>
@@ -8637,6 +8477,27 @@
             </summary>
             <value>A collection of objects representing the items being selected. 
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.SelectedItemCollection">
+
+            <summary>
+                <para>Represents a collection of selected chart elements (points and series) including business objects, in the case of data binding.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.SelectedItemCollection.#ctor(DevExpress.XtraCharts.Native.ISelectionController)">
+            <summary>
+                <para>Creates and initializes a new instance of the <see cref="T:DevExpress.XtraCharts.SelectedItemCollection"/> class.
+</para>
+            </summary>
+            <param name="controller">
+		The <b>ISelectionController</b> interface 
+
+            </param>
 
 
         </member>
@@ -10272,34 +10133,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.LegendItemCheckedEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraCharts.ChartControl.LegendItemChecked"/> (<see cref="E:DevExpress.XtraCharts.Web.WebChartControl.LegendItemChecked"/>) event.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.LegendItemCheckedEventArgs.CheckedElement">
-            <summary>
-                <para>Gets a value that defines which chart element has been checked on a legend by a legend check box.  
-</para>
-            </summary>
-            <value>The <see cref="T:DevExpress.XtraCharts.ChartElement"/> value that is the chart element for which the legend check box has been checked. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.LegendItemCheckedEventArgs.NewCheckState">
-            <summary>
-                <para>Gets a value that indicates the check state of a legend item after the <see cref="E:DevExpress.XtraCharts.ChartControl.LegendItemChecked"/> event is handled.
-</para>
-            </summary>
-            <value><b>true</b>, if a legend item is checked; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.FinancialIndicatorCollection">
 
             <summary>
@@ -10595,14 +10428,6 @@
             <value>An integer  value.
 </value>
 
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Margins">
-
-            <summary>
-                <para>Represents the indents between a chart's diagram and the chart's border.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.FinancialIndicators">
@@ -11756,92 +11581,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.RadarSeriesViewBase">
-
-            <summary>
-                <para>Represents the base class for series views of the Radar and Polar types.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RadarSeriesViewBase.#ctor">
-            <summary>
-                <para>Initializes a new instance of the RadarSeriesViewBase class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RadarSeriesViewBase.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the RadarSeriesViewBase object passed as the parameter.
-
-</para>
-            </summary>
-            <param name="obj">
-		A RadarSeriesViewBase object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarSeriesViewBase.ColorEach">
-            <summary>
-                <para>Gets or sets a value that specifies whether each data point of a series is shown in a different color.
-
-</para>
-            </summary>
-            <value><b>true</b> to specify that each data point in a series has a different color; <b>false</b> to use the same color for all the series' data points.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarSeriesViewBase.DiagramType">
-            <summary>
-                <para>Gets a value of the diagram type.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Type"/> value.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RadarSeriesViewBase.Equals(System.Object)">
-            <summary>
-                <para>Determines whether the specified object is equal to the current RadarSeriesViewBase instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current RadarSeriesViewBase instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RadarSeriesViewBase.GetHashCode">
-            <summary>
-                <para>Gets the hash code (a number) that corresponds to the value of the current RadarSeriesViewBase object.
-
-</para>
-            </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarSeriesViewBase.Shadow">
-            <summary>
-                <para>Gets the shadow settings for the Radar and Polar series. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.Shadow"/> object which provides the settings used to paint the series shadow. 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.StackedSplineArea3DSeriesView">
 
             <summary>
@@ -11976,6 +11715,14 @@
             <value>An integer value specifying the line tension percentage.
 </value>
 
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Margins">
+
+            <summary>
+                <para>Represents the indents between a chart's diagram and the chart's border.
+</para>
+            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.SplineArea3DSeriesView">
@@ -12468,6 +12215,80 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.SimpleDiagramSeriesViewBase">
+
+            <summary>
+                <para>Represents the base class for series view types which use the <see cref="T:DevExpress.XtraCharts.SimpleDiagram"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.SimpleDiagramSeriesViewBase.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the SimpleDiagramSeriesViewBase object passed as the parameter.
+</para>
+            </summary>
+            <param name="element">
+		A SimpleDiagramSeriesViewBase object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.SimpleDiagramSeriesViewBase.GetValueCaption(System.Int32)">
+            <summary>
+                <para>Gets a caption value for the SimpleDiagramSeriesViewBase type.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer caption index. If it's negative or exceeds the last available index, an exception is raised. 
+
+            </param>
+            <returns>A <see cref="T:System.String"/> value that is the caption for the SimpleDiagramSeriesViewBase type.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.SimpleDiagramSeriesViewBase.Titles">
+            <summary>
+                <para>Provides access to a collection of series titles, which are displayed for the current series.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.SeriesTitleCollection"/> object that represents the collection of series titles.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.CrosshairElementGroup">
+
+            <summary>
+                <para>Defines the crosshair elements (crosshair value lines, crosshair value labels, crosshair labels) and crosshair header element that can be used to custom draw a crosshair cursor. 
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.CrosshairElementGroup.CrosshairElements">
+            <summary>
+                <para>Gets the settings of crosshair elements (crosshair value lines, crosshair value labels, crosshair labels) to customize their appearance. 
+</para>
+            </summary>
+            <value>An object implementing the <see cref="T:System.Collections.IEnumerable"/> interface that represents the collection of  <see cref="T:DevExpress.XtraCharts.CrosshairElement"/>s.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.CrosshairElementGroup.HeaderElement">
+            <summary>
+                <para>Gets the settings of crosshair group header elements to customize their appearance. 
+</para>
+            </summary>
+            <value>An object implementing the System.Collections.IEnumerable interface that represents the <see cref="T:DevExpress.XtraCharts.CrosshairGroupHeaderElement"/> collection.
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.StackedSplineAreaSeriesView">
 
             <summary>
@@ -12742,91 +12563,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.XYDiagramSeriesViewBase">
-
-            <summary>
-                <para>Represents the base class for series view types which use the <see cref="T:DevExpress.XtraCharts.XYDiagram"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.XYDiagramSeriesViewBase.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the XYDiagramSeriesViewBase object passed as the parameter.
-
-</para>
-            </summary>
-            <param name="obj">
-		An XYDiagramSeriesViewBase object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.XYDiagramSeriesViewBase.AxisX">
-            <summary>
-                <para>Specifies the X-axis, that is used to plot the current series on a <see cref="T:DevExpress.XtraCharts.XYDiagram"/>.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraCharts.AxisX"/> or a <see cref="T:DevExpress.XtraCharts.SecondaryAxisX"/> object, that is the X-axis for the current series.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.XYDiagramSeriesViewBase.AxisY">
-            <summary>
-                <para>Specifies the Y-axis, that is used to plot the current series on a <see cref="T:DevExpress.XtraCharts.XYDiagram"/>.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraCharts.AxisY"/> or an <see cref="T:DevExpress.XtraCharts.SecondaryAxisY"/> object, that is the Y-axis for the current series.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.XYDiagramSeriesViewBase.Equals(System.Object)">
-            <summary>
-                <para>Determines whether or not the specified object is equal to the current XYDiagramSeriesViewBase instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current XYDiagramSeriesViewBase instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.XYDiagramSeriesViewBase.GetHashCode">
-            <summary>
-                <para>Serves as the default hash function.
-</para>
-            </summary>
-            <returns>An integer value, specifying the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.XYDiagramSeriesViewBase.Pane">
-            <summary>
-                <para>Gets or sets the pane, used to plot the current series on an <see cref="T:DevExpress.XtraCharts.XYDiagram"/>. 
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraCharts.XYDiagramDefaultPane"/> or an <see cref="T:DevExpress.XtraCharts.XYDiagramPane"/> object, representing the pane for the current series. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.XYDiagramSeriesViewBase.Shadow">
-            <summary>
-                <para>Gets the shadow settings for the 2D XY-series. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.Shadow"/> object which provides the settings used to paint the series shadow. 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.LegendItemCheckedEventHandler">
 
             <summary>
@@ -12849,6 +12585,22 @@
 		A <see cref="T:DevExpress.XtraCharts.LegendItemCheckedEventArgs"/> object that contains data related to the event.
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.ManhattanBarSeriesView">
+
+            <summary>
+                <para>Represents a series view of the Manhattan Bar type.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.ManhattanBarSeriesView.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ManhattanBarSeriesView class with default settings.
+</para>
+            </summary>
 
 
         </member>
@@ -13013,6 +12765,17 @@
             </summary>
             <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object, which provides resources based on the thread's culture.
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Localization.ChartLocalizer.GetDefaultString(DevExpress.XtraCharts.Localization.ChartStringId)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="id">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -14074,22 +13837,6 @@
             </summary>
             <value>A <see cref="T:DevExpress.XtraCharts.ScaleType"/> object, representing the scale type for the value data of the data point.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Doughnut3DSeriesLabel">
-
-            <summary>
-                <para>Defines label settings for Doughnut 3D series.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Doughnut3DSeriesLabel.#ctor">
-            <summary>
-                <para>Initializes a new instance of the Doughnut3DSeriesLabel class with default settings.
-</para>
-            </summary>
 
 
         </member>
@@ -15401,6 +15148,92 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.RadarSeriesViewBase">
+
+            <summary>
+                <para>Represents the base class for series views of the Radar and Polar types.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RadarSeriesViewBase.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RadarSeriesViewBase class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RadarSeriesViewBase.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the RadarSeriesViewBase object passed as the parameter.
+
+</para>
+            </summary>
+            <param name="obj">
+		A RadarSeriesViewBase object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarSeriesViewBase.ColorEach">
+            <summary>
+                <para>Gets or sets a value that specifies whether each data point of a series is shown in a different color.
+
+</para>
+            </summary>
+            <value><b>true</b> to specify that each data point in a series has a different color; <b>false</b> to use the same color for all the series' data points.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarSeriesViewBase.DiagramType">
+            <summary>
+                <para>Gets a value of the diagram type.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Type"/> value.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RadarSeriesViewBase.Equals(System.Object)">
+            <summary>
+                <para>Determines whether the specified object is equal to the current RadarSeriesViewBase instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object.
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current RadarSeriesViewBase instance; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RadarSeriesViewBase.GetHashCode">
+            <summary>
+                <para>Gets the hash code (a number) that corresponds to the value of the current RadarSeriesViewBase object.
+
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarSeriesViewBase.Shadow">
+            <summary>
+                <para>Gets the shadow settings for the Radar and Polar series. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.Shadow"/> object which provides the settings used to paint the series shadow. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.RadarLineSeriesView">
 
             <summary>
@@ -16692,6 +16525,73 @@
                 <para>If the number of series points exceeds the number of palette color, the colors are repeated for last series points.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Axis3D">
+
+            <summary>
+                <para>Represents the base class for classes that provide axes functionality for a chart control in 3D series.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Axis3D.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the Axis3D object passed as the parameter.
+
+</para>
+            </summary>
+            <param name="obj">
+		An Axis3D object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Axis3D.InterlacedFillStyle">
+            <summary>
+                <para>Gets the interlaced fill style settings.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.RectangleFillStyle3D"/> object which specifies the interlaced fill style.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Axis3D.Label">
+            <summary>
+                <para>Gets the settings of axis labels in 3D series.
+
+
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraCharts.AxisLabel3D"/> object which provides axis label settings.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Axis3D.Name">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraCharts.ChartElementNamed.Name"/> property.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Axis3D.ToString">
+            <summary>
+                <para>Returns the textual representation of the axis.
+
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value which is the textual representation of the axis.
+</returns>
 
 
         </member>
@@ -18936,109 +18836,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.TaskLink">
-
-            <summary>
-                <para>Represents a Task Link object that is specific to a Gantt Chart diagram type.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TaskLink class with the default settings.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor(DevExpress.XtraCharts.SeriesPoint)">
-            <summary>
-                <para>Initializes a new instance of the TaskLink class, specifying the relation to the child point and the <see cref="F:DevExpress.XtraCharts.TaskLinkType.FinishToStart"/> (default) link type. 
-
-</para>
-            </summary>
-            <param name="point">
-		A <see cref="T:DevExpress.XtraCharts.SeriesPoint"/> object specifying the child point for the relation being created.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor(DevExpress.XtraCharts.SeriesPoint,DevExpress.XtraCharts.TaskLinkType)">
-            <summary>
-                <para>Initializes a new instance of the TaskLink class, specifying the relation to the child point and the link type. 
-
-</para>
-            </summary>
-            <param name="point">
-		A <see cref="T:DevExpress.XtraCharts.SeriesPoint"/> object specifying the child point for the relation being created.
-
-            </param>
-            <param name="linkType">
-		A <see cref="T:DevExpress.XtraCharts.TaskLinkType"/> object specifying the link type. 
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor(System.Int32,DevExpress.XtraCharts.TaskLinkType)">
-            <summary>
-                <para>Initializes a new instance of the TaskLink class, specifying the child point ID in a relation, and the link type. 
-
-</para>
-            </summary>
-            <param name="childPointID">
-		An integer value which specifies the ID of the relation's child point.
-
-
-            </param>
-            <param name="linkType">
-		A <see cref="T:DevExpress.XtraCharts.TaskLinkType"/> object specifying the link type. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor(System.Int32)">
-            <summary>
-                <para>Initializes a new instance of the TaskLink class, specifying the child point ID in a relation, and the <see cref="F:DevExpress.XtraCharts.TaskLinkType.FinishToStart"/> (default) link type. 
-
-</para>
-            </summary>
-            <param name="childPointID">
-		An integer value which specifies the ID of the relation's child point.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.TaskLink.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all settings from the TaskLink object passed as a parameter.
-
-</para>
-            </summary>
-            <param name="obj">
-		A TaskLink object whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.TaskLink.LinkType">
-            <summary>
-                <para><para>Gets or sets the value specifying the connection order of child and parent bars.</para>
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.TaskLinkType"/> enumeration value which represents the connection type.
-
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Relation">
 
             <summary>
@@ -19853,22 +19650,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.ManhattanBarSeriesView">
-
-            <summary>
-                <para>Represents a series view of the Manhattan Bar type.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.ManhattanBarSeriesView.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ManhattanBarSeriesView class with default settings.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.RectangleFillStyle3D">
 
             <summary>
@@ -19996,47 +19777,87 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.SimpleDiagramSeriesViewBase">
+        <member name="T:DevExpress.XtraCharts.XYDiagramSeriesViewBase">
 
             <summary>
-                <para>Represents the base class for series view types which use the <see cref="T:DevExpress.XtraCharts.SimpleDiagram"/>.
+                <para>Represents the base class for series view types which use the <see cref="T:DevExpress.XtraCharts.XYDiagram"/>.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraCharts.SimpleDiagramSeriesViewBase.Assign(DevExpress.XtraCharts.ChartElement)">
+        <member name="M:DevExpress.XtraCharts.XYDiagramSeriesViewBase.Assign(DevExpress.XtraCharts.ChartElement)">
             <summary>
-                <para>Copies all the settings from the SimpleDiagramSeriesViewBase object passed as the parameter.
+                <para>Copies all the settings from the XYDiagramSeriesViewBase object passed as the parameter.
+
 </para>
             </summary>
-            <param name="element">
-		A SimpleDiagramSeriesViewBase object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+            <param name="obj">
+		An XYDiagramSeriesViewBase object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.XtraCharts.SimpleDiagramSeriesViewBase.GetValueCaption(System.Int32)">
+        <member name="P:DevExpress.XtraCharts.XYDiagramSeriesViewBase.AxisX">
             <summary>
-                <para>Gets a caption value for the SimpleDiagramSeriesViewBase type.
+                <para>Specifies the X-axis, that is used to plot the current series on a <see cref="T:DevExpress.XtraCharts.XYDiagram"/>.
 </para>
             </summary>
-            <param name="index">
-		A zero-based integer caption index. If it's negative or exceeds the last available index, an exception is raised. 
+            <value>An <see cref="T:DevExpress.XtraCharts.AxisX"/> or a <see cref="T:DevExpress.XtraCharts.SecondaryAxisX"/> object, that is the X-axis for the current series.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.XYDiagramSeriesViewBase.AxisY">
+            <summary>
+                <para>Specifies the Y-axis, that is used to plot the current series on a <see cref="T:DevExpress.XtraCharts.XYDiagram"/>.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraCharts.AxisY"/> or an <see cref="T:DevExpress.XtraCharts.SecondaryAxisY"/> object, that is the Y-axis for the current series.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.XYDiagramSeriesViewBase.Equals(System.Object)">
+            <summary>
+                <para>Determines whether or not the specified object is equal to the current XYDiagramSeriesViewBase instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object.
 
             </param>
-            <returns>A <see cref="T:System.String"/> value that is the caption for the SimpleDiagramSeriesViewBase type.
+            <returns><b>true</b> if the specified object is equal to the current XYDiagramSeriesViewBase instance; otherwise <b>false</b>.
 </returns>
 
 
         </member>
-        <member name="P:DevExpress.XtraCharts.SimpleDiagramSeriesViewBase.Titles">
+        <member name="M:DevExpress.XtraCharts.XYDiagramSeriesViewBase.GetHashCode">
             <summary>
-                <para>Provides access to a collection of series titles, which are displayed for the current series.
-
+                <para>Serves as the default hash function.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.SeriesTitleCollection"/> object that represents the collection of series titles.
+            <returns>An integer value, specifying the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.XYDiagramSeriesViewBase.Pane">
+            <summary>
+                <para>Gets or sets the pane, used to plot the current series on an <see cref="T:DevExpress.XtraCharts.XYDiagram"/>. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraCharts.XYDiagramDefaultPane"/> or an <see cref="T:DevExpress.XtraCharts.XYDiagramPane"/> object, representing the pane for the current series. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.XYDiagramSeriesViewBase.Shadow">
+            <summary>
+                <para>Gets the shadow settings for the 2D XY-series. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.Shadow"/> object which provides the settings used to paint the series shadow. 
 </value>
 
 
@@ -20504,73 +20325,6 @@
                 <para>Represents the X axis within a chart control in 3D series.
 </para>
             </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Axis3D">
-
-            <summary>
-                <para>Represents the base class for classes that provide axes functionality for a chart control in 3D series.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Axis3D.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the Axis3D object passed as the parameter.
-
-</para>
-            </summary>
-            <param name="obj">
-		An Axis3D object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Axis3D.InterlacedFillStyle">
-            <summary>
-                <para>Gets the interlaced fill style settings.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.RectangleFillStyle3D"/> object which specifies the interlaced fill style.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Axis3D.Label">
-            <summary>
-                <para>Gets the settings of axis labels in 3D series.
-
-
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraCharts.AxisLabel3D"/> object which provides axis label settings.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Axis3D.Name">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraCharts.ChartElementNamed.Name"/> property.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Axis3D.ToString">
-            <summary>
-                <para>Returns the textual representation of the axis.
-
-</para>
-            </summary>
-            <returns>A <see cref="T:System.String"/> value which is the textual representation of the axis.
-</returns>
-
 
         </member>
         <member name="T:DevExpress.XtraCharts.FillStyle3D">
@@ -22827,31 +22581,71 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.FunnelDrawOptions">
+        <member name="T:DevExpress.XtraCharts.FillOptionsColor2Base">
 
             <summary>
-                <para>Contains settings for custom drawing funnel series.
+                <para>Represents the base class for objects which define specific filling options using the second color.
+
+
+
 </para>
             </summary>
 
         </member>
-        <member name="P:DevExpress.XtraCharts.FunnelDrawOptions.Border">
+        <member name="M:DevExpress.XtraCharts.FillOptionsColor2Base.#ctor">
             <summary>
-                <para>Gets the Funnel series view's border settings when implementing custom drawing in the chart control.
+                <para>Initializes a new instance of the FillOptionsColor2Base class with default settings.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.CustomBorder"/> object which specifies the border style.
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.FillOptionsColor2Base.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the FillOptionsColor2Base object passed as the parameter.
+
+</para>
+            </summary>
+            <param name="obj">
+		A FillOptionsColor2Base object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.FillOptionsColor2Base.Color2">
+            <summary>
+                <para>Gets or sets the second color used in specific filling modes.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Color"/> structure that specifies the second filling color. 
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraCharts.FunnelDrawOptions.FillStyle">
+        <member name="M:DevExpress.XtraCharts.FillOptionsColor2Base.Equals(System.Object)">
             <summary>
-                <para>Gets the Funnel series view's fill style settings when implementing custom draw in the chart control.
+                <para>Determines whether the specified object is equal to the current FillOptionsColor2Base instance.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.PolygonFillStyle"/> object which specifies the fill style for the background of funnels. 
-</value>
+            <param name="obj">
+		The object to compare with the current object.
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current FillOptionsColor2Base instance; otherwise <b>false</b>.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.FillOptionsColor2Base.GetHashCode">
+            <summary>
+                <para>Gets the hash code (a number) that corresponds to the value of the current FillOptionsColor2Base object.
+
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
 
 
         </member>
@@ -25409,72 +25203,6 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
 </para>
             </summary>
             <value>Always <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.StepLineSeriesView">
-
-            <summary>
-                <para>Represents a series view of the Step Line type.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.StepLineSeriesView.#ctor">
-            <summary>
-                <para>Initializes a new instance of the StepLineSeriesView class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.StepLineSeriesView.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the StepLineSeriesView object passed as the parameter.
-
-</para>
-            </summary>
-            <param name="obj">
-		A StepLineSeriesView object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.StepLineSeriesView.Equals(System.Object)">
-            <summary>
-                <para>Determines whether the specified object is equal to the current StepLineSeriesView instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current StepLineSeriesView instance; otherwise <b>false</b>.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.StepLineSeriesView.GetHashCode">
-            <summary>
-                <para>Gets the hash code (a number) that corresponds to the value of the current StepLineSeriesView object.
-
-</para>
-            </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.StepLineSeriesView.InvertedStep">
-            <summary>
-                <para>Gets or sets a value that specifies the manner in which step lines connect data point markers.
-</para>
-            </summary>
-            <value><b>true</b> if markers are connected using inverted steps; <b>false</b> if standard steps are use to connect markers.
 </value>
 
 
@@ -29376,6 +29104,22 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.FullStackedBarSeriesLabel">
+
+            <summary>
+                <para>Defines label settings for full-stacked bar series.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.FullStackedBarSeriesLabel.#ctor">
+            <summary>
+                <para>Initializes a new instance of the FullStackedBarSeriesLabel class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.FullStackedBarPointOptions">
 
             <summary>
@@ -33195,72 +32939,6 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.FunnelSeriesViewBase">
-
-            <summary>
-                <para>Represents the base class for series views of the Funnel type.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FunnelSeriesViewBase.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the FunnelSeriesViewBase object passed as the parameter.
-</para>
-            </summary>
-            <param name="obj">
-		An FunnelSeriesViewBase object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FunnelSeriesViewBase.Equals(System.Object)">
-            <summary>
-                <para>Determines whether or not the specified object is equal to the current FunnelSeriesViewBase instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to be compared with the current object.
-
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current FunnelSeriesViewBase instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FunnelSeriesViewBase.GetHashCode">
-            <summary>
-                <para>Serves as the default hash function.
-</para>
-            </summary>
-            <returns>An integer value, specifying the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.FunnelSeriesViewBase.HeightToWidthRatio">
-            <summary>
-                <para>Gets or sets a value that specifies the height-to-width ratio of a Funnel series.
-</para>
-            </summary>
-            <value>A double value that specifies the height-to-width ratio of a funnel. 
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.FunnelSeriesViewBase.PointDistance">
-            <summary>
-                <para>Gets or sets the distance between points of a Funnel series.
-</para>
-            </summary>
-            <value>An integer, representing the distance between points of a Funnel series, in pixels.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.FillMode3D">
 
             <summary>
@@ -33289,6 +32967,132 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
         <member name="F:DevExpress.XtraCharts.FillMode3D.Solid">
             <summary>
                 <para>Specifies that an element's surface should be filled in the solid mode.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.DateTimeScaleOptions">
+
+            <summary>
+                <para>Contains settings for an axis scale when its data type is date-time.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.DateTimeScaleOptions.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the DateTimeScaleOptions object passed as the parameter.
+</para>
+            </summary>
+            <param name="obj">
+		A DateTimeScaleOptions object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.AutomaticMeasureUnitsCalculator">
+            <summary>
+                <para>Gets or sets the automatic date-time measure unit calculator.
+</para>
+            </summary>
+            <value>An object of class implementing the <see cref="T:DevExpress.XtraCharts.IDateTimeMeasureUnitsCalculator"/> interface.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.XtraCharts.DateTimeScaleOptions.DefaultGridAlignment">
+            <summary>
+                <para>Identifies the default value for the <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.GridAlignment"/> property. Always <see cref="F:DevExpress.XtraCharts.DateTimeGridAlignment.Day"/>.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.XtraCharts.DateTimeScaleOptions.DefaultMeasureUnit">
+            <summary>
+                <para>Identifies the default value for the <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.MeasureUnit"/> property. Always <see cref="F:DevExpress.XtraCharts.DateTimeMeasureUnit.Day"/>.
+</para>
+            </summary>
+            <returns>
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.GridAlignment">
+            <summary>
+                <para>Gets or sets the date-time measure unit to which the beginning of an axis' gridlines and labels should be aligned.
+
+
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.DateTimeGridAlignment"/> enumeration value that represents the measurement unit to which the beginning of an axis's gridlines and labels should be aligned.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.MeasureUnit">
+            <summary>
+                <para>Gets or sets the detail level for date-time values.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.DateTimeMeasureUnit"/> enumeration value which represents the axis' detail level.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.WorkdaysOnly">
+            <summary>
+                <para>Specifies whether holidays and non-working days should be excluded from the axis scale.
+</para>
+            </summary>
+            <value><b>true</b>, to exclude non-working days from the axis scale; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.WorkdaysOptions">
+            <summary>
+                <para>Provides access to the information about non-working days to adjust the date-time axis scale.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.WorkdaysOptions"/> object that contains the information about non-working days.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.ScaleMode">
+
+            <summary>
+                <para>Lists the values that specify the scale mode for an axis.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraCharts.ScaleMode.Automatic">
+            <summary>
+                <para>Identifies the automatic date-time scale mode, meaning that data is automatically aggregated according to the chosen <see cref="P:DevExpress.XtraCharts.ScaleOptionsBase.AggregateFunction"/>.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraCharts.ScaleMode.Continuous">
+            <summary>
+                <para>Identifies the continuous date-time scale mode, meaning data aggregation is disabled and you can only change the grid alignment using the <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.GridAlignment"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraCharts.ScaleMode.Manual">
+            <summary>
+                <para>Identifies the manual date-time scale mode, meaning that the <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.GridAlignment"/> and <see cref="P:DevExpress.XtraCharts.DateTimeScaleOptions.MeasureUnit"/> properties are in effect, and they should be manually defined. Also, you can choose the aggregate function using the <see cref="P:DevExpress.XtraCharts.ScaleOptionsBase.AggregateFunction"/> property.
 </para>
             </summary>
 
@@ -33777,23 +33581,6 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.NumericColorizerValueProvider">
-
-            <summary>
-                <para>The class used to provide floating point number values stored in the color data source member to a colorizer.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.NumericColorizerValueProvider.#ctor">
-            <summary>
-                <para>Initializes a new instance of the NumericColorizerValueProvider class with default settings.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.CustomDrawCrosshairEventHandler">
 
             <summary>
@@ -34003,6 +33790,230 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
             </summary>
             <value><b>Default</b> - the <b>Visibility</b> property value is obtained from the parent's <see cref="P:DevExpress.XtraCharts.CrosshairOptions.ShowArgumentLabels"/> and/ or <see cref="P:DevExpress.XtraCharts.CrosshairOptions.ShowValueLabels"/> properties depending on an axis; <b>True</b> - crosshair axis labels are visible on a diagram; <b>False</b> - crosshair axis labels are hidden. The default is <b>DefaultBoolean.Default</b>.
 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.TaskLink">
+
+            <summary>
+                <para>Represents a Task Link object that is specific to a Gantt Chart diagram type.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TaskLink class with the default settings.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor(DevExpress.XtraCharts.SeriesPoint)">
+            <summary>
+                <para>Initializes a new instance of the TaskLink class, specifying the relation to the child point and the <see cref="F:DevExpress.XtraCharts.TaskLinkType.FinishToStart"/> (default) link type. 
+
+</para>
+            </summary>
+            <param name="point">
+		A <see cref="T:DevExpress.XtraCharts.SeriesPoint"/> object specifying the child point for the relation being created.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor(DevExpress.XtraCharts.SeriesPoint,DevExpress.XtraCharts.TaskLinkType)">
+            <summary>
+                <para>Initializes a new instance of the TaskLink class, specifying the relation to the child point and the link type. 
+
+</para>
+            </summary>
+            <param name="point">
+		A <see cref="T:DevExpress.XtraCharts.SeriesPoint"/> object specifying the child point for the relation being created.
+
+            </param>
+            <param name="linkType">
+		A <see cref="T:DevExpress.XtraCharts.TaskLinkType"/> object specifying the link type. 
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor(System.Int32,DevExpress.XtraCharts.TaskLinkType)">
+            <summary>
+                <para>Initializes a new instance of the TaskLink class, specifying the child point ID in a relation, and the link type. 
+
+</para>
+            </summary>
+            <param name="childPointID">
+		An integer value which specifies the ID of the relation's child point.
+
+
+            </param>
+            <param name="linkType">
+		A <see cref="T:DevExpress.XtraCharts.TaskLinkType"/> object specifying the link type. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.TaskLink.#ctor(System.Int32)">
+            <summary>
+                <para>Initializes a new instance of the TaskLink class, specifying the child point ID in a relation, and the <see cref="F:DevExpress.XtraCharts.TaskLinkType.FinishToStart"/> (default) link type. 
+
+</para>
+            </summary>
+            <param name="childPointID">
+		An integer value which specifies the ID of the relation's child point.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.TaskLink.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all settings from the TaskLink object passed as a parameter.
+
+</para>
+            </summary>
+            <param name="obj">
+		A TaskLink object whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.TaskLink.LinkType">
+            <summary>
+                <para><para>Gets or sets the value specifying the connection order of child and parent bars.</para>
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.TaskLinkType"/> enumeration value which represents the connection type.
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Printing.ChartOptionsPrint">
+
+            <summary>
+                <para>Provides print options for the chart control.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Printing.ChartOptionsPrint.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies all the settings from the ChartOptionsPrint object passed as a parameter.
+
+</para>
+            </summary>
+            <param name="options">
+		A ChartOptionsPrint object (which is the <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then this method does nothing.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Printing.ChartOptionsPrint.ImageFormat">
+            <summary>
+                <para>Specifies the image format for a chart's representation in a Print Preview form.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.Printing.PrintImageFormat"/> enumeration value, specifying the image format for the chart.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Printing.ChartOptionsPrint.SizeMode">
+            <summary>
+                <para>Gets or sets a value which specifies the size mode used to print the chart.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.Printing.PrintSizeMode"/> enumeration value which specifies the size mode used to print the chart.
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Printing.ChartOptionsPrint.ToString">
+            <summary>
+                <para>Returns the textual representation of print options.
+
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value which is the textual representation of print options.
+
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.StepLineSeriesView">
+
+            <summary>
+                <para>Represents a series view of the Step Line type.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.StepLineSeriesView.#ctor">
+            <summary>
+                <para>Initializes a new instance of the StepLineSeriesView class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.StepLineSeriesView.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the StepLineSeriesView object passed as the parameter.
+
+</para>
+            </summary>
+            <param name="obj">
+		A StepLineSeriesView object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.StepLineSeriesView.Equals(System.Object)">
+            <summary>
+                <para>Determines whether the specified object is equal to the current StepLineSeriesView instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object.
+
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current StepLineSeriesView instance; otherwise <b>false</b>.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.StepLineSeriesView.GetHashCode">
+            <summary>
+                <para>Gets the hash code (a number) that corresponds to the value of the current StepLineSeriesView object.
+
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.StepLineSeriesView.InvertedStep">
+            <summary>
+                <para>Gets or sets a value that specifies the manner in which step lines connect data point markers.
+</para>
+            </summary>
+            <value><b>true</b> if markers are connected using inverted steps; <b>false</b> if standard steps are use to connect markers.
 </value>
 
 

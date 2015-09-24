@@ -389,27 +389,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Web.BookmarkFiller`1">
-
-            <summary>
-                <para>The base class for all classes that provide the capability to obtain a hierarchy of bookmarks for a particular report.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.BookmarkFiller`1.Fill(DevExpress.XtraReports.Web.T)">
-            <summary>
-                <para>Fills the parent object with the hierarchy of a report's bookmarks.
-</para>
-            </summary>
-            <param name="parent">
-		A type of the <i>parent</i> object.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.Web.DocumentViewer.ReportToolbarAlignment">
 
             <summary>
@@ -510,7 +489,7 @@
                 <para>Returns the dictionary listing the data connections by their names.
 </para>
             </summary>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aSystem.Collections.Generic.Dictionary%602">Dictionary&lt;String, String&gt;</a> object.
+            <returns>A <see cref="Dictionary&lt;String, String&gt;"/> object.
 </returns>
 
 
@@ -526,7 +505,7 @@
 
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase">DataConnectionParametersBase</a> object.
+            <returns>A <see cref="DataConnectionParametersBase"/> object.
 </returns>
 
 
@@ -668,7 +647,7 @@
 		A <see cref="T:System.Boolean"/> value.
 
             </param>
-            <returns>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ImageProperties">ImageProperties</a> object.
+            <returns>An <see cref="ImageProperties"/> object.
 </returns>
 
 
@@ -940,7 +919,7 @@
                 <para>Provides access to the margins of a <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>'s labels.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.Margins">Margins</a> object.
+            <value>A <see cref="Margins"/> object.
 </value>
 
 
@@ -1053,65 +1032,7 @@
                 <para>Provides access to the margins of a <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>'s combo boxes.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.Margins">Margins</a> object.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraReports.Web.ASPxDocumentViewer.DeserializeClientParameters"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.#ctor(System.String,System.String,System.Object)">
-            <summary>
-                <para>Initializes a new instance of the DeserializeClientParameterEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Name"/> property.
-
-            </param>
-            <param name="path">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Path"/> property.
-
-            </param>
-            <param name="value">
-		A <see cref="T:System.Object"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Value"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Name">
-            <summary>
-                <para>Specifies the parameter name.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the parameter name.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Path">
-            <summary>
-                <para>Specifies the parameter path.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the parameter path (for example, <i>"subreport1.subreportParameter1"</i>).
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Value">
-            <summary>
-                <para>Specifies the parameter value.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Object"/>, storing the parameter value.
+            <value>A <see cref="Margins"/> object.
 </value>
 
 
@@ -1501,7 +1422,7 @@
                 <para>Gets the caption style settings of the report toolbar container.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.EditorCaptionCellStyle">EditorCaptionCellStyle</a> value.
+            <value>A <see cref="EditorCaptionCellStyle"/> value.
 </value>
 
 
@@ -1511,7 +1432,7 @@
                 <para>Gets the caption style settings of the report toolbar.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.EditorCaptionStyle">EditorCaptionStyle</a> value.
+            <value>A <see cref="EditorCaptionStyle"/> value.
 </value>
 
 
@@ -1521,7 +1442,7 @@
                 <para>Provides access to the style settings of the <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>'s combo box buttons.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ButtonControlStyle">ButtonControlStyle</a> value.
+            <value>A <see cref="ButtonControlStyle"/> value.
 </value>
 
 
@@ -1531,7 +1452,7 @@
                 <para>Provides access to the style settings of the <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>'s combo box items.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ListBoxItemStyle">ListBoxItemStyle</a> value.
+            <value>A <see cref="ListBoxItemStyle"/> value.
 </value>
 
 
@@ -1541,7 +1462,7 @@
                 <para>Provides access to the style settings of the <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>'s combo box list.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.AppearanceStyleBase">AppearanceStyleBase</a> value.
+            <value>A <see cref="AppearanceStyleBase"/> value.
 </value>
 
 
@@ -1624,7 +1545,7 @@
                 <para>Gets the style settings assigned to disabled items in a Document Map.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.DisabledStyle">DisabledStyle</a> value.
+            <value>A <see cref="DisabledStyle"/> value.
 </value>
 
 
@@ -1634,7 +1555,7 @@
                 <para>Gets the style settings assigned to links in a Document Map.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.LinkStyle">LinkStyle</a> value.
+            <value>A <see cref="LinkStyle"/> value.
 </value>
 
 
@@ -1644,7 +1565,7 @@
                 <para>Gets the style settings assigned to check boxes in a Document Map.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.TreeViewNodeCheckBoxStyle">TreeViewNodeCheckBoxStyle</a> value.
+            <value>A <see cref="TreeViewNodeCheckBoxStyle"/> value.
 </value>
 
 
@@ -1654,7 +1575,7 @@
                 <para>Gets the style settings assigned to focused check boxes in a Document Map.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.TreeViewNodeCheckBoxStyle">TreeViewNodeCheckBoxStyle</a> value.
+            <value>A <see cref="TreeViewNodeCheckBoxStyle"/> value.
 </value>
 
 
@@ -1664,7 +1585,7 @@
                 <para>Gets the style settings assigned to nodes in a Document Map.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.AppearanceStyle">AppearanceStyle</a> value.
+            <value>A <see cref="AppearanceStyle"/> value.
 </value>
 
 
@@ -1690,7 +1611,7 @@
                 <para>Specifies the width of the Document Viewer toolbar.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.Web.UI.WebControls.Unit">Unit</a> value.
+            <value>A <see cref="Unit"/> value.
 </value>
 
 
@@ -2163,7 +2084,7 @@
                 <para>Provides access to the options of the default edit button that invokes the editor's dropdown window. 
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.DropDownButton">DropDownButton</a> object.
+            <value>A <see cref="DropDownButton"/> object.
 </value>
 
 
@@ -2253,7 +2174,7 @@
                 <para>Provides access to the settings of a <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>'s background image.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.BackgroundImage">BackgroundImage</a> object.
+            <value>A <see cref="BackgroundImage"/> object.
 </value>
 
 
@@ -2283,7 +2204,7 @@
                 <para>Provides access to the paddings of a <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>'s separator line.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.Paddings">Paddings</a> object.
+            <value>A <see cref="Paddings"/> object.
 </value>
 
 
@@ -2325,145 +2246,6 @@
             </summary>
             <value>A <see cref="T:System.String"/> value.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.ReportToolbarItemKind">
-
-            <summary>
-                <para>Specifies the type of a particular <see cref="T:DevExpress.XtraReports.Web.ReportToolbarItem"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.Custom">
-            <summary>
-                <para>Represents any custom toolbar item. Note that you may add any custom item to the collection returned by the <see cref="P:DevExpress.XtraReports.Web.ReportToolbar.Items"/> property.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.FirstPage">
-            <summary>
-                <para>Represents a button to display the first page of a report.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.LastPage">
-            <summary>
-                <para>Represents a button to display the last page of a report.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.NextPage">
-            <summary>
-                <para>Represents a button to display the next page of a report.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.OfLabel">
-            <summary>
-                <para>Represents the "of" caption before the edit box that displays the total number of report pages.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PageCount">
-            <summary>
-                <para>Represents an edit box that displays the total number of report pages.
-
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PageLabel">
-            <summary>
-                <para>Represents the "Page" caption before the drop-down list that allows end-users to select the page to be shown. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PageNumber">
-            <summary>
-                <para>Represents a drop-down list that allows end-users to select the page to be shown.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PreviousPage">
-            <summary>
-                <para>Represents a button used to display the previous page of a report.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PrintPage">
-            <summary>
-                <para>Represents a button used to print the current page.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PrintReport">
-            <summary>
-                <para>Represents a button used to print the entire report.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveFormat">
-            <summary>
-                <para>Represents a drop-down list, allowing end-users to choose an export format for the report. The report can be exported by clicking on either the <see cref="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveToDisk"/> or <see cref="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveToWindow"/> toolbar button.
-
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveToDisk">
-            <summary>
-                <para>Represents a button to export a report and save it to the disk. The export format is specified by the <see cref="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveFormat"/> toolbar item.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveToWindow">
-            <summary>
-                <para>Represents a button to export a report and show it in a new window. The export format is specified by the <see cref="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveFormat"/> toolbar item.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.Search">
-            <summary>
-                <para>Represents a button to invoke the <b>Search</b> dialog, allowing end-users to search for specific text in a report.
-
-
-</para>
-            </summary>
 
 
         </member>
@@ -2547,7 +2329,7 @@
                 <para>Gets an object that lists the client-side events specific to the ASPxDocumentViewer.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.Web.DocumentViewer.DocumentViewerClientSideEvents">DocumentViewerClientSideEvents</a> object, which allows assigning handlers to the client-side events available for the ASPxDocumentViewer.
+            <value>A <see cref="DocumentViewerClientSideEvents"/> object, which allows assigning handlers to the client-side events available for the ASPxDocumentViewer.
 </value>
 
 
@@ -2641,7 +2423,7 @@
                 <para>Specifies the report to display in the ASPxDocumentViewer.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.UI.XtraReport">XtraReport</a> specifying a report to display.
+            <value>An <see cref="XtraReport"/> specifying a report to display.
 </value>
 
 
@@ -2651,7 +2433,7 @@
                 <para>Specifies the name of the class of the report to display in the ASPxDocumentViewer.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> specifying the name of a report class.
+            <value>A <see cref="String"/> specifying the name of a report class.
 </value>
 
 
@@ -2788,7 +2570,7 @@
                 <para>Provides access to the style settings that control the appearance of the Document Viewer's document map.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.Web.ReportDocumentMapStyles">ReportDocumentMapStyles</a> object containing style settings.
+            <value>A <see cref="ReportDocumentMapStyles"/> object containing style settings.
 </value>
 
 
@@ -2854,7 +2636,7 @@
                 <para>Provides access to the style settings that control the appearance of splitters in the Document Viewer.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.Web.DocumentViewer.DocumentViewerSplitterStyles">DocumentViewerSplitterStyles</a> object containing style settings.
+            <value>A <see cref="DocumentViewerSplitterStyles"/> object containing style settings.
 </value>
 
 
@@ -2864,7 +2646,7 @@
                 <para>Provides access to the style settings that control the appearance of the Document Viewer's toolbar.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarStyles">DocumentViewerReportToolbarStyles</a> object containing style settings.
+            <value>A <see cref="DocumentViewerReportToolbarStyles"/> object containing style settings.
 </value>
 
 
@@ -2875,7 +2657,7 @@
 
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.Web.ReportToolbarItemCollection">ReportToolbarItemCollection</a> object representing the report toolbar's collection of items.
+            <value>A <see cref="ReportToolbarItemCollection"/> object representing the report toolbar's collection of items.
 </value>
 
 
@@ -2896,6 +2678,27 @@
 </para>
             </summary>
             <returns> </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Web.BookmarkFiller`1">
+
+            <summary>
+                <para>The base class for all classes that provide the capability to obtain a hierarchy of bookmarks for a particular report.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.BookmarkFiller`1.Fill(DevExpress.XtraReports.Web.T)">
+            <summary>
+                <para>Fills the parent object with the hierarchy of a report's bookmarks.
+</para>
+            </summary>
+            <param name="parent">
+		A type of the <i>parent</i> object.
+
+            </param>
 
 
         </member>
@@ -2947,7 +2750,7 @@
                 <para>Provides access to the ReportViewer's background image.  
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.BackgroundImage">BackgroundImage</a> object that represents the web control's background image. 
+            <value>A <see cref="BackgroundImage"/> object that represents the web control's background image. 
 </value>
 
 
@@ -2958,7 +2761,7 @@
 
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.Border">Border</a> object.
+            <value>A <see cref="Border"/> object.
 </value>
 
 
@@ -3236,7 +3039,7 @@
                 <para>Provides access to the padding settings of the ReportViewer object.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.Paddings">Paddings</a> object.
+            <value>A <see cref="Paddings"/> object.
 </value>
 
 
@@ -3317,7 +3120,7 @@
                 <para>Provides access to the style settings of the <b>Search</b> dialog's buttons.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ButtonControlStyles">ButtonControlStyles</a> object that defines the appearance of buttons.
+            <value>A <see cref="ButtonControlStyles"/> object that defines the appearance of buttons.
 </value>
 
 
@@ -3327,7 +3130,7 @@
                 <para>Provides access to the image settings of the <b>Search</b> dialog's editors.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.EditorImages">EditorImages</a> object that defines the image settings of editors.
+            <value>An <see cref="EditorImages"/> object that defines the image settings of editors.
 </value>
 
 
@@ -3337,7 +3140,7 @@
                 <para>Provides access to the style settings of the <b>Search</b> dialog's editors.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.EditorStyles">EditorStyles</a> object that contains the editor's appearance settings.
+            <value>An <see cref="EditorStyles"/> object that contains the editor's appearance settings.
 
 </value>
 
@@ -3360,7 +3163,7 @@
                 <para>Provides access to the style settings of the <b>Search</b> dialog's form.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.PopupControlStyles">PopupControlStyles</a> object containing form's appearance settings.
+            <value>A <see cref="PopupControlStyles"/> object containing form's appearance settings.
 </value>
 
 
@@ -3898,84 +3701,60 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles">
+        <member name="T:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs">
 
             <summary>
-                <para>Provides options that control the appearance of a <see cref="T:DevExpress.XtraReports.Web.ReportViewer"/>.
+                <para>Provides data for the <see cref="E:DevExpress.XtraReports.Web.ASPxDocumentViewer.DeserializeClientParameters"/> event.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
+        <member name="M:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.#ctor(System.String,System.String,System.Object)">
             <summary>
-                <para>Initializes a new instance of the DocumentViewerViewerStyles class with the specified skin owner.
+                <para>Initializes a new instance of the DeserializeClientParameterEventArgs class with the specified settings.
 </para>
             </summary>
-            <param name="owner">
-		An object implementing the DevExpress.Web.Internal.ISkinOwner interface.
+            <param name="name">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Name"/> property.
+
+            </param>
+            <param name="path">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Path"/> property.
+
+            </param>
+            <param name="value">
+		A <see cref="T:System.Object"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Value"/> property.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.BookmarkSelectionBorder">
+        <member name="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Name">
             <summary>
-                <para>Specifies the selection border settings of a document bookmark.
+                <para>Specifies the parameter name.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Web.Border"/> value.
+            <value>A <see cref="T:System.String"/> value, specifying the parameter name.
 </value>
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.CopyFrom(DevExpress.Web.StylesBase)">
+        <member name="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Path">
             <summary>
-                <para>Duplicates the properties of the specified object into the current instance of the DocumentViewerViewerStyles class.
+                <para>Specifies the parameter path.
 </para>
             </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.StylesBase"/> descendant that is the object whose settings will be copied.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.Height">
-            <summary>
-                <para>Specifies the height of the report viewer within the Document Viewer.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure.
+            <value>A <see cref="T:System.String"/> value, specifying the parameter path (for example, <i>"subreport1.subreportParameter1"</i>).
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.Paddings">
+        <member name="P:DevExpress.XtraReports.Web.DeserializeClientParameterEventArgs.Value">
             <summary>
-                <para>Provides access to the padding settings of the DocumentViewerViewerStyles object.
+                <para>Specifies the parameter value.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Web.Paddings"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.ShowDocumentShadow">
-            <summary>
-                <para>Specifies whether or not to display the document shadow in the Document Viewer.
-</para>
-            </summary>
-            <value><b>true</b> to display the document shadow; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.Width">
-            <summary>
-                <para>Specifies the width of the report viewer within the Document Viewer.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure.
+            <value>A <see cref="T:System.Object"/>, storing the parameter value.
 </value>
 
 
@@ -4101,7 +3880,7 @@
                 <para>Provides access to the caption settings of the <see cref="T:DevExpress.XtraReports.Web.ASPxDocumentViewer"/>'s Parameters panel.
 </para>
             </summary>
-            <value> A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.Web.ReportParametersPanelEditorCaptionSettings">ReportParametersPanelEditorCaptionSettings</a> object containing the caption settings of the Parameters panel.
+            <value> A <see cref="ReportParametersPanelEditorCaptionSettings"/> object containing the caption settings of the Parameters panel.
 </value>
 
 
@@ -4189,7 +3968,7 @@
                 <para>Provides access to the appearance settings of the <see cref="T:DevExpress.XtraReports.Web.ReportParametersPanel"/>'s button.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ButtonControlStyles">ButtonControlStyles</a> object containing the appearance settings of the <see cref="T:DevExpress.XtraReports.Web.ReportParametersPanel"/>'s button.
+            <value>A <see cref="ButtonControlStyles"/> object containing the appearance settings of the <see cref="T:DevExpress.XtraReports.Web.ReportParametersPanel"/>'s button.
 </value>
 
 
@@ -4199,7 +3978,7 @@
                 <para>Provides access to the appearance settings of the <see cref="T:DevExpress.XtraReports.Web.ReportParametersPanel"/>'s editor elements.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.EditorStyles">EditorStyles</a> object containing the appearance settings of the <see cref="T:DevExpress.XtraReports.Web.ReportParametersPanel"/>'s editor elements.
+            <value>A <see cref="EditorStyles"/> object containing the appearance settings of the <see cref="T:DevExpress.XtraReports.Web.ReportParametersPanel"/>'s editor elements.
 </value>
 
 
@@ -4209,7 +3988,7 @@
                 <para>Provides access to the editor style settings of an <see cref="T:DevExpress.XtraReports.Web.ASPxDocumentViewer"/>'s Parameters panel.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.Web.ReportParametersPanelEditorStyles">ReportParametersPanelEditorStyles</a> object containing the editor style settings of the Parameters panel.
+            <value>A <see cref="ReportParametersPanelEditorStyles"/> object containing the editor style settings of the Parameters panel.
 </value>
 
 
@@ -4297,7 +4076,7 @@
                 <para>Provides access to the settings that define images displayed within the ReportDocumentMap's elements. 
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.TreeViewImages">TreeViewImages</a> object that contains image settings.
+            <value>A <see cref="TreeViewImages"/> object that contains image settings.
 </value>
 
 
@@ -4508,7 +4287,7 @@
 
 </para>
             </summary>
-            <returns>A database schema provider, implementing the <a href="ms-xhelp:///?Id=T%3aDevExpress.DataAccess.Sql.IDBSchemaProvider">IDBSchemaProvider</a> interface.
+            <returns>A database schema provider, implementing the <see cref="IDBSchemaProvider"/> interface.
 </returns>
 
 
@@ -4570,7 +4349,7 @@
                 <para>Provides access to the container for services.
 </para>
             </summary>
-            <value>An object, implementing the <a href="ms-xhelp:///?Id=T%3aSystem.IServiceProvider">IServiceProvider</a> interface.
+            <value>An object, implementing the <see cref="IServiceProvider"/> interface.
 </value>
 
 
@@ -4608,35 +4387,139 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents">
+        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties">
 
             <summary>
-                <para>Provides additional client-side events to an <see cref="T:DevExpress.XtraReports.Web.ASPxWebDocumentViewer"/>.
+                <para>Stores properties of the <see cref="T:DevExpress.Web.Mvc.ReportToolbarExtension"/>.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.#ctor">
+        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties.#ctor(DevExpress.Web.IPropertiesOwner)">
             <summary>
-                <para>Initializes a new instance of the WebDocumentViewerClientSideEvents class with default settings.
+                <para>Initializes a new instance of the DocumentViewerReportToolbarProperties class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object implementing the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties.CaptionSettings">
+            <summary>
+                <para>Provides access to the caption settings of a report toolbar.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.Web.ReportToolbarEditorCaptionSettings"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties.Changed(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Indicates the property that has changed its value.
+</para>
+            </summary>
+            <param name="properties">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> descendant.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles">
+
+            <summary>
+                <para>Provides options that control the appearance of a <see cref="T:DevExpress.XtraReports.Web.ReportViewer"/>.
 </para>
             </summary>
 
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
+            <summary>
+                <para>Initializes a new instance of the DocumentViewerViewerStyles class with the specified skin owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object implementing the DevExpress.Web.Internal.ISkinOwner interface.
+
+            </param>
+
 
         </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeMenuActions">
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.BookmarkSelectionBorder">
             <summary>
-                <para> </para>
+                <para>Specifies the selection border settings of a document bookmark.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.Web.Border"/> value.
+</value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeParameterEditors">
+        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.CopyFrom(DevExpress.Web.StylesBase)">
             <summary>
-                <para> </para>
+                <para>Duplicates the properties of the specified object into the current instance of the DocumentViewerViewerStyles class.
+</para>
             </summary>
-            <value> </value>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.StylesBase"/> descendant that is the object whose settings will be copied.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.Height">
+            <summary>
+                <para>Specifies the height of the report viewer within the Document Viewer.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.Paddings">
+            <summary>
+                <para>Provides access to the padding settings of the DocumentViewerViewerStyles object.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.Paddings"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.ShowDocumentShadow">
+            <summary>
+                <para>Specifies whether or not to display the document shadow in the Document Viewer.
+</para>
+            </summary>
+            <value><b>true</b> to display the document shadow; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerViewerStyles.Width">
+            <summary>
+                <para>Specifies the width of the report viewer within the Document Viewer.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure.
+</value>
 
 
         </member>
@@ -6641,57 +6524,46 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties">
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.WebDocumentViewer_ToggleMultipageMode">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs">
 
             <summary>
-                <para>Stores properties of the <see cref="T:DevExpress.Web.Mvc.ReportToolbarExtension"/>.
+                <para>Provides data for the <see cref="E:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerRemoteSourceSettings.RequestCredentials"/> event.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.#ctor">
             <summary>
-                <para>Initializes a new instance of the DocumentViewerReportToolbarProperties class with the specified owner.
+                <para>Initializes a new instance of the WebAuthenticatorLoginEventArgs class with default settings.
 </para>
             </summary>
-            <param name="owner">
-		An object implementing the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties.Assign(DevExpress.Web.PropertiesBase)">
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.Credential">
             <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
+                <para>Specifies the user credentials to login to a remote document source.
 </para>
             </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties.CaptionSettings">
-            <summary>
-                <para>Provides access to the caption settings of a report toolbar.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.Web.ReportToolbarEditorCaptionSettings"/> object.
+            <value>A <see cref="T:DevExpress.XtraReports.Web.DocumentViewer.WebCredential"/> object.
 </value>
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerReportToolbarProperties.Changed(DevExpress.Web.PropertiesBase)">
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.Handled">
             <summary>
-                <para>Indicates the property that has changed its value.
+                <para>Specifies whether or not the corresponding event was handled.
 </para>
             </summary>
-            <param name="properties">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> descendant.
-
-            </param>
+            <value><b>true</b> if the event was handled; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -6976,7 +6848,7 @@
                 <para>Specifies the required mark visibility mode.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.EditorRequiredMarkMode">EditorRequiredMarkMode</a> value.
+            <value>A <see cref="EditorRequiredMarkMode"/> value.
 </value>
 
 
@@ -7542,6 +7414,145 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.Web.ReportToolbarItemKind">
+
+            <summary>
+                <para>Specifies the type of a particular <see cref="T:DevExpress.XtraReports.Web.ReportToolbarItem"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.Custom">
+            <summary>
+                <para>Represents any custom toolbar item. Note that you may add any custom item to the collection returned by the <see cref="P:DevExpress.XtraReports.Web.ReportToolbar.Items"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.FirstPage">
+            <summary>
+                <para>Represents a button to display the first page of a report.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.LastPage">
+            <summary>
+                <para>Represents a button to display the last page of a report.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.NextPage">
+            <summary>
+                <para>Represents a button to display the next page of a report.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.OfLabel">
+            <summary>
+                <para>Represents the "of" caption before the edit box that displays the total number of report pages.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PageCount">
+            <summary>
+                <para>Represents an edit box that displays the total number of report pages.
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PageLabel">
+            <summary>
+                <para>Represents the "Page" caption before the drop-down list that allows end-users to select the page to be shown. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PageNumber">
+            <summary>
+                <para>Represents a drop-down list that allows end-users to select the page to be shown.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PreviousPage">
+            <summary>
+                <para>Represents a button used to display the previous page of a report.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PrintPage">
+            <summary>
+                <para>Represents a button used to print the current page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.PrintReport">
+            <summary>
+                <para>Represents a button used to print the entire report.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveFormat">
+            <summary>
+                <para>Represents a drop-down list, allowing end-users to choose an export format for the report. The report can be exported by clicking on either the <see cref="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveToDisk"/> or <see cref="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveToWindow"/> toolbar button.
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveToDisk">
+            <summary>
+                <para>Represents a button to export a report and save it to the disk. The export format is specified by the <see cref="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveFormat"/> toolbar item.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveToWindow">
+            <summary>
+                <para>Represents a button to export a report and show it in a new window. The export format is specified by the <see cref="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.SaveFormat"/> toolbar item.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.ReportToolbarItemKind.Search">
+            <summary>
+                <para>Represents a button to invoke the <b>Search</b> dialog, allowing end-users to search for specific text in a report.
+
+
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Web.Native.ClientControls.Services.IJSContentGenerator`1">
 
             <summary>
@@ -7640,7 +7651,7 @@
                 <para>Provides access to additional client-side events for the ASPxWebDocumentViewer.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents">WebDocumentViewerClientSideEvents</a> object.
+            <value>A <see cref="WebDocumentViewerClientSideEvents"/> object.
 </value>
 
 
@@ -7801,7 +7812,7 @@
                 <para>Provides access to the width settings of the <see cref="T:DevExpress.XtraReports.Web.ASPxDocumentViewer"/>'s buttons.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.Web.UI.WebControls.Unit">Unit</a> value.
+            <value>A <see cref="Unit"/> value.
 </value>
 
 
@@ -7889,7 +7900,7 @@
                 <para>Gets the caption style settings of the <b>Parameters</b> panel.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.EditorCaptionStyle">EditorCaptionStyle</a> value.
+            <value>A <see cref="EditorCaptionStyle"/> value.
 </value>
 
 
@@ -7899,7 +7910,7 @@
                 <para>Gets the caption style settings of the <b>Parameters</b> panel container.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.EditorCaptionCellStyle">EditorCaptionCellStyle</a> value.
+            <value>A <see cref="EditorCaptionCellStyle"/> value.
 </value>
 
 
@@ -7920,7 +7931,7 @@
             <summary>
                 <para> </para>
             </summary>
-            <value>A EditorRootStyle value.
+            <value>A <see cref="EditorRootStyle"/> value.
 </value>
 
 
@@ -8112,42 +8123,6 @@
 </para>
             </summary>
             <value>An object implementing the <see cref="T:DevExpress.DocumentServices.ServiceModel.IParameterContainer"/> interface.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerRemoteSourceSettings.RequestCredentials"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.#ctor">
-            <summary>
-                <para>Initializes a new instance of the WebAuthenticatorLoginEventArgs class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.Credential">
-            <summary>
-                <para>Specifies the user credentials to login to a remote document source.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.Web.DocumentViewer.WebCredential"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.Handled">
-            <summary>
-                <para>Specifies whether or not the corresponding event was handled.
-</para>
-            </summary>
-            <value><b>true</b> if the event was handled; otherwise, <b>false</b>.
 </value>
 
 
@@ -8451,6 +8426,38 @@
 </para>
             </summary>
             <returns> </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents">
+
+            <summary>
+                <para>Provides additional client-side events to an <see cref="T:DevExpress.XtraReports.Web.ASPxWebDocumentViewer"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.#ctor">
+            <summary>
+                <para>Initializes a new instance of the WebDocumentViewerClientSideEvents class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeMenuActions">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeParameterEditors">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

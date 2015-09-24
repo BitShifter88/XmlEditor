@@ -205,7 +205,7 @@
                 <para>Provides style settings that define the appearance of a loading panel.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.LoadingPanelStyle">LoadingPanelStyle</a> object that contains the style settings.
+            <value>A <see cref="LoadingPanelStyle"/> object that contains the style settings.
 </value>
 
 
@@ -1044,7 +1044,7 @@
                 <para>Gets the settings of an image displayed within the check spelling form close button.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.HeaderButtonImageProperties">HeaderButtonImageProperties</a> object that contains image settings.
+            <value>A <see cref="HeaderButtonImageProperties"/> object that contains image settings.
 </value>
 
 
@@ -1214,7 +1214,7 @@
                 <para>Gets or sets the delay before displaying the loading panel.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aSystem.Int32">Int32</a> value that specifies the time interval between when a callback is sent to the server and a loading panel is displayed, in milliseconds.
+            <value>An <see cref="Int32"/> value that specifies the time interval between when a callback is sent to the server and a loading panel is displayed, in milliseconds.
 
 </value>
 
@@ -1258,6 +1258,14 @@
             </summary>
             <value>A string that specifies the text displayed within a loading panel. 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpellChecker.ASPxSpellChecker.MaximumErrorCountInResponse">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -1313,7 +1321,7 @@
  
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxSpellChecker.SpellCheckerDialogSettings">SpellCheckerDialogSettings</a> object that contains customization settings for form elements of built-in dialogs.
+            <value>An <see cref="SpellCheckerDialogSettings"/> object that contains customization settings for form elements of built-in dialogs.
 </value>
 
 
@@ -1323,7 +1331,7 @@
                 <para>Gets the settings allowing you to specify paths to dialog forms (UserControls) stored within a web site.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings">SpellCheckerFormsSettings</a> object containing properties which point to individual dialog forms. 
+            <value>A <see cref="SpellCheckerFormsSettings"/> object containing properties which point to individual dialog forms. 
 </value>
 
 
@@ -1333,7 +1341,7 @@
                 <para>Provides access to the loading panel's settings.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.SettingsLoadingPanel">SettingsLoadingPanel</a> object that contains the loading panel's settings.
+            <value>A <see cref="SettingsLoadingPanel"/> object that contains the loading panel's settings.
 </value>
 
 
@@ -1620,7 +1628,7 @@
                 <para>Returns an object comprising resources based on the thread's language and regional settings (culture).
 </para>
             </summary>
-            <returns>A XtraLocalizer object comprising resources based on the thread's culture.
+            <returns>A <see cref="XtraLocalizer"/> object comprising resources based on the thread's culture.
 </returns>
 
 
@@ -1634,7 +1642,7 @@
 		An <see cref="T:DevExpress.Web.ASPxSpellChecker.Localization.ASPxSpellCheckerStringId"/> enumeration value identifying the string to localize.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> corresponding to the specified identifier.
+            <returns>A <see cref="String"/> corresponding to the specified identifier.
 </returns>
 
 

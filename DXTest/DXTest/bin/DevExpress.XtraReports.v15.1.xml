@@ -36,354 +36,53 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.XRRichText">
+        <member name="T:DevExpress.XtraReports.UI.XRSummaryEvents">
 
             <summary>
-                <para>A Rich Text control which is used to display, enter, and manipulate formatted text. 
+                <para>Contains the names of the scripts available for <see cref="T:DevExpress.XtraReports.UI.XRSummary"/>.
 
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.#ctor">
+        <member name="M:DevExpress.XtraReports.UI.XRSummaryEvents.#ctor">
             <summary>
-                <para>Initializes a new instance of the XRRichText class with default settings.
+                <para>Initializes a new instance of the XRSummaryEvents class with default settings.
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.BeginInit">
+        <member name="P:DevExpress.XtraReports.UI.XRSummaryEvents.OnGetResult">
             <summary>
-                <para>Starts the XRRichText's initialization. Initialization occurs at runtime.
+                <para>Specifies the name of the script used to handle the <see cref="M:DevExpress.XtraReports.UI.XRSummary.GetResult"/> event.
+
 
 </para>
             </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.CanGrow">
-            <summary>
-                <para>Gets or sets a value indicating whether the control's height can grow in order to display the contents in their entirety.
-
-</para>
-            </summary>
-            <value><b>true</b> if the control's height can grow in order to display all its text; otherwise, <b>false</b>.
+            <value>A <see cref="T:System.String"/> value, specifying the name of the script for this event.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.CanShrink">
+        <member name="P:DevExpress.XtraReports.UI.XRSummaryEvents.OnReset">
             <summary>
-                <para>Gets or sets a value indicating whether the control's height can decrease if its text does not completely fill the control.
+                <para>Gets or sets the name of the script used to handle the <see cref="E:DevExpress.XtraReports.UI.XRLabel.SummaryReset"/> event.
 </para>
             </summary>
-            <value><b>true</b> if the control's height can decrease in order to remove the unused space; otherwise, <b>false</b>. 
-
+            <value>A <see cref="T:System.String"/> value, specifying the name of the script for this event.
 </value>
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.Clear">
+        <member name="P:DevExpress.XtraReports.UI.XRSummaryEvents.OnRowChanged">
             <summary>
-                <para>Clears all contents of the Rich Text control.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.EndInit">
-            <summary>
-                <para>Ends the XRRichText's initialization.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.GetEffectiveFont">
-            <summary>
-                <para>Overrides the <see cref="M:DevExpress.XtraReports.UI.XRControl.GetEffectiveFont"/> property, to return the font from the content of the <see cref="T:DevExpress.XtraReports.UI.XRRichText"/> control.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.Drawing.Font"/> value representing the effective font.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.GetEffectiveForeColor">
-            <summary>
-                <para>Overrides the <see cref="M:DevExpress.XtraReports.UI.XRControl.GetEffectiveForeColor"/> property, to return the foreground color from the content of the <see cref="T:DevExpress.XtraReports.UI.XRRichText"/> control.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.Drawing.Color"/> value representing the effective foreground color.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.Html">
-            <summary>
-                <para><b>Bindable</b>. Used to supply HTML content to a XRRichText control.
+                <para>Gets or sets the name of the script used to handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.RowChanged"/> event.
 
 
 </para>
             </summary>
-            <value>Always empty string.
-
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.KeepTogether">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.KeepTogether"/> property.
-</para>
-            </summary>
-            <value><b>true</b> to keep the contents of the entire control on a single page; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.Lines">
-            <summary>
-                <para>Gets or sets the text lines in the XRRichText control.
-
-</para>
-            </summary>
-            <value>An array of <see cref="T:System.String"/> values that contain some text in the XRRichText control.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.LoadFile(System.IO.Stream,DevExpress.XtraReports.UI.XRRichTextStreamType)">
-            <summary>
-                <para>Loads the contents of an existing data stream into the XRRichText control.
-</para>
-            </summary>
-            <param name="data">
-		A <see cref="T:System.IO.Stream"/> of data to load into the XRRichText control.
-
-
-            </param>
-            <param name="streamType">
-		An <see cref="T:DevExpress.XtraReports.UI.XRRichTextStreamType"/> enumeration value that determines the type of stream to be used for loading data into the XRRichText control.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.LoadFile(System.String,DevExpress.XtraReports.UI.XRRichTextStreamType)">
-            <summary>
-                <para>Loads a specific type of file into the XRRichText control.
-</para>
-            </summary>
-            <param name="path">
-		A <see cref="T:System.String"/> containing a path to the file to be loaded into the XRRichText control.
-
-            </param>
-            <param name="streamType">
-		An <see cref="T:DevExpress.XtraReports.UI.XRRichTextStreamType"/> enumeration value that determines the type of stream used to load the file into the XRRichText control.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.LoadFile(System.String)">
-            <summary>
-                <para>Loads the contents of the Rich Text Format (RTF) file into the XRRichText control.
-
-</para>
-            </summary>
-            <param name="path">
-		A <see cref="T:System.String"/> containing a path to the file to be loaded into the XRRichText control.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.Rtf">
-            <summary>
-                <para><b>Bindable</b>. Gets or sets the text of the XRRichText control, including all the Rich Text Format (RTF) codes.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value which represents the control's text in RTF format.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.SaveFile(System.String,DevExpress.XtraReports.UI.XRRichTextStreamType)">
-            <summary>
-                <para>Saves the contents of the XRRichText control to the specified type of file.
-</para>
-            </summary>
-            <param name="path">
-		A <see cref="T:System.String"/> containing the name and location of the file to save the control's contents to. 
-
-            </param>
-            <param name="streamType">
-		An <see cref="T:DevExpress.XtraReports.UI.XRRichTextStreamType"/> enumeration value that defines the type of stream to use for saving the XRRichText control's contents to a file.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.SaveFile(System.IO.Stream,DevExpress.XtraReports.UI.XRRichTextStreamType)">
-            <summary>
-                <para>Saves the contents of the XRRichText control to the specified open data stream.
-
-</para>
-            </summary>
-            <param name="data">
-		A <see cref="T:System.IO.Stream"/> of data to which the contents of the XRRichText control will be saved.
-
-            </param>
-            <param name="streamType">
-		An <see cref="T:DevExpress.XtraReports.UI.XRRichTextStreamType"/> enumeration value that identifies the type of stream to save the control's contents to.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRRichText.SaveFile(System.String)">
-            <summary>
-                <para>Saves the contents of the XRRichText control to a Rich Text Format (RTF) file.
-</para>
-            </summary>
-            <param name="path">
-		A <see cref="T:System.String"/> containing a path to the file, which the contents of the XRRichText control will be saved to.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.Text">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.TextAlignment">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.TextAlignment"/> property to hide it.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.TextAlignment"/> value.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRRichText.XlsxFormatString">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.XlsxFormatString"/> property to hide it.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.XRControlCollectionBase">
-
-            <summary>
-                <para>Serves as the base class for classes that represent collections of <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class descendants.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRControlCollectionBase.#ctor(DevExpress.XtraReports.UI.XRControl)">
-            <summary>
-                <para>Initializes a new instance of the XRControlCollectionBase class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An <see cref="T:DevExpress.XtraReports.UI.XRControl"/> object, which will be the container for the created collection.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.XtraReports.UI.XRControlCollectionBase.CollectionChanged">
-            <summary>
-                <para>Occurs after making any change to the collection of report controls.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRControlCollectionBase.Dispose">
-            <summary>
-                <para>Disposes of the XRControlCollectionBase object.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.BindingEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.XRControl.EvaluateBinding"/> event.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.BindingEventHandler.Invoke(System.Object,DevExpress.XtraReports.UI.BindingEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.XRControl.EvaluateBinding"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The <see cref="T:DevExpress.XtraReports.UI.XRControl"/> descendant which fires the event.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraReports.UI.BindingEventArgs"/> object that contains data related to the event.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.ResFinder">
-
-            <summary>
-                <para>For internal use. Assists the XtraReports Suite localization.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.ResFinder.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ResFinder class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.GroupBandScripts">
-
-            <summary>
-                <para>Contains the names of the scripts assigned to <see cref="T:DevExpress.XtraReports.UI.GroupBand"/>. 
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.GroupBandScripts.OnBandLevelChanged">
-            <summary>
-                <para>Gets or sets the name of the script used to handle the <see cref="E:DevExpress.XtraReports.UI.GroupBand.BandLevelChanged"/> event.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
+            <value>A <see cref="T:System.String"/> value, specifying the name of the script for this event.
 </value>
 
 
@@ -495,36 +194,6 @@
 		A <see cref="T:DevExpress.XtraReports.UI.SubBand"/> object to remove from the collection of bands.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Design.ScriptExceptionEventArgs">
-
-            <summary>
-                <para>Occurs when an exception is raised during the execution of report scripts.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Design.ScriptExceptionEventArgs.#ctor(System.Exception)">
-            <summary>
-                <para>Initializes a new instance of the ScriptExceptionEventArgs class with the specified exception.
-</para>
-            </summary>
-            <param name="exception">
-		A <see cref="T:System.Exception"/> object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Design.ScriptExceptionEventArgs.Cancel">
-            <summary>
-                <para>Specifies whether the script execution should be canceled.
-</para>
-            </summary>
-            <value><b>true</b> to cancel the script execution; otherwise <b>false</b>.
-</value>
 
 
         </member>
@@ -1357,6 +1026,22 @@
                 <para>Initializes a new instance of the XRPivotGrid class with default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.ActualHeight">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.ActualWidth">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -3928,6 +3613,35 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.UI.BarCode.XRCode128Generator">
+
+            <summary>
+                <para>The class used to generate a Code 128 barcode.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.BarCode.XRCode128Generator.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.BarCode.XRCode128Generator"/> class with default settings.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.BarCode.XRCode128Generator.CharSet">
+            <summary>
+                <para>Gets or sets the value specifying the charset type for the Code 128 barcode. 
+</para>
+            </summary>
+            <value>One of the <see cref="T:DevExpress.XtraReports.UI.BarCode.Code128Charset"/> enumeration's values specifying the charset used.
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.BarCode.XRCode11Generator">
 
             <summary>
@@ -4365,6 +4079,207 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.XRGauge">
+
+            <summary>
+                <para>A Gauge control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRGauge.#ctor">
+            <summary>
+                <para>Initializes a new instance of the XRGauge class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.ActualValue">
+            <summary>
+                <para>Specifies a measure that provides data for calculating the actual Gauge value.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.Font">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Font"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.ForeColor">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Color"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.ImageType">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.KeepTogether">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A Boolean value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.Maximum">
+            <summary>
+                <para>Specifies sets the maximum value of the Gauge scale.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.Minimum">
+            <summary>
+                <para>Specifies the minimum value of the Gauge scale.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.TargetValue">
+            <summary>
+                <para>Specifies a measure that provides data for calculating the target Gauge value.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.Text">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.TextAlignment">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.TextAlignment"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraReports.UI.XRGauge.TextChanged">
+            <summary>
+                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.TextChanged"/> event.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewStyle">
+            <summary>
+                <para>Specifies the style of a Gauge.
+</para>
+            </summary>
+            <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeStyle enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewTheme">
+            <summary>
+                <para>Specifies the theme of a Gauge.
+</para>
+            </summary>
+            <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeTheme enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewType">
+            <summary>
+                <para>Specifies the view type of a Gauge.
+</para>
+            </summary>
+            <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeType enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.WordWrap">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A Boolean value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGauge.XlsxFormatString">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.SubBand">
+
+            <summary>
+                <para>A band provides a functional copy of the source band below which it is located.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.SubBand.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SubBand class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.SubBand.SubBands">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.Band.SubBands"/> property to hide it.
+
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.UI.SubBandCollection"/> value.
 </value>
 
 
@@ -10547,7 +10462,7 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>Specifies a control used to expand/collapse the current report band.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.UI.XRControl">XRControl</a> object specifying a report control.
+            <value>An <see cref="XRControl"/> object specifying a report control.
 </value>
 
 
@@ -10596,73 +10511,32 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.PreviewMouseEventArgs">
+        <member name="T:DevExpress.XtraReports.Design.ScriptExceptionEventArgs">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewClick"/>, <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewDoubleClick"/>, <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseMove"/>, <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseDown"/> and <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseUp"/> events.
-
- 
+                <para>Occurs when an exception is raised during the execution of report scripts.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.PreviewMouseEventArgs.#ctor(DevExpress.XtraPrinting.VisualBrick,DevExpress.XtraPrinting.ChangeEventArgs)">
+        <member name="M:DevExpress.XtraReports.Design.ScriptExceptionEventArgs.#ctor(System.Exception)">
             <summary>
-                <para>Initializes a new instance of the PreviewMouseEventArgs class with the specified settings.
+                <para>Initializes a new instance of the ScriptExceptionEventArgs class with the specified exception.
 </para>
             </summary>
-            <param name="brick">
-		A <see cref="T:DevExpress.XtraPrinting.VisualBrick"/> object, representing a control's contents in a report document. This value is assigned to the <see cref="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.Brick"/> property.
-
-            </param>
-            <param name="changeArgs">
-		A <see cref="T:DevExpress.XtraReports.UI.ChangeEventArgs"/> object, specifying the changes to property values. 
-
+            <param name="exception">
+		A <see cref="T:System.Exception"/> object.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.Brick">
+        <member name="P:DevExpress.XtraReports.Design.ScriptExceptionEventArgs.Cancel">
             <summary>
-                <para>Gets a visual brick that represents this control's contents on a report page.
-
-
+                <para>Specifies whether the script execution should be canceled.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.VisualBrick"/> object which represents the control's contents.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.PreviewMouseEventArgs.GetBrickScreenBounds">
-            <summary>
-                <para>Obtains the location and size of the <see cref="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.Brick"/> on the screen.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.Drawing.Rectangle"/> object representing brick bounds on the screen. 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.MouseButton">
-            <summary>
-                <para>Provides access to the value that specifies which mouse button has been clicked.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Windows.Input.MouseButton"/> enumeration member, specifying which mouse button has been clicked.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.PreviewControl">
-            <summary>
-                <para>Gets the control which shows the print preview of the report for this event.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Windows.Forms.Control"/> object which represents the preview control for the event.
+            <value><b>true</b> to cancel the script execution; otherwise <b>false</b>.
 </value>
 
 
@@ -13195,23 +13069,43 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.DetailReportBandCollection">
+        <member name="T:DevExpress.XtraReports.UI.XRTableScripts">
 
             <summary>
-                <para>A collection of <see cref="T:DevExpress.XtraReports.UI.DetailReportBand"/> objects.
+                <para>Contains the names of the scripts assigned to <see cref="T:DevExpress.XtraReports.UI.XRTable"/>. 
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.DetailReportBandCollection.#ctor(DevExpress.XtraReports.UI.XtraReportBase)">
+        <member name="M:DevExpress.XtraReports.UI.XRTableScripts.#ctor(DevExpress.XtraReports.UI.XRControl)">
             <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.DetailReportBandCollection"/> class.
+                <para>Initializes a new instance of the XRTableScripts class with the specified control.
 </para>
             </summary>
-            <param name="owner">
-		An <see cref="T:DevExpress.XtraReports.UI.XtraReportBase"/> object which will be the container for the created collection.
+            <param name="control">
+		An <see cref="T:DevExpress.XtraReports.UI.XRControl"/> object.
 
             </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableScripts.OnHtmlItemCreated">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControlEvents.OnHtmlItemCreated"/> property.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, containing the script's code for the event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableScripts.OnTextChanged">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControlEvents.OnTextChanged"/> property.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> containing the script's code for the event.
+</value>
 
 
         </member>
@@ -13231,124 +13125,67 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection">
+        <member name="T:DevExpress.XtraReports.UI.Formatting">
 
             <summary>
-                <para>Represents a field collection for the <see cref="T:DevExpress.XtraReports.UI.XRPivotGrid"/> control.
+                <para>A container of values, which are applied to a control when its owner Formatting Rule's condition is true.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
+        <member name="M:DevExpress.XtraReports.UI.Formatting.#ctor">
             <summary>
-                <para>Initializes a new instance of the XRPivotGridFieldCollection class.
+                <para>Initializes a new instance of the Formatting class with default settings.
 </para>
             </summary>
-            <param name="data">
-		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridData"/> object that implements data-aware operations on the data source.
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.Formatting.#ctor(System.String,DevExpress.Utils.DefaultBoolean)">
+            <summary>
+                <para>Initializes a new instance of the Formatting class with the specified name and visibility setting.
+
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value, which specifies a formatting's name. This value is assigned to the <see cref="P:DevExpress.XtraReports.UI.XRControlStyle.Name"/> property.
+
+
+            </param>
+            <param name="visible">
+		A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value which specifies whether the visibility should be changed by applying this formatting, and to what value it should be changed. This value is assigned to the <see cref="P:DevExpress.XtraReports.UI.Formatting.Visible"/> property. 
+
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection.AddRange(DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField[])">
+        <member name="P:DevExpress.XtraReports.UI.Formatting.Visible">
             <summary>
-                <para>Adds an array of fields to the end of the collection.
+                <para>Gets or sets the visibility state.
+
 </para>
             </summary>
-            <param name="fields">
-		An array of <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> objects. 
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value which represents the visibility state.
 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection.Item(System.String)">
-            <summary>
-                <para>Gets the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object specified by the field name. 
-</para>
-            </summary>
-            <param name="fieldName">
-		A <see cref="T:System.String"/> value specifying the field name of the required <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object. 
-
-            </param>
-            <value>An <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object bound to the specified field. 
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection.Item(System.Int32)">
-            <summary>
-                <para>Provides indexed access to individual fields in the collection.
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer specifying the desired field's position within the collection. If negative or greater than the last available index, an exception is raised. 
-
-
-            </param>
-            <value>An <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object which represents the field at the specified position. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView">
+        <member name="T:DevExpress.XtraReports.UI.GroupBandScripts">
 
             <summary>
-                <para>Provides display options for the <see cref="T:DevExpress.XtraReports.UI.XRPivotGrid"/> control.
+                <para>Contains the names of the scripts assigned to <see cref="T:DevExpress.XtraReports.UI.GroupBand"/>. 
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.#ctor(System.EventHandler)">
+        <member name="P:DevExpress.XtraReports.UI.GroupBandScripts.OnBandLevelChanged">
             <summary>
-                <para>Initializes a new instance of the XRPivotGridOptionsView class.
+                <para>Gets or sets the name of the script used to handle the <see cref="E:DevExpress.XtraReports.UI.GroupBand.BandLevelChanged"/> event.
 </para>
             </summary>
-            <param name="optionsChanged">
-		A delegate that will receive change notifications.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.DrawFocusedCellRect">
-            <summary>
-                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraPivotGrid.PivotGridOptionsViewBase.DrawFocusedCellRect"/> property, to hide it.
-
-</para>
-            </summary>
-            <value>Always <b>true</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.FilterSeparatorBarPadding">
-            <summary>
-                <para>Specifies the distance from the separator line to the adjacent areas.
-</para>
-            </summary>
-            <value>An integer value which specifies the distance from the separator line to the adjacent areas. The default is <b>1</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.HeaderHeightOffset">
-            <summary>
-                <para>For internal use only. Specifies the vertical distance between field headers.
-</para>
-            </summary>
-            <value>An integer value that specifies the distance between field headers, in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.HeaderWidthOffset">
-            <summary>
-                <para>For internal use only. Specifies the horizontal distance between field headers.
-</para>
-            </summary>
-            <value>An integer value that specifies the distance between field headers, in pixels. 
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -13359,6 +13196,90 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>Contains the names of the scripts assigned to <see cref="T:DevExpress.XtraReports.UI.XRSubreport"/>. 
 </para>
             </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraReports.LightSwitchDataSource">
+
+            <summary>
+                <para>A data source that allows you to use native LightSwitch structures, such as Table or Query.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.LightSwitchDataSource.#ctor">
+            <summary>
+                <para>Initializes a new instance of the LightSwitchDataSource class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.CollectionName">
+            <summary>
+                <para>Specifies the name of a collection that is used as a LightSwitch data source.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.DataSource">
+            <summary>
+                <para>Specifies a LightSwitch data source object.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Object"/> type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.DataSourceName">
+            <summary>
+                <para>Specifies the name of a LightSwitch data source.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraReports.LightSwitchDataSource.FillDataSource">
+            <summary>
+                <para>For internal use. Occurs when a LightSwitch data source is being filled.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.LightSwitchDataSource.GetParameters">
+            <summary>
+                <para>Provides access to the collection of report parameters.
+</para>
+            </summary>
+            <returns>A collection of <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> objects.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.IsQuery">
+            <summary>
+                <para>Specifies whether or not the data source is a LightSwitch query.
+</para>
+            </summary>
+            <value><b>true</b> if the data source is a LightSwitch query; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.QueryParameters">
+            <summary>
+                <para>Provides access to the collection of LightSwitch query parameters.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Xpo.DB.QueryParameterCollection"/> object.
+</value>
+
 
         </member>
         <member name="T:DevExpress.XtraReports.UI.GroupHeaderBandScripts">
@@ -13986,88 +13907,51 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.XRCrossBandBox">
+        <member name="T:DevExpress.XtraReports.Templates.Author">
 
             <summary>
-                <para>A Cross-Band Box control.
+                <para>Provides the information about a <see cref="T:DevExpress.XtraReports.Templates.Template"/>'s author.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.XRCrossBandBox.#ctor">
+        <member name="M:DevExpress.XtraReports.Templates.Author.#ctor">
             <summary>
-                <para>Initializes a new instance of the XRCrossBandBox class with default settings.
+                <para>Initializes a new instance of the Author class with default settings.
 </para>
             </summary>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.BackColor">
+        <member name="M:DevExpress.XtraReports.Templates.Author.Clone">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BackColor"/> property to hide it.
+                <para>Creates a copy of the current Author object.
+
+
 </para>
             </summary>
-            <value>Always <see cref="P:System.Drawing.Color.Transparent"/>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.BorderDashStyle">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BorderDashStyle"/> property, to hide it.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.Borders">
-            <summary>
-                <para>Gets or sets a set of borders (top, right, bottom,left), which should be visible for the cross-band box.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration value or their combination, which represents a set of visible borders.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.BorderWidth">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BorderWidth"/> property.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Single"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.ForeColor">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.ForeColor"/> property to hide it.
-</para>
-            </summary>
-            <value>Always <see cref="P:System.Drawing.Color.Transparent"/>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRCrossBandBox.GetEffectiveBorderDashStyle">
-            <summary>
-                <para>Overrides the <see cref="M:DevExpress.XtraReports.UI.XRControl.GetEffectiveBackColor"/> property to hide it. 
-</para>
-            </summary>
-            <returns>A <see cref="T:DevExpress.XtraPrinting.BorderDashStyle"/> enumeration value.
+            <returns>An Author object which is a copy of the current object.
 </returns>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.Padding">
+        <member name="P:DevExpress.XtraReports.Templates.Author.ID">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Padding"/> property to hide it.
+                <para>Specifies the report template's author ID.
 </para>
             </summary>
-            <value>Always <see cref="F:DevExpress.XtraPrinting.PaddingInfo.Empty"/>.
+            <value>A <see cref="T:System.Guid"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Templates.Author.Name">
+            <summary>
+                <para>Specifies the name of the report template's author.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> object.
 </value>
 
 
@@ -14725,39 +14609,23 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.QueryParameter">
+        <member name="T:DevExpress.XtraReports.UI.XRControlScripts">
 
             <summary>
-                <para>A <see cref="T:DevExpress.XtraReports.LightSwitchDataSource"/> parameter that is used with a parameterized LightSwitch Query.
+                <para>Contains names of the scripts for all report controls.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.QueryParameter.#ctor">
+        <member name="M:DevExpress.XtraReports.UI.XRControlScripts.#ctor(DevExpress.XtraReports.UI.XRControl)">
             <summary>
-                <para>Initializes a new instance of the QueryParameter class with default settings.
+                <para>Initializes a new instance of the XRControlScripts class with the specified control.
 </para>
             </summary>
+            <param name="control">
+		An <see cref="T:DevExpress.XtraReports.UI.XRControl"/> object.
 
-
-        </member>
-        <member name="P:DevExpress.XtraReports.QueryParameter.LookUpSettings">
-            <summary>
-                <para>Specifies a <see cref="T:DevExpress.XtraReports.Parameters.LookUpSettings"/> object for the QueryParameter.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.Parameters.LookUpSettings"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.QueryParameter.Type">
-            <summary>
-                <para>Specifies the query parameter type.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Type"/> enumeration value.
-</value>
+            </param>
 
 
         </member>
@@ -14998,6 +14866,72 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.UI.XRGroupSortingSummary">
+
+            <summary>
+                <para>Contains settings that define the sorting of groups by summary function results.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRGroupSortingSummary.#ctor">
+            <summary>
+                <para>Initializes a new instance of the XRGroupSortingSummary class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.Enabled">
+            <summary>
+                <para>Specifies whether the summary function is enabled.
+</para>
+            </summary>
+            <value><b>true</b> if the summary function is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.FieldName">
+            <summary>
+                <para>Specifies the data field, for which the summary function is calculated.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the data field name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.Function">
+            <summary>
+                <para>Specifies the arithmetic function to calculate. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.UI.SortingSummaryFunction"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.IgnoreNullValues">
+            <summary>
+                <para>Specifies whether <b>null</b> values should be ignored when a summary is calculated. 
+</para>
+            </summary>
+            <value><b>true</b> to ignore null values; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.SortOrder">
+            <summary>
+                <para>Specifies the sorting direction for groups (ascending or descending).
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraReports.UI.XRColumnSortOrder"/> enumeration value.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.GetValueEventHandler">
 
             <summary>
@@ -15106,42 +15040,73 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.XRTableScripts">
+        <member name="T:DevExpress.XtraReports.UI.PreviewMouseEventArgs">
 
             <summary>
-                <para>Contains the names of the scripts assigned to <see cref="T:DevExpress.XtraReports.UI.XRTable"/>. 
+                <para>Provides data for the <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewClick"/>, <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewDoubleClick"/>, <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseMove"/>, <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseDown"/> and <see cref="E:DevExpress.XtraReports.UI.XRControl.PreviewMouseUp"/> events.
+
+ 
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.XRTableScripts.#ctor(DevExpress.XtraReports.UI.XRControl)">
+        <member name="M:DevExpress.XtraReports.UI.PreviewMouseEventArgs.#ctor(DevExpress.XtraPrinting.VisualBrick,DevExpress.XtraPrinting.ChangeEventArgs)">
             <summary>
-                <para>Initializes a new instance of the XRTableScripts class with the specified control.
+                <para>Initializes a new instance of the PreviewMouseEventArgs class with the specified settings.
 </para>
             </summary>
-            <param name="control">
-		An <see cref="T:DevExpress.XtraReports.UI.XRControl"/> object.
+            <param name="brick">
+		A <see cref="T:DevExpress.XtraPrinting.VisualBrick"/> object, representing a control's contents in a report document. This value is assigned to the <see cref="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.Brick"/> property.
+
+            </param>
+            <param name="changeArgs">
+		A <see cref="T:DevExpress.XtraReports.UI.ChangeEventArgs"/> object, specifying the changes to property values. 
+
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRTableScripts.OnHtmlItemCreated">
+        <member name="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.Brick">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControlEvents.OnHtmlItemCreated"/> property.
+                <para>Gets a visual brick that represents this control's contents on a report page.
+
+
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value, containing the script's code for the event.
+            <value>A <see cref="T:DevExpress.XtraPrinting.VisualBrick"/> object which represents the control's contents.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRTableScripts.OnTextChanged">
+        <member name="M:DevExpress.XtraReports.UI.PreviewMouseEventArgs.GetBrickScreenBounds">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControlEvents.OnTextChanged"/> property.
+                <para>Obtains the location and size of the <see cref="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.Brick"/> on the screen.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> containing the script's code for the event.
+            <returns>A <see cref="T:System.Drawing.Rectangle"/> object representing brick bounds on the screen. 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.MouseButton">
+            <summary>
+                <para>Provides access to the value that specifies which mouse button has been clicked.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.Windows.Input.MouseButton"/> enumeration member, specifying which mouse button has been clicked.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.PreviewMouseEventArgs.PreviewControl">
+            <summary>
+                <para>Gets the control which shows the print preview of the report for this event.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.Windows.Forms.Control"/> object which represents the preview control for the event.
 </value>
 
 
@@ -15806,50 +15771,28 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.Formatting">
+        <member name="T:DevExpress.XtraReports.UI.BindingEventHandler">
 
             <summary>
-                <para>A container of values, which are applied to a control when its owner Formatting Rule's condition is true.
+                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.XRControl.EvaluateBinding"/> event.
+
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.Formatting.#ctor">
+        <member name="M:DevExpress.XtraReports.UI.BindingEventHandler.Invoke(System.Object,DevExpress.XtraReports.UI.BindingEventArgs)">
             <summary>
-                <para>Initializes a new instance of the Formatting class with default settings.
+                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.XRControl.EvaluateBinding"/> event.
 </para>
             </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.Formatting.#ctor(System.String,DevExpress.Utils.DefaultBoolean)">
-            <summary>
-                <para>Initializes a new instance of the Formatting class with the specified name and visibility setting.
-
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> value, which specifies a formatting's name. This value is assigned to the <see cref="P:DevExpress.XtraReports.UI.XRControlStyle.Name"/> property.
-
+            <param name="sender">
+		The <see cref="T:DevExpress.XtraReports.UI.XRControl"/> descendant which fires the event.
 
             </param>
-            <param name="visible">
-		A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value which specifies whether the visibility should be changed by applying this formatting, and to what value it should be changed. This value is assigned to the <see cref="P:DevExpress.XtraReports.UI.Formatting.Visible"/> property. 
-
+            <param name="e">
+		A <see cref="T:DevExpress.XtraReports.UI.BindingEventArgs"/> object that contains data related to the event.
 
             </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.Formatting.Visible">
-            <summary>
-                <para>Gets or sets the visibility state.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value which represents the visibility state.
-
-</value>
 
 
         </member>
@@ -16405,6 +16348,92 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.UI.XRCrossBandBox">
+
+            <summary>
+                <para>A Cross-Band Box control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRCrossBandBox.#ctor">
+            <summary>
+                <para>Initializes a new instance of the XRCrossBandBox class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.BackColor">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BackColor"/> property to hide it.
+</para>
+            </summary>
+            <value>Always <see cref="P:System.Drawing.Color.Transparent"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.BorderDashStyle">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BorderDashStyle"/> property, to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.Borders">
+            <summary>
+                <para>Gets or sets a set of borders (top, right, bottom,left), which should be visible for the cross-band box.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration value or their combination, which represents a set of visible borders.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.BorderWidth">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BorderWidth"/> property.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Single"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.ForeColor">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.ForeColor"/> property to hide it.
+</para>
+            </summary>
+            <value>Always <see cref="P:System.Drawing.Color.Transparent"/>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRCrossBandBox.GetEffectiveBorderDashStyle">
+            <summary>
+                <para>Overrides the <see cref="M:DevExpress.XtraReports.UI.XRControl.GetEffectiveBackColor"/> property to hide it. 
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.XtraPrinting.BorderDashStyle"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRCrossBandBox.Padding">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Padding"/> property to hide it.
+</para>
+            </summary>
+            <value>Always <see cref="F:DevExpress.XtraPrinting.PaddingInfo.Empty"/>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsPrint">
 
             <summary>
@@ -16451,6 +16480,115 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.VerticalContentSplitting"/> enumeration value. The default is <b>VerticalContentSplitting.Exact</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Localization.ReportResLocalizer">
+
+            <summary>
+                <para>A default localizer to translate the XtraReports' resources.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Localization.ReportResLocalizer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ReportResLocalizer class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.PageFooterBand">
+
+            <summary>
+                <para>A band located at the end of every report page.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.PageFooterBand.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PageFooterBand class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Serialization.ObjectStorageInfo">
+
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Serialization.ObjectStorageInfo.#ctor">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Serialization.ObjectStorageInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <param name="type">
+		A <see cref="T:System.String"/> value.
+
+            </param>
+            <param name="content">
+		A <see cref="T:System.String"/> value.
+
+            </param>
+            <param name="contentRef">
+		A <see cref="T:System.String"/> value.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Serialization.ObjectStorageInfo.Content">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Serialization.ObjectStorageInfo.ObjectType">
+            <summary>
+                <para>For internal use. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Serialization.ObjectStorageInfo.Ref">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Serialization.ObjectStorageInfo.Type">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -16555,128 +16693,6 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Localization.ReportResLocalizer">
-
-            <summary>
-                <para>A default localizer to translate the XtraReports' resources.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Localization.ReportResLocalizer.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ReportResLocalizer class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Serialization.ObjectStorageInfo">
-
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Serialization.ObjectStorageInfo.#ctor">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Serialization.ObjectStorageInfo.#ctor(System.String,System.String,System.String)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="type">
-		A <see cref="T:System.String"/> value.
-
-            </param>
-            <param name="content">
-		A <see cref="T:System.String"/> value.
-
-            </param>
-            <param name="contentRef">
-		A <see cref="T:System.String"/> value.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Serialization.ObjectStorageInfo.Content">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Serialization.ObjectStorageInfo.ObjectType">
-            <summary>
-                <para>For internal use. 
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Serialization.ObjectStorageInfo.Ref">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Serialization.ObjectStorageInfo.Type">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UserDesigner.DesignerLoadedEventHandler">
-
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraReports.UI.XtraReport.DesignerLoaded"/> event. 
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UserDesigner.DesignerLoadedEventHandler.Invoke(System.Object,DevExpress.XtraReports.UserDesigner.DesignerLoadedEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.XtraReport.DesignerLoaded"/> or <see cref="E:DevExpress.XtraReports.UserDesigner.XRDesignPanel.DesignerHostLoaded"/>  event.
-
-
-</para>
-            </summary>
-            <param name="sender">
-		The event source.
-
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraReports.UserDesigner.DesignerLoadedEventArgs"/> object that contains data related to the event.
-
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.UserDesigner.DesignerLoadedEventArgs">
 
             <summary>
@@ -16755,6 +16771,67 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <value>A DevExpress.XtraPivotGrid.Data.PivotGridData object.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection">
+
+            <summary>
+                <para>Represents a field collection for the <see cref="T:DevExpress.XtraReports.UI.XRPivotGrid"/> control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
+            <summary>
+                <para>Initializes a new instance of the XRPivotGridFieldCollection class.
+</para>
+            </summary>
+            <param name="data">
+		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridData"/> object that implements data-aware operations on the data source.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection.AddRange(DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField[])">
+            <summary>
+                <para>Adds an array of fields to the end of the collection.
+</para>
+            </summary>
+            <param name="fields">
+		An array of <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> objects. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection.Item(System.String)">
+            <summary>
+                <para>Gets the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object specified by the field name. 
+</para>
+            </summary>
+            <param name="fieldName">
+		A <see cref="T:System.String"/> value specifying the field name of the required <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object. 
+
+            </param>
+            <value>An <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object bound to the specified field. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridFieldCollection.Item(System.Int32)">
+            <summary>
+                <para>Provides indexed access to individual fields in the collection.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer specifying the desired field's position within the collection. If negative or greater than the last available index, an exception is raised. 
+
+
+            </param>
+            <value>An <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object which represents the field at the specified position. 
 </value>
 
 
@@ -17011,6 +17088,48 @@ However, if the height of the entire group is more than the page height, this gr
             <value>An object implementing the <see cref="T:System.Collections.IDictionary"/> interface. 
 
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.CalculatedFieldCollection">
+
+            <summary>
+                <para>A collection of <see cref="T:DevExpress.XtraReports.UI.CalculatedField"/> objects.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.CalculatedFieldCollection.#ctor(DevExpress.XtraReports.UI.XtraReport)">
+            <summary>
+                <para>Initializes a new instance of the CalculatedFieldCollection class with the specified owner report.
+
+</para>
+            </summary>
+            <param name="report">
+		An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.CalculatedFieldCollection.AddRange(DevExpress.XtraReports.UI.CalculatedField[])">
+            <summary>
+                <para>Appends an array of calculated fields to the collection.
+</para>
+            </summary>
+            <param name="items">
+		An array of <see cref="T:DevExpress.XtraReports.UI.CalculatedField"/> objects to append to the collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.CalculatedFieldCollection.Dispose">
+            <summary>
+                <para>Disposes the CalculatedFieldCollection object.
+
+</para>
+            </summary>
 
 
         </member>
@@ -17274,42 +17393,6 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.MultiColumnMode">
-
-            <summary>
-                <para>Specifies which multi-column properties will be taken into account if the multi-column feature is enabled.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraReports.UI.MultiColumnMode.None">
-            <summary>
-                <para>Multicolumn printing is disabled.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount">
-            <summary>
-                <para>Multicolumn printing is enabled and uses the <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnCount"/> property's value. The <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnWidth"/> property's value is ignored in this case, and the width of the columns is calculated automatically based upon the <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnCount"/> property's value and the page's width.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.UI.MultiColumnMode.UseColumnWidth">
-            <summary>
-                <para>Multicolumn printing is enabled and uses the <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnWidth"/> property's value. The <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnCount"/> property's value is ignored in this case, and the number of the columns is calculated automatically based upon the <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnWidth"/> property's value and the page's width.
-
-
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.UI.DataSourceRowEventArgs">
 
             <summary>
@@ -17417,6 +17500,67 @@ However, if the height of the entire group is more than the page height, this gr
             </summary>
             <returns>An integer value representing the hash code for the current object.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView">
+
+            <summary>
+                <para>Provides display options for the <see cref="T:DevExpress.XtraReports.UI.XRPivotGrid"/> control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.#ctor(System.EventHandler)">
+            <summary>
+                <para>Initializes a new instance of the XRPivotGridOptionsView class.
+</para>
+            </summary>
+            <param name="optionsChanged">
+		A delegate that will receive change notifications.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.DrawFocusedCellRect">
+            <summary>
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraPivotGrid.PivotGridOptionsViewBase.DrawFocusedCellRect"/> property, to hide it.
+
+</para>
+            </summary>
+            <value>Always <b>true</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.FilterSeparatorBarPadding">
+            <summary>
+                <para>Specifies the distance from the separator line to the adjacent areas.
+</para>
+            </summary>
+            <value>An integer value which specifies the distance from the separator line to the adjacent areas. The default is <b>1</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.HeaderHeightOffset">
+            <summary>
+                <para>For internal use only. Specifies the vertical distance between field headers.
+</para>
+            </summary>
+            <value>An integer value that specifies the distance between field headers, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsView.HeaderWidthOffset">
+            <summary>
+                <para>For internal use only. Specifies the horizontal distance between field headers.
+</para>
+            </summary>
+            <value>An integer value that specifies the distance between field headers, in pixels. 
+</value>
 
 
         </member>
@@ -17573,120 +17717,6 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>If a control is placed onto a <see cref="T:DevExpress.XtraReports.UI.DetailBand"/>, it is printed as a set of bricks, if possible. If a control is placed onto any other report band, it is printed as an image.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.XRTableCellCollection">
-
-            <summary>
-                <para>A collection of <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> objects.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRTableCellCollection.#ctor(DevExpress.XtraReports.UI.XRTableRow)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.XRTableCellCollection"/> class.
-</para>
-            </summary>
-            <param name="owner">
-		An <see cref="T:DevExpress.XtraReports.UI.XRTableRow"/> object that owns this collection of table cells. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRTableCellCollection.Add(DevExpress.XtraReports.UI.XRTableCell)">
-            <summary>
-                <para>Appends the specified <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> to the table row's collection of cells.
-
-</para>
-            </summary>
-            <param name="cell">
-		An <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> object to append to the collection.
-
-            </param>
-            <returns>An integer value specifying the index of the new element in the collection. This method adds the <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/>  object to the end of the collection.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRTableCellCollection.AddRange(DevExpress.XtraReports.UI.XRTableCell[])">
-            <summary>
-                <para>Appends an array of table cells to the collection.
-
-</para>
-            </summary>
-            <param name="cells">
-		An array of <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> objects to append to the collection.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRTableCellCollection.Item(System.Int32)">
-            <summary>
-                <para>An indexer that returns the <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> object at the specified index in the collection of cells.
-</para>
-            </summary>
-            <param name="index">
-		An integer index value that locates the cell in the collection.
-
-            </param>
-            <value>An <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> object that has the specified index in the collection of cells.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.XRSummaryEvents">
-
-            <summary>
-                <para>Contains the names of the scripts available for <see cref="T:DevExpress.XtraReports.UI.XRSummary"/>.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRSummaryEvents.#ctor">
-            <summary>
-                <para>Initializes a new instance of the XRSummaryEvents class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRSummaryEvents.OnGetResult">
-            <summary>
-                <para>Specifies the name of the script used to handle the <see cref="M:DevExpress.XtraReports.UI.XRSummary.GetResult"/> event.
-
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the name of the script for this event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRSummaryEvents.OnReset">
-            <summary>
-                <para>Gets or sets the name of the script used to handle the <see cref="E:DevExpress.XtraReports.UI.XRLabel.SummaryReset"/> event.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the name of the script for this event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRSummaryEvents.OnRowChanged">
-            <summary>
-                <para>Gets or sets the name of the script used to handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.RowChanged"/> event.
-
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the name of the script for this event.
-</value>
 
 
         </member>
@@ -18098,55 +18128,6 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <value><b>true</b> if the field is shown in Prefilter; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Templates.Author">
-
-            <summary>
-                <para>Provides the information about a <see cref="T:DevExpress.XtraReports.Templates.Template"/>'s author.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Templates.Author.#ctor">
-            <summary>
-                <para>Initializes a new instance of the Author class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Templates.Author.Clone">
-            <summary>
-                <para>Creates a copy of the current Author object.
-
-
-</para>
-            </summary>
-            <returns>An Author object which is a copy of the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Templates.Author.ID">
-            <summary>
-                <para>Specifies the report template's author ID.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Guid"/> structure.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Templates.Author.Name">
-            <summary>
-                <para>Specifies the name of the report template's author.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> object.
 </value>
 
 
@@ -18928,31 +18909,65 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.SubBand">
+        <member name="T:DevExpress.XtraReports.UI.XRTableCellCollection">
 
             <summary>
-                <para>A band provides a functional copy of the source band below which it is located.
-
+                <para>A collection of <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> objects.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.SubBand.#ctor">
+        <member name="M:DevExpress.XtraReports.UI.XRTableCellCollection.#ctor(DevExpress.XtraReports.UI.XRTableRow)">
             <summary>
-                <para>Initializes a new instance of the SubBand class with default settings.
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.XRTableCellCollection"/> class.
 </para>
             </summary>
+            <param name="owner">
+		An <see cref="T:DevExpress.XtraReports.UI.XRTableRow"/> object that owns this collection of table cells. 
+
+            </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.SubBand.SubBands">
+        <member name="M:DevExpress.XtraReports.UI.XRTableCellCollection.Add(DevExpress.XtraReports.UI.XRTableCell)">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.Band.SubBands"/> property to hide it.
-
+                <para>Appends the specified <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> to the table row's collection of cells.
 
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.UI.SubBandCollection"/> value.
+            <param name="cell">
+		An <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> object to append to the collection.
+
+            </param>
+            <returns>An integer value specifying the index of the new element in the collection. This method adds the <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/>  object to the end of the collection.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRTableCellCollection.AddRange(DevExpress.XtraReports.UI.XRTableCell[])">
+            <summary>
+                <para>Appends an array of table cells to the collection.
+
+</para>
+            </summary>
+            <param name="cells">
+		An array of <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> objects to append to the collection.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableCellCollection.Item(System.Int32)">
+            <summary>
+                <para>An indexer that returns the <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> object at the specified index in the collection of cells.
+</para>
+            </summary>
+            <param name="index">
+		An integer index value that locates the cell in the collection.
+
+            </param>
+            <value>An <see cref="T:DevExpress.XtraReports.UI.XRTableCell"/> object that has the specified index in the collection of cells.
 </value>
 
 
@@ -18994,6 +19009,26 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>The top of the control is positioned at the top of the band.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.DetailReportBandCollection">
+
+            <summary>
+                <para>A collection of <see cref="T:DevExpress.XtraReports.UI.DetailReportBand"/> objects.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.DetailReportBandCollection.#ctor(DevExpress.XtraReports.UI.XtraReportBase)">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.DetailReportBandCollection"/> class.
+</para>
+            </summary>
+            <param name="owner">
+		An <see cref="T:DevExpress.XtraReports.UI.XtraReportBase"/> object which will be the container for the created collection.
+
+            </param>
 
 
         </member>
@@ -22401,22 +22436,6 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.PageFooterBand">
-
-            <summary>
-                <para>A band located at the end of every report page.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.PageFooterBand.#ctor">
-            <summary>
-                <para>Initializes a new instance of the PageFooterBand class with default settings.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.UI.GroupFieldCollection">
 
             <summary>
@@ -23796,48 +23815,6 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.CalculatedFieldCollection">
-
-            <summary>
-                <para>A collection of <see cref="T:DevExpress.XtraReports.UI.CalculatedField"/> objects.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.CalculatedFieldCollection.#ctor(DevExpress.XtraReports.UI.XtraReport)">
-            <summary>
-                <para>Initializes a new instance of the CalculatedFieldCollection class with the specified owner report.
-
-</para>
-            </summary>
-            <param name="report">
-		An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.CalculatedFieldCollection.AddRange(DevExpress.XtraReports.UI.CalculatedField[])">
-            <summary>
-                <para>Appends an array of calculated fields to the collection.
-</para>
-            </summary>
-            <param name="items">
-		An array of <see cref="T:DevExpress.XtraReports.UI.CalculatedField"/> objects to append to the collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.CalculatedFieldCollection.Dispose">
-            <summary>
-                <para>Disposes the CalculatedFieldCollection object.
-
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.UI.CalculatedField">
 
             <summary>
@@ -23990,173 +23967,81 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.XRControlScripts">
+        <member name="T:DevExpress.XtraReports.ResFinder">
 
             <summary>
-                <para>Contains names of the scripts for all report controls.
+                <para>For internal use. Assists the XtraReports Suite localization.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.XRControlScripts.#ctor(DevExpress.XtraReports.UI.XRControl)">
+        <member name="M:DevExpress.XtraReports.ResFinder.#ctor">
             <summary>
-                <para>Initializes a new instance of the XRControlScripts class with the specified control.
+                <para>Initializes a new instance of the ResFinder class with default settings.
 </para>
             </summary>
-            <param name="control">
-		An <see cref="T:DevExpress.XtraReports.UI.XRControl"/> object.
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.QueryParameter">
+
+            <summary>
+                <para>A <see cref="T:DevExpress.XtraReports.LightSwitchDataSource"/> parameter that is used with a parameterized LightSwitch Query.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.QueryParameter.#ctor">
+            <summary>
+                <para>Initializes a new instance of the QueryParameter class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.QueryParameter.LookUpSettings">
+            <summary>
+                <para>Specifies a <see cref="T:DevExpress.XtraReports.Parameters.LookUpSettings"/> object for the QueryParameter.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.Parameters.LookUpSettings"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.QueryParameter.Type">
+            <summary>
+                <para>Specifies the query parameter type.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Type"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.GroupHeaderBand.SortingSummaryRowChanged"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventHandler.Invoke(System.Object,DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.GroupHeaderBand.SortingSummaryRowChanged"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source.
+
 
             </param>
+            <param name="e">
+		A <see cref="T:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs"/> object that contains data related to the event.
 
 
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.XRGroupSortingSummary">
-
-            <summary>
-                <para>Contains settings that define the sorting of groups by summary function results.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.XRGroupSortingSummary.#ctor">
-            <summary>
-                <para>Initializes a new instance of the XRGroupSortingSummary class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.Enabled">
-            <summary>
-                <para>Specifies whether the summary function is enabled.
-</para>
-            </summary>
-            <value><b>true</b> if the summary function is enabled; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.FieldName">
-            <summary>
-                <para>Specifies the data field, for which the summary function is calculated.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the data field name.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.Function">
-            <summary>
-                <para>Specifies the arithmetic function to calculate. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.UI.SortingSummaryFunction"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.IgnoreNullValues">
-            <summary>
-                <para>Specifies whether <b>null</b> values should be ignored when a summary is calculated. 
-</para>
-            </summary>
-            <value><b>true</b> to ignore null values; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGroupSortingSummary.SortOrder">
-            <summary>
-                <para>Specifies the sorting direction for groups (ascending or descending).
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraReports.UI.XRColumnSortOrder"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.LightSwitchDataSource">
-
-            <summary>
-                <para>A data source that allows you to use native LightSwitch structures, such as Table or Query.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.LightSwitchDataSource.#ctor">
-            <summary>
-                <para>Initializes a new instance of the LightSwitchDataSource class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.CollectionName">
-            <summary>
-                <para>Specifies the name of a collection that is used as a LightSwitch data source.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.DataSource">
-            <summary>
-                <para>Specifies a LightSwitch data source object.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Object"/> type.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.DataSourceName">
-            <summary>
-                <para>Specifies the name of a LightSwitch data source.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraReports.LightSwitchDataSource.FillDataSource">
-            <summary>
-                <para>For internal use. Occurs when a LightSwitch data source is being filled.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.LightSwitchDataSource.GetParameters">
-            <summary>
-                <para>Provides access to the collection of report parameters.
-</para>
-            </summary>
-            <returns>A collection of <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> objects.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.IsQuery">
-            <summary>
-                <para>Specifies whether or not the data source is a LightSwitch query.
-</para>
-            </summary>
-            <value><b>true</b> if the data source is a LightSwitch query; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.LightSwitchDataSource.QueryParameters">
-            <summary>
-                <para>Provides access to the collection of LightSwitch query parameters.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Xpo.DB.QueryParameterCollection"/> object.
-</value>
+            </param>
 
 
         </member>
@@ -26575,7 +26460,7 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>Specifies a control used to expand/collapse the current report band.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.UI.XRControl">XRControl</a> object specifying a report control.
+            <value>An <see cref="XRControl"/> object specifying a report control.
 </value>
 
 
@@ -26943,7 +26828,7 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>Specifies a control used to expand/collapse the current report band.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraReports.UI.XRControl">XRControl</a> object specifying a report control.
+            <value>An <see cref="XRControl"/> object specifying a report control.
 </value>
 
 
@@ -27010,6 +26895,72 @@ However, if the height of the entire group is more than the page height, this gr
             </summary>
             <value>A <see cref="T:DevExpress.XtraReports.UI.GroupFieldCollection"/> object which represents the collection of data fields to sort by.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UserDesigner.DesignerLoadedEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraReports.UI.XtraReport.DesignerLoaded"/> event. 
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UserDesigner.DesignerLoadedEventHandler.Invoke(System.Object,DevExpress.XtraReports.UserDesigner.DesignerLoadedEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.XtraReport.DesignerLoaded"/> or <see cref="E:DevExpress.XtraReports.UserDesigner.XRDesignPanel.DesignerHostLoaded"/>  event.
+
+
+</para>
+            </summary>
+            <param name="sender">
+		The event source.
+
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.XtraReports.UserDesigner.DesignerLoadedEventArgs"/> object that contains data related to the event.
+
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.XRControlCollectionBase">
+
+            <summary>
+                <para>Serves as the base class for classes that represent collections of <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class descendants.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRControlCollectionBase.#ctor(DevExpress.XtraReports.UI.XRControl)">
+            <summary>
+                <para>Initializes a new instance of the XRControlCollectionBase class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An <see cref="T:DevExpress.XtraReports.UI.XRControl"/> object, which will be the container for the created collection.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.XtraReports.UI.XRControlCollectionBase.CollectionChanged">
+            <summary>
+                <para>Occurs after making any change to the collection of report controls.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRControlCollectionBase.Dispose">
+            <summary>
+                <para>Disposes of the XRControlCollectionBase object.
+</para>
+            </summary>
 
 
         </member>
@@ -27089,174 +27040,294 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.XRGauge">
+        <member name="T:DevExpress.XtraReports.UI.MultiColumnMode">
 
             <summary>
-                <para>A Gauge control.
+                <para>Specifies which multi-column properties will be taken into account if the multi-column feature is enabled.
+
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.XRGauge.#ctor">
+        <member name="F:DevExpress.XtraReports.UI.MultiColumnMode.None">
             <summary>
-                <para>Initializes a new instance of the XRGauge class with default settings.
+                <para>Multicolumn printing is disabled.
 </para>
             </summary>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.ActualValue">
+        <member name="F:DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount">
             <summary>
-                <para>Specifies a measure that provides data for calculating the actual Gauge value.
+                <para>Multicolumn printing is enabled and uses the <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnCount"/> property's value. The <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnWidth"/> property's value is ignored in this case, and the width of the columns is calculated automatically based upon the <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnCount"/> property's value and the page's width.
+
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.UI.MultiColumnMode.UseColumnWidth">
+            <summary>
+                <para>Multicolumn printing is enabled and uses the <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnWidth"/> property's value. The <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnCount"/> property's value is ignored in this case, and the number of the columns is calculated automatically based upon the <see cref="P:DevExpress.XtraReports.UI.MultiColumn.ColumnWidth"/> property's value and the page's width.
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.UI.XRRichText">
+
+            <summary>
+                <para>A Rich Text control which is used to display, enter, and manipulate formatted text. 
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.#ctor">
+            <summary>
+                <para>Initializes a new instance of the XRRichText class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.BeginInit">
+            <summary>
+                <para>Starts the XRRichText's initialization. Initialization occurs at runtime.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.CanGrow">
+            <summary>
+                <para>Gets or sets a value indicating whether the control's height can grow in order to display the contents in their entirety.
+
+</para>
+            </summary>
+            <value><b>true</b> if the control's height can grow in order to display all its text; otherwise, <b>false</b>.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.Font">
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.CanShrink">
             <summary>
-                <para>For internal use.
+                <para>Gets or sets a value indicating whether the control's height can decrease if its text does not completely fill the control.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Font"/> object.
+            <value><b>true</b> if the control's height can decrease in order to remove the unused space; otherwise, <b>false</b>. 
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.ForeColor">
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.Clear">
             <summary>
-                <para>For internal use.
+                <para>Clears all contents of the Rich Text control.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> structure.
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.EndInit">
+            <summary>
+                <para>Ends the XRRichText's initialization.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.GetEffectiveFont">
+            <summary>
+                <para>Overrides the <see cref="M:DevExpress.XtraReports.UI.XRControl.GetEffectiveFont"/> property, to return the font from the content of the <see cref="T:DevExpress.XtraReports.UI.XRRichText"/> control.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Font"/> value representing the effective font.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.GetEffectiveForeColor">
+            <summary>
+                <para>Overrides the <see cref="M:DevExpress.XtraReports.UI.XRControl.GetEffectiveForeColor"/> property, to return the foreground color from the content of the <see cref="T:DevExpress.XtraReports.UI.XRRichText"/> control.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color"/> value representing the effective foreground color.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.Html">
+            <summary>
+                <para><b>Bindable</b>. Used to supply HTML content to a XRRichText control.
+
+
+</para>
+            </summary>
+            <value>Always empty string.
+
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.ImageType">
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.KeepTogether">
             <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.KeepTogether">
-            <summary>
-                <para>For internal use.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.KeepTogether"/> property.
 </para>
             </summary>
-            <value>A Boolean value.
+            <value><b>true</b> to keep the contents of the entire control on a single page; otherwise, <b>false</b>.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.Maximum">
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.Lines">
             <summary>
-                <para>Specifies sets the maximum value of the Gauge scale.
+                <para>Gets or sets the text lines in the XRRichText control.
+
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
+            <value>An array of <see cref="T:System.String"/> values that contain some text in the XRRichText control.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.Minimum">
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.LoadFile(System.IO.Stream,DevExpress.XtraReports.UI.XRRichTextStreamType)">
             <summary>
-                <para>Specifies the minimum value of the Gauge scale.
+                <para>Loads the contents of an existing data stream into the XRRichText control.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
+            <param name="data">
+		A <see cref="T:System.IO.Stream"/> of data to load into the XRRichText control.
+
+
+            </param>
+            <param name="streamType">
+		An <see cref="T:DevExpress.XtraReports.UI.XRRichTextStreamType"/> enumeration value that determines the type of stream to be used for loading data into the XRRichText control.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.LoadFile(System.String,DevExpress.XtraReports.UI.XRRichTextStreamType)">
+            <summary>
+                <para>Loads a specific type of file into the XRRichText control.
+</para>
+            </summary>
+            <param name="path">
+		A <see cref="T:System.String"/> containing a path to the file to be loaded into the XRRichText control.
+
+            </param>
+            <param name="streamType">
+		An <see cref="T:DevExpress.XtraReports.UI.XRRichTextStreamType"/> enumeration value that determines the type of stream used to load the file into the XRRichText control.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.LoadFile(System.String)">
+            <summary>
+                <para>Loads the contents of the Rich Text Format (RTF) file into the XRRichText control.
+
+</para>
+            </summary>
+            <param name="path">
+		A <see cref="T:System.String"/> containing a path to the file to be loaded into the XRRichText control.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.Rtf">
+            <summary>
+                <para><b>Bindable</b>. Gets or sets the text of the XRRichText control, including all the Rich Text Format (RTF) codes.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value which represents the control's text in RTF format.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.TargetValue">
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.SaveFile(System.String,DevExpress.XtraReports.UI.XRRichTextStreamType)">
             <summary>
-                <para>Specifies a measure that provides data for calculating the target Gauge value.
+                <para>Saves the contents of the XRRichText control to the specified type of file.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value; <b>null</b> (<b>Nothing</b> in Visual Basic) to define this value automatically.
+            <param name="path">
+		A <see cref="T:System.String"/> containing the name and location of the file to save the control's contents to. 
+
+            </param>
+            <param name="streamType">
+		An <see cref="T:DevExpress.XtraReports.UI.XRRichTextStreamType"/> enumeration value that defines the type of stream to use for saving the XRRichText control's contents to a file.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.SaveFile(System.IO.Stream,DevExpress.XtraReports.UI.XRRichTextStreamType)">
+            <summary>
+                <para>Saves the contents of the XRRichText control to the specified open data stream.
+
+</para>
+            </summary>
+            <param name="data">
+		A <see cref="T:System.IO.Stream"/> of data to which the contents of the XRRichText control will be saved.
+
+            </param>
+            <param name="streamType">
+		An <see cref="T:DevExpress.XtraReports.UI.XRRichTextStreamType"/> enumeration value that identifies the type of stream to save the control's contents to.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRRichText.SaveFile(System.String)">
+            <summary>
+                <para>Saves the contents of the XRRichText control to a Rich Text Format (RTF) file.
+</para>
+            </summary>
+            <param name="path">
+		A <see cref="T:System.String"/> containing a path to the file, which the contents of the XRRichText control will be saved to.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.Text">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.Text">
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.TextAlignment">
             <summary>
-                <para>For internal use.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.TextAlignment"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value.
+            <value>A <see cref="T:DevExpress.XtraPrinting.TextAlignment"/> value.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.TextAlignment">
+        <member name="P:DevExpress.XtraReports.UI.XRRichText.XlsxFormatString">
             <summary>
-                <para>For internal use.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.XlsxFormatString"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.TextAlignment"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraReports.UI.XRGauge.TextChanged">
-            <summary>
-                <para>Overrides the <see cref="E:DevExpress.XtraReports.UI.XRControl.TextChanged"/> event.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewStyle">
-            <summary>
-                <para>Specifies the style of a Gauge.
-</para>
-            </summary>
-            <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeStyle enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewTheme">
-            <summary>
-                <para>Specifies the theme of a Gauge.
-</para>
-            </summary>
-            <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeTheme enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.ViewType">
-            <summary>
-                <para>Specifies the view type of a Gauge.
-</para>
-            </summary>
-            <value>A DevExpress.XtraGauges.Core.Customization.DashboardGaugeType enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.WordWrap">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value>A Boolean value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.XRGauge.XlsxFormatString">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
+            <value>A <see cref="T:System.String"/> value. 
 </value>
 
 
@@ -27423,61 +27494,6 @@ However, if the height of the entire group is more than the page height, this gr
 
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.GroupHeaderBand.SortingSummaryRowChanged"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventHandler.Invoke(System.Object,DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.XtraReports.UI.GroupHeaderBand.SortingSummaryRowChanged"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event source.
-
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs"/> object that contains data related to the event.
-
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.UI.BarCode.XRCode128Generator">
-
-            <summary>
-                <para>The class used to generate a Code 128 barcode.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.BarCode.XRCode128Generator.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.BarCode.XRCode128Generator"/> class with default settings.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.BarCode.XRCode128Generator.CharSet">
-            <summary>
-                <para>Gets or sets the value specifying the charset type for the Code 128 barcode. 
-</para>
-            </summary>
-            <value>One of the <see cref="T:DevExpress.XtraReports.UI.BarCode.Code128Charset"/> enumeration's values specifying the charset used.
-
-</value>
 
 
         </member>

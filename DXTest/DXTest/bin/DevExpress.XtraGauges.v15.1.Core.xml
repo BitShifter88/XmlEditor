@@ -4,48 +4,6 @@
         <name>DevExpress.XtraGauges.v15.1.Core</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.XtraGauges.Core.Model.ScaleRange">
-
-            <summary>
-                <para>Represents the base class for ranges associated with a scale.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraGauges.Core.Model.ScaleRange.EndPercent">
-            <summary>
-                <para>Gets or sets the end value of the range in percents.
-</para>
-            </summary>
-            <value>A nullable Single value that specifies the end value of the range in percents.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGauges.Core.Model.ScaleRange.Scale">
-            <summary>
-                <para>Gets the scale with which the current range is associated.
-</para>
-            </summary>
-            <value>A DevExpress.XtraGauges.Core.Model.IScale object with which the current range is associated.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGauges.Core.Model.ScaleRange.StartPercent">
-            <summary>
-                <para>Gets or sets the start value of the range, as a percentage.
-
-</para>
-            </summary>
-            <value>A nullable Single value that specifies the start value of the range, as a percentage.
-
-
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventArgs">
 
             <summary>
@@ -217,6 +175,48 @@
                 <para>Initializes a new instance of the LinearScaleRange class.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGauges.Core.Model.ScaleRange">
+
+            <summary>
+                <para>Represents the base class for ranges associated with a scale.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Model.ScaleRange.EndPercent">
+            <summary>
+                <para>Gets or sets the end value of the range in percents.
+</para>
+            </summary>
+            <value>A nullable Single value that specifies the end value of the range in percents.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Model.ScaleRange.Scale">
+            <summary>
+                <para>Gets the scale with which the current range is associated.
+</para>
+            </summary>
+            <value>A DevExpress.XtraGauges.Core.Model.IScale object with which the current range is associated.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Model.ScaleRange.StartPercent">
+            <summary>
+                <para>Gets or sets the start value of the range, as a percentage.
+
+</para>
+            </summary>
+            <value>A nullable Single value that specifies the start value of the range, as a percentage.
+
+
+</value>
 
 
         </member>
@@ -1178,6 +1178,66 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraGauges.Core.Base.ColorScheme">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.#ctor">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.Color">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGauges.Core.Base.ColorScheme.PropertyChanged">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.Reset">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ShouldSerialize">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.TargetElements">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ToString">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraGauges.Core.Model.BaseGauge">
 
             <summary>
@@ -1286,6 +1346,14 @@
 
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Model.BaseGauge.GetColorScheme">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
 
 
         </member>
@@ -4969,6 +5037,41 @@
             </param>
             <returns><b>true</b> if the <b>Style Chooser</b> form has been invoked successfully; otherwise, <b>false</b>.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGauges.Core.Base.TargetElement">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraGauges.Core.Base.TargetElement.Empty">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGauges.Core.Base.TargetElement.ImageIndicator">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGauges.Core.Base.TargetElement.Label">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGauges.Core.Base.TargetElement.RangeBar">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>

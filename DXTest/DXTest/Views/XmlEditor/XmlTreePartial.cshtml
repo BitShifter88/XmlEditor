@@ -15,7 +15,6 @@
             // Furthermore, the Action updates the view model of the TreeList
             settings.SettingsEditing.UpdateNodeRouteValues = new { Controller = "XmlEditor", Action = "UpdateNode" };
             settings.SettingsEditing.DeleteNodeRouteValues = new { Controller = "XmlEditor", Action = "DeleteNode" };
-            settings.SettingsEditing.NodeDragDropRouteValues = new { Controller = "XmlEditor", Action = "NodeDragDrop" };
             settings.ClientSideEvents.ContextMenu = "function(s, e) { OnTreeListRightClick(s, e) }";
             //settings.ClientSideEvents.CallbackError = "onTreeListCallBackError";
             settings.Width = Unit.Pixel(1000);
@@ -34,8 +33,15 @@
             settings.RootValue = 0;
             // This allows the user to be able to select individual nodes
             settings.SettingsBehavior.AllowFocusedNode = true;
-            settings.SettingsBehavior.AllowDragDrop = true;
-            //settings.SettingsBehavior.AutoExpandAllNodes = true;
+
+            // If the tree structure is locked, the user is not allowed to drag and drop
+            bool lockTreeStrucutre = Boolean.Parse(System.Web.Configuration.WebConfigurationManager.AppSettings["LockTreeStructure"]);
+            if (lockTreeStrucutre == false)
+            {
+                settings.SettingsEditing.NodeDragDropRouteValues = new { Controller = "XmlEditor", Action = "NodeDragDrop" };
+                settings.SettingsBehavior.AllowDragDrop = true;
+            }
+
 
             settings.Settings.GridLines = System.Web.UI.WebControls.GridLines.Both;
             settings.SettingsBehavior.ExpandCollapseAction = TreeListExpandCollapseAction.NodeDblClick;
@@ -90,11 +96,13 @@
             // We create a column with an "edit" link that allows the user to edit spcific tree nodes
             settings.CommandColumn.Visible = true;
             settings.CommandColumn.EditButton.Visible = true;
-            settings.CommandColumn.DeleteButton.Visible = true;
-            settings.SettingsEditing.ConfirmDelete = true;
+            // If the tree structure is locked, the user should not be allowed to delete nodes
+            if (lockTreeStrucutre == false)
+            {
+                settings.CommandColumn.DeleteButton.Visible = true;
+                settings.SettingsEditing.ConfirmDelete = true;
+            }
             settings.CommandColumn.Width = 50;
-
-            
 
             // Each time a row (node) is created in the TreeList, we assign it a color according to the node type. Elements are colored green, and attributes are colered red
             settings.HtmlRowPrepared = (s, e) =>

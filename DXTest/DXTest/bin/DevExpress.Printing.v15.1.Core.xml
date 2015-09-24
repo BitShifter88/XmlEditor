@@ -919,79 +919,77 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraPrinting.TextExportOptionsBase">
+        <member name="T:DevExpress.XtraReports.Parameters.ParameterInfo">
 
             <summary>
-                <para>Represents the base class for objects which define export options specific for Text and CSV formats.
+                <para>Represents a class containing information about a specific parameter and its editor.
 
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraPrinting.TextExportOptionsBase.Assign(DevExpress.XtraPrinting.ExportOptionsBase)">
+        <member name="M:DevExpress.XtraReports.Parameters.ParameterInfo.#ctor(DevExpress.XtraReports.Parameters.Parameter,System.Windows.Forms.Control)">
             <summary>
-                <para>Copies all the settings from the TextExportOptionsBase object passed as a parameter.
+                <para>Initializes a new instance of the ParameterInfo class with the specified parameter and the editor for this parameter.
 
 </para>
             </summary>
-            <param name="source">
-		An TextExportOptionsBase object (which is the <see cref="T:DevExpress.XtraPrinting.ExportOptionsBase"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+            <param name="parameter">
+		A <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> object specifying the parameter for which an event has been raised. This value is assigned to the <see cref="P:DevExpress.XtraReports.Parameters.ParameterInfo.Parameter"/> property.
+
+            </param>
+            <param name="editor">
+		A <see cref="T:System.Windows.Forms.Control"/> class descendant specifying the editor for this parameter. This value is assigned to the <see cref="P:DevExpress.XtraReports.Parameters.ParameterInfo.Editor"/> property.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.Encoding">
+        <member name="M:DevExpress.XtraReports.Parameters.ParameterInfo.#ctor(DevExpress.XtraReports.Parameters.Parameter,DevExpress.Utils.Function`2)">
             <summary>
-                <para>Gets or sets the encoding of the text-based file to which a report is exported.
+                <para>Initializes a new instance of the ParameterInfo class with the specified parameter and the editor for this parameter.
+
 </para>
             </summary>
-            <value>A <see cref="T:System.Text.Encoding"/> class descendant specifying the encoding of the text-based file.
+            <param name="parameter">
+		A <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> object specifying the parameter for which an event has been raised. This value is assigned to the <see cref="P:DevExpress.XtraReports.Parameters.ParameterInfo.Parameter"/> property.
 
+            </param>
+            <param name="createEditor">
+		A <see cref="T:System.Windows.Forms.Control"/> class descendant specifying the editor for this parameter. This value is assigned to the <see cref="P:DevExpress.XtraReports.Parameters.ParameterInfo.Editor"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Parameters.ParameterInfo.Editor">
+            <summary>
+                <para>Gets or sets an editor, used to enter a parameter's value.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.Windows.Forms.Control"/> class descendant. Normally, it should be one of the DevExpress XtraEditors.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.EncodingType">
+        <member name="M:DevExpress.XtraReports.Parameters.ParameterInfo.GetEditor(System.Boolean)">
             <summary>
-                <para>Gets or sets a value used to serialize the <see cref="P:DevExpress.XtraPrinting.TextExportOptionsBase.Encoding"/> property.
-
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="T:DevExpress.XtraPrinting.EncodingType"/> enumeration value which represents the encoding type of the created text-based document.
-
-</value>
+            <param name="forceCreate">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.QuoteStringsWithSeparators">
+        <member name="P:DevExpress.XtraReports.Parameters.ParameterInfo.Parameter">
             <summary>
-                <para>Gets or sets a value indicating whether a string with separators should be placed in quotation marks when a document is exported to a Text-based file.
-
-
+                <para>Provides access to the parameter associated with the current ParameterInfo object.
 </para>
             </summary>
-            <value><b>true</b> to quote (place quotation marks around) text elements containing symbols which are the same as the specified separator string; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.Separator">
-            <summary>
-                <para>Gets or sets the symbol(s) to separate text elements when a document is exported to a Text-based file.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> containing the symbol(s) which will be used to separate text elements in the created Text-based file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.TextExportMode">
-            <summary>
-                <para>Gets or sets a value indicating whether to use the formatting of the data fields in the bound dataset for the cells in the exported TXT or CSV document. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.TextExportMode"/> enumeration value.
+            <value>A <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> object.
 </value>
 
 
@@ -1081,9 +1079,11 @@
         </member>
         <member name="P:DevExpress.Export.Xl.XlFormatting.IsDateTimeFormatString">
             <summary>
-                <para> </para>
+                <para>Gets or sets a value indicating whether the format string assigned to the <see cref="P:DevExpress.Export.Xl.XlFormatting.NetFormatString"/> property is a date and time format string.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the .NET-style format string is used to format a date and time value in a cell; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -1102,7 +1102,7 @@
                 <para>Gets or sets a number format that specifies how a numeric value should be displayed in a cell.
 </para>
             </summary>
-            <value>An <b>XlNumberFormat</b> object that specifies a cell number format. 
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format. 
 </value>
 
 
@@ -1162,72 +1162,6 @@
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.TaskStatus"/> enumeration value. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPrinting.RtfExportOptions">
-
-            <summary>
-                <para>Contains options which define how a document is exported to RTF format.
-
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.RtfExportOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the RtfExportOptions class with default settings.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.RtfExportOptions.Assign(DevExpress.XtraPrinting.ExportOptionsBase)">
-            <summary>
-                <para>Copies all the settings from the RtfExportOptions object passed as a parameter.
-
-</para>
-            </summary>
-            <param name="source">
-		An RtfExportOptions object (which is the <see cref="T:DevExpress.XtraPrinting.ExportOptionsBase"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.RtfExportOptions.ExportMode">
-            <summary>
-                <para>Gets or sets a value indicating how a document is exported to RTF.
-
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraPrinting.RtfExportMode"/> enumeration value which represents the RTF export mode.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.RtfExportOptions.ExportWatermarks">
-            <summary>
-                <para>Gets or sets a value indicating whether watermarks should be included into the resulting file, when a document is exported to RTF.
-
-</para>
-            </summary>
-            <value><b>true</b> to include watermarks; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.RtfExportOptions.PageRange">
-            <summary>
-                <para>Gets or sets the range of pages to be exported.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> specifying the range of pages.
 </value>
 
 
@@ -1330,7 +1264,7 @@
         </member>
         <member name="M:DevExpress.Export.Xl.XlCellFormatting.FromNetFormat(System.String,System.Boolean)">
             <summary>
-                <para>Creates the <see cref="T:DevExpress.Export.Xl.XlCellFormatting"/> object that specifies a cell number format based on the given .NET-style format string.
+                <para>Specifies a number format for cell values based on the given .NET-style format string.
 </para>
             </summary>
             <param name="formatString">
@@ -1338,7 +1272,7 @@
 
             </param>
             <param name="isDateTimeFormat">
-		<b>true</b>, if the <i>formatString</i> value is a date and time format specifier; otherwise, <b>false</b>.
+		<b>true</b>, if the <i>formatString</i> parameter is a date and time format specifier; otherwise, <b>false</b>.
 
             </param>
             <returns>An <see cref="T:DevExpress.Export.Xl.XlCellFormatting"/> object that specifies the number format options to be applied to a cell.
@@ -1428,21 +1362,25 @@
         </member>
         <member name="M:DevExpress.Export.Xl.XlCellFormatting.Merge(DevExpress.Export.Xl.XlCellFormatting,DevExpress.Export.Xl.XlCellFormatting)">
             <summary>
-                <para> </para>
+                <para>Combines formatting settings of the two specified instances of the XlCellFormatting class. 
+</para>
             </summary>
             <param name="target">
-		 
+		An XlCellFormatting object that is the target object for merging.
+
             </param>
             <param name="source">
-		 
+		An XlCellFormatting object that is the source object for merging.
+
             </param>
-            <returns> </returns>
+            <returns>An XlCellFormatting object that is a result of merging operation.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlCellFormatting.MergeWith(DevExpress.Export.Xl.XlCellFormatting)">
             <summary>
-                <para>Combines the formatting settings of the specified XlCellFormatting object with the current instance of the XlCellFormatting class. 
+                <para>Combines formatting settings of the specified XlCellFormatting object with the current instance of the XlCellFormatting class. 
 </para>
             </summary>
             <param name="other">
@@ -1513,9 +1451,12 @@ If the <i>themeColor</i> is other than any of the theme accent colors, the <b>Sy
         </member>
         <member name="M:DevExpress.Export.Xl.XlCellFormatting.ToDifferentialFormatting">
             <summary>
-                <para> </para>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+Converts the current cell format to the differential formatting object.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>An XlDifferentialFormatting object that specifies the incremental formatting to be appled.
+</returns>
 
 
         </member>
@@ -2729,6 +2670,111 @@ If the <i>themeColor</i> is other than any of the theme accent colors, the <b>Sy
 
 
         </member>
+        <member name="T:DevExpress.XtraPrinting.PdfDocumentOptions">
+
+            <summary>
+                <para>Contains options which specify the <b>Document Properties</b> of the created PDF file.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PdfDocumentOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PdfDocumentOptions class with default settings.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Application">
+            <summary>
+                <para>Gets or sets the string to be added as an Application property of the resulting PDF file.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> which stores an Application name.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PdfDocumentOptions.Assign(DevExpress.XtraPrinting.PdfDocumentOptions)">
+            <summary>
+                <para>Copies all the settings from the PdfDocumentOptions object passed as a parameter.
+
+</para>
+            </summary>
+            <param name="documentOptions">
+		A PdfDocumentOptions object whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Author">
+            <summary>
+                <para>Gets or sets the string to be added as an Author property of the resulting PDF file.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> which stores an Author name.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PdfDocumentOptions.Clone">
+            <summary>
+                <para>Creates a copy of the current PdfDocumentOptions object.
+</para>
+            </summary>
+            <returns>A PdfDocumentOptions object which is a copy of the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Keywords">
+            <summary>
+                <para>Gets or sets the string to be added as a Keywords property of the resulting PDF file.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> which stores keywords.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.XtraPrinting.PdfDocumentOptions.Producer">
+            <summary>
+                <para>Contains the value which is embedded as a <b>Producer</b> field into any PDF document created by the XtraPrinting Library. This value is usually equal to "Developer Express Inc. XtraPrinting (tm) v<i>X</i>.<i>Y</i>".
+</para>
+            </summary>
+            <returns>$
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Subject">
+            <summary>
+                <para>Gets or sets the string to be added as a Subject property of the resulting PDF file.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> which stores a Subject.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Title">
+            <summary>
+                <para>Gets or sets the string to be added as a Title property of the resulting PDF file.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> which stores a Title.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.IReport">
 
             <summary>
@@ -3351,165 +3397,6 @@ If the <i>themeColor</i> is other than any of the theme accent colors, the <b>Sy
                 <para>A worksheet is visible. 
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPrinting.PdfExportOptions">
-
-            <summary>
-                <para>Contains options which define how a document is exported to PDF format.
-
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.PdfExportOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the PdfExportOptions class with default settings.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.AdditionalMetadata">
-            <summary>
-                <para>Additional metadata that is added to the PDF document's metadata.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.PdfExportOptions.Assign(DevExpress.XtraPrinting.ExportOptionsBase)">
-            <summary>
-                <para>Copies all the settings from the PdfExportOptions object passed as a parameter.
-
-</para>
-            </summary>
-            <param name="source">
-		A PdfExportOptions object (which is the <see cref="T:DevExpress.XtraPrinting.ExportOptionsBase"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.Attachments">
-            <summary>
-                <para>Provides access to the attachment files list of the document. 
-</para>
-            </summary>
-            <value>A ICollection collection of files to be attached to the document.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.Compressed">
-            <summary>
-                <para>Gets or sets a value indicating whether the resulting PDF file should be compressed.
-
-</para>
-            </summary>
-            <value><b>true</b> to compress the resulting PDF file; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ConvertImagesToJpeg">
-            <summary>
-                <para>Specifies whether or not all bitmaps contained in the document should be converted to JPEG format during exporting to PDF.
-
-</para>
-            </summary>
-            <value><b>true</b> to convert images to JPEG; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.DocumentOptions">
-            <summary>
-                <para>Gets the options to be embedded as Document Properties of the created PDF file.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.PdfDocumentOptions"/> object which contains Document Properties options.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ImageQuality">
-            <summary>
-                <para>Gets or sets the quality of images in the resulting PDF file.
-
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraPrinting.PdfJpegImageQuality"/> enumeration value which specifies the quality of images in the resulting PDF file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.NeverEmbeddedFonts">
-            <summary>
-                <para>Gets or sets a semicolon-delimited string of values with the font names  which should not be embedded in the resulting PDF file.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> which contains the font names delimited by a semicolon.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.PasswordSecurityOptions">
-            <summary>
-                <para>Provides access to the PDF security options of the document, which require specifying a password.
-</para>
-            </summary>
-            <value>A  <see cref="T:DevExpress.XtraPrinting.PdfPasswordSecurityOptions"/> object, representing the security options.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.PdfACompatibility">
-            <summary>
-                <para>Specifies document compatibility with the <b>PDF/A</b> specification.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.PdfACompatibility"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.PdfACompatible">
-            <summary>
-                <para>Specifies whether or not the document supports the <b>PDF/A</b> specification.
-</para>
-            </summary>
-            <value><b>true</b> if the document supports <b>PDF-A</b>; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ShowPrintDialogOnOpen">
-            <summary>
-                <para>Gets or sets a value indicating whether the Print dialog should be displayed when a PDF file is opened in an appropriate application.
-
-</para>
-            </summary>
-            <value><b>true</b> to open the Print dialog on open; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.SignatureOptions">
-            <summary>
-                <para>Provides access to the digital signature options of PdfExportOptions.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.PdfSignatureOptions"/> object.
-</value>
 
 
         </member>
@@ -4720,29 +4607,569 @@ If the <i>values</i> parameter is <b>null</b>, an <b>ArgumentNullException</b> i
 
 
         </member>
-        <member name="T:DevExpress.ReportServer.ServiceModel.Client.IAuthenticationService">
+        <member name="T:DevExpress.Export.Xl.XlPrintOptions">
 
             <summary>
-                <para>If implemented by a class, provides functionality for the DevExpress Report Server authentication service.
-</para>
+                <para> </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.ReportServer.ServiceModel.Client.IAuthenticationService.Login(System.String,System.String)">
+        <member name="M:DevExpress.Export.Xl.XlPrintOptions.#ctor">
             <summary>
-                <para>Logins to a Report Server.
+                <para>Initializes a new instance of the XlPrintOptions class with default settings.
 </para>
             </summary>
-            <param name="userName">
-		A <see cref="T:System.String"/> value, specifying the user name.
 
-            </param>
-            <param name="password">
-		A <see cref="T:System.String"/> value, specifying the password.
 
-            </param>
-            <returns><b>true</b> if the attempt to login is successful; otherwise <b>false</b>.
-</returns>
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPrintOptions.GridLines">
+            <summary>
+                <para> </para>
+            </summary>
+            <value><b>true</b>, to print worksheet gridlines; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPrintOptions.Headings">
+            <summary>
+                <para> </para>
+            </summary>
+            <value><b>true</b>, to print row and column headings; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPrintOptions.HorizontalCentered">
+            <summary>
+                <para> </para>
+            </summary>
+            <value><b>true</b>, to center worksheet data; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPrintOptions.VerticalCentered">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlPageSetup">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlPageSetup.#ctor">
+            <summary>
+                <para>Initializes a new instance of the XlPageSetup class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.AutomaticFirstPageNumber">
+            <summary>
+                <para>Gets or sets a value indicating whether the first page number should be selected automatically.
+</para>
+            </summary>
+            <value><b>true</b>, to use the default page number for the first printed page; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.BlackAndWhite">
+            <summary>
+                <para>Gets or sets whether to print the worksheet in black and white or in color.
+</para>
+            </summary>
+            <value><b>true</b>, to print the worksheet in black and white; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.CommentsPrintMode">
+            <summary>
+                <para>Gets or sets how comments contained in a worksheet are printed.
+</para>
+            </summary>
+            <value>One of the <b>XlCommentsPrintMode</b> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.Copies">
+            <summary>
+                <para>Gets or sets the number of worksheet copies to print.
+</para>
+            </summary>
+            <value>A positive integer that is a number of copies to print.
+If the number of copies is less than 1 or greater than 32767, a System.ArgumentOutOfRangeException will be thrown. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.Draft">
+            <summary>
+                <para>Gets or sets a value indicating whether the worksheet should be printed without graphics and graphic elements (such as gridlines). 
+</para>
+            </summary>
+            <value><b>true</b>, to exclude graphics from the printout; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.ErrorsPrintMode">
+            <summary>
+                <para>Gets or sets how errors contained in worksheet cells are printed.
+</para>
+            </summary>
+            <value>One of the <b>XlErrorsPrintMode</b> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.FirstPageNumber">
+            <summary>
+                <para>Gets or sets the number from which pagination starts on the current worksheet. 
+</para>
+            </summary>
+            <value>An integer that is the number of the first page of the printed worksheet. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.FitToHeight">
+            <summary>
+                <para>Gets or sets the number of pages by height in which the worksheet should fit when printed.
+</para>
+            </summary>
+            <value>A positive integer value that specifies the number of pages that the worksheet should fit on.
+This value must be between 0 and 32767; otherwise, a System.ArgumentOutOfRangeException will be thrown.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.FitToPage">
+            <summary>
+                <para>Gets or sets a value indicating whether the worksheet content should be scaled to fit on a specific number of pages.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>FitToPage</b> print option is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.FitToWidth">
+            <summary>
+                <para>Gets or sets the number of pages wide the worksheet should fit on when printed.
+</para>
+            </summary>
+            <value>A positive integer value that specifies the number of pages that the worksheet should fit on.
+This value must be between 0 and 32767; otherwise, a System.ArgumentOutOfRangeException will be thrown.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.HorizontalDpi">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.PageOrientation">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.PagePrintOrder">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.PaperKind">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.Scale">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.UsePrinterDefaults">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageSetup.VerticalDpi">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlExpressionStyle">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlExpressionStyle.Array">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlExpressionStyle.DefinedName">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlExpressionStyle.Normal">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlExpressionStyle.Shared">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlNumberFormat">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.DayMonth">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as a date. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.FormatCode">
+            <summary>
+                <para>Gets the format code corresponding to the current number format.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that is the format string.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.FormatId">
+            <summary>
+                <para>Gets the unique identifier associated with the current number format.
+</para>
+            </summary>
+            <value>An integer value that is the number format Id.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Fraction">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the # ?/? format code to display a cell number as a fraction. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Fraction2">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the # ??/?? format code to display a cell number as a fraction. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.General">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the General format to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.LongDate">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as a date. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.LongTime12">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the h:mm:ss AM/PM format code to display a cell value as a time value. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.LongTime24">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as a time value. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.MinuteSeconds">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as a time value. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.MinuteSecondsMs">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as a time value. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.MonthYear">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as a date.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.NegativeParentheses">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.NegativeParentheses2">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.NegativeParenthesesRed">
+            <summary>
+                <para>Gets the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.NegativeParenthesesRed2">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Number">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Number2">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.NumberWithThousandSeparator">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.NumberWithThousandSeparator2">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Percentage">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell number as a percentage. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Percentage2">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell number as a percentage. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Scientific">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Scientific1">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display numeric data in a cell. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.ShortDate">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as a date. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.ShortDateTime">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the m/d/yy h:mm format code to display a cell value as a date and time. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.ShortTime12">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the h:mm AM/PM format code to display a cell value as a time value. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.ShortTime24">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as a time value. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Span">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  format code to display a cell value as the total amount of time elapsed.  
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlNumberFormat.Text">
+            <summary>
+                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that uses the  character to display a cell value as a text. 
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies a cell number format.
+</value>
 
 
         </member>
@@ -6388,7 +6815,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="M:DevExpress.Export.Xl.XlFill.PatternFill(DevExpress.Export.Xl.XlPatternType)">
             <summary>
-                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlFill"/> object that specifies the automatic pattern fill for a cell background. 
+                <para>Creates the <see cref="T:DevExpress.Export.Xl.XlFill"/> object that specifies the automatic pattern fill for a cell background. 
 </para>
             </summary>
             <param name="patternType">
@@ -6402,7 +6829,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="M:DevExpress.Export.Xl.XlFill.PatternFill(DevExpress.Export.Xl.XlPatternType,DevExpress.Export.Xl.XlColor,DevExpress.Export.Xl.XlColor)">
             <summary>
-                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlFill"/> object that specifies the pattern fill for a cell background. 
+                <para>Creates the <see cref="T:DevExpress.Export.Xl.XlFill"/> object that specifies the pattern fill for a cell background. 
 </para>
             </summary>
             <param name="patternType">
@@ -6434,7 +6861,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="M:DevExpress.Export.Xl.XlFill.SolidFill(DevExpress.Export.Xl.XlColor)">
             <summary>
-                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlFill"/> object that specifies the solid fill for a cell background.
+                <para>Creates the <see cref="T:DevExpress.Export.Xl.XlFill"/> object that specifies the solid fill for a cell background.
 </para>
             </summary>
             <param name="color">
@@ -6512,7 +6939,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.Export.Xl.XlHeaderFooter.BookName">
             <summary>
-                <para>Prints the name of the worksheet.
+                <para>Prints the name of the workbook.
 </para>
             </summary>
             <returns> </returns>
@@ -7331,6 +7758,28 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 
 
         </member>
+        <member name="T:DevExpress.Export.Xl.IXlExporter">
+
+            <summary>
+                <para>Represents an exporter used to create a spreadsheet document and export it to a stream. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.IXlExporter.CreateDocument(System.IO.Stream)">
+            <summary>
+                <para>Creates a new document and writes it to the specified stream.
+</para>
+            </summary>
+            <param name="stream">
+		The System.IO.Stream object to output the document to. 
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlDocument"/> object that is the newly created workbook.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.Export.Xl.XlExport">
 
             <summary>
@@ -7934,62 +8383,6 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 
 
         </member>
-        <member name="T:DevExpress.XtraPrinting.IGraphics">
-
-            <summary>
-                <para>Provides the essential functionality for document printing.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.IGraphics.Dpi">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Single"/> value.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.IGraphics.GetPageCount(System.Int32,DevExpress.Utils.DefaultBoolean)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="basePageNumber">
-		An integer value.
-
-            </param>
-            <param name="continuousPageNumbering">
-		A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value.
-
-            </param>
-            <returns>An integer value.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.IGraphics.ResetDrawingPage">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.IGraphics.SetDrawingPage(DevExpress.XtraPrinting.Page)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="page">
-		A <see cref="T:DevExpress.XtraPrinting.Page"/> object.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraPrinting.XlsxExportOptions">
 
             <summary>
@@ -8050,6 +8443,25 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
             <param name="exportHyperlinks">
 		<b>true</b> to export hyperlinks; otherwise, <b>false</b>. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.XlsExportOptionsBase.ExportHyperlinks"/> property.
 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.XlsxExportOptions.#ctor(DevExpress.XtraPrinting.TextExportMode,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="textExportMode">
+		 
+            </param>
+            <param name="showGridLines">
+		 
+            </param>
+            <param name="exportHyperlinks">
+		 
+            </param>
+            <param name="fitToPrintedPageWidth">
+		 
             </param>
 
 
@@ -8152,6 +8564,47 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 
 
         </member>
+        <member name="M:DevExpress.XtraPrinting.XlsExportOptionsBase.#ctor(DevExpress.XtraPrinting.TextExportMode,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="textExportMode">
+		 
+            </param>
+            <param name="showGridLines">
+		 
+            </param>
+            <param name="exportHyperlinks">
+		 
+            </param>
+            <param name="fitToPrintedPageWidth">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.XlsExportOptionsBase.#ctor(DevExpress.XtraPrinting.TextExportMode,System.Boolean,System.Boolean,System.Boolean,DevExpress.Utils.DefaultBoolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="textExportMode">
+		 
+            </param>
+            <param name="showGridLines">
+		 
+            </param>
+            <param name="exportHyperlinks">
+		 
+            </param>
+            <param name="fitToPrintedPageWidth">
+		 
+            </param>
+            <param name="rightToLeftDocument">
+		 
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.XtraPrinting.XlsExportOptionsBase.Assign(DevExpress.XtraPrinting.ExportOptionsBase)">
             <summary>
                 <para>Copies all the settings from the <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object passed as a parameter. 
@@ -8174,6 +8627,14 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsBase.FitToPrintedPageWidth">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsBase.RawDataMode">
             <summary>
                 <para>Enables the export mode, which when used exports only a report's actual data to XLSX (excluding all non-relevant elements, such as images, graphics, font and appearance settings).
@@ -8182,6 +8643,14 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
             </summary>
             <value><b>true</b> to enable the raw data export mode; otherwise <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsBase.RightToLeftDocument">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -10473,28 +10942,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
 
 
         </member>
-        <member name="T:DevExpress.Export.Xl.IXlExporter">
-
-            <summary>
-                <para>Represents an exporter used to create a spreadsheet document and export it to a stream. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Export.Xl.IXlExporter.CreateDocument(System.IO.Stream)">
-            <summary>
-                <para>Creates a new document and writes it to the specified stream.
-</para>
-            </summary>
-            <param name="stream">
-		The System.IO.Stream object to output the document to. 
-
-            </param>
-            <returns>An <see cref="T:DevExpress.Export.Xl.IXlDocument"/> object that is the newly created workbook.
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.Export.Xl.XlFontFamily">
 
             <summary>
@@ -10875,7 +11322,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
                 <para>Specifies the date of the attachment file creation.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.Nullable%601">Nullable</a> value, that specifies the date of the attachment file creation.
+            <value>A <see cref="Nullable"/> value, that specifies the date of the attachment file creation.
 </value>
 
 
@@ -10915,7 +11362,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
                 <para>Specifies the date of the attachment file's last modification.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.Nullable%601">Nullable</a> value that specifies the date of the attachment file's last modification.
+            <value>A <see cref="Nullable"/> value that specifies the date of the attachment file's last modification.
 </value>
 
 
@@ -10925,8 +11372,8 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
                 <para>Specifies the relation between the document and the attachment file.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttachmentRelationship">PdfAttachmentRelationship</a> value, specifying the relation between the document and the attachment file.
-The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttachmentRelationship">PdfAttachmentRelationship</a>.Alternative</b>.
+            <value>A <see cref="PdfAttachmentRelationship"/> value, specifying the relation between the document and the attachment file.
+The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
 </value>
 
 
@@ -11449,81 +11896,6 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
                 <para><para></para>
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Parameters.ParameterInfo">
-
-            <summary>
-                <para>Represents a class containing information about a specific parameter and its editor.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Parameters.ParameterInfo.#ctor(DevExpress.XtraReports.Parameters.Parameter,System.Windows.Forms.Control)">
-            <summary>
-                <para>Initializes a new instance of the ParameterInfo class with the specified parameter and the editor for this parameter.
-
-</para>
-            </summary>
-            <param name="parameter">
-		A <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> object specifying the parameter for which an event has been raised. This value is assigned to the <see cref="P:DevExpress.XtraReports.Parameters.ParameterInfo.Parameter"/> property.
-
-            </param>
-            <param name="editor">
-		A <see cref="T:System.Windows.Forms.Control"/> class descendant specifying the editor for this parameter. This value is assigned to the <see cref="P:DevExpress.XtraReports.Parameters.ParameterInfo.Editor"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Parameters.ParameterInfo.#ctor(DevExpress.XtraReports.Parameters.Parameter,DevExpress.Utils.Function`2)">
-            <summary>
-                <para>Initializes a new instance of the ParameterInfo class with the specified parameter and the editor for this parameter.
-
-</para>
-            </summary>
-            <param name="parameter">
-		A <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> object specifying the parameter for which an event has been raised. This value is assigned to the <see cref="P:DevExpress.XtraReports.Parameters.ParameterInfo.Parameter"/> property.
-
-            </param>
-            <param name="createEditor">
-		A <see cref="T:System.Windows.Forms.Control"/> class descendant specifying the editor for this parameter. This value is assigned to the <see cref="P:DevExpress.XtraReports.Parameters.ParameterInfo.Editor"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Parameters.ParameterInfo.Editor">
-            <summary>
-                <para>Gets or sets an editor, used to enter a parameter's value.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Windows.Forms.Control"/> class descendant. Normally, it should be one of the DevExpress XtraEditors.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Parameters.ParameterInfo.GetEditor(System.Boolean)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="forceCreate">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Parameters.ParameterInfo.Parameter">
-            <summary>
-                <para>Provides access to the parameter associated with the current ParameterInfo object.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> object.
-</value>
 
 
         </member>
@@ -14153,205 +14525,6 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
 
 
         </member>
-        <member name="T:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient">
-
-            <summary>
-                <para>If implemented by a class, provides the client-side functionality for a WCF Export Service.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.AssembleDocumentAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.UploadingResourceId,System.Object)">
-            <summary>
-                <para>Starts assembling the document (asynchronously).
-</para>
-            </summary>
-            <param name="id">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.UploadingResourceId"/> object, identifying the document's resources.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.AssembleDocumentCompleted">
-            <summary>
-                <para>Occurs when the document has been assembled.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.ClearDocumentAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Object)">
-            <summary>
-                <para>Starts clearing the document (asynchronously).
-</para>
-            </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.ClearDocumentCompleted">
-            <summary>
-                <para>Occurs when the document has been cleared.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetDocumentDownloadUri(DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId)">
-            <summary>
-                <para>Obtains the uniform resource identifier (URI) of the downloaded document.
-</para>
-            </summary>
-            <param name="exportId">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId"/> object, identifying the exported document.
-
-            </param>
-            <returns>A <see cref="T:System.Uri"/> object, specifying a uniform resource identifier (URI) of the downloaded document.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetExportedDocumentAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId,System.Object)">
-            <summary>
-                <para>Starts obtaining the exported document (asynchronously).
-</para>
-            </summary>
-            <param name="exportId">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId"/> object, identifying the exported document.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetExportedDocumentCompleted">
-            <summary>
-                <para>Occurs when the exported document has been obtained.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetExportStatusAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId,System.Object)">
-            <summary>
-                <para>Starts obtaining the exported document's status (asynchronously).
-</para>
-            </summary>
-            <param name="exportId">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId"/> object, identifying the exported document.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetExportStatusCompleted">
-            <summary>
-                <para>Occurs when the exported document's status has been obtained.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.StartExportAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentExportArgs,System.Object)">
-            <summary>
-                <para>Starts exporting the document (asynchronously).
-</para>
-            </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
-
-            </param>
-            <param name="exportArgs">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentExportArgs"/> object, storing the arguments required to export the document.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.StartExportCompleted">
-            <summary>
-                <para>Occurs when the document export has started.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.StartUploadAsync(System.Object)">
-            <summary>
-                <para>Starts uploading the document (asynchronously).
-</para>
-            </summary>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.StartUploadCompleted">
-            <summary>
-                <para>Occurs when the document upload has started.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.UploadResourceChunkAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.UploadingResourceId,System.Byte[],System.Object)">
-            <summary>
-                <para>Starts uploading the document's resources (asynchronously).
-</para>
-            </summary>
-            <param name="id">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.UploadingResourceId"/> object, identifying the document's resources.
-
-            </param>
-            <param name="data">
-		A <see cref="T:System.Byte"/> array, containing the document data (in fragments).
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.UploadResourceChunkCompleted">
-            <summary>
-                <para>Occurs when the document fragment has been uploaded.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.ReportServer.Printing.AuthenticationType">
 
             <summary>
@@ -14524,90 +14697,507 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
 
 
         </member>
-        <member name="T:DevExpress.XtraPrinting.BookmarkInfo">
+        <member name="T:DevExpress.ReportServer.ServiceModel.Client.IAuthenticationService">
 
             <summary>
-                <para>Contains information about a bookmark that is related to a printing brick.
+                <para>If implemented by a class, provides functionality for the DevExpress Report Server authentication service.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraPrinting.BookmarkInfo.#ctor(DevExpress.XtraPrinting.IBrickOwner,System.String,DevExpress.XtraPrinting.BookmarkInfo)">
+        <member name="M:DevExpress.ReportServer.ServiceModel.Client.IAuthenticationService.Login(System.String,System.String)">
             <summary>
-                <para>Initializes a new instance of the BookmarkInfo class with the specified settings.
+                <para>Logins to a Report Server.
 </para>
             </summary>
-            <param name="brickOwner">
-		An object implementing the <see cref="T:DevExpress.XtraPrinting.IBrickOwner"/> interface. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BookmarkInfo.BrickOwner"/> property.
+            <param name="userName">
+		A <see cref="T:System.String"/> value, specifying the user name.
 
             </param>
-            <param name="bookmark">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BookmarkInfo.Bookmark"/> property.
+            <param name="password">
+		A <see cref="T:System.String"/> value, specifying the password.
 
             </param>
-            <param name="bookmarkParentInfo">
-		A <see cref="T:DevExpress.XtraPrinting.BookmarkInfo"/> object. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BookmarkInfo.ParentInfo"/> property.
+            <returns><b>true</b> if the attempt to login is successful; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient">
+
+            <summary>
+                <para>If implemented by a class, provides the client-side functionality for a WCF Report Service.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetBuildStatusAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Object)">
+            <summary>
+                <para>Starts obtaining the document build status (asynchronously).
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.Bookmark">
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetBuildStatusCompleted">
             <summary>
-                <para>Specifies the element's bookmark.
+                <para>Occurs when the created document's status has been obtained.
+
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value.
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetDocumentDataAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Object)">
+            <summary>
+                <para>Starts obtaining the document data (asynchronously).
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetDocumentDataCompleted">
+            <summary>
+                <para>Occurs when the document data has been obtained.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetLookUpValues(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter[],System.String[],System.Object)">
+            <summary>
+                <para>Returns a collection of parameter values assigned to a lookup editor.
+</para>
+            </summary>
+            <param name="identity">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> value.
+
+            </param>
+            <param name="parameterValues">
+		An array of <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter"/> objects.
+
+            </param>
+            <param name="requiredParameterPaths">
+		An array of <see cref="T:System.String"/> values, specifying the parameter paths (for example, <i>"subreport1.subreportParameter1"</i>).
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetLookUpValuesCompleted">
+            <summary>
+                <para>Occurs when a lookup editor has finished obtaining the appropriate parameter values.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPagesAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Int32[],DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility,System.Object)">
+            <summary>
+                <para>Starts obtaining the document pages (asynchronously).
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+
+            </param>
+            <param name="pageIndexes">
+		An array of integer values, specifying the document pages.
+
+            </param>
+            <param name="compatibility">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility"/> enumeration value, specifying the markup compatibility.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPagesCompleted">
+            <summary>
+                <para>Occurs when the document pages have been obtained.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPrintDocumentAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.Object)">
+            <summary>
+                <para>Starts obtaining the printed document (asynchronously).
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object, identifying the printed document.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPrintDocumentCompleted">
+            <summary>
+                <para>Occurs when the printed document has been obtained.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPrintStatusAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.Object)">
+            <summary>
+                <para>Starts obtaining the status of the printed document (asynchronously).
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object, identifying the printed document.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPrintStatusCompleted">
+            <summary>
+                <para>Occurs when the printed document's status has been obtained.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetReportParametersAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,System.Object)">
+            <summary>
+                <para>Starts obtaining the report parameters (asynchronously).
+</para>
+            </summary>
+            <param name="identity">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetReportParametersCompleted">
+            <summary>
+                <para>Occurs when the report parameters have been obtained.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StartBuildAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs,System.Object)">
+            <summary>
+                <para>Starts building the report (asynchronously).
+</para>
+            </summary>
+            <param name="identity">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
+
+            </param>
+            <param name="buildArgs">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs"/> object, storing the arguments required to create the report.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StartBuildCompleted">
+            <summary>
+                <para>Occurs when the document build has started.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StartPrintAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility,System.Object)">
+            <summary>
+                <para>Starts printing the document (asynchronously).
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+
+            </param>
+            <param name="compatibility">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility"/> enumeration value, specifying the markup compatibility.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StartPrintCompleted">
+            <summary>
+                <para>Occurs when the document printing has started.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StopBuildAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Object)">
+            <summary>
+                <para>Stops building the document (asynchronously).
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StopBuildCompleted">
+            <summary>
+                <para>Occurs when the document build has stopped.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StopPrintAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.Object)">
+            <summary>
+                <para>Stops printing the document (asynchronously).
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object, identifying the printed document.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StopPrintCompleted">
+            <summary>
+                <para>Occurs when the document printing has stopped.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.BrickPagePair">
+
+            <summary>
+                <para>Represents an association of a brick and a page. 
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.BrickPagePair.Brick">
+            <summary>
+                <para>Gets a <b>brick</b> object of the brick-page pair.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.Brick"/> object.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.BrickOwner">
+        <member name="P:DevExpress.XtraPrinting.BrickPagePair.BrickIndices">
             <summary>
-                <para>Provides access to the bookmark's owner brick.
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Create(DevExpress.XtraPrinting.Brick,DevExpress.XtraPrinting.Page)">
+            <summary>
+                <para>Creates a new brick-page pair with the specified brick and page.
 </para>
             </summary>
-            <value>An object implementing the <see cref="T:DevExpress.XtraPrinting.IBrickOwner"/> interface.
+            <param name="brick">
+		A <see cref="T:DevExpress.XtraPrinting.Brick"/> object specifying a brick component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Brick"/> property.
+
+
+            </param>
+            <param name="page">
+		A <see cref="T:DevExpress.XtraPrinting.Page"/> object specifying a page component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> property.
+
+            </param>
+            <returns>A new BrickPagePair instance with the specified values.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Create(System.String,DevExpress.XtraPrinting.Page)">
+            <summary>
+                <para>Creates a new brick-page pair with the specified string indices and page.
+</para>
+            </summary>
+            <param name="indices">
+		A <see cref="T:System.String"/> value, which contains indices for the created object.
+
+            </param>
+            <param name="page">
+		A <see cref="T:DevExpress.XtraPrinting.Page"/> object specifying a page component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> property.
+
+            </param>
+            <returns>A new BrickPagePair instance with the specified values.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Create(DevExpress.XtraPrinting.Brick,DevExpress.XtraPrinting.Page,System.Int32[],System.Drawing.RectangleF)">
+            <summary>
+                <para>Creates a new brick-page pair with the specified brick, page, integer indices and brick bounds.
+</para>
+            </summary>
+            <param name="brick">
+		A <see cref="T:DevExpress.XtraPrinting.Brick"/> object specifying a brick component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Brick"/> property.
+
+            </param>
+            <param name="page">
+		A <see cref="T:DevExpress.XtraPrinting.Page"/> object specifying a page component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> property.
+
+            </param>
+            <param name="indices">
+		An array of integer values, which represent indices for the created object.
+
+            </param>
+            <param name="brickBounds">
+		A <see cref="T:System.Drawing.RectangleF"/> object specifying the width, height and location of the brick.
+
+            </param>
+            <returns>A new BrickPagePair instance with the specified values.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Create(System.Int32[],DevExpress.XtraPrinting.Page)">
+            <summary>
+                <para>Creates a new brick-page pair with the specified integer indices and page.
+</para>
+            </summary>
+            <param name="indices">
+		An array of integer values, which specify indices for the created object.
+
+            </param>
+            <param name="page">
+		A <see cref="T:DevExpress.XtraPrinting.Page"/> object specifying a page component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> property.
+
+            </param>
+            <returns>A new BrickPagePair instance with the specified values.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.BrickPagePair.Empty">
+            <summary>
+                <para>Gets an empty brick-page pair.
+</para>
+            </summary>
+            <value>A <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Empty"/> value, representing a brick-page pair with <b>null</b> components.
 </value>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.BookmarkInfo.Empty">
+        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Equals(System.Object)">
             <summary>
-                <para>A <see cref="T:System.String.Empty"/> value.
+                <para>Determines whether the specified object is equal to the current BrickPagePair instance.
 </para>
             </summary>
-            <returns> </returns>
+            <param name="obj">
+		The object to compare with the current object. 
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current BrickPagePair instance; otherwise <b>false</b>.
+</returns>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.HasBookmark">
+        <member name="M:DevExpress.XtraPrinting.BrickPagePair.GetBrickBounds">
             <summary>
-                <para>Specifies whether or not there are bookmarks specified for the brick.
+                <para>Returns the size and location of the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Brick"/> on the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> associated with the current BrickPagePair object.
+
 </para>
             </summary>
-            <value><b>true</b>, if there are bookmarks assigned to the element; otherwise <b>false</b>.
+            <returns>A <see cref="T:System.Drawing.RectangleF"/> object representing the width, height and location of the brick.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.BrickPagePair.GetHashCode">
+            <summary>
+                <para>Gets the hash code (a number) that corresponds to the value of the current BrickPagePair object.
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.BrickPagePair.Page">
+            <summary>
+                <para>Gets a <b>page</b> object of the brick-page pair.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.Page"/> object.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.ParentBrick">
+        <member name="P:DevExpress.XtraPrinting.BrickPagePair.PageIndex">
             <summary>
-                <para>Provides access to the bookmark's parent brick.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.VisualBrick"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.ParentInfo">
-            <summary>
-                <para>Specifies information about the bookmark's parent.
+                <para>Gets an index of a page, which contains a bookmark's brick.
 
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.BookmarkInfo"/> object.
+            <value>An integer value representing a page index.
 </value>
 
 
@@ -15076,28 +15666,6 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Parameters.ParameterExtensions">
-
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Parameters.ParameterExtensions.HasCascadeLookUpSettings(DevExpress.XtraReports.Parameters.Parameter)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="parameter">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.UI.VerticalAnchorStyles">
 
             <summary>
@@ -15409,179 +15977,6 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
 
 
         </member>
-        <member name="T:DevExpress.XtraPrinting.BrickPagePair">
-
-            <summary>
-                <para>Represents an association of a brick and a page. 
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.BrickPagePair.Brick">
-            <summary>
-                <para>Gets a <b>brick</b> object of the brick-page pair.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.Brick"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.BrickPagePair.BrickIndices">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Create(DevExpress.XtraPrinting.Brick,DevExpress.XtraPrinting.Page)">
-            <summary>
-                <para>Creates a new brick-page pair with the specified brick and page.
-</para>
-            </summary>
-            <param name="brick">
-		A <see cref="T:DevExpress.XtraPrinting.Brick"/> object specifying a brick component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Brick"/> property.
-
-
-            </param>
-            <param name="page">
-		A <see cref="T:DevExpress.XtraPrinting.Page"/> object specifying a page component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> property.
-
-            </param>
-            <returns>A new BrickPagePair instance with the specified values.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Create(System.String,DevExpress.XtraPrinting.Page)">
-            <summary>
-                <para>Creates a new brick-page pair with the specified string indices and page.
-</para>
-            </summary>
-            <param name="indices">
-		A <see cref="T:System.String"/> value, which contains indices for the created object.
-
-            </param>
-            <param name="page">
-		A <see cref="T:DevExpress.XtraPrinting.Page"/> object specifying a page component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> property.
-
-            </param>
-            <returns>A new BrickPagePair instance with the specified values.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Create(DevExpress.XtraPrinting.Brick,DevExpress.XtraPrinting.Page,System.Int32[],System.Drawing.RectangleF)">
-            <summary>
-                <para>Creates a new brick-page pair with the specified brick, page, integer indices and brick bounds.
-</para>
-            </summary>
-            <param name="brick">
-		A <see cref="T:DevExpress.XtraPrinting.Brick"/> object specifying a brick component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Brick"/> property.
-
-            </param>
-            <param name="page">
-		A <see cref="T:DevExpress.XtraPrinting.Page"/> object specifying a page component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> property.
-
-            </param>
-            <param name="indices">
-		An array of integer values, which represent indices for the created object.
-
-            </param>
-            <param name="brickBounds">
-		A <see cref="T:System.Drawing.RectangleF"/> object specifying the width, height and location of the brick.
-
-            </param>
-            <returns>A new BrickPagePair instance with the specified values.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Create(System.Int32[],DevExpress.XtraPrinting.Page)">
-            <summary>
-                <para>Creates a new brick-page pair with the specified integer indices and page.
-</para>
-            </summary>
-            <param name="indices">
-		An array of integer values, which specify indices for the created object.
-
-            </param>
-            <param name="page">
-		A <see cref="T:DevExpress.XtraPrinting.Page"/> object specifying a page component of the pair. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> property.
-
-            </param>
-            <returns>A new BrickPagePair instance with the specified values.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.BrickPagePair.Empty">
-            <summary>
-                <para>Gets an empty brick-page pair.
-</para>
-            </summary>
-            <value>A <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Empty"/> value, representing a brick-page pair with <b>null</b> components.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.BrickPagePair.Equals(System.Object)">
-            <summary>
-                <para>Determines whether the specified object is equal to the current BrickPagePair instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object. 
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current BrickPagePair instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.BrickPagePair.GetBrickBounds">
-            <summary>
-                <para>Returns the size and location of the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Brick"/> on the <see cref="P:DevExpress.XtraPrinting.BrickPagePair.Page"/> associated with the current BrickPagePair object.
-
-</para>
-            </summary>
-            <returns>A <see cref="T:System.Drawing.RectangleF"/> object representing the width, height and location of the brick.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.BrickPagePair.GetHashCode">
-            <summary>
-                <para>Gets the hash code (a number) that corresponds to the value of the current BrickPagePair object.
-</para>
-            </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.BrickPagePair.Page">
-            <summary>
-                <para>Gets a <b>page</b> object of the brick-page pair.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.Page"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.BrickPagePair.PageIndex">
-            <summary>
-                <para>Gets an index of a page, which contains a bookmark's brick.
-
-</para>
-            </summary>
-            <value>An integer value representing a page index.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraPrinting.LabelBrick">
 
             <summary>
@@ -15752,170 +16147,6 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
             </param>
             <returns> 
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPrinting.Drawing.PageWatermark">
-
-            <summary>
-                <para>Represents a page's watermark.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.Drawing.PageWatermark.#ctor">
-            <summary>
-                <para>Initializes a new instance of the PageWatermark class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.Drawing.PageWatermark.Dispose">
-            <summary>
-                <para>Disposes of the PageWatermark object.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.Drawing.PageWatermark.Equals(System.Object)">
-            <summary>
-                <para>Determines whether the specified object is equal to the current PageWatermark instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current PageWatermark instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.Font">
-            <summary>
-                <para>Gets or sets the font of the PageWatermark.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Font"/> object that defines the text's format, including font face, size, and style attributes.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ForeColor">
-            <summary>
-                <para>Gets or sets the foreground color of the PageWatermark's text.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object representing the foreground color of the text.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.Drawing.PageWatermark.GetHashCode">
-            <summary>
-                <para>Gets the hash code (a number) that corresponds to the value of the current PageWatermark object.
-
-</para>
-            </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.Image">
-            <summary>
-                <para>Gets or sets the PageWatermark's picture.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Image"/> object specifying the watermark's picture.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ImageAlign">
-            <summary>
-                <para>Gets or sets the position of the PageWatermark's picture.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.ContentAlignment"/> enumeration value specifying how a picture is aligned on the document page.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ImageTiling">
-            <summary>
-                <para>Gets or sets a value indicating if a PageWatermark's picture should be tiled.
-</para>
-            </summary>
-            <value><b>true</b> to tile a watermark's picture; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ImageTransparency">
-            <summary>
-                <para>Gets or sets the transparency of the watermark's image.
-
-</para>
-            </summary>
-            <value>An integer value specifying the images's transparency. It should be between <b>0</b> and <b>255</b>, inclusive.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ImageViewMode">
-            <summary>
-                <para>Gets or sets the mode in which a picture <see cref="T:DevExpress.XtraPrinting.Drawing.PageWatermark"/> is displayed.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraPrinting.Drawing.ImageViewMode"/> enumeration value specifying how the picture should be displayed.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ShowBehind">
-            <summary>
-                <para>Gets or sets a value indicating whether a watermark should be printed behind or in front of the contents of a page.
-
-</para>
-            </summary>
-            <value><b>true</b> to print a watermark behind the contents of a page; otherwise <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.Text">
-            <summary>
-                <para>Gets or sets a PageWatermark's text.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> specifying the text of a watermark.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.TextDirection">
-            <summary>
-                <para>Gets or sets the incline of the PageWatermark's text.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.Drawing.DirectionMode"/> enumeration value representing the text incline.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.TextTransparency">
-            <summary>
-                <para>Gets or sets the transparency of the PageWatermark's text.
-</para>
-            </summary>
-            <value>An integer value specifying the text's transparency. It should be between <b>0</b> and <b>255</b>, inclusive.
-</value>
 
 
         </member>
@@ -16295,6 +16526,29 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
 </para>
             </summary>
             <value>An integer value which represents a tip's length.
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.Shape.FilletShapeBase">
+
+            <summary>
+                <para>Defines the base class for all the shape types whose corners can be filleted.
+
+
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Shape.FilletShapeBase.Fillet">
+            <summary>
+                <para>Gets or sets a value specifying how shape corners are rounded (in percent).
+
+
+</para>
+            </summary>
+            <value>An integer value which shows how corners are rounded. This value should be from <b>0</b> to <b>100</b>. 
 
 </value>
 
@@ -18148,6 +18402,83 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
 
 
         </member>
+        <member name="T:DevExpress.XtraPrinting.TextExportOptionsBase">
+
+            <summary>
+                <para>Represents the base class for objects which define export options specific for Text and CSV formats.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.TextExportOptionsBase.Assign(DevExpress.XtraPrinting.ExportOptionsBase)">
+            <summary>
+                <para>Copies all the settings from the TextExportOptionsBase object passed as a parameter.
+
+</para>
+            </summary>
+            <param name="source">
+		An TextExportOptionsBase object (which is the <see cref="T:DevExpress.XtraPrinting.ExportOptionsBase"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.Encoding">
+            <summary>
+                <para>Gets or sets the encoding of the text-based file to which a report is exported.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Text.Encoding"/> class descendant specifying the encoding of the text-based file.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.EncodingType">
+            <summary>
+                <para>Gets or sets a value used to serialize the <see cref="P:DevExpress.XtraPrinting.TextExportOptionsBase.Encoding"/> property.
+
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraPrinting.EncodingType"/> enumeration value which represents the encoding type of the created text-based document.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.QuoteStringsWithSeparators">
+            <summary>
+                <para>Gets or sets a value indicating whether a string with separators should be placed in quotation marks when a document is exported to a Text-based file.
+
+
+</para>
+            </summary>
+            <value><b>true</b> to quote (place quotation marks around) text elements containing symbols which are the same as the specified separator string; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.Separator">
+            <summary>
+                <para>Gets or sets the symbol(s) to separate text elements when a document is exported to a Text-based file.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> containing the symbol(s) which will be used to separate text elements in the created Text-based file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.TextExportOptionsBase.TextExportMode">
+            <summary>
+                <para>Gets or sets a value indicating whether to use the formatting of the data fields in the bound dataset for the cells in the exported TXT or CSV document. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.TextExportMode"/> enumeration value.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.PdfJpegImageQuality">
 
             <summary>
@@ -18335,6 +18666,25 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
             <param name="workbookColorPaletteCompliance">
 		A <see cref="T:DevExpress.XtraPrinting.WorkbookColorPaletteCompliance"/> enumeration value. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.XlsExportOptions.WorkbookColorPaletteCompliance"/> property.
 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.XlsExportOptions.#ctor(DevExpress.XtraPrinting.TextExportMode,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="textExportMode">
+		 
+            </param>
+            <param name="showGridLines">
+		 
+            </param>
+            <param name="exportHyperlinks">
+		 
+            </param>
+            <param name="fitToPrintedPageWidth">
+		 
             </param>
 
 
@@ -18685,107 +19035,227 @@ The default is <b><a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPrinting.PdfAttach
 
 
         </member>
-        <member name="T:DevExpress.XtraPrinting.PdfDocumentOptions">
+        <member name="T:DevExpress.XtraPrinting.RtfExportOptions">
 
             <summary>
-                <para>Contains options which specify the <b>Document Properties</b> of the created PDF file.
+                <para>Contains options which define how a document is exported to RTF format.
+
+
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraPrinting.PdfDocumentOptions.#ctor">
+        <member name="M:DevExpress.XtraPrinting.RtfExportOptions.#ctor">
             <summary>
-                <para>Initializes a new instance of the PdfDocumentOptions class with default settings.
+                <para>Initializes a new instance of the RtfExportOptions class with default settings.
 
 </para>
             </summary>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Application">
+        <member name="M:DevExpress.XtraPrinting.RtfExportOptions.Assign(DevExpress.XtraPrinting.ExportOptionsBase)">
             <summary>
-                <para>Gets or sets the string to be added as an Application property of the resulting PDF file.
+                <para>Copies all the settings from the RtfExportOptions object passed as a parameter.
 
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> which stores an Application name.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.PdfDocumentOptions.Assign(DevExpress.XtraPrinting.PdfDocumentOptions)">
-            <summary>
-                <para>Copies all the settings from the PdfDocumentOptions object passed as a parameter.
-
-</para>
-            </summary>
-            <param name="documentOptions">
-		A PdfDocumentOptions object whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+            <param name="source">
+		An RtfExportOptions object (which is the <see cref="T:DevExpress.XtraPrinting.ExportOptionsBase"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Author">
+        <member name="P:DevExpress.XtraPrinting.RtfExportOptions.ExportMode">
             <summary>
-                <para>Gets or sets the string to be added as an Author property of the resulting PDF file.
+                <para>Gets or sets a value indicating how a document is exported to RTF.
 
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> which stores an Author name.
+            <value>An <see cref="T:DevExpress.XtraPrinting.RtfExportMode"/> enumeration value which represents the RTF export mode.
+
 </value>
 
 
         </member>
-        <member name="M:DevExpress.XtraPrinting.PdfDocumentOptions.Clone">
+        <member name="P:DevExpress.XtraPrinting.RtfExportOptions.ExportWatermarks">
             <summary>
-                <para>Creates a copy of the current PdfDocumentOptions object.
-</para>
-            </summary>
-            <returns>A PdfDocumentOptions object which is a copy of the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Keywords">
-            <summary>
-                <para>Gets or sets the string to be added as a Keywords property of the resulting PDF file.
+                <para>Gets or sets a value indicating whether watermarks should be included into the resulting file, when a document is exported to RTF.
 
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> which stores keywords.
+            <value><b>true</b> to include watermarks; otherwise, <b>false</b>.
 </value>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.PdfDocumentOptions.Producer">
+        <member name="P:DevExpress.XtraPrinting.RtfExportOptions.PageRange">
             <summary>
-                <para>Contains the value which is embedded as a <b>Producer</b> field into any PDF document created by the XtraPrinting Library. This value is usually equal to "Developer Express Inc. XtraPrinting (tm) v<i>X</i>.<i>Y</i>".
-</para>
-            </summary>
-            <returns>$
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Subject">
-            <summary>
-                <para>Gets or sets the string to be added as a Subject property of the resulting PDF file.
+                <para>Gets or sets the range of pages to be exported.
 
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> which stores a Subject.
+            <value>A <see cref="T:System.String"/> specifying the range of pages.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.PdfDocumentOptions.Title">
+        <member name="T:DevExpress.XtraPrinting.PdfExportOptions">
+
             <summary>
-                <para>Gets or sets the string to be added as a Title property of the resulting PDF file.
+                <para>Contains options which define how a document is exported to PDF format.
+
 
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> which stores a Title.
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PdfExportOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PdfExportOptions class with default settings.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.AdditionalMetadata">
+            <summary>
+                <para>Additional metadata that is added to the PDF document's metadata.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PdfExportOptions.Assign(DevExpress.XtraPrinting.ExportOptionsBase)">
+            <summary>
+                <para>Copies all the settings from the PdfExportOptions object passed as a parameter.
+
+</para>
+            </summary>
+            <param name="source">
+		A PdfExportOptions object (which is the <see cref="T:DevExpress.XtraPrinting.ExportOptionsBase"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.Attachments">
+            <summary>
+                <para>Provides access to the attachment files list of the document. 
+</para>
+            </summary>
+            <value>A <see cref="ICollection"/> collection of files to be attached to the document.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.Compressed">
+            <summary>
+                <para>Gets or sets a value indicating whether the resulting PDF file should be compressed.
+
+</para>
+            </summary>
+            <value><b>true</b> to compress the resulting PDF file; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ConvertImagesToJpeg">
+            <summary>
+                <para>Specifies whether or not all bitmaps contained in the document should be converted to JPEG format during exporting to PDF.
+
+</para>
+            </summary>
+            <value><b>true</b> to convert images to JPEG; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.DocumentOptions">
+            <summary>
+                <para>Gets the options to be embedded as Document Properties of the created PDF file.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.PdfDocumentOptions"/> object which contains Document Properties options.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ImageQuality">
+            <summary>
+                <para>Gets or sets the quality of images in the resulting PDF file.
+
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraPrinting.PdfJpegImageQuality"/> enumeration value which specifies the quality of images in the resulting PDF file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.NeverEmbeddedFonts">
+            <summary>
+                <para>Gets or sets a semicolon-delimited string of values with the font names  which should not be embedded in the resulting PDF file.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> which contains the font names delimited by a semicolon.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.PasswordSecurityOptions">
+            <summary>
+                <para>Provides access to the PDF security options of the document, which require specifying a password.
+</para>
+            </summary>
+            <value>A  <see cref="T:DevExpress.XtraPrinting.PdfPasswordSecurityOptions"/> object, representing the security options.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.PdfACompatibility">
+            <summary>
+                <para>Specifies document compatibility with the <b>PDF/A</b> specification.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.PdfACompatibility"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.PdfACompatible">
+            <summary>
+                <para>Specifies whether or not the document supports the <b>PDF/A</b> specification.
+</para>
+            </summary>
+            <value><b>true</b> if the document supports <b>PDF-A</b>; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ShowPrintDialogOnOpen">
+            <summary>
+                <para>Gets or sets a value indicating whether the Print dialog should be displayed when a PDF file is opened in an appropriate application.
+
+</para>
+            </summary>
+            <value><b>true</b> to open the Print dialog on open; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PdfExportOptions.SignatureOptions">
+            <summary>
+                <para>Provides access to the digital signature options of PdfExportOptions.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.PdfSignatureOptions"/> object.
 </value>
 
 
@@ -20219,6 +20689,80 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 
 
         </member>
+        <member name="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory">
+
+            <summary>
+                <para>Supports automatic <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClient"/> creation on the client side.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the ReportServiceClientFactory class with the specified endpoint configuration name.
+</para>
+            </summary>
+            <param name="endpointConfigurationName">
+		A <see cref="T:System.String"/> value, specifying the endpoint configuration name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.#ctor(System.String,System.ServiceModel.EndpointAddress)">
+            <summary>
+                <para>Initializes a new instance of the ReportServiceClientFactory class with the specified endpoint configuration name and remote address.
+</para>
+            </summary>
+            <param name="endpointConfigurationName">
+		A <see cref="T:System.String"/> value, specifying the endpoint configuration name.
+
+            </param>
+            <param name="remoteAddress">
+		An <see cref="T:System.ServiceModel.EndpointAddress"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.#ctor(System.ServiceModel.EndpointAddress)">
+            <summary>
+                <para>Initializes a new instance of the ReportServiceClientFactory class with the specified remote address.
+</para>
+            </summary>
+            <param name="remoteAddress">
+		An <see cref="T:System.ServiceModel.EndpointAddress"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.#ctor(System.ServiceModel.EndpointAddress,System.ServiceModel.Channels.Binding)">
+            <summary>
+                <para>Initializes a new instance of the ReportServiceClientFactory class with the specified remote address and binding.
+</para>
+            </summary>
+            <param name="remoteAddress">
+		An <see cref="T:System.ServiceModel.EndpointAddress"/> object.
+
+            </param>
+            <param name="binding">
+		A <see cref="T:System.ServiceModel.Channels.Binding"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.Create">
+            <summary>
+                <para>Creates a <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClient"/>.
+</para>
+            </summary>
+            <returns>An object implementing the <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient"/> interface (typically, this is a <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClient"/> object).
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.DocumentServices.ServiceModel.IParameterContainer">
 
             <summary>
@@ -20513,17 +21057,42 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 
 
         </member>
-        <member name="T:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient">
+        <member name="T:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient">
 
             <summary>
-                <para>If implemented by a class, provides the client-side functionality for a WCF Report Service.
+                <para>If implemented by a class, provides the client-side functionality for a WCF Export Service.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetBuildStatusAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Object)">
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.AssembleDocumentAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.UploadingResourceId,System.Object)">
             <summary>
-                <para>Starts obtaining the document build status (asynchronously).
+                <para>Starts assembling the document (asynchronously).
+</para>
+            </summary>
+            <param name="id">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.UploadingResourceId"/> object, identifying the document's resources.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.AssembleDocumentCompleted">
+            <summary>
+                <para>Occurs when the document has been assembled.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.ClearDocumentAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Object)">
+            <summary>
+                <para>Starts clearing the document (asynchronously).
 </para>
             </summary>
             <param name="documentId">
@@ -20537,55 +21106,89 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 
 
         </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetBuildStatusCompleted">
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.ClearDocumentCompleted">
             <summary>
-                <para>Occurs when the created document's status has been obtained.
+                <para>Occurs when the document has been cleared.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetDocumentDownloadUri(DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId)">
+            <summary>
+                <para>Obtains the uniform resource identifier (URI) of the downloaded document.
+</para>
+            </summary>
+            <param name="exportId">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId"/> object, identifying the exported document.
+
+            </param>
+            <returns>A <see cref="T:System.Uri"/> object, specifying a uniform resource identifier (URI) of the downloaded document.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetExportedDocumentAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId,System.Object)">
+            <summary>
+                <para>Starts obtaining the exported document (asynchronously).
+</para>
+            </summary>
+            <param name="exportId">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId"/> object, identifying the exported document.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetExportedDocumentCompleted">
+            <summary>
+                <para>Occurs when the exported document has been obtained.
 
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetDocumentDataAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Object)">
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetExportStatusAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId,System.Object)">
             <summary>
-                <para>Starts obtaining the document data (asynchronously).
+                <para>Starts obtaining the exported document's status (asynchronously).
+</para>
+            </summary>
+            <param name="exportId">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ExportId"/> object, identifying the exported document.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.GetExportStatusCompleted">
+            <summary>
+                <para>Occurs when the exported document's status has been obtained.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.StartExportAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentExportArgs,System.Object)">
+            <summary>
+                <para>Starts exporting the document (asynchronously).
 </para>
             </summary>
             <param name="documentId">
 		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
 
             </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetDocumentDataCompleted">
-            <summary>
-                <para>Occurs when the document data has been obtained.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetLookUpValues(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter[],System.String[],System.Object)">
-            <summary>
-                <para>Returns a collection of parameter values assigned to a lookup editor.
-</para>
-            </summary>
-            <param name="identity">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> value.
-
-            </param>
-            <param name="parameterValues">
-		An array of <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter"/> objects.
-
-            </param>
-            <param name="requiredParameterPaths">
-		An array of <see cref="T:System.String"/> values, specifying the parameter paths (for example, <i>"subreport1.subreportParameter1"</i>).
+            <param name="exportArgs">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentExportArgs"/> object, storing the arguments required to export the document.
 
             </param>
             <param name="asyncState">
@@ -20595,29 +21198,47 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 
 
         </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetLookUpValuesCompleted">
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.StartExportCompleted">
             <summary>
-                <para>Occurs when a lookup editor has finished obtaining the appropriate parameter values.
+                <para>Occurs when the document export has started.
+
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPagesAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Int32[],DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility,System.Object)">
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.StartUploadAsync(System.Object)">
             <summary>
-                <para>Starts obtaining the document pages (asynchronously).
+                <para>Starts uploading the document (asynchronously).
 </para>
             </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
 
             </param>
-            <param name="pageIndexes">
-		An array of integer values, specifying the document pages.
+
+
+        </member>
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.StartUploadCompleted">
+            <summary>
+                <para>Occurs when the document upload has started.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.UploadResourceChunkAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.UploadingResourceId,System.Byte[],System.Object)">
+            <summary>
+                <para>Starts uploading the document's resources (asynchronously).
+</para>
+            </summary>
+            <param name="id">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.UploadingResourceId"/> object, identifying the document's resources.
 
             </param>
-            <param name="compatibility">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility"/> enumeration value, specifying the markup compatibility.
+            <param name="data">
+		A <see cref="T:System.Byte"/> array, containing the document data (in fragments).
 
             </param>
             <param name="asyncState">
@@ -20627,193 +21248,9 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 
 
         </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPagesCompleted">
+        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IExportServiceClient.UploadResourceChunkCompleted">
             <summary>
-                <para>Occurs when the document pages have been obtained.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPrintDocumentAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.Object)">
-            <summary>
-                <para>Starts obtaining the printed document (asynchronously).
-</para>
-            </summary>
-            <param name="printId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object, identifying the printed document.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPrintDocumentCompleted">
-            <summary>
-                <para>Occurs when the printed document has been obtained.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPrintStatusAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.Object)">
-            <summary>
-                <para>Starts obtaining the status of the printed document (asynchronously).
-</para>
-            </summary>
-            <param name="printId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object, identifying the printed document.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetPrintStatusCompleted">
-            <summary>
-                <para>Occurs when the printed document's status has been obtained.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetReportParametersAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,System.Object)">
-            <summary>
-                <para>Starts obtaining the report parameters (asynchronously).
-</para>
-            </summary>
-            <param name="identity">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.GetReportParametersCompleted">
-            <summary>
-                <para>Occurs when the report parameters have been obtained.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StartBuildAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs,System.Object)">
-            <summary>
-                <para>Starts building the report (asynchronously).
-</para>
-            </summary>
-            <param name="identity">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
-
-            </param>
-            <param name="buildArgs">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs"/> object, storing the arguments required to create the report.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StartBuildCompleted">
-            <summary>
-                <para>Occurs when the document build has started.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StartPrintAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility,System.Object)">
-            <summary>
-                <para>Starts printing the document (asynchronously).
-</para>
-            </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
-
-            </param>
-            <param name="compatibility">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility"/> enumeration value, specifying the markup compatibility.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StartPrintCompleted">
-            <summary>
-                <para>Occurs when the document printing has started.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StopBuildAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Object)">
-            <summary>
-                <para>Stops building the document (asynchronously).
-</para>
-            </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StopBuildCompleted">
-            <summary>
-                <para>Occurs when the document build has stopped.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StopPrintAsync(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.Object)">
-            <summary>
-                <para>Stops printing the document (asynchronously).
-</para>
-            </summary>
-            <param name="printId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object, identifying the printed document.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient.StopPrintCompleted">
-            <summary>
-                <para>Occurs when the document printing has stopped.
-
+                <para>Occurs when the document fragment has been uploaded.
 </para>
             </summary>
 
@@ -21566,6 +22003,20 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
             </summary>
             <value>A <see cref="T:System.String"/> value.
 </value>
+
+
+        </member>
+        <member name="E:DevExpress.ReportServer.Printing.RemoteDocumentSource.ParametersRequestBeforeShow">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.ReportServer.Printing.RemoteDocumentSource.ParametersRequestValueChanged">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>
@@ -22624,77 +23075,91 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 
 
         </member>
-        <member name="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory">
+        <member name="T:DevExpress.XtraPrinting.BookmarkInfo">
 
             <summary>
-                <para>Supports automatic <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClient"/> creation on the client side.
+                <para>Contains information about a bookmark that is related to a printing brick.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.#ctor(System.String)">
+        <member name="M:DevExpress.XtraPrinting.BookmarkInfo.#ctor(DevExpress.XtraPrinting.IBrickOwner,System.String,DevExpress.XtraPrinting.BookmarkInfo)">
             <summary>
-                <para>Initializes a new instance of the ReportServiceClientFactory class with the specified endpoint configuration name.
+                <para>Initializes a new instance of the BookmarkInfo class with the specified settings.
 </para>
             </summary>
-            <param name="endpointConfigurationName">
-		A <see cref="T:System.String"/> value, specifying the endpoint configuration name.
+            <param name="brickOwner">
+		An object implementing the <see cref="T:DevExpress.XtraPrinting.IBrickOwner"/> interface. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BookmarkInfo.BrickOwner"/> property.
 
             </param>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.#ctor(System.String,System.ServiceModel.EndpointAddress)">
-            <summary>
-                <para>Initializes a new instance of the ReportServiceClientFactory class with the specified endpoint configuration name and remote address.
-</para>
-            </summary>
-            <param name="endpointConfigurationName">
-		A <see cref="T:System.String"/> value, specifying the endpoint configuration name.
+            <param name="bookmark">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BookmarkInfo.Bookmark"/> property.
 
             </param>
-            <param name="remoteAddress">
-		An <see cref="T:System.ServiceModel.EndpointAddress"/> object.
+            <param name="bookmarkParentInfo">
+		A <see cref="T:DevExpress.XtraPrinting.BookmarkInfo"/> object. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.BookmarkInfo.ParentInfo"/> property.
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.#ctor(System.ServiceModel.EndpointAddress)">
+        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.Bookmark">
             <summary>
-                <para>Initializes a new instance of the ReportServiceClientFactory class with the specified remote address.
+                <para>Specifies the element's bookmark.
 </para>
             </summary>
-            <param name="remoteAddress">
-		An <see cref="T:System.ServiceModel.EndpointAddress"/> object.
-
-            </param>
+            <value>A <see cref="T:System.String"/> value.
+</value>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.#ctor(System.ServiceModel.EndpointAddress,System.ServiceModel.Channels.Binding)">
+        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.BrickOwner">
             <summary>
-                <para>Initializes a new instance of the ReportServiceClientFactory class with the specified remote address and binding.
+                <para>Provides access to the bookmark's owner brick.
 </para>
             </summary>
-            <param name="remoteAddress">
-		An <see cref="T:System.ServiceModel.EndpointAddress"/> object.
-
-            </param>
-            <param name="binding">
-		A <see cref="T:System.ServiceModel.Channels.Binding"/> object.
-
-            </param>
+            <value>An object implementing the <see cref="T:DevExpress.XtraPrinting.IBrickOwner"/> interface.
+</value>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClientFactory.Create">
+        <member name="F:DevExpress.XtraPrinting.BookmarkInfo.Empty">
             <summary>
-                <para>Creates a <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClient"/>.
+                <para>A <see cref="T:System.String.Empty"/> value.
 </para>
             </summary>
-            <returns>An object implementing the <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClient"/> interface (typically, this is a <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClient"/> object).
-</returns>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.HasBookmark">
+            <summary>
+                <para>Specifies whether or not there are bookmarks specified for the brick.
+</para>
+            </summary>
+            <value><b>true</b>, if there are bookmarks assigned to the element; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.ParentBrick">
+            <summary>
+                <para>Provides access to the bookmark's parent brick.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.VisualBrick"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.BookmarkInfo.ParentInfo">
+            <summary>
+                <para>Specifies information about the bookmark's parent.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.BookmarkInfo"/> object.
+</value>
 
 
         </member>
@@ -22819,6 +23284,62 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
             </param>
             <returns> 
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.IGraphics">
+
+            <summary>
+                <para>Provides the essential functionality for document printing.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.IGraphics.Dpi">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Single"/> value.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.IGraphics.GetPageCount(System.Int32,DevExpress.Utils.DefaultBoolean)">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <param name="basePageNumber">
+		An integer value.
+
+            </param>
+            <param name="continuousPageNumbering">
+		A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value.
+
+            </param>
+            <returns>An integer value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.IGraphics.ResetDrawingPage">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.IGraphics.SetDrawingPage(DevExpress.XtraPrinting.Page)">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <param name="page">
+		A <see cref="T:DevExpress.XtraPrinting.Page"/> object.
+
+            </param>
 
 
         </member>
@@ -23648,154 +24169,6 @@ Gets or sets a value indicating whether the left, right, top and bottom borders 
 		<b>true</b> if the command has been handled; otherwise <b>false</b>.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPrinting.LineBrick">
-
-            <summary>
-                <para>A visual brick containing a line.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.LineBrick.#ctor(DevExpress.XtraPrinting.IBrickOwner)">
-            <summary>
-                <para>Initializes a new instance of the LineBrick class with the specified owner.
-</para>
-            </summary>
-            <param name="brickOwner">
-		An object implementing the <see cref="T:DevExpress.XtraPrinting.IBrickOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.LineBrick.#ctor">
-            <summary>
-                <para>Initializes a new instance of the LineBrick class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.BrickType">
-            <summary>
-                <para>Gets the text string, containing the brick type information.
-</para>
-            </summary>
-            <value>A string, characterizing the brick's type. Always returns "Line".
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.LineBrick.Clone">
-            <summary>
-                <para>Creates a new LineBrick instance, which is a copy of the current instance. 
-</para>
-            </summary>
-            <returns>A new LineBrick instance, which is a copy of the current instance. 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.ForeColor">
-            <summary>
-                <para>Gets or sets the color of the line displayed in the current line brick.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object specifying the foreground color of the line.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.HtmlLineDirection">
-            <summary>
-                <para>Gets or sets the line direction in HTML output.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraPrinting.HtmlLineDirection"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.LineDirection">
-            <summary>
-                <para>Gets or sets the line direction.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.UI.LineDirection"/> enumeration value, which determines the current line direction.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.LineStyle">
-            <summary>
-                <para>Gets or sets the style used for a dashed line.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Drawing2D.DashStyle"/> enumeration value that represents the style used for a dashed line.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.LineWidth">
-            <summary>
-                <para>Gets or sets the width of the line displayed in the line brick.
-</para>
-            </summary>
-            <value>An integer value representing the width of the line.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.NoClip">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BrickBase.NoClip"/> property to change its return value.
-</para>
-            </summary>
-            <value>Always <b>true</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.Text">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.Text"/> property to hide it.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.TextValue">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.TextValue"/> property to hide it.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Object"/>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.TextValueFormatString">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.TextValueFormatString"/> property to hide it.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.LineBrick.XlsxFormatString">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.XlsxFormatString"/> property to hide it.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value. 
-</value>
 
 
         </member>
@@ -24742,6 +25115,31 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
 
 
         </member>
+        <member name="T:DevExpress.XtraPrinting.XamlExport.XamlCompatibility">
+
+            <summary>
+                <para>Lists the values that indicate the document markup compatibility of various software platforms.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraPrinting.XamlExport.XamlCompatibility.Silverlight">
+            <summary>
+                <para>XAML is Silverlight-compatible.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraPrinting.XamlExport.XamlCompatibility.WPF">
+            <summary>
+                <para>XAML is WPF-compatible.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.Export.Xl.XlBorderLineStyle">
 
             <summary>
@@ -25398,6 +25796,154 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
             </summary>
             <value>An integer value representing the width of the brick.
 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.LineBrick">
+
+            <summary>
+                <para>A visual brick containing a line.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.LineBrick.#ctor(DevExpress.XtraPrinting.IBrickOwner)">
+            <summary>
+                <para>Initializes a new instance of the LineBrick class with the specified owner.
+</para>
+            </summary>
+            <param name="brickOwner">
+		An object implementing the <see cref="T:DevExpress.XtraPrinting.IBrickOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.LineBrick.#ctor">
+            <summary>
+                <para>Initializes a new instance of the LineBrick class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.BrickType">
+            <summary>
+                <para>Gets the text string, containing the brick type information.
+</para>
+            </summary>
+            <value>A string, characterizing the brick's type. Always returns "Line".
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.LineBrick.Clone">
+            <summary>
+                <para>Creates a new LineBrick instance, which is a copy of the current instance. 
+</para>
+            </summary>
+            <returns>A new LineBrick instance, which is a copy of the current instance. 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.ForeColor">
+            <summary>
+                <para>Gets or sets the color of the line displayed in the current line brick.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Color"/> object specifying the foreground color of the line.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.HtmlLineDirection">
+            <summary>
+                <para>Gets or sets the line direction in HTML output.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraPrinting.HtmlLineDirection"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.LineDirection">
+            <summary>
+                <para>Gets or sets the line direction.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.UI.LineDirection"/> enumeration value, which determines the current line direction.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.LineStyle">
+            <summary>
+                <para>Gets or sets the style used for a dashed line.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Drawing2D.DashStyle"/> enumeration value that represents the style used for a dashed line.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.LineWidth">
+            <summary>
+                <para>Gets or sets the width of the line displayed in the line brick.
+</para>
+            </summary>
+            <value>An integer value representing the width of the line.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.NoClip">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BrickBase.NoClip"/> property to change its return value.
+</para>
+            </summary>
+            <value>Always <b>true</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.Text">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.Text"/> property to hide it.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.TextValue">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.TextValue"/> property to hide it.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Object"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.TextValueFormatString">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.TextValueFormatString"/> property to hide it.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.LineBrick.XlsxFormatString">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.XlsxFormatString"/> property to hide it.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value. 
 </value>
 
 
@@ -26345,6 +26891,82 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
 
 
         </member>
+        <member name="T:DevExpress.Export.Xl.XlPageMargins">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlPageMargins.#ctor">
+            <summary>
+                <para>Initializes a new instance of the XlPageMargins class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageMargins.Bottom">
+            <summary>
+                <para>Gets or sets the size of the bottom margin of a printed page.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> value that specifies the bottom margin in a unit of measurement defined by the <see cref="P:DevExpress.Export.Xl.XlPageMargins.PageUnits"/> property. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageMargins.Footer">
+            <summary>
+                <para>Gets or sets the space between a footer and the bottom edge of a printed page.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> value that specifies the footer margin in a unit of measurement defined by the <see cref="P:DevExpress.Export.Xl.XlPageMargins.PageUnits"/> property. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageMargins.Header">
+            <summary>
+                <para> </para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> value that specifies the header margin in a unit of measurement defined by the <see cref="P:DevExpress.Export.Xl.XlPageMargins.PageUnits"/> property. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageMargins.Left">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageMargins.PageUnits">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageMargins.Right">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlPageMargins.Top">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.BarCode.IntelligentMailGenerator">
 
             <summary>
@@ -26520,6 +27142,28 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.Parameters.ParameterExtensions">
+
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Parameters.ParameterExtensions.HasCascadeLookUpSettings(DevExpress.XtraReports.Parameters.Parameter)">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <param name="parameter">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.LineDirection">
 
             <summary>
@@ -26557,6 +27201,170 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
                 <para>A line is drawn vertically.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.Drawing.PageWatermark">
+
+            <summary>
+                <para>Represents a page's watermark.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Drawing.PageWatermark.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PageWatermark class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Drawing.PageWatermark.Dispose">
+            <summary>
+                <para>Disposes of the PageWatermark object.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Drawing.PageWatermark.Equals(System.Object)">
+            <summary>
+                <para>Determines whether the specified object is equal to the current PageWatermark instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object.
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current PageWatermark instance; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.Font">
+            <summary>
+                <para>Gets or sets the font of the PageWatermark.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Font"/> object that defines the text's format, including font face, size, and style attributes.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ForeColor">
+            <summary>
+                <para>Gets or sets the foreground color of the PageWatermark's text.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Color"/> object representing the foreground color of the text.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Drawing.PageWatermark.GetHashCode">
+            <summary>
+                <para>Gets the hash code (a number) that corresponds to the value of the current PageWatermark object.
+
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.Image">
+            <summary>
+                <para>Gets or sets the PageWatermark's picture.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Image"/> object specifying the watermark's picture.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ImageAlign">
+            <summary>
+                <para>Gets or sets the position of the PageWatermark's picture.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.ContentAlignment"/> enumeration value specifying how a picture is aligned on the document page.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ImageTiling">
+            <summary>
+                <para>Gets or sets a value indicating if a PageWatermark's picture should be tiled.
+</para>
+            </summary>
+            <value><b>true</b> to tile a watermark's picture; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ImageTransparency">
+            <summary>
+                <para>Gets or sets the transparency of the watermark's image.
+
+</para>
+            </summary>
+            <value>An integer value specifying the images's transparency. It should be between <b>0</b> and <b>255</b>, inclusive.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ImageViewMode">
+            <summary>
+                <para>Gets or sets the mode in which a picture <see cref="T:DevExpress.XtraPrinting.Drawing.PageWatermark"/> is displayed.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraPrinting.Drawing.ImageViewMode"/> enumeration value specifying how the picture should be displayed.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ShowBehind">
+            <summary>
+                <para>Gets or sets a value indicating whether a watermark should be printed behind or in front of the contents of a page.
+
+</para>
+            </summary>
+            <value><b>true</b> to print a watermark behind the contents of a page; otherwise <b>false</b>.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.Text">
+            <summary>
+                <para>Gets or sets a PageWatermark's text.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> specifying the text of a watermark.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.TextDirection">
+            <summary>
+                <para>Gets or sets the incline of the PageWatermark's text.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.Drawing.DirectionMode"/> enumeration value representing the text incline.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.TextTransparency">
+            <summary>
+                <para>Gets or sets the transparency of the PageWatermark's text.
+</para>
+            </summary>
+            <value>An integer value specifying the text's transparency. It should be between <b>0</b> and <b>255</b>, inclusive.
+</value>
 
 
         </member>
@@ -26689,31 +27497,6 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
             </summary>
             <value>A <see cref="T:System.String"/> value, identifying the report editing session.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPrinting.XamlExport.XamlCompatibility">
-
-            <summary>
-                <para>Lists the values that indicate the document markup compatibility of various software platforms.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.XamlExport.XamlCompatibility.Silverlight">
-            <summary>
-                <para>XAML is Silverlight-compatible.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.XamlExport.XamlCompatibility.WPF">
-            <summary>
-                <para>XAML is WPF-compatible.
-</para>
-            </summary>
 
 
         </member>
@@ -32014,29 +32797,6 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
                 <para>A control is anchored to the right edge of its container.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPrinting.Shape.FilletShapeBase">
-
-            <summary>
-                <para>Defines the base class for all the shape types whose corners can be filleted.
-
-
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.Shape.FilletShapeBase.Fillet">
-            <summary>
-                <para>Gets or sets a value specifying how shape corners are rounded (in percent).
-
-
-</para>
-            </summary>
-            <value>An integer value which shows how corners are rounded. This value should be from <b>0</b> to <b>100</b>. 
-
-</value>
 
 
         </member>

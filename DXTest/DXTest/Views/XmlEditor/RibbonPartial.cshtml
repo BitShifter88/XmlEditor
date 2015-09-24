@@ -14,11 +14,15 @@
 
     var clipboard = tab.Groups.Add("Clipboard");
 
+    bool lockTreeStrucutre = Boolean.Parse(System.Web.Configuration.WebConfigurationManager.AppSettings["LockTreeStructure"]);
+
     clipboard.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
     {
         i.Text = "Paste";
         i.Name = "Paste";
         i.Size = RibbonItemSize.Large;
+        if (lockTreeStrucutre)
+            i.ClientEnabled = false;
         ((RibbonButtonItem)i).LargeImage.IconID = IconID.EditPaste32x32;
     });
 
@@ -27,6 +31,8 @@
         i.Text = "Cut";
         i.Name = "Cut";
         i.Size = RibbonItemSize.Small;
+        if (lockTreeStrucutre)
+            i.ClientEnabled = false;
         ((RibbonButtonItem)i).SmallImage.IconID = IconID.EditCopy16x16;
     });
 
@@ -35,6 +41,8 @@
         i.Text = "Copy";
         i.Name = "Copy";
         i.Size = RibbonItemSize.Small;
+        if (lockTreeStrucutre)
+            i.ClientEnabled = false;
         ((RibbonButtonItem)i).SmallImage.IconID = IconID.ActionsMerge16x16;
     });
 
@@ -47,6 +55,8 @@
         i.Text = "Add Element";
         i.Name = "AddElement";
         i.Size = RibbonItemSize.Large;
+        if (lockTreeStrucutre)
+            i.ClientEnabled = false;
         ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/addElement.png";
     });
     // Adds the "Add Attribute" button to the ribbon
@@ -55,6 +65,8 @@
         i.Text = "Add Attribute";
         i.Name = "AddAttribute";
         i.Size = RibbonItemSize.Large;
+        if (lockTreeStrucutre)
+            i.ClientEnabled = false;
         ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/addAttribute.png";
     });
     // The ribbon group that contains the button images for manipulating namespace declarations
@@ -76,7 +88,7 @@
         i.Text = "Expand All";
         i.Name = "ExpandAll";
         i.Size = RibbonItemSize.Large;
-        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/n.ico";
+        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/expand.png";
     });
 
     treeView.Items.Add(MVCxRibbonItemType.ButtonItem, i =>
@@ -84,7 +96,7 @@
         i.Text = "Collapse All";
         i.Name = "CollapseAll";
         i.Size = RibbonItemSize.Large;
-        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/n.ico";
+        ((RibbonButtonItem)i).LargeImage.Url = "~/Content/Images/collapse.png";
     });
 
     // Attactes the popup menu to the ribbons file tab. The popup menu is constructed further down

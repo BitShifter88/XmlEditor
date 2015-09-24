@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
-using System.Web;
 using System.Xml.Linq;
 
 namespace DXTest.Code.Xml
@@ -95,33 +93,48 @@ namespace DXTest.Code.Xml
 
             if (oldNode.Type == XmlNodeType.Element)
             {
-                XElement element = (XElement)oldNode.XObject;
-
-                XmlHelper.ChangeLocalNameForElement(element, updatedNode.Name);
-
-                // If the updated node has been assigned a namespace tag
-                if (updatedNode.Tag != null)
-                {
-                    XmlNamespace newNamespace = namespaceManager.GetNamespaceByPrefix(updatedNode.Tag);
-                    XmlHelper.ChangeNamespace(element, newNamespace);
-                }
-
-                // Parents don't have values, because XDocument does not like that
-                if (oldNode.IsParrent == false)
-                    element.Value = updatedNode.Value;
+                UpdateElement(updatedNode, namespaceManager, oldNode);
             }
             else if (oldNode.Type == XmlNodeType.Attribute)
             {
-                // XAttribute does not allow us to change its name. Therefor we have to replace th old attribute with a new one
-                XAttribute attribute = (XAttribute)oldNode.XObject;
-                XAttribute newAttribute = XmlHelper.CreateAttribute(XmlHelper.ChangeLocalNameForAttribute(attribute, updatedNode.Name), updatedNode.Value);
-                XmlHelper.ReplaceAttribute(attribute, newAttribute, oldNode.Parrent);
+                UpdateAttribute(updatedNode, oldNode);
             }
             else if (oldNode.Type == XmlNodeType.Namespace)
             {
-                XAttribute attribute = (XAttribute)oldNode.XObject;
-                namespaceManager.ChangeNamespaceDeclaration(doc, attribute, oldNode.Parrent, updatedNode.Value, updatedNode.Name);
+                UpdateNamespaceDeclaration(updatedNode, namespaceManager, doc, oldNode);
             }
+        }
+
+        private static void UpdateNamespaceDeclaration(XmlTreeNode updatedNode, NamespaceManager namespaceManager, XDocument doc, XmlTreeNode oldNode)
+        {
+            XAttribute attribute = (XAttribute)oldNode.XObject;
+            namespaceManager.ChangeNamespaceDeclaration(doc, attribute, oldNode.Parrent, updatedNode.Value, updatedNode.Name);
+        }
+
+        private static void UpdateAttribute(XmlTreeNode updatedNode, XmlTreeNode oldNode)
+        {
+            // XAttribute does not allow us to change its name. Therefor we have to replace th old attribute with a new one
+            XAttribute attribute = (XAttribute)oldNode.XObject;
+            XAttribute newAttribute = XmlHelper.CreateAttribute(XmlHelper.ChangeLocalNameForAttribute(attribute, updatedNode.Name), updatedNode.Value);
+            XmlHelper.ReplaceAttribute(attribute, newAttribute, oldNode.Parrent);
+        }
+
+        private static void UpdateElement(XmlTreeNode updatedNode, NamespaceManager namespaceManager, XmlTreeNode oldNode)
+        {
+            XElement element = (XElement)oldNode.XObject;
+
+            XmlHelper.ChangeLocalNameForElement(element, updatedNode.Name);
+
+            // If the updated node has been assigned a namespace tag
+            if (updatedNode.Tag != null)
+            {
+                XmlNamespace newNamespace = namespaceManager.GetNamespaceByPrefix(updatedNode.Tag);
+                XmlHelper.ChangeNamespace(element, newNamespace);
+            }
+
+            // Parents don't have values, because XDocument does not like that
+            if (oldNode.IsParrent == false)
+                element.Value = updatedNode.Value;
         }
 
         /// <summary>
@@ -201,7 +214,6 @@ namespace DXTest.Code.Xml
         {
             List<XmlTreeNode> treeNodes = _dataSource.GetXmlTreeNodes();
     
-            int highestId = treeNodes.OrderByDescending(i => i.Id).FirstOrDefault().Id;
             XmlTreeNode parent = treeNodes.Where(i => i.Id == parrentId).FirstOrDefault();
             XElement parentElement = (XElement)parent.XObject;
 
@@ -242,6 +254,7 @@ namespace DXTest.Code.Xml
 
             XElement pasteTarget = (XElement)parentNode.XObject;
 
+            // If the node that is being copyed is an Element
             if (node.GetType().IsAssignableFrom(typeof(XElement)))
             {
                 XElement copyedNode = (XElement)node;
@@ -249,6 +262,7 @@ namespace DXTest.Code.Xml
                 // we make a copy again, so that we can do future pastes
                 XmlTreeClipboard.Copy(new XElement(copyedNode));
             }
+            // If the node that is being copyed is an attribute
             else if (node.GetType().IsAssignableFrom(typeof(XAttribute)))
             {
                 XAttribute attribute = (XAttribute)node;

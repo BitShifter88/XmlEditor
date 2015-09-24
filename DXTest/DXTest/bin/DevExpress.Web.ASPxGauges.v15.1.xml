@@ -271,6 +271,14 @@
 
 
         </member>
+        <member name="P:DevExpress.Web.ASPxGauges.ASPxGaugeControl.ColorScheme">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.Web.ASPxGauges.ASPxGaugeControl.CssClass">
             <summary>
                 <para>Overrides the base class property to hide it.
@@ -781,7 +789,7 @@
                 <para>Gets or sets the delay before displaying the loading panel.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aSystem.Int32">Int32</a> value that specifies the interval from the time a callback is sent to the server and a loading panel is displayed, in milliseconds.
+            <value>An <see cref="Int32"/> value that specifies the interval from the time a callback is sent to the server and a loading panel is displayed, in milliseconds.
 
 </value>
 
@@ -989,7 +997,7 @@
                 <para>Provides access to the loading panel settings.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.SettingsLoadingPanel">SettingsLoadingPanel</a> object that contains the loading panel's settings.
+            <value>A <see cref="SettingsLoadingPanel"/> object that contains the loading panel's settings.
 </value>
 
 

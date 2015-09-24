@@ -29,7 +29,7 @@
 		A value to be converted.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aSystem.Double">Double</a> object that is the result of the conversion.
+            <returns>A <see cref="Double"/> object that is the result of the conversion.
 </returns>
 
 

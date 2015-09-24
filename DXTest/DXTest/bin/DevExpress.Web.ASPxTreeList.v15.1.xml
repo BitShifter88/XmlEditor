@@ -4,88 +4,6 @@
         <name>DevExpress.Web.ASPxTreeList.v15.1</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn">
-
-            <summary>
-                <para>Represents a data column with an editor containing a customizable dropdown window.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListDropDownEditColumn class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn.PropertiesDropDownEdit">
-            <summary>
-                <para>Gets the column editor's settings.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.DropDownEditProperties"/> object that contains settings specific to a dropdown editor.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn">
-
-            <summary>
-                <para>Represents a data column that displays images from a binary stream.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListBinaryImageColumn class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.AllowSort">
-            <summary>
-                <para>Gets or sets whether end-users can sort data by the column's values.
-</para>
-            </summary>
-            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.PropertiesBinaryImage">
-            <summary>
-                <para>Gets the column editor's settings.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.BinaryImageEditProperties"/> object that contains settings specific to a binary image editor.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.SortIndex">
-            <summary>
-                <para>Gets or sets the column's position among sorted columns.
-</para>
-            </summary>
-            <value>An integer value that specifies the zero-based column's index among sorted columns. <b>-1</b> if data is not sorted by this column.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.SortOrder">
-            <summary>
-                <para>Gets or sets the column's sort order. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Data.ColumnSortOrder"/> enumeration value that specifies the column's sort order.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxTreeList.TreeListExportSystemStyles">
 
             <summary>
@@ -233,7 +151,7 @@
                 <para>Gets or sets the minimum height of the edit form's popup window.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.Web.UI.WebControls.Unit">Unit</a> object that defines the minimum height of the window.
+            <value>A <see cref="Unit"/> object that defines the minimum height of the window.
 </value>
 
 
@@ -243,7 +161,7 @@
                 <para>Gets or sets the minimum width of edit form's popup window.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aSystem.Web.UI.WebControls.Unit">Unit</a> object that defines the minimum width of the window.
+            <value>A <see cref="Unit"/> object that defines the minimum width of the window.
 </value>
 
 
@@ -525,6 +443,88 @@
 
         </member>
         <member name="P:DevExpress.Web.ASPxTreeList.TreeListImageColumn.SortOrder">
+            <summary>
+                <para>Gets or sets the column's sort order. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Data.ColumnSortOrder"/> enumeration value that specifies the column's sort order.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn">
+
+            <summary>
+                <para>Represents a data column with an editor containing a customizable dropdown window.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListDropDownEditColumn class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn.PropertiesDropDownEdit">
+            <summary>
+                <para>Gets the column editor's settings.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.DropDownEditProperties"/> object that contains settings specific to a dropdown editor.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn">
+
+            <summary>
+                <para>Represents a data column that displays images from a binary stream.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListBinaryImageColumn class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.AllowSort">
+            <summary>
+                <para>Gets or sets whether end-users can sort data by the column's values.
+</para>
+            </summary>
+            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.PropertiesBinaryImage">
+            <summary>
+                <para>Gets the column editor's settings.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.BinaryImageEditProperties"/> object that contains settings specific to a binary image editor.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.SortIndex">
+            <summary>
+                <para>Gets or sets the column's position among sorted columns.
+</para>
+            </summary>
+            <value>An integer value that specifies the zero-based column's index among sorted columns. <b>-1</b> if data is not sorted by this column.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.SortOrder">
             <summary>
                 <para>Gets or sets the column's sort order. 
 </para>
@@ -934,7 +934,7 @@
                 <para>Gets the appearance settings used to paint images when the tree list is exported.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxTreeList.TreeListExportAppearance">TreeListExportAppearance</a> object that contains appearance settings used to paint images when the tree list is exported.
+            <value>A <see cref="TreeListExportAppearance"/> object that contains appearance settings used to paint images when the tree list is exported.
 </value>
 
 
@@ -1421,7 +1421,7 @@
                 <para>Provides access to the print options.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxTreeList.ASPxTreeListPrintSettings">ASPxTreeListPrintSettings</a> object that contains the ASPxTreeList's print options.
+            <value>An <see cref="ASPxTreeListPrintSettings"/> object that contains the ASPxTreeList's print options.
 </value>
 
 
@@ -2769,7 +2769,7 @@
                 <para>Provides access to the style settings that control the appearance of custom command buttons.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ButtonControlStyles">ButtonControlStyles</a> object that contains button style settings.
+            <value>An <see cref="ButtonControlStyles"/> object that contains button style settings.
 </value>
 
 
@@ -2845,7 +2845,7 @@
                 <para>Provides access to the style settings that control the appearance of command buttons.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ButtonControlStyles">ButtonControlStyles</a> object that contains button style settings.
+            <value>An <see cref="ButtonControlStyles"/> object that contains button style settings.
 </value>
 
 
@@ -4913,7 +4913,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Gets or sets a value that specifies how columns are resized when an end-user changes a column's width.
 </para>
             </summary>
-            <value>One of the <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ColumnResizeMode">ColumnResizeMode</a> enumeration values.
+            <value>One of the <see cref="ColumnResizeMode"/> enumeration values.
 </value>
 
 
@@ -5043,7 +5043,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Gets or sets a value specifying the horizontal scrollbar's display mode.
 </para>
             </summary>
-            <value>One of the <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ScrollBarMode">ScrollBarMode</a> enumeration values.
+            <value>One of the <see cref="ScrollBarMode"/> enumeration values.
 </value>
 
 
@@ -5135,7 +5135,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Gets or sets a value specifying the vertical scrollbar's display mode.
 </para>
             </summary>
-            <value>One of the <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ScrollBarMode">ScrollBarMode</a> enumeration values.
+            <value>One of the <see cref="ScrollBarMode"/> enumeration values.
 </value>
 
 
@@ -5601,6 +5601,173 @@ the number of visible nodes divided by the number of visible columns is less tha
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Web.ImageProperties"/> object that contains image settings.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents">
+
+            <summary>
+                <para>Contains a list of the client-side events available for the ASPxTreeList.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListClientSideEvents class. For internal use only.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.ColumnResized">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.ColumnResized"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.ColumnResizing">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.ColumnResizing"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.ContextMenu">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.ContextMenu"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function, or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.CustomButtonClick">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.CustomButtonClick"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.CustomDataCallback">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.CustomDataCallback"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function, or the entire JavaScript function code used to handle an event.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.CustomizationWindowCloseUp">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.CustomizationWindowCloseUp"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.EndDragNode">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.EndDragNode"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.FocusedNodeChanged">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.FocusedNodeChanged"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeClick">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.NodeClick"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeCollapsing">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.NodeCollapsing"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeDblClick">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.NodeDblClick"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeExpanding">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.NodeExpanding"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeFocusing">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <b>NodeFocusing</b> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.SelectionChanged">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.SelectionChanged"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.StartDragNode">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.StartDragNode"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
 </value>
 
 
@@ -7707,7 +7874,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Gets the collection of data columns within the ASPxTreeList control.
 </para>
             </summary>
-            <value>A ReadOnlyTreeListColumnCollection object that is a collection of data columns.
+            <value>A <see cref="ReadOnlyTreeListColumnCollection"/> object that is a collection of data columns.
 </value>
 
 
@@ -8560,7 +8727,7 @@ the number of visible nodes divided by the number of visible columns is less tha
 
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxTreeList.TreeListSettings">TreeListSettings</a> object that contains the ASPxTreeList's display options.
+            <value>A <see cref="TreeListSettings"/> object that contains the ASPxTreeList's display options.
 </value>
 
 
@@ -8570,7 +8737,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Provides access to the control's behavior settings.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxTreeList.TreeListSettingsBehavior">TreeListSettingsBehavior</a> object that contains the control's behavior settings.
+            <value>A <see cref="TreeListSettingsBehavior"/> object that contains the control's behavior settings.
 </value>
 
 
@@ -8580,7 +8747,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Provides access to the ASPxTreeList cookie and layout settings.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxTreeList.TreeListSettingsCookies">TreeListSettingsCookies</a> object that contains the control's cookie and layout settings.
+            <value>An <see cref="TreeListSettingsCookies"/> object that contains the control's cookie and layout settings.
 </value>
 
 
@@ -8600,7 +8767,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Provides access to the ASPxTreeList's security settings that allow disabling data modification operations such as editing, inserting, deleting.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxTreeList.TreeListSettingsDataSecurity">TreeListSettingsDataSecurity</a> object containing data security settings.
+            <value>A <see cref="TreeListSettingsDataSecurity"/> object containing data security settings.
 </value>
 
 
@@ -8888,7 +9055,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Gets the column editor's settings.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.TokenBoxProperties">TokenBoxProperties</a> object that contains settings specific to a token box editor.
+            <value>A <see cref="TokenBoxProperties"/> object that contains settings specific to a token box editor.
 </value>
 
 
@@ -8959,173 +9126,6 @@ the number of visible nodes divided by the number of visible columns is less tha
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents">
-
-            <summary>
-                <para>Contains a list of the client-side events available for the ASPxTreeList.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListClientSideEvents class. For internal use only.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.ColumnResized">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.ColumnResized"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.ColumnResizing">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.ColumnResizing"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.ContextMenu">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.ContextMenu"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function, or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.CustomButtonClick">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.CustomButtonClick"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.CustomDataCallback">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.CustomDataCallback"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function, or the entire JavaScript function code used to handle an event.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.CustomizationWindowCloseUp">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.CustomizationWindowCloseUp"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.EndDragNode">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.EndDragNode"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.FocusedNodeChanged">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.FocusedNodeChanged"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeClick">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.NodeClick"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeCollapsing">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.NodeCollapsing"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeDblClick">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.NodeDblClick"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeExpanding">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.NodeExpanding"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.NodeFocusing">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <b>NodeFocusing</b> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.SelectionChanged">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.SelectionChanged"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListClientSideEvents.StartDragNode">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a client ASPxTreeList's <see cref="E:DevExpress.Web.ASPxTreeList.Scripts.ASPxClientTreeList.StartDragNode"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxTreeList.Localization.ASPxTreeListResLocalizer">
 
             <summary>
@@ -9165,7 +9165,7 @@ the number of visible nodes divided by the number of visible columns is less tha
                 <para>Returns an object comprising resources based on the thread's language and regional settings (culture).
 </para>
             </summary>
-            <returns>A XtraLocalizer object comprising resources based on the thread's culture.
+            <returns>A <see cref="XtraLocalizer"/> object comprising resources based on the thread's culture.
 </returns>
 
 
@@ -9179,7 +9179,7 @@ the number of visible nodes divided by the number of visible columns is less tha
 		An <see cref="T:DevExpress.Web.ASPxTreeList.Localization.ASPxTreeListStringId"/> enumeration value identifying the string to localize.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> corresponding to the specified identifier.
+            <returns>A <see cref="String"/> corresponding to the specified identifier.
 </returns>
 
 

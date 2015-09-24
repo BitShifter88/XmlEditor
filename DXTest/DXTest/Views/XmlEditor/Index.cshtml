@@ -21,6 +21,7 @@
 @Html.DevExpress().PopupMenu(
         settings =>
         {
+            bool lockTreeStrucutre = Boolean.Parse(System.Web.Configuration.WebConfigurationManager.AppSettings["LockTreeStructure"]);
             settings.PopupAction = PopupAction.LeftMouseClick;
             settings.PopupVerticalAlign = PopupVerticalAlign.Below;
             settings.PopupHorizontalAlign = PopupHorizontalAlign.LeftSides;
@@ -29,31 +30,43 @@
             {
                 item.Text = "New Element";
                 item.NavigateUrl = "javascript:NewElement();";
+                if (lockTreeStrucutre)
+                    item.ClientEnabled = false;
             });
             settings.Items.Add(item =>
             {
                 item.Text = "New Attribute";
                 item.NavigateUrl = "javascript:NewAttribute();";
+                if (lockTreeStrucutre)
+                    item.ClientEnabled = false;
             });
             settings.Items.Add(item =>
             {
                 item.Text = "Delete";
                 item.NavigateUrl = "javascript:Delete();";
+                if (lockTreeStrucutre)
+                    item.ClientEnabled = false;
             });
             settings.Items.Add(item =>
             {
                 item.Text = "Copy";
                 item.NavigateUrl = "javascript:Copy();";
+                if (lockTreeStrucutre)
+                    item.ClientEnabled = false;
             });
             settings.Items.Add(item =>
             {
                 item.Text = "Cut";
                 item.NavigateUrl = "javascript:Cut();";
+                if (lockTreeStrucutre)
+                    item.ClientEnabled = false;
             });
             settings.Items.Add(item =>
             {
                 item.Text = "Paste";
                 item.NavigateUrl = "javascript:Paste();";
+                if (lockTreeStrucutre)
+                    item.ClientEnabled = false;
             });
             settings.ClientSideEvents.Init = "InitPopupMenuHandler";
             //settings.ClientSideEvents.ItemClick = "OnPopupMenuItemClick";

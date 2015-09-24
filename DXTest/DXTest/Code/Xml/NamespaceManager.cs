@@ -1,18 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace DXTest.Code.Xml
 {
-    public class XmlNamespace
-    {
-        public string Uri { get; set; }
-        public string Prefix { get; set; }
-    }
-
     /// <summary>
     /// This class is responsible for keeping track of the namespaces in the XML document. It is also responsible for adding/deleting and changing the name and value
     /// of namespaces. Changing the value and name of a namespace declaration is not trivial, since XAttribute handles this very poorly

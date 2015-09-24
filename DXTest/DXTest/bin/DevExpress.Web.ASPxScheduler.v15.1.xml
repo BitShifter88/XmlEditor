@@ -735,30 +735,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleted"/> event. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventHandler.Invoke(System.Object,DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleted"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> control which fires the event.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventArgs"/> object that contains event data.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxScheduler.InitClientAppointmentHandler">
 
             <summary>
@@ -823,6 +799,46 @@
 </para>
             </summary>
             <value>A <see cref="T:System.Collections.Generic.Dictionary`2[[System.String],[System.Object]]"/> object containing name-value pairs.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.SchedulerFormEditorsImages">
+
+            <summary>
+                <para>Contains settings that allow images to be defined for specific elements of editors used within the <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.SchedulerFormEditorsImages.#ctor(DevExpress.Web.Internal.ISkinOwner)">
+            <summary>
+                <para>Initializes a new instance of the SchedulerFormEditorsImages class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <b>ISkinOwner</b> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.SchedulerFormEditorsImages.ImageFolder">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.SchedulerFormEditorsImages.LoadingPanel">
+            <summary>
+                <para>Gets the settings of an image displayed within a <b>Loading Panel</b>.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ImageProperties"/> object that contains image settings.
 </value>
 
 
@@ -1054,46 +1070,6 @@
 </para>
             </summary>
             <value>An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusDisplayType"/> enumeration specifying how the status is displayed.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.SchedulerFormEditorsImages">
-
-            <summary>
-                <para>Contains settings that allow images to be defined for specific elements of editors used within the <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.SchedulerFormEditorsImages.#ctor(DevExpress.Web.Internal.ISkinOwner)">
-            <summary>
-                <para>Initializes a new instance of the SchedulerFormEditorsImages class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <b>ISkinOwner</b> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.SchedulerFormEditorsImages.ImageFolder">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.SchedulerFormEditorsImages.LoadingPanel">
-            <summary>
-                <para>Gets the settings of an image displayed within a <b>Loading Panel</b>.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ImageProperties"/> object that contains image settings.
 </value>
 
 
@@ -1684,7 +1660,7 @@
                 <para>Gets the view's type. 
 </para>
             </summary>
-            <value>One of the <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraScheduler.SchedulerViewType">SchedulerViewType</a> enumeration values.
+            <value>One of the <see cref="SchedulerViewType"/> enumeration values.
 </value>
 
 
@@ -3782,6 +3758,30 @@
             </summary>
             <value>A <see cref="T:System.Collections.Specialized.OrderedDictionary"/> object, representing a collection of data field name/value pairs.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleted"/> event. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventHandler.Invoke(System.Object,DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleted"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> control which fires the event.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventArgs"/> object that contains event data.
+
+            </param>
 
 
         </member>
@@ -7289,7 +7289,7 @@
                 <para>Gets or sets the mode for displaying a current time indicator.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraScheduler.CurrentTimeVisibility">CurrentTimeVisibility</a> enumeration member specifying the mode for displaying current time indicator.
+            <value>A <see cref="CurrentTimeVisibility"/> enumeration member specifying the mode for displaying current time indicator.
 </value>
 
 
@@ -9020,7 +9020,7 @@
 		A <see cref="T:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerStringId"/> enumeration value identifying the string to localize.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aSystem.String">String</a> corresponding to the specified identifier.
+            <returns>A <see cref="String"/> corresponding to the specified identifier.
 </returns>
 
 

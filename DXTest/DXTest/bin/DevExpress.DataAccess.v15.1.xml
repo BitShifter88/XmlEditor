@@ -4,113 +4,131 @@
         <name>DevExpress.DataAccess.v15.1</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.DataAccess.Sql.DBSchema">
+        <member name="T:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters">
 
             <summary>
-                <para>An object schema that is used to manage database objects (e.g., <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects or their descendants).
+                <para>Contains parameters used to establish a connection to a Teradata database server.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.DataAccess.Sql.DBSchema.#ctor(DevExpress.Xpo.DB.DBTable[],DevExpress.Xpo.DB.DBTable[])">
+        <member name="M:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters.#ctor">
             <summary>
-                <para>Initializes a new instance of the DBSchema class.
-</para>
-            </summary>
-            <param name="tables">
-		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects representing tables that will be included in the DBSchema. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.DBSchema.Tables"/> property.
-
-            </param>
-            <param name="views">
-		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects representing views that will be included in the DBSchema. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.DBSchema.Views"/> property.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.DBSchema.#ctor">
-            <summary>
-                <para>Initializes a new instance of the DBSchema class with default settings.
+                <para>Initializes a new instance of the TeradataConnectionParameters class.
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.DataAccess.Sql.DBSchema.#ctor(DevExpress.Xpo.DB.DBTable[],DevExpress.Xpo.DB.DBTable[],DevExpress.Xpo.DB.DBStoredProcedure[])">
+        <member name="M:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters.#ctor(System.String,System.String,System.String,System.String,System.String)">
             <summary>
-                <para>Initializes a new instance of the DBSchema class with the specified settings.
+                <para>Initializes a new instance of the TeradataConnectionParameters class.
 </para>
             </summary>
-            <param name="tables">
-		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects.
+            <param name="serverName">
+		A <see cref="T:System.String"/> value that specifies the name of the Teradata server to which the connection should be established.
 
             </param>
-            <param name="views">
-		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects.
+            <param name="port">
+		A <see cref="T:System.String"/> value that specifies the port used to establish a connection to server.
 
             </param>
-            <param name="storedProcedures">
-		An array of <see cref="T:DevExpress.Xpo.DB.DBStoredProcedure"/> objects.
+            <param name="databaseName">
+		A <see cref="T:System.String"/> value that specifies the database name.
+
+            </param>
+            <param name="userName">
+		A <see cref="T:System.String"/> that specifies the user name used for authentication.
+
+            </param>
+            <param name="password">
+		A <see cref="T:System.String"/> that specifies the password used for authentication.
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.DataAccess.Sql.DBSchema.LoadFromXml(System.IO.Stream)">
+        <member name="F:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters.DefaultPort">
             <summary>
-                <para>Loads the data store's schema from a specific stream.
+                <para>A default port used to establish a connection to a Teradata database server.
 </para>
             </summary>
-            <param name="stream">
-		A <see cref="T:System.IO.Stream"/> descendant from which the data store's schema is loaded.
-
-            </param>
+            <returns> </returns>
 
 
         </member>
-        <member name="M:DevExpress.DataAccess.Sql.DBSchema.SaveToXml(System.IO.Stream)">
+        <member name="P:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters.Port">
             <summary>
-                <para>Saves the data store's schema to a specific stream.
+                <para>Gets or sets a port used to establish a connection to a Teradata database server.
 </para>
             </summary>
-            <param name="stream">
-		A <see cref="T:System.IO.Stream"/> descendant to which the data store's schema is written.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Sql.DBSchema.StoredProcedures">
-            <summary>
-                <para>Gets stored procedures included in the DBSchema. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Xpo.DB.DBStoredProcedure"/> value.
+            <value>A <see cref="T:System.String"/> value that specifies the port used to establish a connection to a Teradata database server.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.DataAccess.Sql.DBSchema.Tables">
-            <summary>
-                <para>Gets tables included in the DBSchema.
+        <member name="T:DevExpress.DataAccess.Sql.DBColumnWithAlias">
 
+            <summary>
+                <para>A column in a <see cref="T:DevExpress.DataAccess.Sql.DBTableWithAlias"/>.
 </para>
             </summary>
-            <value>An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects representing tables included in the DBSchema.
 
-</value>
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.DBColumnWithAlias.#ctor(System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the DBColumnWithAlias class.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> that specifies the column's name. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.Name"/> field.
+
+            </param>
+            <param name="alias">
+		A <see cref="T:System.String"/> that specifies the column's alias. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.DBColumnWithAlias.Alias"/> property.
+
+            </param>
 
 
         </member>
-        <member name="P:DevExpress.DataAccess.Sql.DBSchema.Views">
+        <member name="M:DevExpress.DataAccess.Sql.DBColumnWithAlias.#ctor(System.String,System.String,System.Boolean,System.String,System.Int32,DevExpress.Xpo.DB.DBColumnType)">
             <summary>
-                <para>Gets views included in the DBSchema.
-
+                <para>Initializes a new instance of the DBColumnWithAlias class.
 </para>
             </summary>
-            <value>An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects representing views included in the DBSchema.
+            <param name="name">
+		A <see cref="T:System.String"/> that specifies the column's name. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.Name"/> field.
 
+            </param>
+            <param name="alias">
+		A <see cref="T:System.String"/> that specifies the column's alias. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.DBColumnWithAlias.Alias"/> property.
+
+            </param>
+            <param name="isKey">
+		A <see cref="T:System.Boolean"/> value specifying whether the current column is the primary key. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.IsKey"/> field.
+
+            </param>
+            <param name="dBTypeName">
+		A <see cref="T:System.String"/> specifying the name of the column data type. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.DBTypeName"/> field.
+
+            </param>
+            <param name="size">
+		Specifies the maximum length of a text column. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.Size"/> field.
+
+            </param>
+            <param name="type">
+		A <b>DBColumnType</b> enumeration value that specifies the column's type. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.ColumnType"/> field.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Sql.DBColumnWithAlias.Alias">
+            <summary>
+                <para>Gets or sets the column's alias.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> specifying the column's alias.
 </value>
 
 
@@ -273,174 +291,113 @@
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.ConnectionParameters.MsSqlCEConnectionParameters">
+        <member name="T:DevExpress.DataAccess.Sql.DBSchema">
 
             <summary>
-                <para>Contains parameters used to establish a connection to a Microsoft SQL Server Compact Edition database file.
-
+                <para>An object schema that is used to manage database objects (e.g., <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects or their descendants).
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.DataAccess.ConnectionParameters.MsSqlCEConnectionParameters.#ctor">
+        <member name="M:DevExpress.DataAccess.Sql.DBSchema.#ctor(DevExpress.Xpo.DB.DBTable[],DevExpress.Xpo.DB.DBTable[])">
             <summary>
-                <para>Initializes a new instance of the MsSqlCEConnectionParameters class with default settings.
+                <para>Initializes a new instance of the DBSchema class.
 </para>
             </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.ConnectionParameters.MsSqlCEConnectionParameters.#ctor(System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the MsSqlCEConnectionParameters class.
-</para>
-            </summary>
-            <param name="fileName">
-		A <see cref="T:System.String"/> that specifies the path to the Microsoft SQL Server Compact Edition database file. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FileConnectionParametersBase.FileName"/> property.
+            <param name="tables">
+		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects representing tables that will be included in the DBSchema. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.DBSchema.Tables"/> property.
 
             </param>
-            <param name="password">
-		A <see cref="T:System.String"/> that specifies the password used for authentication. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FileConnectionParametersBase.Password"/> property.
+            <param name="views">
+		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects representing views that will be included in the DBSchema. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.DBSchema.Views"/> property.
+
 
             </param>
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfoCollection">
-
+        <member name="M:DevExpress.DataAccess.Sql.DBSchema.#ctor">
             <summary>
-                <para>A collection of stored procedures provided by an <see cref="T:DevExpress.DataAccess.EntityFramework.EFDataSource"/>.
-
+                <para>Initializes a new instance of the DBSchema class with default settings.
 </para>
             </summary>
+
 
         </member>
-        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfoCollection.Add(DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo)">
+        <member name="M:DevExpress.DataAccess.Sql.DBSchema.#ctor(DevExpress.Xpo.DB.DBTable[],DevExpress.Xpo.DB.DBTable[],DevExpress.Xpo.DB.DBStoredProcedure[])">
             <summary>
-                <para>Adds a stored procedure to the current EFStoredProcedureInfoCollection.
+                <para>Initializes a new instance of the DBSchema class with the specified settings.
 </para>
             </summary>
-            <param name="storedProcedure">
-		A <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> specifying a stored procedure to add to the collection.
+            <param name="tables">
+		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects.
 
             </param>
+            <param name="views">
+		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects.
 
-
-        </member>
-        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfoCollection.AddRange(DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo[])">
-            <summary>
-                <para>Adds an array of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects to the collection.
-</para>
-            </summary>
-            <param name="storedProcedureInfos">
-		An array of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects to append to the collection.
+            </param>
+            <param name="storedProcedures">
+		An array of <see cref="T:DevExpress.Xpo.DB.DBStoredProcedure"/> objects.
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfoCollection.AddRange(System.Collections.Generic.IEnumerable`1)">
+        <member name="M:DevExpress.DataAccess.Sql.DBSchema.LoadFromXml(System.IO.Stream)">
             <summary>
-                <para>Adds a collection of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects to the current collection.
+                <para>Loads the data store's schema from a specific stream.
 </para>
             </summary>
-            <param name="storedProcedureInfos">
-		A collection of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects to append to the current collection.
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> descendant from which the data store's schema is loaded.
 
             </param>
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.Sql.DBColumnWithAlias">
-
+        <member name="M:DevExpress.DataAccess.Sql.DBSchema.SaveToXml(System.IO.Stream)">
             <summary>
-                <para>A column in a <see cref="T:DevExpress.DataAccess.Sql.DBTableWithAlias"/>.
+                <para>Saves the data store's schema to a specific stream.
 </para>
             </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.DBColumnWithAlias.#ctor(System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the DBColumnWithAlias class.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> that specifies the column's name. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.Name"/> field.
-
-            </param>
-            <param name="alias">
-		A <see cref="T:System.String"/> that specifies the column's alias. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.DBColumnWithAlias.Alias"/> property.
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> descendant to which the data store's schema is written.
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.DataAccess.Sql.DBColumnWithAlias.#ctor(System.String,System.String,System.Boolean,System.String,System.Int32,DevExpress.Xpo.DB.DBColumnType)">
+        <member name="P:DevExpress.DataAccess.Sql.DBSchema.StoredProcedures">
             <summary>
-                <para>Initializes a new instance of the DBColumnWithAlias class.
+                <para>Gets stored procedures included in the DBSchema. 
 </para>
             </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> that specifies the column's name. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.Name"/> field.
-
-            </param>
-            <param name="alias">
-		A <see cref="T:System.String"/> that specifies the column's alias. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.DBColumnWithAlias.Alias"/> property.
-
-            </param>
-            <param name="isKey">
-		A <see cref="T:System.Boolean"/> value specifying whether the current column is the primary key. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.IsKey"/> field.
-
-            </param>
-            <param name="dBTypeName">
-		A <see cref="T:System.String"/> specifying the name of the column data type. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.DBTypeName"/> field.
-
-            </param>
-            <param name="size">
-		Specifies the maximum length of a text column. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.Size"/> field.
-
-            </param>
-            <param name="type">
-		A <b>DBColumnType</b> enumeration value that specifies the column's type. This value is assigned to the <see cref="F:DevExpress.Xpo.DB.DBColumn.ColumnType"/> field.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Sql.DBColumnWithAlias.Alias">
-            <summary>
-                <para>Gets or sets the column's alias.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> specifying the column's alias.
+            <value>A <see cref="T:DevExpress.Xpo.DB.DBStoredProcedure"/> value.
 </value>
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.Wizard.Model.IDataConnection">
-
+        <member name="P:DevExpress.DataAccess.Sql.DBSchema.Tables">
             <summary>
-                <para>When implemented by a class, enables it to connect to a data source.
+                <para>Gets tables included in the DBSchema.
+
 </para>
             </summary>
+            <value>An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects representing tables included in the DBSchema.
 
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Model.IDataConnection.CreateConnectionString">
-            <summary>
-                <para>Creates a connection string based on the specified value.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.String"/> value.
-</returns>
+</value>
 
 
         </member>
-        <member name="P:DevExpress.DataAccess.Wizard.Model.IDataConnection.StoreConnectionNameOnly">
+        <member name="P:DevExpress.DataAccess.Sql.DBSchema.Views">
             <summary>
-                <para>Specifies whether to store any connection settings except for the data connection name.
+                <para>Gets views included in the DBSchema.
+
 </para>
             </summary>
-            <value><b>true</b> to store only the name of a data connection; otherwise <b>false</b>.
+            <value>An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects representing views included in the DBSchema.
+
 </value>
 
 
@@ -752,7 +709,7 @@
                 <para>Obtains a <a href="http://msdn.microsoft.com/en-us/library/system.reflection.memberinfo(v=vs.110).aspx">MemberInfo</a> object containing information about the current member.
 </para>
             </summary>
-            <value>A MemberInfo object.
+            <value>A <see cref="MemberInfo"/> object.
 </value>
 
 
@@ -1132,7 +1089,7 @@
                 <para>Provides access to the default object constructor.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aDevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo">ObjectConstructorInfo</a> value containing settings of the default object constructor.
+            <value>An <see cref="ObjectConstructorInfo"/> value containing settings of the default object constructor.
 </value>
 
 
@@ -1154,114 +1111,6 @@
             </summary>
             <returns>A <see cref="T:System.String"/> value, which is the textual representation of an ObjectConstructorInfo.
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.Sql.StoredProcQuery">
-
-            <summary>
-                <para>A stored procedure call.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor(System.String)">
-            <summary>
-                <para>Obsolete. Initializes a new instance of the StoredProcQuery class with the specified stored procedure.
-</para>
-            </summary>
-            <param name="storedProcName">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor">
-            <summary>
-                <para>Initializes a new instance of the StoredProcQuery class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor(System.String,System.Collections.Generic.IEnumerable`1)">
-            <summary>
-                <para>Obsolete. Initializes a new instance of the StoredProcQuery class with the specified stored procedure and parameters.
-</para>
-            </summary>
-            <param name="storedProcName">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName"/> property.
-
-            </param>
-            <param name="parameters">
-		A collection of <see cref="T:DevExpress.DataAccess.Sql.QueryParameter"/> objects. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.SqlQuery.Parameters"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable`1)">
-            <summary>
-                <para>Initializes a new instance of the StoredProcQuery class with the specified settings.
-</para>
-            </summary>
-            <param name="queryName">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.SqlQuery.Name"/> property.
-
-            </param>
-            <param name="storedProcName">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName"/> property.
-
-            </param>
-            <param name="parameters">
-		A collection of <see cref="T:DevExpress.DataAccess.Sql.QueryParameter"/> objects. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.SqlQuery.Parameters"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor(System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the StoredProcQuery class with the specified query and stored procedure.
-</para>
-            </summary>
-            <param name="queryName">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.SqlQuery.Name"/> property.
-
-            </param>
-            <param name="storedProcName">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName">
-            <summary>
-                <para>Specifies the stored procedure to use in the query.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the stored procedure name.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.Validate">
-            <summary>
-                <para>Checks the validity of the StoredProcQuery.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.Validate(DevExpress.DataAccess.Sql.DBSchema)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="schema">
-		 
-            </param>
 
 
         </member>
@@ -1388,69 +1237,6 @@
             </param>
             <returns>An <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> object.
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters">
-
-            <summary>
-                <para>Contains parameters used to establish a connection to a Teradata database server.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TeradataConnectionParameters class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters.#ctor(System.String,System.String,System.String,System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the TeradataConnectionParameters class.
-</para>
-            </summary>
-            <param name="serverName">
-		A <see cref="T:System.String"/> value that specifies the name of the Teradata server to which the connection should be established.
-
-            </param>
-            <param name="port">
-		A <see cref="T:System.String"/> value that specifies the port used to establish a connection to server.
-
-            </param>
-            <param name="databaseName">
-		A <see cref="T:System.String"/> value that specifies the database name.
-
-            </param>
-            <param name="userName">
-		A <see cref="T:System.String"/> that specifies the user name used for authentication.
-
-            </param>
-            <param name="password">
-		A <see cref="T:System.String"/> that specifies the password used for authentication.
-
-            </param>
-
-
-        </member>
-        <member name="F:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters.DefaultPort">
-            <summary>
-                <para>A default port used to establish a connection to a Teradata database server.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ConnectionParameters.TeradataConnectionParameters.Port">
-            <summary>
-                <para>Gets or sets a port used to establish a connection to a Teradata database server.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the port used to establish a connection to a Teradata database server.
-</value>
 
 
         </member>
@@ -2202,6 +1988,42 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Sql.DatabaseConnectionException">
+
+            <summary>
+                <para>The exception occurring after a data source connection has failed.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.DatabaseConnectionException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the DatabaseConnectionException class with the specified message.
+</para>
+            </summary>
+            <param name="message">
+		A <see cref="T:System.String"/> value, specifying the message displayed when a database connection fails.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.DatabaseConnectionException.#ctor(System.String,System.Exception)">
+            <summary>
+                <para>Initializes a new instance of the DatabaseConnectionException class with the specified message and exception details.
+</para>
+            </summary>
+            <param name="message">
+		A <see cref="T:System.String"/> value, specifying the message displayed when a database connection fails.
+
+            </param>
+            <param name="innerException">
+		A <see cref="T:System.Exception"/> object, specifying the error details.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.EntityFramework.EFParameterCollection">
 
             <summary>
@@ -2895,6 +2717,114 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Sql.StoredProcQuery">
+
+            <summary>
+                <para>A stored procedure call.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor(System.String)">
+            <summary>
+                <para>Obsolete. Initializes a new instance of the StoredProcQuery class with the specified stored procedure.
+</para>
+            </summary>
+            <param name="storedProcName">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor">
+            <summary>
+                <para>Initializes a new instance of the StoredProcQuery class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor(System.String,System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>Obsolete. Initializes a new instance of the StoredProcQuery class with the specified stored procedure and parameters.
+</para>
+            </summary>
+            <param name="storedProcName">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName"/> property.
+
+            </param>
+            <param name="parameters">
+		A collection of <see cref="T:DevExpress.DataAccess.Sql.QueryParameter"/> objects. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.SqlQuery.Parameters"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>Initializes a new instance of the StoredProcQuery class with the specified settings.
+</para>
+            </summary>
+            <param name="queryName">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.SqlQuery.Name"/> property.
+
+            </param>
+            <param name="storedProcName">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName"/> property.
+
+            </param>
+            <param name="parameters">
+		A collection of <see cref="T:DevExpress.DataAccess.Sql.QueryParameter"/> objects. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.SqlQuery.Parameters"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.#ctor(System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the StoredProcQuery class with the specified query and stored procedure.
+</para>
+            </summary>
+            <param name="queryName">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.SqlQuery.Name"/> property.
+
+            </param>
+            <param name="storedProcName">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Sql.StoredProcQuery.StoredProcName">
+            <summary>
+                <para>Specifies the stored procedure to use in the query.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the stored procedure name.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.Validate">
+            <summary>
+                <para>Checks the validity of the StoredProcQuery.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.StoredProcQuery.Validate(DevExpress.DataAccess.Sql.DBSchema)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="schema">
+		 
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.Sql.CustomSqlQuery">
 
             <summary>
@@ -2967,6 +2897,42 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Sql.QueryParameter">
+
+            <summary>
+                <para>A parameter passed to a <see cref="T:DevExpress.DataAccess.Sql.SqlQuery"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.QueryParameter.#ctor">
+            <summary>
+                <para>Initializes a new instance of the QueryParameter class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.QueryParameter.#ctor(System.String,System.Type,System.Object)">
+            <summary>
+                <para>Initializes a new instance of the QueryParameter class with the specified settings.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value, specifying the parameter name.
+
+            </param>
+            <param name="type">
+		A <see cref="T:System.String"/> value, specifying the parameter type.
+
+            </param>
+            <param name="value">
+		A <see cref="T:System.String"/> value, specifying the parameter value.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.Sql.SqlQuery">
 
             <summary>
@@ -3019,44 +2985,6 @@
             </summary>
             <param name="schema">
 		 
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.Sql.IDBSchemaProvider">
-
-            <summary>
-                <para>Provides the capability to customize the data store schema.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.IDBSchemaProvider.GetSchema(DevExpress.DataAccess.Sql.SqlDataConnection)">
-            <summary>
-                <para>Returns the database schema for the specified connection.
-</para>
-            </summary>
-            <param name="connection">
-		An <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> object that specifies the connection to an SQL data source.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.DataAccess.Sql.DBSchema"/> object that is the database schema.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.IDBSchemaProvider.LoadColumns(DevExpress.DataAccess.Sql.SqlDataConnection,DevExpress.Xpo.DB.DBTable[])">
-            <summary>
-                <para>Loads columns from the specified tables.
-</para>
-            </summary>
-            <param name="connection">
-		An <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> object that specifies a connection to a data store.
-
-            </param>
-            <param name="tables">
-		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects specifying tables.
-
             </param>
 
 
@@ -4358,6 +4286,13 @@
 
 
         </member>
+        <member name="M:DevExpress.DataAccess.Sql.SqlDataConnection.BlackoutCredentials">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="M:DevExpress.DataAccess.Sql.SqlDataConnection.Close">
             <summary>
                 <para>Closes the connection to a SQL data source.
@@ -4394,6 +4329,17 @@
             </summary>
             <returns>A <see cref="T:System.String"/> value, specifying the query.
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.SqlDataConnection.CreateConnectionString(System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="blackoutCredentials">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -4510,110 +4456,6 @@
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.Sql.QueryParameter">
-
-            <summary>
-                <para>A parameter passed to a <see cref="T:DevExpress.DataAccess.Sql.SqlQuery"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.QueryParameter.#ctor">
-            <summary>
-                <para>Initializes a new instance of the QueryParameter class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.QueryParameter.#ctor(System.String,System.Type,System.Object)">
-            <summary>
-                <para>Initializes a new instance of the QueryParameter class with the specified settings.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> value, specifying the parameter name.
-
-            </param>
-            <param name="type">
-		A <see cref="T:System.String"/> value, specifying the parameter type.
-
-            </param>
-            <param name="value">
-		A <see cref="T:System.String"/> value, specifying the parameter value.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventHandler">
-
-            <summary>
-                <para>References a method that will handle the <b>ConfigureDataConnection</b> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventHandler.Invoke(System.Object,DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs)">
-            <summary>
-                <para>References a method that will handle the <b>ConfigureDataConnection</b> events.
-</para>
-            </summary>
-            <param name="sender">
-		The event source.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs"/> object that contains event data.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs">
-
-            <summary>
-                <para>Provides data for the <b>ConfigureDataConnection</b> events. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs.#ctor(System.String,DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase)">
-            <summary>
-                <para>Initializes a new instance of the ConfigureDataConnectionEventArgs class.
-</para>
-            </summary>
-            <param name="connectionName">
-		A <see cref="T:System.String"/> that specifies the name of the connection for which the event has been raised.
-
-            </param>
-            <param name="connectionParameters">
-		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant that contains connection parameters.property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs.ConnectionName">
-            <summary>
-                <para>Gets the name of the connection for which the event has been raised. 
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> that specifies the name of the connection for which the event has been raised. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs.ConnectionParameters">
-            <summary>
-                <para>Gets or sets parameters used to establish a connection to data.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant that contains parameters used to establish a connection to data.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.DataAccess.Sql.DBTableWithAlias">
 
             <summary>
@@ -4644,6 +4486,165 @@
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> specifying the table's alias.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Sql.IDBSchemaProvider">
+
+            <summary>
+                <para>Provides the capability to customize the data store schema.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.IDBSchemaProvider.GetSchema(DevExpress.DataAccess.Sql.SqlDataConnection)">
+            <summary>
+                <para>Returns the database schema for the specified connection.
+</para>
+            </summary>
+            <param name="connection">
+		An <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> object that specifies the connection to an SQL data source.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.DataAccess.Sql.DBSchema"/> object that is the database schema.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.IDBSchemaProvider.LoadColumns(DevExpress.DataAccess.Sql.SqlDataConnection,DevExpress.Xpo.DB.DBTable[])">
+            <summary>
+                <para>Loads columns from the specified tables.
+</para>
+            </summary>
+            <param name="connection">
+		An <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> object that specifies a connection to a data store.
+
+            </param>
+            <param name="tables">
+		An array of <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects specifying tables.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfoCollection">
+
+            <summary>
+                <para>A collection of stored procedures provided by an <see cref="T:DevExpress.DataAccess.EntityFramework.EFDataSource"/>.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfoCollection.Add(DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo)">
+            <summary>
+                <para>Adds a stored procedure to the current EFStoredProcedureInfoCollection.
+</para>
+            </summary>
+            <param name="storedProcedure">
+		A <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> specifying a stored procedure to add to the collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfoCollection.AddRange(DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo[])">
+            <summary>
+                <para>Adds an array of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects to the collection.
+</para>
+            </summary>
+            <param name="storedProcedureInfos">
+		An array of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects to append to the collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfoCollection.AddRange(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>Adds a collection of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects to the current collection.
+</para>
+            </summary>
+            <param name="storedProcedureInfos">
+		A collection of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects to append to the current collection.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo">
+
+            <summary>
+                <para>Contains information about a stored procedure provided by an <see cref="T:DevExpress.DataAccess.EntityFramework.EFDataSource"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.#ctor">
+            <summary>
+                <para>Initializes a new instance of the EFStoredProcedureInfo class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the EFStoredProcedureInfo class with the specified name.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value specifying the stored procedure name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.#ctor(System.String,System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>Initializes a new instance of the EFStoredProcedureInfo class with specified settings.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value specifying the stored procedure name.
+
+            </param>
+            <param name="parameters">
+		A collection of stored procedure parameters.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.#ctor(DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo)">
+            <summary>
+                <para>Initializes a new instance of the EFStoredProcedureInfo class with the specified prototype. 
+</para>
+            </summary>
+            <param name="other">
+		A <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> specifying a prototype for a new <b>EFStoredProcedureInfo</b> instance.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.Name">
+            <summary>
+                <para>Specifies the name of the stored procedure.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the stored procedure name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.Parameters">
+            <summary>
+                <para>Specifies the stored procedure parameters.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.EntityFramework.EFParameterCollection"/> object specifying a collection of stored procedure parameters.
 </value>
 
 
@@ -4878,6 +4879,74 @@
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value, specifying the table name.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventHandler">
+
+            <summary>
+                <para>References a method that will handle the <b>ConfigureDataConnection</b> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventHandler.Invoke(System.Object,DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs)">
+            <summary>
+                <para>References a method that will handle the <b>ConfigureDataConnection</b> events.
+</para>
+            </summary>
+            <param name="sender">
+		The event source.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs"/> object that contains event data.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs">
+
+            <summary>
+                <para>Provides data for the <b>ConfigureDataConnection</b> events. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs.#ctor(System.String,DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase)">
+            <summary>
+                <para>Initializes a new instance of the ConfigureDataConnectionEventArgs class.
+</para>
+            </summary>
+            <param name="connectionName">
+		A <see cref="T:System.String"/> that specifies the name of the connection for which the event has been raised.
+
+            </param>
+            <param name="connectionParameters">
+		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant that contains connection parameters.property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs.ConnectionName">
+            <summary>
+                <para>Gets the name of the connection for which the event has been raised. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that specifies the name of the connection for which the event has been raised. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Sql.ConfigureDataConnectionEventArgs.ConnectionParameters">
+            <summary>
+                <para>Gets or sets parameters used to establish a connection to data.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant that contains parameters used to establish a connection to data.
 </value>
 
 
@@ -5432,6 +5501,39 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.ConnectionParameters.MsSqlCEConnectionParameters">
+
+            <summary>
+                <para>Contains parameters used to establish a connection to a Microsoft SQL Server Compact Edition database file.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.ConnectionParameters.MsSqlCEConnectionParameters.#ctor">
+            <summary>
+                <para>Initializes a new instance of the MsSqlCEConnectionParameters class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.ConnectionParameters.MsSqlCEConnectionParameters.#ctor(System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the MsSqlCEConnectionParameters class.
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> that specifies the path to the Microsoft SQL Server Compact Edition database file. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FileConnectionParametersBase.FileName"/> property.
+
+            </param>
+            <param name="password">
+		A <see cref="T:System.String"/> that specifies the password used for authentication. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FileConnectionParametersBase.Password"/> property.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters">
 
             <summary>
@@ -5891,82 +5993,6 @@
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo">
-
-            <summary>
-                <para>Contains information about a stored procedure provided by an <see cref="T:DevExpress.DataAccess.EntityFramework.EFDataSource"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.#ctor">
-            <summary>
-                <para>Initializes a new instance of the EFStoredProcedureInfo class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the EFStoredProcedureInfo class with the specified name.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> value specifying the stored procedure name.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.#ctor(System.String,System.Collections.Generic.IEnumerable`1)">
-            <summary>
-                <para>Initializes a new instance of the EFStoredProcedureInfo class with specified settings.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> value specifying the stored procedure name.
-
-            </param>
-            <param name="parameters">
-		A collection of stored procedure parameters.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.#ctor(DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo)">
-            <summary>
-                <para>Initializes a new instance of the EFStoredProcedureInfo class with the specified prototype. 
-</para>
-            </summary>
-            <param name="other">
-		A <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> specifying a prototype for a new <b>EFStoredProcedureInfo</b> instance.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.Name">
-            <summary>
-                <para>Specifies the name of the stored procedure.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the stored procedure name.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo.Parameters">
-            <summary>
-                <para>Specifies the stored procedure parameters.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.DataAccess.EntityFramework.EFParameterCollection"/> object specifying a collection of stored procedure parameters.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.DataAccess.ObjectBinding.Parameter">
 
             <summary>
@@ -6010,6 +6036,60 @@
                 <para> </para>
             </summary>
             <returns> </returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Model.IDataConnection">
+
+            <summary>
+                <para>When implemented by a class, enables it to connect to a data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Model.IDataConnection.BlackoutCredentials">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Model.IDataConnection.CreateConnectionString">
+            <summary>
+                <para>Creates a connection string based on the specified value.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Model.IDataConnection.CreateConnectionString(System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="blackoutCredentials">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IDataConnection.Name">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IDataConnection.StoreConnectionNameOnly">
+            <summary>
+                <para>Specifies whether to store any connection settings except for the data connection name.
+</para>
+            </summary>
+            <value><b>true</b> to store only the name of a data connection; otherwise <b>false</b>.
+</value>
 
 
         </member>
@@ -6162,42 +6242,6 @@
             </summary>
             <value>A <see cref="T:System.String"/> that specifies the SQL query used to select data from the data store.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.Sql.DatabaseConnectionException">
-
-            <summary>
-                <para>The exception occurring after a data source connection has failed.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.DatabaseConnectionException.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the DatabaseConnectionException class with the specified message.
-</para>
-            </summary>
-            <param name="message">
-		A <see cref="T:System.String"/> value, specifying the message displayed when a database connection fails.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.DatabaseConnectionException.#ctor(System.String,System.Exception)">
-            <summary>
-                <para>Initializes a new instance of the DatabaseConnectionException class with the specified message and exception details.
-</para>
-            </summary>
-            <param name="message">
-		A <see cref="T:System.String"/> value, specifying the message displayed when a database connection fails.
-
-            </param>
-            <param name="innerException">
-		A <see cref="T:System.Exception"/> object, specifying the error details.
-
-            </param>
 
 
         </member>

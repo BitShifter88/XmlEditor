@@ -131,31 +131,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Web.CustomCallbackEventHandler">
-
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomCallback"/> event.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Web.CustomCallbackEventHandler.Invoke(System.Object,DevExpress.XtraCharts.Web.CustomCallbackEventArgs)">
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomCallback"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event source. This parameter identifies the <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> which raised the event.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraCharts.Web.CustomCallbackEventArgs"/> object which contains event data.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Web.CallbackStateLoadEventHandler">
 
             <summary>
@@ -273,6 +248,31 @@
             </summary>
             <value>A <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> object which represents the chart for which the event was raised.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Web.CustomCallbackEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomCallback"/> event.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Web.CustomCallbackEventHandler.Invoke(System.Object,DevExpress.XtraCharts.Web.CustomCallbackEventArgs)">
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomCallback"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source. This parameter identifies the <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> which raised the event.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.XtraCharts.Web.CustomCallbackEventArgs"/> object which contains event data.
+
+            </param>
 
 
         </member>
@@ -1251,7 +1251,7 @@
                 <para>Gets or sets the delay before displaying the loading panel.
 </para>
             </summary>
-            <value>An <a href="ms-xhelp:///?Id=T%3aSystem.Int32">Int32</a> value that specifies the time interval between when a callback is sent to the server and a loading panel is displayed, in milliseconds.
+            <value>An <see cref="Int32"/> value that specifies the time interval between when a callback is sent to the server and a loading panel is displayed, in milliseconds.
 </value>
 
 
@@ -1271,7 +1271,7 @@
                 <para>Gets or sets the position of an image displayed within a Loading Panel with respect to the panel's text content.
 </para>
             </summary>
-            <value>One of the <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ImagePosition">ImagePosition</a> enumeration values.
+            <value>One of the <see cref="ImagePosition"/> enumeration values.
 </value>
 
 
@@ -1725,7 +1725,7 @@
                 <para>Provides access to the loading panel settings.
 </para>
             </summary>
-            <value>A <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.SettingsLoadingPanel">SettingsLoadingPanel</a> object containing the loading panel's settings.
+            <value>A <see cref="SettingsLoadingPanel"/> object containing the loading panel's settings.
 </value>
 
 

@@ -309,6 +309,156 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization">
+
+            <summary>
+                <para>Provides customization options for an ASPxPivotGrid control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.#ctor(DevExpress.Web.ASPxPivotGrid.OptionsCustomizationChangedEventHandler,System.EventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
+            <summary>
+                <para>Initializes a new instance of the PivotGridWebOptionsCustomization class. 
+</para>
+            </summary>
+            <param name="webOptionsChanged">
+		An OptionsCustomizationChangedEventHandler delegate that will receive change notifications.
+
+            </param>
+            <param name="optionsChanged">
+		An EventHandler delegate that will receive change notifications.
+
+            </param>
+            <param name="viewBagOwner">
+		An object that implements the IViewBagOwner interface.
+
+            </param>
+            <param name="objectPath">
+		A string value. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.AllowCustomizationWindowResizing">
+            <summary>
+                <para>Gets or sets whether to allow end-users to resize the Customization Form.
+</para>
+            </summary>
+            <value><b>true</b> to allow end-users to resize the Customization Form; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.AllowHideFields">
+            <summary>
+                <para>Gets or sets a value which specifies when fields can be hidden by end-users. This member supports the .NET Framework infrastructure and cannot be used directly from your code.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraPivotGrid.AllowHideFieldsType"/> enumeration value which specifies when fields can be hidden by end-users.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.CustomizationExcelWindowHeight">
+            <summary>
+                <para>Gets or sets the height of the Customization Form,  when it is painted in the <b>Excel2007</b> style.
+</para>
+            </summary>
+            <value>An integer value that specifies the height of the Customization Form, when it is painted in the <b>Excel2007</b> style, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.CustomizationExcelWindowWidth">
+            <summary>
+                <para>Gets or sets the width of the Customization Form, when it is painted in the <b>Excel2007</b> style.
+</para>
+            </summary>
+            <value>An integer value that specifies the width of the Customization Form, when it is painted in the <b>Excel2007</b> style, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.CustomizationWindowHeight">
+            <summary>
+                <para>Gets or sets the height of the Customization Form, when it is painted in the <b>Simple</b> style.
+</para>
+            </summary>
+            <value>An integer value that specifies the height of the Customization Form, when it is painted in the <b>Simple</b> style, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.CustomizationWindowWidth">
+            <summary>
+                <para>Gets or sets the width of the Customization Form, when it is painted in the <b>Simple</b> style.
+</para>
+            </summary>
+            <value>An integer value that specifies the width of the Customization Form, when it is painted in the <b>Simple</b> style, in pixels.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowHeight">
+            <summary>
+                <para>Gets or sets the filter window's height.
+</para>
+            </summary>
+            <value>An integer value that specifies the window's height. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowMinHeight">
+            <summary>
+                <para>Gets or sets the minimum allowed filter window height.
+
+</para>
+            </summary>
+            <value>An integer value that specifies the minimum allowed filter window height.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowMinWidth">
+            <summary>
+                <para>Gets or sets the minimum allowed filter window width.
+
+</para>
+            </summary>
+            <value>An integer value that specifies the minimum allowed filter window width.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowResizeMode">
+            <summary>
+                <para>Gets or sets how a filter popup window visually responds to resizing operations. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ResizingMode"/> enumeration member that specifies how a filter popup window visually responds to resizing operations. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowWidth">
+            <summary>
+                <para>Gets or sets the filter window width.
+
+</para>
+            </summary>
+            <value>An integer value that specifies the window width. 
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridImageProperties">
 
             <summary>
@@ -876,31 +1026,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomSummaryEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomSummary"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCustomSummaryEventHandler.Invoke(System.Object,DevExpress.Web.ASPxPivotGrid.PivotGridCustomSummaryEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomSummary"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event source.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomSummaryEventArgs"/> object that contains event data.
-
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridCallbackStateEventHandler">
 
             <summary>
@@ -1303,128 +1428,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomFieldSort"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData,DevExpress.Web.ASPxPivotGrid.PivotGridField)">
-            <summary>
-                <para>Initializes a new instance of the PivotGridCustomFieldSortEventArgs class.
-</para>
-            </summary>
-            <param name="data">
-		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridData"/> object which contains field data.
-
-            </param>
-            <param name="field">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object which represents the field whose values are being compared. This value is assigned to the <see cref="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Field"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Field">
-            <summary>
-                <para>Gets the field whose values are being compared.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object which represents the field whose values are being compared.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.GetListSourceColumnValue(System.Int32,System.String)">
-            <summary>
-                <para>Gets the specified field's value in the specified row in the control's underlying data source.
-</para>
-            </summary>
-            <param name="listSourceRowIndex">
-		An integer value which identifies the row in the data source.
-
-            </param>
-            <param name="columnName">
-		A string which specifies the required field name.
-
-            </param>
-            <returns>An object which represents the field's value in the control's data source.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Handled">
-            <summary>
-                <para>Gets or sets whether a comparison operation is being handled and therefore no default processing is required.
-</para>
-            </summary>
-            <value><b>true</b> if a comparison operation is being handled; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.ListSourceRowIndex1">
-            <summary>
-                <para>Gets the index in the data source of the first of the two rows being compared.
-</para>
-            </summary>
-            <value>An integer value that specifies the index of the first row in the data source.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.ListSourceRowIndex2">
-            <summary>
-                <para>Gets the index in the data source of the second of the two rows being compared.
-</para>
-            </summary>
-            <value>An integer value that specifies the index of the second row in the data source.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Result">
-            <summary>
-                <para>Gets or sets the result of a custom comparison.
-</para>
-            </summary>
-            <value>An integer value that specifies the custom comparison's result.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.SortOrder">
-            <summary>
-                <para>Gets the sort order applied to the field.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotSortOrder"/> value that represents the field's sort order.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Value1">
-            <summary>
-                <para>Gets the first value being compared.
-</para>
-            </summary>
-            <value>An object that represents the first value being compared.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Value2">
-            <summary>
-                <para>Gets the second value being compared.
-</para>
-            </summary>
-            <value>An object that represents the second value being compared.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxPivotGrid.WebPivotGridOptionsPrint">
 
             <summary>
@@ -1591,28 +1594,255 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFilterItemStyle">
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle">
 
             <summary>
-                <para>Provides style settings used to paint filter items within the filter dropdown.
+                <para>Provides style settings for field headers.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFilterItemStyle.#ctor">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.#ctor">
             <summary>
-                <para>Initializes a new instance of the PivotFilterItemStyle class.
+                <para>Initializes a new instance of the PivotHeaderStyle class.
 </para>
             </summary>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFilterItemStyle.ImageSpacing">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.FilterImageSpacing">
             <summary>
-                <para>This property is not in effect for the PivotFilterItemStyle class.
+                <para>This property is not in effect for the PivotHeaderStyle class.
 </para>
             </summary>
             <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.ImageSpacing">
+            <summary>
+                <para>This property is not in effect for the PivotHeaderStyle class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.SortingImageSpacing">
+            <summary>
+                <para>This property is not in effect for the PivotHeaderStyle class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.Spacing">
+            <summary>
+                <para>This property is not in effect for the PivotHeaderStyle class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView">
+
+            <summary>
+                <para>Provides view options for ASPxPivotGrid controls.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.#ctor(System.EventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
+            <summary>
+                <para>Initializes a new instance of the PivotGridWebOptionsView class.
+</para>
+            </summary>
+            <param name="optionsChanged">
+		A delegate that will receive change notifications.
+
+            </param>
+            <param name="viewBagOwner">
+		An object which implements the IViewBagOwner interface.
+
+            </param>
+            <param name="objectPath">
+		A string value.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies settings from the options object passed as the parameter. 
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.DataHeadersDisplayMode">
+            <summary>
+                <para>Gets or sets a value that specifies how data headers are displayed.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotDataHeadersDisplayMode"/> enumeration value that specifies how data headers are displayed.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.DataHeadersPopupMaxColumnCount">
+            <summary>
+                <para>Gets or sets a value limiting the number of data field headers displayed in a row (line) of the field headers popup.
+</para>
+            </summary>
+            <value>An integer value specifying the maximum number of data fields in a row.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.DataHeadersPopupMinCount">
+            <summary>
+                <para>Gets or sets the minimum number of data fields required to temporarily hide data field headers within a hidden panel.
+
+</para>
+            </summary>
+            <value>An integer value that specifies the minimum number of data fields required to temporarily hide data field headers within a hidden panel.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.DrawFocusedCellRect">
+            <summary>
+                <para>This property is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.EnableContextMenuScrolling">
+            <summary>
+                <para>Gets or sets whether to enable context menu scrolling. 
+</para>
+            </summary>
+            <value><b>true</b> to enable context menu scrolling; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.EnableFilterControlPopupMenuScrolling">
+            <summary>
+                <para>Gets or sets whether scrolling popup menus invoked in the Prefilter window is allowed.
+</para>
+            </summary>
+            <value><b>true</b> to allow end-users to scroll popup menus invoked in the Prefilter window; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.HorizontalScrollBarMode">
+            <summary>
+                <para>Gets or sets a value specifying the horizontal scroll bar's display mode.
+</para>
+            </summary>
+            <value>One of the <see cref="ScrollBarMode"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.HorizontalScrollingMode">
+            <summary>
+                <para>Gets or sets a value specifying the horizontal scrolling mode.
+</para>
+            </summary>
+            <value>The <see cref="PivotScrollingMode"/> object, that specifies the horizontal scrolling mode.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.RowTreeWidth">
+            <summary>
+                <para>This property is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.ShowContextMenus">
+            <summary>
+                <para>Gets or sets whether end-users can invoke the context menus.
+</para>
+            </summary>
+            <value><b>true</b> to enable context menus; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.ShowHorizontalScrollBar">
+            <summary>
+                <para>Gets or sets whether the horizontal scrollbar is displayed.
+</para>
+            </summary>
+            <value><b>true</b> to display the horizontal scrollbar; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.ShowHorzLines">
+            <summary>
+                <para>Gets or sets whether horizontal grid lines are displayed. This member supports the .NET Framework infrastructure and cannot be used directly from your code.
+</para>
+            </summary>
+            <value><b>true</b> to display horizontal grid lines; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.ShowVertLines">
+            <summary>
+                <para>Gets or sets whether vertical grid lines are displayed. This member supports the .NET Framework infrastructure and cannot be used directly from your code.
+</para>
+            </summary>
+            <value><b>true</b> to display vertical grid lines; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.VerticalScrollBarMode">
+            <summary>
+                <para>Gets or sets a value specifying the vertical scroll bar's display mode.
+</para>
+            </summary>
+            <value>One of the <see cref="ScrollBarMode"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.VerticalScrollingMode">
+            <summary>
+                <para>Gets or sets a value specifying the vertical scrolling mode.
+</para>
+            </summary>
+            <value>The <see cref="PivotScrollingMode"/> object that specifies the vertical scrolling mode.
 </value>
 
 
@@ -1670,153 +1900,28 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization">
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventHandler">
 
             <summary>
-                <para>Provides customization options for an ASPxPivotGrid control.
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomFieldSort"/> event.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.#ctor(DevExpress.Web.ASPxPivotGrid.OptionsCustomizationChangedEventHandler,System.EventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventHandler.Invoke(System.Object,DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs)">
             <summary>
-                <para>Initializes a new instance of the PivotGridWebOptionsCustomization class. 
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomFieldSort"/> event.
 </para>
             </summary>
-            <param name="webOptionsChanged">
-		An OptionsCustomizationChangedEventHandler delegate that will receive change notifications.
+            <param name="sender">
+		The event sender. Identifies the ASPxPivotGrid control that raised an event.
+
 
             </param>
-            <param name="optionsChanged">
-		An EventHandler delegate that will receive change notifications.
+            <param name="e">
+		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs"/> object that contains event data.
 
             </param>
-            <param name="viewBagOwner">
-		An object that implements the IViewBagOwner interface.
-
-            </param>
-            <param name="objectPath">
-		A string value. 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.AllowCustomizationWindowResizing">
-            <summary>
-                <para>Gets or sets whether to allow end-users to resize the Customization Form.
-</para>
-            </summary>
-            <value><b>true</b> to allow end-users to resize the Customization Form; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.AllowHideFields">
-            <summary>
-                <para>Gets or sets a value which specifies when fields can be hidden by end-users. This member supports the .NET Framework infrastructure and cannot be used directly from your code.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraPivotGrid.AllowHideFieldsType"/> enumeration value which specifies when fields can be hidden by end-users.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.CustomizationExcelWindowHeight">
-            <summary>
-                <para>Gets or sets the height of the Customization Form,  when it is painted in the <b>Excel2007</b> style.
-</para>
-            </summary>
-            <value>An integer value that specifies the height of the Customization Form, when it is painted in the <b>Excel2007</b> style, in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.CustomizationExcelWindowWidth">
-            <summary>
-                <para>Gets or sets the width of the Customization Form, when it is painted in the <b>Excel2007</b> style.
-</para>
-            </summary>
-            <value>An integer value that specifies the width of the Customization Form, when it is painted in the <b>Excel2007</b> style, in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.CustomizationWindowHeight">
-            <summary>
-                <para>Gets or sets the height of the Customization Form, when it is painted in the <b>Simple</b> style.
-</para>
-            </summary>
-            <value>An integer value that specifies the height of the Customization Form, when it is painted in the <b>Simple</b> style, in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.CustomizationWindowWidth">
-            <summary>
-                <para>Gets or sets the width of the Customization Form, when it is painted in the <b>Simple</b> style.
-</para>
-            </summary>
-            <value>An integer value that specifies the width of the Customization Form, when it is painted in the <b>Simple</b> style, in pixels.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowHeight">
-            <summary>
-                <para>Gets or sets the filter window's height.
-</para>
-            </summary>
-            <value>An integer value that specifies the window's height. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowMinHeight">
-            <summary>
-                <para>Gets or sets the minimum allowed filter window height.
-
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum allowed filter window height.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowMinWidth">
-            <summary>
-                <para>Gets or sets the minimum allowed filter window width.
-
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum allowed filter window width.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowResizeMode">
-            <summary>
-                <para>Gets or sets how a filter popup window visually responds to resizing operations. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ResizingMode"/> enumeration member that specifies how a filter popup window visually responds to resizing operations. 
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.FilterPopupWindowWidth">
-            <summary>
-                <para>Gets or sets the filter window width.
-
-</para>
-            </summary>
-            <value>An integer value that specifies the window width. 
-
-</value>
 
 
         </member>
@@ -1849,6 +1954,178 @@
         <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFilterButtonStyle.Spacing">
             <summary>
                 <para>This property is not in effect for the PivotFilterButtonStyle class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomFieldSort"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData,DevExpress.Web.ASPxPivotGrid.PivotGridField)">
+            <summary>
+                <para>Initializes a new instance of the PivotGridCustomFieldSortEventArgs class.
+</para>
+            </summary>
+            <param name="data">
+		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridData"/> object which contains field data.
+
+            </param>
+            <param name="field">
+		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object which represents the field whose values are being compared. This value is assigned to the <see cref="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Field"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Field">
+            <summary>
+                <para>Gets the field whose values are being compared.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object which represents the field whose values are being compared.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.GetListSourceColumnValue(System.Int32,System.String)">
+            <summary>
+                <para>Gets the specified field's value in the specified row in the control's underlying data source.
+</para>
+            </summary>
+            <param name="listSourceRowIndex">
+		An integer value which identifies the row in the data source.
+
+            </param>
+            <param name="columnName">
+		A string which specifies the required field name.
+
+            </param>
+            <returns>An object which represents the field's value in the control's data source.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Handled">
+            <summary>
+                <para>Gets or sets whether a comparison operation is being handled and therefore no default processing is required.
+</para>
+            </summary>
+            <value><b>true</b> if a comparison operation is being handled; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.ListSourceRowIndex1">
+            <summary>
+                <para>Gets the index in the data source of the first of the two rows being compared.
+</para>
+            </summary>
+            <value>An integer value that specifies the index of the first row in the data source.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.ListSourceRowIndex2">
+            <summary>
+                <para>Gets the index in the data source of the second of the two rows being compared.
+</para>
+            </summary>
+            <value>An integer value that specifies the index of the second row in the data source.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Result">
+            <summary>
+                <para>Gets or sets the result of a custom comparison.
+</para>
+            </summary>
+            <value>An integer value that specifies the custom comparison's result.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.SortOrder">
+            <summary>
+                <para>Gets the sort order applied to the field.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotSortOrder"/> value that represents the field's sort order.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Value1">
+            <summary>
+                <para>Gets the first value being compared.
+</para>
+            </summary>
+            <value>An object that represents the first value being compared.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs.Value2">
+            <summary>
+                <para>Gets the second value being compared.
+</para>
+            </summary>
+            <value>An object that represents the second value being compared.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotScrollingMode">
+
+            <summary>
+                <para>Lists values that specify the scrolling mode of the <see cref="T:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxPivotGrid.PivotScrollingMode.Standard">
+            <summary>
+                <para>Allows end-users to scroll data rows/columns displayed within the current page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxPivotGrid.PivotScrollingMode.Virtual">
+            <summary>
+                <para>Allows end-users to navigate through pivot grid pages using a scrollbar.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFilterItemStyle">
+
+            <summary>
+                <para>Provides style settings used to paint filter items within the filter dropdown.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFilterItemStyle.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PivotFilterItemStyle class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFilterItemStyle.ImageSpacing">
+            <summary>
+                <para>This property is not in effect for the PivotFilterItemStyle class.
 </para>
             </summary>
             <value> 
@@ -2209,6 +2486,113 @@
 </para>
             </summary>
             <value>An object that represents the cell's value. 
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection">
+
+            <summary>
+                <para>Represents a field collection for the ASPxPivotGrid control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
+            <summary>
+                <para>Initializes a new instance of the PivotGridFieldCollection class.
+</para>
+            </summary>
+            <param name="data">
+		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridData"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Add(DevExpress.Web.ASPxPivotGrid.PivotGridField)">
+            <summary>
+                <para>Appends the specified field to the collection.
+</para>
+            </summary>
+            <param name="field">
+		The <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that will be added to the collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Add(System.String,DevExpress.XtraPivotGrid.PivotArea)">
+            <summary>
+                <para>Adds a new field with the specified field name and location to the end of the collection.
+</para>
+            </summary>
+            <param name="fieldName">
+		A string that identifies the name of the database field that will be assigned to the new PivotGridField object. 
+
+            </param>
+            <param name="area">
+		A <see cref="T:DevExpress.XtraPivotGrid.PivotArea"/> value that identifies the area in which the new PivotGridField object will be positioned. 
+
+            </param>
+            <returns>The <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that has been added to the collection.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.AddField(DevExpress.Web.ASPxPivotGrid.PivotGridField)">
+            <summary>
+                <para>Adds the specified field to the end of the collection.
+</para>
+            </summary>
+            <param name="field">
+		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object representing the field to add to the collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.GetFieldByClientID(System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and cannot be used directly from your code.
+</para>
+            </summary>
+            <param name="clientID">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Item(System.Int32)">
+            <summary>
+                <para>Provides indexed access to individual fields in the collection.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer specifying the desired field's position within the collection. If negative or exceeds the last available index, an exception is raised.
+
+            </param>
+            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object which represents a field at the specified position.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Item(System.String)">
+            <summary>
+                <para>Gets the field with the specified id, name of the bound database field or caption.
+
+</para>
+            </summary>
+            <param name="id_fieldName_Caption">
+		A string value which specified the field's id, name of the bound database field or the field's caption.
+
+            </param>
+            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object which represents a field with the specified id, name of the bound database field or caption.
 
 </value>
 
@@ -6618,140 +7002,115 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle">
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs">
 
             <summary>
-                <para>Provides style settings for field headers.
+                <para>Serves as a base for classes that provide data for events used to customize field values.
+
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.#ctor">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.#ctor(DevExpress.XtraPivotGrid.Data.PivotFieldValueItem)">
             <summary>
-                <para>Initializes a new instance of the PivotHeaderStyle class.
+                <para>Initializes a new instance of the PivotFieldValueEventArgs class.
 </para>
             </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.FilterImageSpacing">
-            <summary>
-                <para>This property is not in effect for the PivotHeaderStyle class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.ImageSpacing">
-            <summary>
-                <para>This property is not in effect for the PivotHeaderStyle class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.SortingImageSpacing">
-            <summary>
-                <para>This property is not in effect for the PivotHeaderStyle class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.Spacing">
-            <summary>
-                <para>This property is not in effect for the PivotHeaderStyle class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView">
-
-            <summary>
-                <para>Provides view options for ASPxPivotGrid controls.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.#ctor(System.EventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
-            <summary>
-                <para>Initializes a new instance of the PivotGridWebOptionsView class.
-</para>
-            </summary>
-            <param name="optionsChanged">
-		A delegate that will receive change notifications.
-
-            </param>
-            <param name="viewBagOwner">
-		An object which implements the IViewBagOwner interface.
-
-            </param>
-            <param name="objectPath">
-		A string value.
+            <param name="fieldValueItem">
+		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem"/> object that contains information used to initialize a new object.
 
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.Assign(DevExpress.Utils.Controls.BaseOptions)">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CreateDrillDownDataSource">
             <summary>
-                <para>Copies settings from the options object passed as the parameter. 
+                <para>Returns a list of records associated with the field value currently being processed.
 </para>
             </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
+            <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records associated with the processed field value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CreateDrillDownDataSource(System.Int32,System.Collections.Generic.List`1)">
+            <summary>
+                <para>Returns a list of records used to calculate a summary value for the current field. Allows you to specify the columns and limit the number of records to be returned.
+</para>
+            </summary>
+            <param name="maxRowCount">
+		An integer value that specifies the maximum number of data rows to be returned. <b>-1</b> to retrieve all rows. 
 
             </param>
+            <param name="customColumns">
+		A list of columns in a data source, to be returned. 
+
+            </param>
+            <returns>A <see cref="PivotDrillDownDataSource"/> object that contains the underlying data.
+</returns>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.DataHeadersDisplayMode">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CreateOLAPDrillDownDataSource(System.Int32,System.Collections.Generic.List`1)">
             <summary>
-                <para>Gets or sets a value that specifies how data headers are displayed.
+                <para>In OLAP mode, returns a list of records used to calculate a summary value for the current field. Allows you to specify the columns and limit the number of records to be returned.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotDataHeadersDisplayMode"/> enumeration value that specifies how data headers are displayed.
+            <param name="maxRowCount">
+		An integer value that specifies the maximum number of data rows to be returned. <b>-1</b> to retrieve all rows.
+
+            </param>
+            <param name="customColumns">
+		A list of columns in a data source, to be returned.
+
+            </param>
+            <returns>A <see cref="PivotDrillDownDataSource"/> object that contains the underlying data.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CreateServerModeDrillDownDataSource(System.Int32,System.Collections.Generic.List`1)">
+            <summary>
+                <para>In server mode, returns a list of records used to calculate a summary value for the current field. Allows you to specify the columns and limit the number of records to be returned.
+</para>
+            </summary>
+            <param name="maxRowCount">
+		An integer value that specifies the maximum number of data rows to be returned. <b>-1</b> to retrieve all rows.
+
+            </param>
+            <param name="customColumns">
+		A list of columns in a data source, to be returned.
+
+            </param>
+            <returns>A <see cref="PivotDrillDownDataSource"/> object that contains the underlying data.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.Data">
+            <summary>
+                <para>This member supports the .NET Framework infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value>A PivotGridData object.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.DataHeadersPopupMaxColumnCount">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.DataField">
             <summary>
-                <para>Gets or sets a value limiting the number of data field headers displayed in a row (line) of the field headers popup.
+                <para>Gets the data field which identifies the processed value.
 </para>
             </summary>
-            <value>An integer value specifying the maximum number of data fields in a row.
+            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that represent the data field.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.DataHeadersPopupMinCount">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.FieldIndex">
             <summary>
-                <para>Gets or sets the minimum number of data fields required to temporarily hide data field headers within a hidden panel.
-
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum number of data fields required to temporarily hide data field headers within a hidden panel.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.DrawFocusedCellRect">
-            <summary>
-                <para>This property is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
 </para>
             </summary>
             <value> 
@@ -6759,114 +7118,149 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.EnableContextMenuScrolling">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.FieldValueItem">
             <summary>
-                <para>Gets or sets whether to enable context menu scrolling. 
+                <para>Gets the information about the field value currently being processed.
 </para>
             </summary>
-            <value><b>true</b> to enable context menu scrolling; otherwise, <b>false</b>.
+            <value>A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem"/> object that contains information about the field value currently being processed.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.EnableFilterControlPopupMenuScrolling">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.GetCellValue(System.Int32,System.Int32)">
             <summary>
-                <para>Gets or sets whether scrolling popup menus invoked in the Prefilter window is allowed.
+                <para>Returns a value displayed in the specified cell.
 </para>
             </summary>
-            <value><b>true</b> to allow end-users to scroll popup menus invoked in the Prefilter window; otherwise, <b>false</b>.
+            <param name="columnIndex">
+		A zero-based integer which identifies the visible index of the column.
+
+            </param>
+            <param name="rowIndex">
+		A zero-based integer which identifies the <b>absolute</b> index of the row. To obtain the absolute row index by its index within the current page, use the <see cref="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetAbsoluteRowIndex"/> method.
+
+
+            </param>
+            <returns>A value displayed in the specified cell.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.GetFieldValue(DevExpress.Web.ASPxPivotGrid.PivotGridField,System.Int32)">
+            <summary>
+                <para>Returns the specified column or row field's value for the cell addressed by its zero-based index in the Data Area.
+</para>
+            </summary>
+            <param name="field">
+		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object representing a column field or row field, whose value is to be obtained.
+
+            </param>
+            <param name="cellIndex">
+		A zero-based index of a cell in the Data Area that identifies the required field value. Indexes are numbered starting from the left edge for column fields, and from the top edge for row fields.
+
+            </param>
+            <returns>An object representing the field's value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.GetHigherLevelFields">
+            <summary>
+                <para>Returns the parent field(s) for the field value being currently processed.
+</para>
+            </summary>
+            <returns>An array of <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> objects that represent parent fields for the field value currently being processed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.GetHigherLevelFieldValue(DevExpress.Web.ASPxPivotGrid.PivotGridField)">
+            <summary>
+                <para>Returns the value of a specific parent field corresponding to the field value currently being processed.
+</para>
+            </summary>
+            <param name="field">
+		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that represents the parent field whose value is returned.
+
+            </param>
+            <returns>An object that represents the value of the specified parent (higher level) field.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.IsCollapsed">
+            <summary>
+                <para>Indicates whether the processed field value is collapsed.
+</para>
+            </summary>
+            <value><b>true</b> if the field value is collapsed; otherwise, <b>false</b>.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.HorizontalScrollBarMode">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.IsColumn">
             <summary>
-                <para>Gets or sets a value specifying the horizontal scroll bar's display mode.
+                <para>Indicates whether the processed field value corresponds to a column field.
 </para>
             </summary>
-            <value>One of the <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ScrollBarMode">ScrollBarMode</a> enumeration values.
+            <value><b>true</b> if the processed field value corresponds to a column field; <b>false</b> if the processed field value corresponds to a row field.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.HorizontalScrollingMode">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.IsOthersValue">
             <summary>
-                <para>Gets or sets a value specifying the horizontal scrolling mode.
+                <para>Gets or sets whether the current header corresponds to the "Others" row/column.
+
 </para>
             </summary>
-            <value>The <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxPivotGrid.PivotScrollingMode">PivotScrollingMode</a> object, that specifies the horizontal scrolling mode.
+            <value><b>true</b> if the current header corresponds to the "Others" row/column; otherwise, <b>false</b>.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.RowTreeWidth">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.MaxIndex">
             <summary>
-                <para>This property is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
+                <para>Gets the maximum row index (for row fields) or column index (for column fields) that corresponds to the field value currently being processed.
 </para>
             </summary>
-            <value> 
+            <value>An integer value that specifies the maximum row or column index that corresponds to the processed field value.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.ShowContextMenus">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.MinIndex">
             <summary>
-                <para>Gets or sets whether end-users can invoke the context menus.
+                <para>Gets the minimum row index (for row fields) or column index (for column fields) that corresponds to the field value currently being processed.
 </para>
             </summary>
-            <value><b>true</b> to enable context menus; otherwise, <b>false</b>.
+            <value>An integer value that specifies the minimum row or column index that corresponds to the processed field value.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.ShowHorizontalScrollBar">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.Value">
             <summary>
-                <para>Gets or sets whether the horizontal scrollbar is displayed.
+                <para>Gets the column field or row field value to which the processed column/row header corresponds.
+
 </para>
             </summary>
-            <value><b>true</b> to display the horizontal scrollbar; otherwise, <b>false</b>.
+            <value>An object that represents the field value currently being processed.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.ShowHorzLines">
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.ValueType">
             <summary>
-                <para>Gets or sets whether horizontal grid lines are displayed. This member supports the .NET Framework infrastructure and cannot be used directly from your code.
+                <para>Gets the type of the currently processed column/row header.
 </para>
             </summary>
-            <value><b>true</b> to display horizontal grid lines; otherwise, <b>false</b>.
-</value>
+            <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotGridValueType"/> enumeration value which identifies the type of the currently processed column or row header.
 
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.ShowVertLines">
-            <summary>
-                <para>Gets or sets whether vertical grid lines are displayed. This member supports the .NET Framework infrastructure and cannot be used directly from your code.
-</para>
-            </summary>
-            <value><b>true</b> to display vertical grid lines; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.VerticalScrollBarMode">
-            <summary>
-                <para>Gets or sets a value specifying the vertical scroll bar's display mode.
-</para>
-            </summary>
-            <value>One of the <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ScrollBarMode">ScrollBarMode</a> enumeration values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.VerticalScrollingMode">
-            <summary>
-                <para>Gets or sets a value specifying the vertical scrolling mode.
-</para>
-            </summary>
-            <value>The <a href="ms-xhelp:///?Id=T%3aDevExpress.Web.ASPxPivotGrid.PivotScrollingMode">PivotScrollingMode</a> object that specifies the vertical scrolling mode.
 </value>
 
 
@@ -7224,401 +7618,6 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection">
-
-            <summary>
-                <para>Represents a field collection for the ASPxPivotGrid control.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
-            <summary>
-                <para>Initializes a new instance of the PivotGridFieldCollection class.
-</para>
-            </summary>
-            <param name="data">
-		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridData"/> object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Add(DevExpress.Web.ASPxPivotGrid.PivotGridField)">
-            <summary>
-                <para>Appends the specified field to the collection.
-</para>
-            </summary>
-            <param name="field">
-		The <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that will be added to the collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Add(System.String,DevExpress.XtraPivotGrid.PivotArea)">
-            <summary>
-                <para>Adds a new field with the specified field name and location to the end of the collection.
-</para>
-            </summary>
-            <param name="fieldName">
-		A string that identifies the name of the database field that will be assigned to the new PivotGridField object. 
-
-            </param>
-            <param name="area">
-		A <see cref="T:DevExpress.XtraPivotGrid.PivotArea"/> value that identifies the area in which the new PivotGridField object will be positioned. 
-
-            </param>
-            <returns>The <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that has been added to the collection.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.AddField(DevExpress.Web.ASPxPivotGrid.PivotGridField)">
-            <summary>
-                <para>Adds the specified field to the end of the collection.
-</para>
-            </summary>
-            <param name="field">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object representing the field to add to the collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.GetFieldByClientID(System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and cannot be used directly from your code.
-</para>
-            </summary>
-            <param name="clientID">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Item(System.Int32)">
-            <summary>
-                <para>Provides indexed access to individual fields in the collection.
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer specifying the desired field's position within the collection. If negative or exceeds the last available index, an exception is raised.
-
-            </param>
-            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object which represents a field at the specified position.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Item(System.String)">
-            <summary>
-                <para>Gets the field with the specified id, name of the bound database field or caption.
-
-</para>
-            </summary>
-            <param name="id_fieldName_Caption">
-		A string value which specified the field's id, name of the bound database field or the field's caption.
-
-            </param>
-            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object which represents a field with the specified id, name of the bound database field or caption.
-
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomFieldSort"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventHandler.Invoke(System.Object,DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomFieldSort"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event sender. Identifies the ASPxPivotGrid control that raised an event.
-
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomFieldSortEventArgs"/> object that contains event data.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs">
-
-            <summary>
-                <para>Serves as a base for classes that provide data for events used to customize field values.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.#ctor(DevExpress.XtraPivotGrid.Data.PivotFieldValueItem)">
-            <summary>
-                <para>Initializes a new instance of the PivotFieldValueEventArgs class.
-</para>
-            </summary>
-            <param name="fieldValueItem">
-		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem"/> object that contains information used to initialize a new object.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CreateDrillDownDataSource">
-            <summary>
-                <para>Returns a list of records associated with the field value currently being processed.
-</para>
-            </summary>
-            <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records associated with the processed field value.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CreateDrillDownDataSource(System.Int32,System.Collections.Generic.List`1)">
-            <summary>
-                <para>Returns a list of records used to calculate a summary value for the current field. Allows you to specify the columns and limit the number of records to be returned.
-</para>
-            </summary>
-            <param name="maxRowCount">
-		An integer value that specifies the maximum number of data rows to be returned. <b>-1</b> to retrieve all rows. 
-
-            </param>
-            <param name="customColumns">
-		A list of columns in a data source, to be returned. 
-
-            </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPivotGrid.PivotDrillDownDataSource">PivotDrillDownDataSource</a> object that contains the underlying data.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CreateOLAPDrillDownDataSource(System.Int32,System.Collections.Generic.List`1)">
-            <summary>
-                <para>In OLAP mode, returns a list of records used to calculate a summary value for the current field. Allows you to specify the columns and limit the number of records to be returned.
-</para>
-            </summary>
-            <param name="maxRowCount">
-		An integer value that specifies the maximum number of data rows to be returned. <b>-1</b> to retrieve all rows.
-
-            </param>
-            <param name="customColumns">
-		A list of columns in a data source, to be returned.
-
-            </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPivotGrid.PivotDrillDownDataSource">PivotDrillDownDataSource</a> object that contains the underlying data.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CreateServerModeDrillDownDataSource(System.Int32,System.Collections.Generic.List`1)">
-            <summary>
-                <para>In server mode, returns a list of records used to calculate a summary value for the current field. Allows you to specify the columns and limit the number of records to be returned.
-</para>
-            </summary>
-            <param name="maxRowCount">
-		An integer value that specifies the maximum number of data rows to be returned. <b>-1</b> to retrieve all rows.
-
-            </param>
-            <param name="customColumns">
-		A list of columns in a data source, to be returned.
-
-            </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPivotGrid.PivotDrillDownDataSource">PivotDrillDownDataSource</a> object that contains the underlying data.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.Data">
-            <summary>
-                <para>This member supports the .NET Framework infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value>A PivotGridData object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.DataField">
-            <summary>
-                <para>Gets the data field which identifies the processed value.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that represent the data field.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.FieldIndex">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.FieldValueItem">
-            <summary>
-                <para>Gets the information about the field value currently being processed.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem"/> object that contains information about the field value currently being processed.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.GetCellValue(System.Int32,System.Int32)">
-            <summary>
-                <para>Returns a value displayed in the specified cell.
-</para>
-            </summary>
-            <param name="columnIndex">
-		A zero-based integer which identifies the visible index of the column.
-
-            </param>
-            <param name="rowIndex">
-		A zero-based integer which identifies the <b>absolute</b> index of the row. To obtain the absolute row index by its index within the current page, use the <see cref="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetAbsoluteRowIndex"/> method.
-
-
-            </param>
-            <returns>A value displayed in the specified cell.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.GetFieldValue(DevExpress.Web.ASPxPivotGrid.PivotGridField,System.Int32)">
-            <summary>
-                <para>Returns the specified column or row field's value for the cell addressed by its zero-based index in the Data Area.
-</para>
-            </summary>
-            <param name="field">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object representing a column field or row field, whose value is to be obtained.
-
-            </param>
-            <param name="cellIndex">
-		A zero-based index of a cell in the Data Area that identifies the required field value. Indexes are numbered starting from the left edge for column fields, and from the top edge for row fields.
-
-            </param>
-            <returns>An object representing the field's value.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.GetHigherLevelFields">
-            <summary>
-                <para>Returns the parent field(s) for the field value being currently processed.
-</para>
-            </summary>
-            <returns>An array of <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> objects that represent parent fields for the field value currently being processed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.GetHigherLevelFieldValue(DevExpress.Web.ASPxPivotGrid.PivotGridField)">
-            <summary>
-                <para>Returns the value of a specific parent field corresponding to the field value currently being processed.
-</para>
-            </summary>
-            <param name="field">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that represents the parent field whose value is returned.
-
-            </param>
-            <returns>An object that represents the value of the specified parent (higher level) field.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.IsCollapsed">
-            <summary>
-                <para>Indicates whether the processed field value is collapsed.
-</para>
-            </summary>
-            <value><b>true</b> if the field value is collapsed; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.IsColumn">
-            <summary>
-                <para>Indicates whether the processed field value corresponds to a column field.
-</para>
-            </summary>
-            <value><b>true</b> if the processed field value corresponds to a column field; <b>false</b> if the processed field value corresponds to a row field.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.IsOthersValue">
-            <summary>
-                <para>Gets or sets whether the current header corresponds to the "Others" row/column.
-
-</para>
-            </summary>
-            <value><b>true</b> if the current header corresponds to the "Others" row/column; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.MaxIndex">
-            <summary>
-                <para>Gets the maximum row index (for row fields) or column index (for column fields) that corresponds to the field value currently being processed.
-</para>
-            </summary>
-            <value>An integer value that specifies the maximum row or column index that corresponds to the processed field value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.MinIndex">
-            <summary>
-                <para>Gets the minimum row index (for row fields) or column index (for column fields) that corresponds to the field value currently being processed.
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum row or column index that corresponds to the processed field value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.Value">
-            <summary>
-                <para>Gets the column field or row field value to which the processed column/row header corresponds.
-
-</para>
-            </summary>
-            <value>An object that represents the field value currently being processed.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.ValueType">
-            <summary>
-                <para>Gets the type of the currently processed column/row header.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotGridValueType"/> enumeration value which identifies the type of the currently processed column or row header.
-
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedEventArgs">
 
             <summary>
@@ -7674,7 +7673,7 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 		A list of columns in a data source, to be returned. 
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPivotGrid.PivotDrillDownDataSource">PivotDrillDownDataSource</a> object that contains the underlying data. 
+            <returns>A <see cref="PivotDrillDownDataSource"/> object that contains the underlying data. 
 </returns>
 
 
@@ -7692,7 +7691,7 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 		A list of columns in a data source, to be returned.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPivotGrid.PivotDrillDownDataSource">PivotDrillDownDataSource</a> object that contains the underlying data.
+            <returns>A <see cref="PivotDrillDownDataSource"/> object that contains the underlying data.
 </returns>
 
 
@@ -7710,7 +7709,7 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 		A list of columns in a data source, to be returned.
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPivotGrid.PivotDrillDownDataSource">PivotDrillDownDataSource</a> object that contains the underlying data.
+            <returns>A <see cref="PivotDrillDownDataSource"/> object that contains the underlying data.
 </returns>
 
 
@@ -7932,33 +7931,27 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedCancelEventArgs">
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventHandler">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.FieldValueCollapsing"/> and <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.FieldValueExpanding"/> events.
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.FieldValueDisplayText"/> event.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedCancelEventArgs.#ctor(DevExpress.XtraPivotGrid.Data.PivotFieldValueItem)">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventHandler.Invoke(System.Object,DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventArgs)">
             <summary>
-                <para>Initializes a new instance of the PivotFieldStateChangedCancelEventArgs class.
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.FieldValueDisplayText"/> event.
 </para>
             </summary>
-            <param name="item">
-		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem"/> object which represents the item currently being processed. This value is assigned  to the <see cref="P:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedEventArgs.Item"/> property.
+            <param name="sender">
+		The event source. Identifies the ASPxPivotGrid control that raised the event.
 
             </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventArgs"/> object that contains event data.
 
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedCancelEventArgs.Cancel">
-            <summary>
-                <para>Gets or sets whether the field value can be expanded/collapsed.
-</para>
-            </summary>
-            <value><b>true</b> to cancel the operation; otherwise, <b>false</b>.
-</value>
+            </param>
 
 
         </member>
@@ -8016,27 +8009,33 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventHandler">
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedCancelEventArgs">
 
             <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.FieldValueDisplayText"/> event.
+                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.FieldValueCollapsing"/> and <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.FieldValueExpanding"/> events.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventHandler.Invoke(System.Object,DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventArgs)">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedCancelEventArgs.#ctor(DevExpress.XtraPivotGrid.Data.PivotFieldValueItem)">
             <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.FieldValueDisplayText"/> event.
+                <para>Initializes a new instance of the PivotFieldStateChangedCancelEventArgs class.
 </para>
             </summary>
-            <param name="sender">
-		The event source. Identifies the ASPxPivotGrid control that raised the event.
+            <param name="item">
+		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem"/> object which represents the item currently being processed. This value is assigned  to the <see cref="P:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedEventArgs.Item"/> property.
 
             </param>
-            <param name="e">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventArgs"/> object that contains event data.
 
-            </param>
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldStateChangedCancelEventArgs.Cancel">
+            <summary>
+                <para>Gets or sets whether the field value can be expanded/collapsed.
+</para>
+            </summary>
+            <value><b>true</b> to cancel the operation; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -8174,6 +8173,30 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomCellDisplayText"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventHandler.Invoke(System.Object,DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomCellDisplayText"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source. Identifies the ASPxPivotGrid control that raised the event. 
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventArgs"/> object that contains event data.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventArgs">
 
             <summary>
@@ -8201,30 +8224,6 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
             </summary>
             <value>A string that represents the cell's display text. 
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomCellDisplayText"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventHandler.Invoke(System.Object,DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomCellDisplayText"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event source. Identifies the ASPxPivotGrid control that raised the event. 
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotCellDisplayTextEventArgs"/> object that contains event data.
-
-            </param>
 
 
         </member>
@@ -9273,7 +9272,7 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 		A list of columns to be returned. 
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPivotGrid.PivotDrillDownDataSource">PivotDrillDownDataSource</a> object that contains the underlying data for the processed cell. 
+            <returns>A <see cref="PivotDrillDownDataSource"/> object that contains the underlying data for the processed cell. 
 </returns>
 
 
@@ -9299,7 +9298,7 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 		A list of columns to be returned. 
 
             </param>
-            <returns>A <a href="ms-xhelp:///?Id=T%3aDevExpress.XtraPivotGrid.PivotDrillDownDataSource">PivotDrillDownDataSource</a> object that contains the underlying data. 
+            <returns>A <see cref="PivotDrillDownDataSource"/> object that contains the underlying data. 
 </returns>
 
 
@@ -11138,26 +11137,24 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.WebCustomExportHeaderEventArgs.#ctor(DevExpress.XtraPrinting.IVisualBrick,DevExpress.XtraPivotGrid.Data.PivotFieldItemBase,DevExpress.PivotGrid.Printing.WebPrintAppearanceObject,DevExpress.Web.ASPxPivotGrid.PivotGridField)">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.WebCustomExportHeaderEventArgs.#ctor(DevExpress.XtraPrinting.IVisualBrick,DevExpress.XtraPivotGrid.Data.PivotFieldItemBase,DevExpress.PivotGrid.Printing.WebPrintAppearanceObject,DevExpress.Web.ASPxPivotGrid.PivotGridField,System.Drawing.Rectangle@)">
             <summary>
-                <para>Initializes a new instance of the WebCustomExportHeaderEventArgs class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="brick">
-		An object implementing the <b>IVisualBrick</b> interface or its descendant.
-
+		 
             </param>
             <param name="fieldItem">
-		A <b>PivotFieldItemBase</b> object.
-
+		 
             </param>
             <param name="appearance">
-		An <b>WebPrintAppearanceObject</b> object. This value is assigned to the <see cref="P:DevExpress.Web.ASPxPivotGrid.WebCustomExportHeaderEventArgs.Appearance"/> property.
-
+		 
             </param>
             <param name="field">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that identifies an ASPxPivotGrid field.
-
+		 
+            </param>
+            <param name="rect">
+		 
             </param>
 
 
@@ -11167,7 +11164,7 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
                 <para>Gets or sets the appearance object used to paint the header currently being exported.
 </para>
             </summary>
-            <value>A WebPrintAppearanceObject object that contains appearance settings used to paint the header currently being exported.
+            <value>A <see cref="WebPrintAppearanceObject"/> object that contains appearance settings used to paint the header currently being exported.
 
 
 </value>
@@ -11203,22 +11200,21 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.WebCustomExportFieldValueEventArgs.#ctor(DevExpress.XtraPrinting.IVisualBrick,DevExpress.XtraPivotGrid.Data.PivotFieldValueItem,DevExpress.PivotGrid.Printing.WebPrintAppearanceObject)">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.WebCustomExportFieldValueEventArgs.#ctor(DevExpress.XtraPrinting.IVisualBrick,DevExpress.XtraPivotGrid.Data.PivotFieldValueItem,DevExpress.PivotGrid.Printing.WebPrintAppearanceObject,System.Drawing.Rectangle@)">
             <summary>
-                <para>Initializes a new instance of the WebCustomExportFieldValueEventArgs class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="brick">
-		An object implementing the <b>IVisualBrick</b> interface or its descendant.
-
+		 
             </param>
             <param name="fieldValueItem">
-		A <b>PivotFieldValueItem</b> class descendant.
-
+		 
             </param>
             <param name="appearance">
-		An <b>WebPrintAppearanceObject</b> object. This value is assigned to the <see cref="P:DevExpress.Web.ASPxPivotGrid.WebCustomExportFieldValueEventArgs.Appearance"/> property.
-
+		 
+            </param>
+            <param name="rect">
+		 
             </param>
 
 
@@ -11228,7 +11224,7 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
                 <para>Gets or sets the appearance object used to paint the field value currently being exported.
 </para>
             </summary>
-            <value>A WebPrintAppearanceObject object that contains appearance settings used to paint the field value currently being exported.
+            <value>A <see cref="WebPrintAppearanceObject"/> object that contains appearance settings used to paint the field value currently being exported.
 .
 </value>
 
@@ -11252,46 +11248,39 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxPivotGrid.WebCustomExportCellEventArgs.#ctor(DevExpress.XtraPrinting.IVisualBrick,DevExpress.XtraPivotGrid.Data.PivotGridCellItem,DevExpress.PivotGrid.Printing.WebPrintAppearanceObject,DevExpress.XtraPivotGrid.Data.PivotGridData,DevExpress.Web.ASPxPivotGrid.PivotGridField,DevExpress.Web.ASPxPivotGrid.PivotGridField,DevExpress.Web.ASPxPivotGrid.PivotGridField,System.Drawing.GraphicsUnit,DevExpress.PivotGrid.Printing.PivotGridPrinterBase)">
+        <member name="M:DevExpress.Web.ASPxPivotGrid.WebCustomExportCellEventArgs.#ctor(DevExpress.XtraPrinting.IVisualBrick,DevExpress.XtraPivotGrid.Data.PivotGridCellItem,DevExpress.PivotGrid.Printing.WebPrintAppearanceObject,DevExpress.XtraPivotGrid.Data.PivotGridData,DevExpress.Web.ASPxPivotGrid.PivotGridField,DevExpress.Web.ASPxPivotGrid.PivotGridField,DevExpress.Web.ASPxPivotGrid.PivotGridField,System.Drawing.GraphicsUnit,DevExpress.PivotGrid.Printing.PivotGridPrinterBase,System.Drawing.Rectangle@)">
             <summary>
-                <para>Initializes a new instance of the WebCustomExportCellEventArgs class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="brick">
-		An object implementing the <b>IVisualBrick</b> interface or its descendant.
-
+		 
             </param>
             <param name="cellItem">
-		A <b>PivotGridCellItem</b> object.
-
+		 
             </param>
             <param name="appearance">
-		An <b>WebPrintAppearanceObject</b> object. This value is assigned to the <see cref="P:DevExpress.Web.ASPxPivotGrid.WebCustomExportCellEventArgs.Appearance"/> property.
-
+		 
             </param>
             <param name="data">
-		A <b>PivotGridData</b> object.
-
+		 
             </param>
             <param name="columnField">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that identifies a column field.
-
+		 
             </param>
             <param name="rowField">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that identifies a row field.
-
+		 
             </param>
             <param name="dataField">
-		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that identifies a data field.
-
+		 
             </param>
             <param name="graphicsUnit">
-		A <see cref="T:System.Drawing.GraphicsUnit"/> enumeration value that specifies the unit of measurement for the given data.
-
+		 
             </param>
             <param name="printer">
-		A <b>PivotGridPrinterBase</b> class descendant.
-
+		 
+            </param>
+            <param name="rect">
+		 
             </param>
 
 
@@ -11301,7 +11290,7 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
                 <para>Gets or sets the appearance settings used to paint the cell currently being exported.
 </para>
             </summary>
-            <value>A WebPrintAppearanceObject object that contains appearance settings used to paint the cell currently being exported.
+            <value>A <see cref="WebPrintAppearanceObject"/> object that contains appearance settings used to paint the cell currently being exported.
 </value>
 
 
@@ -11485,30 +11474,6 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotScrollingMode">
-
-            <summary>
-                <para>Lists values that specify the scrolling mode of the <see cref="T:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxPivotGrid.PivotScrollingMode.Standard">
-            <summary>
-                <para>Allows end-users to scroll data rows/columns displayed within the current page.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxPivotGrid.PivotScrollingMode.Virtual">
-            <summary>
-                <para>Allows end-users to navigate through pivot grid pages using a scrollbar.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGroupEventHandler">
 
             <summary>
@@ -11663,6 +11628,31 @@ To refresh the control's data in code, use the <see cref="M:DevExpress.Web.ASPxP
             </summary>
             <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration member that specifies whether to prevent pivot grid data from being refreshed while handling the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomCallback"/> event.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomSummaryEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomSummary"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCustomSummaryEventHandler.Invoke(System.Object,DevExpress.Web.ASPxPivotGrid.PivotGridCustomSummaryEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomSummary"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridCustomSummaryEventArgs"/> object that contains event data.
+
+
+            </param>
 
 
         </member>

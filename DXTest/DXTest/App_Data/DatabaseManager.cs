@@ -1,28 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace DXTest.App_Data
 {
-    public class XmlFileEntry
-    {
-        public string Filename { get; set; }
-        public int Id { get; set; }
-    }
-
-    public class XmlFile
-    {
-        public int Id { get; set; }
-        public string Filename { get; set; }
-        public byte[] Blob { get; set; }
-    }
-
     /// <summary>
     /// This class is used to query the database
     /// </summary>
@@ -44,7 +26,7 @@ namespace DXTest.App_Data
             XmlFile file = null;
 
             // Creates a connection to the database
-            using (var connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -68,12 +50,17 @@ namespace DXTest.App_Data
             return file;
         }
 
+        /// <summary>
+        /// Returns true if the database already contains an XML file with the filename, filename
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <returns></returns>
         public static bool DoesDatabaseContainXmlFile(string filename)
         {
             string connectionString = GetConnectionString();
             bool doesContain = false;
 
-            using (var connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -85,7 +72,7 @@ namespace DXTest.App_Data
                     {
                         while (reader.Read())
                         {
-                            int id = reader.GetInt32(0);
+                            reader.GetInt32(0);
                             doesContain = true;
                         }
                     }
@@ -101,7 +88,7 @@ namespace DXTest.App_Data
 
             string connectionString = GetConnectionString();
 
-            using (var connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -132,7 +119,7 @@ namespace DXTest.App_Data
         {
             string connectionString = GetConnectionString();
 
-            using (var connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -154,7 +141,7 @@ namespace DXTest.App_Data
         {
             string connectionString = GetConnectionString();
 
-            using (var connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -172,7 +159,7 @@ namespace DXTest.App_Data
         {
             string connectionString = GetConnectionString();
 
-            using (var connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
